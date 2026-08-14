@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shortfall - accounting quality, S&amp;P 500 and ASX 200</title>
+<meta name="description" content="Companies whose accounting quality is deteriorating, and the specific flag that fired. A flag is not a thesis.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Shortfall">
+<meta property="og:description" content="Companies whose accounting quality is deteriorating, and the specific flag that fired.">
+<meta property="og:url" content="https://charlietrenorden.com/shortfall/">
+<meta property="og:image" content="https://charlietrenorden.com/shortfall/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-192.png" type="image/png" sizes="192x192">
+<script>
+  /* set theme before paint to avoid a flash - same key as the hub */
+  (function () {
+    try {
+      var saved = localStorage.getItem("theme");
+      var dark = saved ? saved === "dark"
+        : !(window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches);
+      document.documentElement.setAttribute("data-theme", dark ? "dark" : "light");
+    } catch (e) { document.documentElement.setAttribute("data-theme", "dark"); }
+  })();
+</script>
+<link rel="stylesheet" href="style.css">
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "32b821209b5441a08df42ccf61c9e6c2"}'></script>
+</head>
+<body>
+<div class="page">
+  <div class="bar">
+    <a class="home" href="https://charlietrenorden.com/"><span class="back">&larr;</span>Other projects</a>
+    <button class="toggle" id="themeBtn" type="button" aria-label="Toggle light and dark theme"><span class="dot"></span><span id="themeLbl">Dark</span></button>
+  </div>
+
+  <header class="hero">
+    <h1>Shortfall</h1>
+    <p class="lede">Six tests of accounting quality, run across the S&amp;P 500 and the
+    ASX&nbsp;200. Every company here is flagged by something specific, and every flag
+    has an innocent explanation as well as a worrying one.</p>
+  </header>
+
+  <section class="panel" id="scatterPanel" aria-label="Every name by score">
+    <div class="panel-head">
+      <h2>Every name</h2>
+      <p class="note" id="scatterNote"></p>
+    </div>
+    <svg id="scatterSvg" role="img" aria-label="Scatter of composite score by rank"></svg>
+  </section>
+
+  <section class="panel" id="weights">
+    <div class="panel-head">
+      <h2>Weight the flags yourself</h2>
+      <p class="note">Everything starts equally weighted. The faint line on each point
+      shows where equal weighting put it, so you can see how far you have moved it.</p>
+    </div>
+    <div id="sliders"></div>
+    <button id="resetWeights" type="button">Reset to equal weight</button>
+  </section>
+
+  <section class="panel" id="filterPanel">
+    <div id="filters"></div>
+  </section>
+
+  <section id="cards"></section>
+
+  <section class="panel" id="explain">
+    <h2>What each flag shows</h2>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Flag</th>
+            <th>What it measures</th>
+            <th>Why it can signal deterioration</th>
+            <th>Why it can be innocent</th>
+          </tr>
+        </thead>
+        <tbody id="explainBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="panel" id="limits">
+    <h2>What this does not do</h2>
+    <ul>
+      <li>The screen <strong>has not been backtested</strong>. Nobody knows whether these
+      flags predict anything, including me.</li>
+      <li>Restatements, auditor changes and late filings come from SEC filings, so they
+      are <strong>United States only</strong>. The
+      {{ counts.get("Australia (ASX)", 0) }} Australian names cannot carry them.</li>
+      <li>Australian operating cash flow is <strong>derived</strong>, because the
+      published cash flow statements do not carry it directly. Where two independent
+      derivations disagree, the accruals flag is dropped for that company rather than
+      guessed.</li>
+      <li>Stock on hand is measured against revenue rather than cost of sales, because
+      cost of sales is not reliably tagged. The ratio therefore moves with gross margin
+      as well as with inventory.</li>
+      <li>A sixth test, on capitalised costs, was dropped: fewer than one company in ten
+      reports the figure it needs.</li>
+      <li>Companies with fewer than three applicable flags are listed separately rather
+      than ranked. There are {{ excluded|length }} of them.</li>
+      <li>Banks, insurers and utilities often do not report a revenue line in the standard
+      form, so some tests do not apply to them. Not applicable is shown as not applicable,
+      never as a pass.</li>
+    </ul>
+    <p class="fineprint">Sources: SEC EDGAR XBRL company facts and filing metadata for the
+    United States; Yahoo Finance for Australia. Figures are as filed. This is not
+    investment advice and not a recommendation about any company.</p>
+  </section>
+
+  <footer>
+    <a href="https://charlietrenorden.com/">charlietrenorden.com</a>
+  </footer>
+</div>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
