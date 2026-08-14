@@ -21,6 +21,29 @@ def _ratio(numerator, denominator):
     return numerator / denominator
 
 
+# Revenue must be at least this share of total assets for a turnover ratio to carry
+# meaning. Below it the company is not really trading yet and the denominator, not
+# the numerator, drives everything.
+MIN_REVENUE_TO_ASSETS = 0.01
+
+
+def _has_meaningful_revenue(record):
+    """Guard against pre-revenue and development-stage companies.
+
+    FOUND BY THE FAIRNESS CHECK, not by a unit test: Deep Yellow (DYL.AX), a uranium
+    explorer with essentially no revenue, produced a working-capital value of 55.98
+    against a universe median of 0.027 and topped the flag. It was flagged for having
+    no revenue, not for anything about its accounting. Ranking a real company at the
+    top of a deterioration screen on a denominator artefact is exactly the unfairness
+    this page cannot afford.
+    """
+    if record.revenue is None or record.revenue <= 0:
+        return False
+    if record.assets and record.revenue / record.assets < MIN_REVENUE_TO_ASSETS:
+        return False
+    return True
+
+
 def flag_accruals(latest, priors):
     """Sloan accruals: (net income - CFO) / average total assets."""
     if latest.cfo is None:
@@ -49,6 +72,9 @@ def flag_working_capital(latest, priors):
     if not priors:
         return _na("no prior year")
     prior = priors[0]
+    for r in (latest, prior):
+        if not _has_meaningful_revenue(r):
+            return _na("revenue too small for turnover ratios to mean anything")
     changes = []
     for field in ("receivables", "inventory"):
         now = _ratio(getattr(latest, field), latest.revenue)

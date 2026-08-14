@@ -1,1 +1,7 @@
   50/200
+  100/200
+  150/200
+  200/200
+ASX names with history: 197
+derived-CFO status tally: {'agreed': 695, 'no_route': 67, 'single_route': 51, 'disagree': 8}
+failed: 3 [('IFL.AX', 'no records'), ('NSR.AX', 'no records'), ('XYX.AX', 'no records')]

@@ -184,3 +184,28 @@ def test_every_flag_returns_the_same_triple_shape():
         assert isinstance(applicable, bool), name
         if not applicable:
             assert value is None and reason, name
+
+
+# --- pre-revenue guard (found by the fairness check, not by a unit test) -----
+
+def test_working_capital_not_applicable_for_pre_revenue_company():
+    # Deep Yellow shaped: an explorer with assets but essentially no revenue.
+    latest = rec(revenue=1_000.0, assets=500_000_000.0, receivables=50_000.0)
+    priors = [rec(2023, revenue=900.0, assets=480_000_000.0, receivables=1_000.0)]
+    _, applicable, reason = flag_working_capital(latest, priors)
+    assert not applicable
+    assert reason == "revenue too small for turnover ratios to mean anything"
+
+
+def test_working_capital_not_applicable_on_zero_revenue():
+    latest = rec(revenue=0.0, assets=1000.0, receivables=50.0)
+    priors = [rec(2023, revenue=0.0, assets=1000.0, receivables=10.0)]
+    _, applicable, _ = flag_working_capital(latest, priors)
+    assert not applicable
+
+
+def test_working_capital_still_applies_to_a_normal_trading_company():
+    latest = rec(revenue=1000.0, assets=1200.0, receivables=200.0)
+    priors = [rec(2023, revenue=1000.0, assets=1200.0, receivables=180.0)]
+    _, applicable, _ = flag_working_capital(latest, priors)
+    assert applicable
