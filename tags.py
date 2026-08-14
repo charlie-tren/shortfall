@@ -22,10 +22,23 @@ CHAINS = {
     "NetIncome": ["NetIncomeLoss"],
     "CFO": ["NetCashProvidedByUsedInOperatingActivities"],
     "Assets": ["Assets"],
-    "Equity": ["StockholdersEquity"],
+    # 93.8% -> 99.8%. The fallback INCLUDES non-controlling interests, so it is
+    # slightly larger than parent-only equity. For invested capital that is arguably
+    # the better measure anyway, and it is the safe direction: a larger denominator
+    # lowers ROIC, which makes flag 3 less likely to fire.
+    # Caterpillar and Archer-Daniels-Midland both need it - neither tags the
+    # parent-only figure at all, which left them with no ROIC before this.
+    "Equity": [
+        "StockholdersEquity",
+        "StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest",
+    ],
     "Goodwill": ["Goodwill"],
     "TaxExpense": ["IncomeTaxExpenseBenefit"],
-    "StockComp": ["ShareBasedCompensation"],
+    # 81.4% -> 93.8%. `ShareBasedCompensation` is the cash-flow-statement add-back;
+    # plenty of filers only tag the income-statement expense instead. Caterpillar,
+    # Progressive and Newmont all showed "no share-based compensation reported"
+    # before the fallback, which is plainly wrong for companies that all pay in stock.
+    "StockComp": ["ShareBasedCompensation", "AllocatedShareBasedCompensationExpense"],
     "DilutedShares": ["WeightedAverageNumberOfDilutedSharesOutstanding"],
     "Receivables": [
         "AccountsReceivableNetCurrent",
