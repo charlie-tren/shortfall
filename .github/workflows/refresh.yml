@@ -1,0 +1,43 @@
+name: refresh
+
+on:
+  schedule:
+    # Odd minute: GitHub's scheduler runs late and DROPS on-the-hour jobs.
+    - cron: "37 18 * * 1"
+    - cron: "37 22 * * 1"   # same-UTC-day backup
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt
+
+      - name: Unit tests must pass before any data is fetched
+        run: python -m pytest tests/ -q --ignore=tests/test_page_smoke.py
+
+      - name: Refresh index membership
+        run: python build_universe.py
+
+      - name: Rebuild
+        run: python run_build.py
+
+      - name: Commit only if the data actually changed
+        run: |
+          git config user.name "shortfall-bot"
+          git config user.email "noreply@github.com"
+          git add docs/ universe.json
+          git diff --staged --quiet || git commit -m "data: weekly refresh"
+          git push

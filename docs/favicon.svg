@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Shortfall mark: an expected height (outline) and what actually arrived (solid).
+       The gap between them IS the shortfall.
+       Ground is deliberately warm and dark - the rest of the estate uses cool tiles,
+       and at 16px the ground colour distinguishes more than the shape does. -->
+  <rect width="64" height="64" rx="14" fill="#3b1d1d"/>
+  <rect x="16" y="14" width="13" height="36" rx="2.5" fill="none" stroke="#e8b4a0" stroke-width="3"/>
+  <rect x="36" y="34" width="13" height="16" rx="2.5" fill="#e8b4a0"/>
+</svg>
