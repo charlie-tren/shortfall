@@ -99,15 +99,40 @@ def test_not_applicable_is_shown_as_such_never_as_a_score(server):
 
 
 def test_market_filter_drives_the_list(server):
+    """Assert on CONTENT, not count: the card list is capped at 100 and both
+    markets have more than 100 ranked names, so the count cannot move."""
     with sync_playwright() as pw:
         browser, page = page_with(pw, [])
-        before = page.locator(".card").count()
-        options = page.locator("#filters select option").count()
-        if options < 3:
+        options = page.locator("#filters select option")
+        if options.count() < 3:
             pytest.skip("only one market in this build")
-        page.select_option("#filters select", index=1)
-        page.wait_for_timeout(250)
-        assert page.locator(".card").count() != before
+        before = page.locator(".card .ticker").first.text_content()
+        page.select_option("#filters select", label="Australia (ASX)")
+        page.wait_for_timeout(300)
+        tickers = page.locator(".card .ticker").all_text_contents()
+        assert tickers, "filter emptied the list"
+        assert all(t.endswith(".AX") for t in tickers), \
+            f"non-ASX names survived the Australia filter: {[t for t in tickers if not t.endswith('.AX')][:5]}"
+        page.select_option("#filters select", label="United States (NYSE & Nasdaq)")
+        page.wait_for_timeout(300)
+        us = page.locator(".card .ticker").all_text_contents()
+        assert us and not any(t.endswith(".AX") for t in us)
+        page.select_option("#filters select", value="all")
+        page.wait_for_timeout(300)
+        assert page.locator(".card .ticker").first.text_content() == before
+        browser.close()
+
+
+def test_events_filter_shows_only_names_with_a_disclosed_event(server):
+    with sync_playwright() as pw:
+        browser, page = page_with(pw, [])
+        page.check("#filters input[type=checkbox]")
+        page.wait_for_timeout(300)
+        cards = page.locator(".card")
+        assert cards.count() > 0, "no company carries a filing event"
+        # Every remaining card must show at least one badge.
+        for i in range(cards.count()):
+            assert cards.nth(i).locator(".badge").count() > 0
         browser.close()
 
 
