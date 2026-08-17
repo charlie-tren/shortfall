@@ -94,7 +94,9 @@ def test_not_applicable_is_shown_as_such_never_as_a_score(server):
         browser, page = page_with(pw, [])
         na = page.locator(".card dd.na")
         assert na.count() > 0
-        assert "not applicable" in na.first.text_content()
+        # Shown as n/a with the reason on hover - distinct from a score, never a pass.
+        assert na.first.text_content().strip() == "n/a"
+        assert na.first.get_attribute("title")
         browser.close()
 
 

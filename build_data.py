@@ -2,6 +2,7 @@
 
 import json
 
+from correlations import matrix
 from explain import EXPLANATIONS
 from flags import ALL_FLAGS, goodwill_exceeds_equity
 from panel import latest_with_history
@@ -24,6 +25,10 @@ def assemble_name(history):
         "name": latest.name,
         "market": latest.market,
         "year": latest.year,
+        # Size, for the scatter's x axis. Total assets rather than market cap:
+        # neither source carries a cap, and assets is the best-covered tag there is.
+        "assets": latest.assets,
+        "revenue": latest.revenue,
         "flags": flags,
         "applicable": applicable,
         "goodwill_exceeds_equity": goodwill_exceeds_equity(latest),
@@ -90,6 +95,7 @@ def finalise(rows):
         "coverage": coverage,
         "coverage_warnings": warnings,
         "explanations": EXPLANATIONS,
+        "correlations": matrix(included),
     }
 
 

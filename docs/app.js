@@ -74,9 +74,8 @@ function render() {
   renderScatter(rows);
   renderCards(rows);
   const note = document.getElementById("scatterNote");
-  const shown = Math.min(rows.length, 100);
-  note.textContent = `${rows.length} companies ranked. Showing the top ${shown}. `
-    + `Higher means more flags firing more strongly, not a worse company.`;
+  note.textContent = `${rows.length} companies. Hover a point for the name. `
+    + `Cards below are the top ${Math.min(rows.length, 100)} by score.`;
 }
 
 function renderCards(rows) {
@@ -105,45 +104,108 @@ function renderCards(rows) {
       // which on this page is a correctness bug rather than a cosmetic one.
       const pair = el("div", { class: "pair" }, list);
       el("dt", { text: label }, pair);
-      el("dd", {
+      const dd = el("dd", {
         class: on ? "on" : "na",
-        text: on ? f.rank.toFixed(0) : "not applicable",
+        text: on ? f.rank.toFixed(0) : "n/a",
         title: f && !f.applicable ? f.reason : "",
       }, pair);
+      if (on) dd.style.setProperty("--w", f.rank.toFixed(0) + "%");
     });
     el("p", { class: "applicable",
               text: `${row.applicable} of 6 flags applicable` }, card);
   });
 }
 
+/* Money formatted the way a reader reads it, not the way it is stored. */
+function money(v) {
+  if (v == null) return "size not reported";
+  const a = Math.abs(v);
+  if (a >= 1e12) return (v / 1e12).toFixed(1) + "tn";
+  if (a >= 1e9) return (v / 1e9).toFixed(1) + "bn";
+  if (a >= 1e6) return (v / 1e6).toFixed(0) + "m";
+  return String(Math.round(v));
+}
+
+/* X is company SIZE on a log scale, Y is the score.
+
+   The first version plotted score against rank position, which can only ever draw
+   a descending curve - it looked like analysis and contained none. Size is a real
+   second dimension: it separates "a big company scoring high", which is worth a
+   look, from "a small one", which usually is not. */
 function renderScatter(rows) {
   const svg = document.getElementById("scatterSvg");
   while (svg.firstChild) svg.removeChild(svg.firstChild);
-  const W = svg.clientWidth || 900, H = 300, PAD = 34;
+  const W = svg.clientWidth || 900, H = 340;
+  const L = 40, R = 16, T = 14, B = 34;
+
+  const withSize = rows.filter((r) => r.row.assets && r.row.assets > 0);
+  if (!withSize.length) return;
   svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
 
-  svgEl("line", { x1: PAD, y1: H - PAD, x2: W - PAD, y2: H - PAD, class: "axis" }, svg);
-  [0, 50, 100].forEach((v) => {
-    const y = H - PAD - (v / 100) * (H - 2 * PAD);
-    svgEl("line", { x1: PAD, y1: y, x2: W - PAD, y2: y, class: "axis", opacity: 0.35 }, svg);
-    const t = svgEl("text", { x: 4, y: y + 3, class: "axislabel" }, svg);
+  const logs = withSize.map((r) => Math.log10(r.row.assets));
+  const lo = Math.floor(Math.min(...logs)), hi = Math.ceil(Math.max(...logs));
+  const px = (v) => L + ((Math.log10(v) - lo) / (hi - lo || 1)) * (W - L - R);
+  const py = (v) => H - B - (v / 100) * (H - T - B);
+
+  [0, 25, 50, 75, 100].forEach((v) => {
+    svgEl("line", { x1: L, y1: py(v), x2: W - R, y2: py(v), class: "grid" }, svg);
+    const t = svgEl("text", { x: L - 8, y: py(v) + 4, class: "axislabel", "text-anchor": "end" }, svg);
     t.textContent = String(v);
   });
+  for (let e = lo; e <= hi; e++) {
+    const t = svgEl("text", { x: px(Math.pow(10, e)), y: H - 12, class: "axislabel", "text-anchor": "middle" }, svg);
+    t.textContent = money(Math.pow(10, e));
+  }
+  const yl = svgEl("text", { x: L - 8, y: T + 2, class: "axislabel", "text-anchor": "end" }, svg);
+  yl.textContent = "score";
+  const xl = svgEl("text", { x: W - R, y: H - 12, class: "axislabel", "text-anchor": "end" }, svg);
+  xl.textContent = "total assets";
 
-  rows.forEach(({ row, score, base }, i) => {
-    const x = PAD + (i / Math.max(rows.length - 1, 1)) * (W - 2 * PAD);
-    const y = H - PAD - (score / 100) * (H - 2 * PAD);
-    const yb = H - PAD - (base / 100) * (H - 2 * PAD);
+  const layer = svgEl("g", {}, svg);
+  withSize.forEach(({ row, score, base }) => {
+    const x = px(row.assets), y = py(score), yb = py(base);
     if (Math.abs(y - yb) > 1) {
-      svgEl("line", { x1: x, y1: yb, x2: x, y2: y, class: "shift" }, svg);
+      svgEl("line", { x1: x, y1: yb, x2: x, y2: y, class: "shift" }, layer);
     }
     const flagged = row.events && row.events.length;
     const dot = svgEl("circle", {
-      cx: x, cy: y, r: 3, class: flagged ? "dot flagged" : "dot",
-    }, svg);
-    const title = svgEl("title", {}, dot);
-    title.textContent = `${row.name} (${row.ticker}) - ${score.toFixed(0)}`;
+      cx: x, cy: y, r: flagged ? 4.5 : 3.2,
+      class: flagged ? "dot flagged" : "dot",
+      "data-ticker": row.ticker,
+    }, layer);
+    dot.addEventListener("mouseenter", () => showTip(row, score, x, y));
+    dot.addEventListener("mouseleave", hideTip);
   });
+}
+
+function showTip(row, score, x, y) {
+  const tip = document.getElementById("tip");
+  tip.textContent = "";
+  el("strong", { text: row.name }, tip);
+  el("span", { class: "t-ticker", text: row.ticker }, tip);
+  const fired = FLAGS.filter(([k]) => {
+    const f = row.flags[k];
+    return f && f.applicable && f.rank != null && f.rank >= 80;
+  }).map(([, label]) => label);
+  el("span", {
+    class: "t-line",
+    text: `score ${score.toFixed(0)} · ${money(row.assets)} assets · ${row.applicable} of 6 flags`,
+  }, tip);
+  if (fired.length) el("span", { class: "t-line", text: "highest: " + fired.join(", ") }, tip);
+  (row.events || []).forEach((e) => el("span", { class: "t-event", text: e.label }, tip));
+
+  const svg = document.getElementById("scatterSvg");
+  const box = svg.getBoundingClientRect();
+  const sx = box.left + (x / svg.viewBox.baseVal.width) * box.width;
+  const sy = box.top + (y / svg.viewBox.baseVal.height) * box.height;
+  tip.style.display = "block";
+  const tw = tip.offsetWidth;
+  tip.style.left = Math.max(8, Math.min(window.innerWidth - tw - 8, sx - tw / 2)) + "px";
+  tip.style.top = (sy + window.scrollY - tip.offsetHeight - 14) + "px";
+}
+
+function hideTip() {
+  document.getElementById("tip").style.display = "none";
 }
 
 function buildSliders() {
@@ -186,6 +248,50 @@ function buildFilters() {
   cb.addEventListener("change", () => { state.eventsOnly = cb.checked; render(); });
 }
 
+/* The correlation matrix. It is nearly empty, and that IS the content: if the six
+   tests corroborated each other a high score would describe a syndrome. They do not,
+   so it describes a company that is mildly unusual in several unrelated ways. */
+function buildMatrix() {
+  const c = window.SHORTFALL.correlations;
+  const host = document.getElementById("matrix");
+  if (!c || !c.pairs.length) return;
+
+  const rho = {};
+  c.pairs.forEach((p) => { rho[p.a + "|" + p.b] = p; rho[p.b + "|" + p.a] = p; });
+
+  const table = el("table", { class: "matrix" }, host);
+  const head = el("tr", {}, el("thead", {}, table));
+  el("th", { text: "" }, head);
+  c.order.forEach((k) => el("th", { text: c.short[k] }, head));
+
+  const body = el("tbody", {}, table);
+  c.order.forEach((a) => {
+    const tr = el("tr", {}, body);
+    el("th", { text: c.short[a], class: "rowhead" }, tr);
+    c.order.forEach((b) => {
+      const td = el("td", {}, tr);
+      if (a === b) { td.className = "self"; td.textContent = ""; return; }
+      const p = rho[a + "|" + b];
+      if (!p) { td.textContent = ""; return; }
+      td.textContent = p.rho.toFixed(2);
+      td.title = `${c.short[a]} vs ${c.short[b]}: Spearman ${p.rho}, n=${p.n}`;
+      // Opacity carries magnitude; hue carries sign. Nothing here gets past ~0.17,
+      // so the whole grid reading as blank is the honest rendering.
+      const mag = Math.min(Math.abs(p.rho) / 0.35, 1);
+      td.style.background = p.rho >= 0
+        ? `color-mix(in srgb, var(--accent) ${(mag * 70).toFixed(0)}%, transparent)`
+        : `color-mix(in srgb, var(--warn) ${(mag * 70).toFixed(0)}%, transparent)`;
+    });
+  });
+
+  const s = c.strongest;
+  document.getElementById("agreeNote").textContent =
+    `Rank correlation between every pair. Mean strength ${c.mean_abs}; the strongest of `
+    + `${c.pairs.length} pairs is ${c.short[s.a]} against ${c.short[s.b]} at ${s.rho}. `
+    + `Near enough independent - so a high score is a company that is mildly unusual in `
+    + `several unrelated ways, not one failing a single underlying test.`;
+}
+
 function buildExplain() {
   const body = document.getElementById("explainBody");
   body.textContent = "";
@@ -201,6 +307,7 @@ function buildExplain() {
 document.addEventListener("DOMContentLoaded", () => {
   buildSliders();
   buildFilters();
+  buildMatrix();
   buildExplain();
   render();
   const btn = document.getElementById("themeBtn");
