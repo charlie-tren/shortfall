@@ -208,7 +208,9 @@ function renderCards(rows) {
     const head = el("header", {}, card);
     el("h3", { text: row.name }, head);
     el("span", { class: "ticker", text: row.ticker }, head);
-    el("span", { class: "score", text: score.toFixed(0) }, head);
+    const sc = el("span", { class: "score" }, head);
+    el("span", { class: "score-n", text: score.toFixed(0) }, sc);
+    el("span", { class: "score-of", text: "/100" }, sc);
     if (Math.abs(score - base) >= 0.5) {
       el("span", { class: "base", text: `default: ${base.toFixed(0)}` }, head);
     }
@@ -234,7 +236,8 @@ function renderCards(rows) {
       if (on) dd.style.setProperty("--w", f.rank.toFixed(0) + "%");
     });
     el("p", { class: "applicable",
-              text: `${row.applicable} of 6 flags applicable` }, card);
+              text: `${row.applicable} of 6 tests apply. Ranked against `
+                    + `${row.ranked_against === "universe" ? "the whole market" : row.sector}.` }, card);
   });
 }
 
