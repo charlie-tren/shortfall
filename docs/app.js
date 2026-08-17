@@ -131,13 +131,23 @@ function render() {
 }
 
 /* Sector against test: which corners of the market are firing which test.
-   Every cell is the share of that sector's companies sitting in the worst decile
-   of that test. Click a cell to filter to it. */
+   Cells count companies past a single MARKET-WIDE cut - see the note inside, a
+   sector-relative cut would make every cell identical. Click a cell to filter. */
 function renderOverview(rows) {
   const host = document.getElementById("overview");
   host.textContent = "";
   const sectors = Array.from(new Set(rows.map((r) => r.row.sector).filter(Boolean))).sort();
   if (!sectors.length) return;
+
+  // One market-wide 90th-percentile cut per test, computed across everything shown.
+  const cutoffs = {};
+  FLAGS.forEach(([key]) => {
+    const vals = rows.map(({ row }) => {
+      const f = row.flags[key];
+      return f && f.applicable ? f.value : null;
+    }).filter((v) => v != null).sort((a, b) => a - b);
+    cutoffs[key] = vals.length ? vals[Math.floor(0.9 * (vals.length - 1))] : Infinity;
+  });
 
   const table = el("table", { class: "heat" }, host);
   const head = el("tr", {}, el("thead", {}, table));
@@ -153,7 +163,7 @@ function renderOverview(rows) {
     FLAGS.forEach(([key]) => {
       const applies = members.filter(({ row }) => {
         const f = row.flags[key];
-        return f && f.applicable && f.rank != null;
+        return f && f.applicable && f.value != null;
       });
       const td = el("td", {}, tr);
       if (!applies.length) {
@@ -161,10 +171,16 @@ function renderOverview(rows) {
         td.title = `${sec}: test does not apply`;
         return;
       }
-      const hot = applies.filter(({ row }) => row.flags[key].rank >= 90).length;
+      /* Counted against the MARKET-WIDE threshold, not the sector's own.
+         Scoring is sector-relative, which is right - but a heatmap of sector-relative
+         deciles is uniform by construction: every sector has exactly 10% of itself in
+         its own worst 10%, so the cells only ever track sector size. Against one
+         market-wide cut the differences are real, and this is where you see that
+         stock compensation is concentrated in technology. */
+      const hot = applies.filter(({ row }) => row.flags[key].value >= cutoffs[key]).length;
       const share = hot / applies.length;
       td.textContent = hot ? String(hot) : "";
-      td.title = `${sec} - ${hot} of ${applies.length} in the worst decile`;
+      td.title = `${sec} - ${hot} of ${applies.length} past the market-wide cut`;
       td.style.background =
         `color-mix(in srgb, var(--warn) ${(Math.min(share / 0.3, 1) * 78).toFixed(0)}%, transparent)`;
       td.addEventListener("click", () => {
@@ -180,8 +196,8 @@ function renderOverview(rows) {
   document.getElementById("overviewCount").textContent =
     `${rows.length} companies`;
   document.getElementById("overviewNote").textContent =
-    "Companies in the worst decile of each test, by sector. Ranks are computed "
-    + "within sector, so a REIT is compared with REITs. Click a cell to filter.";
+    "Companies past the market-wide worst-10% cut on each test. Scores elsewhere "
+    + "are ranked within sector, so a REIT is compared with REITs. Click a cell to filter.";
 }
 
 function renderCards(rows) {
