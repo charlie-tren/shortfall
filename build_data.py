@@ -4,9 +4,16 @@ import json
 
 from correlations import matrix
 from explain import EXPLANATIONS
+from sectors import MIN_PEERS
 from flags import ALL_FLAGS, goodwill_exceeds_equity
 from panel import latest_with_history
 from score import coverage_gate, percentile_ranks, composite, MIN_APPLICABLE_FLAGS
+
+
+try:
+    SECTORS = json.load(open("sectors.json", encoding="utf-8"))
+except (OSError, ValueError):
+    SECTORS = {}
 
 
 def assemble_name(history):
@@ -29,6 +36,7 @@ def assemble_name(history):
         # neither source carries a cap, and assets is the best-covered tag there is.
         "assets": latest.assets,
         "revenue": latest.revenue,
+        "sector": SECTORS.get(latest.ticker, {}).get("sector", "Unclassified"),
         "flags": flags,
         "applicable": applicable,
         "goodwill_exceeds_equity": goodwill_exceeds_equity(latest),
@@ -56,24 +64,57 @@ def applicable_coverage(rows, flag_key):
 
 
 def rank_all(rows):
-    """Attach percentile ranks per flag, ranked only among applicable names.
+    """Attach percentile ranks per test, ranked WITHIN SECTOR.
 
-    Flag 3's two populations are ranked SEPARATELY: names resolved on the pretax
-    fallback are not comparable to names with true operating income.
+    Sector-relative because ranking everything against the whole universe produced
+    structural false positives that say nothing about accounting quality:
+
+    - A REIT must distribute nearly all its income, so it funds itself by issuing
+      equity. "Share count rising while returns fall" fires on the business model
+      every single year. Prologis reached 4th on the page on exactly this.
+    - An acquisitive company's goodwill share rises because it bought something.
+      AMD's goodwill flag is the Xilinx deal, not deterioration.
+
+    Ranking within sector does not make either disappear - a REIT issuing far more
+    equity than other REITs is still interesting - it stops them being scored against
+    a manufacturer that did nothing of the sort.
+
+    A sector with fewer than MIN_PEERS members cannot support its own percentiles, so
+    those names fall back to the whole universe and carry `ranked_against: universe`.
+
+    Flag 3's two populations stay separate on top of that: names resolved on the
+    pretax fallback are not comparable to names with true operating income.
     """
     by_ticker = {r["ticker"]: r for r in rows}
-    for key in ALL_FLAGS:
-        if key == "share_count_roic":
-            for fallback in (True, False):
-                subset = {r["ticker"]: r["flags"][key]["value"]
-                          for r in rows
-                          if r["operating_income_is_pretax_fallback"] == fallback}
-                for ticker, rank in percentile_ranks(subset).items():
-                    by_ticker[ticker]["flags"][key]["rank"] = rank
-            continue
-        values = {r["ticker"]: r["flags"][key]["value"] for r in rows}
-        for ticker, rank in percentile_ranks(values).items():
-            by_ticker[ticker]["flags"][key]["rank"] = rank
+
+    groups = {}
+    for r in rows:
+        groups.setdefault(r.get("sector") or "Unclassified", []).append(r)
+    small = [s for s, m in groups.items() if len(m) < MIN_PEERS]
+    pool = [r for s in small for r in groups[s]]
+    peer_groups = {s: m for s, m in groups.items() if len(m) >= MIN_PEERS}
+    if pool:
+        peer_groups["__universe__"] = pool
+    for r in pool:
+        r["ranked_against"] = "universe"
+    for s in peer_groups:
+        if s != "__universe__":
+            for r in peer_groups[s]:
+                r["ranked_against"] = s
+
+    for members in peer_groups.values():
+        for key in ALL_FLAGS:
+            if key == "share_count_roic":
+                for fallback in (True, False):
+                    subset = {r["ticker"]: r["flags"][key]["value"]
+                              for r in members
+                              if r["operating_income_is_pretax_fallback"] == fallback}
+                    for ticker, rank in percentile_ranks(subset).items():
+                        by_ticker[ticker]["flags"][key]["rank"] = rank
+                continue
+            values = {r["ticker"]: r["flags"][key]["value"] for r in members}
+            for ticker, rank in percentile_ranks(values).items():
+                by_ticker[ticker]["flags"][key]["rank"] = rank
     return rows
 
 

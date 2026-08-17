@@ -87,14 +87,15 @@ body {
 }
 h1 {
   font-family: var(--display); font-weight: 700;
-  font-size: clamp(60px, 11vw, 110px); line-height: 0.9;
-  margin: 0 0 14px; letter-spacing: 0.005em; text-transform: uppercase;
+  font-size: clamp(38px, 6vw, 62px); line-height: 0.95;
+  margin: 0 0 10px; letter-spacing: 0.01em; text-transform: uppercase;
 }
-.card h3 { font-family: var(--display); font-weight: 700; font-size: 22px; letter-spacing: 0.01em; }
-h2 { font-family: var(--display); font-weight: 700; font-size: 21px; letter-spacing: 0.02em; }
-.lede { color: var(--soft); max-width: 60ch; margin: 0; font-size: 18px; }
+.lede { color: var(--soft); max-width: 60ch; margin: 0; font-size: 17px; }
 
-h2 { font-size: 17px; margin: 0 0 6px; font-weight: 600; }
+h2 {
+  font-family: var(--display); font-weight: 700; font-size: 19px;
+  letter-spacing: 0.02em; margin: 0 0 6px; text-transform: uppercase;
+}
 .note { color: var(--soft); font-size: 14px; margin: 0; max-width: 62ch; }
 
 .panel {
@@ -171,7 +172,8 @@ h2 { font-size: 17px; margin: 0 0 6px; font-weight: 600; }
   padding: 16px 18px; margin-bottom: 12px;
 }
 .card header { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
-.card h3 { margin: 0; font-size: 18px; font-weight: 600; }
+.card h3 { font-family: var(--display); font-weight: 700; font-size: 21px;
+  letter-spacing: 0.01em; margin: 0; }
 .card .ticker { font-family: var(--mono); font-size: 12px; color: var(--soft); }
 .card .score { margin-left: auto; font-family: var(--mono); font-size: 20px; color: var(--accent); }
 .card .base { font-family: var(--mono); font-size: 11px; color: var(--na); width: 100%; text-align: right; }
@@ -238,3 +240,29 @@ footer a:hover { color: var(--accent); }
   .page { padding: 16px 15px 60px; }
   .slider { grid-template-columns: 1fr 80px 30px; }
 }
+
+/* Sector x test overview. Same visual grammar as the correlation matrix so the
+   two panels read as one family. */
+#overview { overflow-x: auto; }
+table.heat { border-collapse: separate; border-spacing: 3px; font-size: 13px; min-width: 700px; }
+table.heat th {
+  font-family: var(--mono); font-size: 10.5px; font-weight: 400; color: var(--na);
+  padding: 4px 6px; text-align: center; border: none; white-space: nowrap;
+}
+table.heat th.rowhead { text-align: right; font-size: 12px; color: var(--soft); }
+table.heat td {
+  border: 1px solid var(--rule); border-radius: 4px; padding: 9px 12px; min-width: 54px;
+  text-align: center; font-family: var(--mono); font-size: 12px; color: var(--ink);
+  cursor: pointer;
+}
+table.heat td:hover { border-color: var(--accent); }
+table.heat td.self, table.heat td.n { background: none; border-color: transparent; cursor: default; }
+table.heat td.n, table.heat th.n { color: var(--na); }
+
+.minscore { width: 110px; accent-color: var(--accent); }
+#filters output { font-family: var(--mono); font-size: 12px; color: var(--soft); }
+.clearBtn {
+  background: none; border: 1px solid var(--rule); color: var(--soft);
+  border-radius: 6px; padding: 4px 11px; font: inherit; font-size: 13px; cursor: pointer;
+}
+.clearBtn:hover { border-color: var(--accent); color: var(--accent); }

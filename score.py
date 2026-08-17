@@ -36,6 +36,26 @@ def percentile_ranks(values):
 
 SEVERITY_TOP_N = 2
 
+# Default weights, by HOW DIRECT THE EVIDENCE IS - not equal.
+#
+# The earlier equal-weight default was justified as "no backtest, so no basis to
+# prefer one test". That conflated two things. A backtest would tell you which test
+# PREDICTS best, and we do not have one. But how directly a test observes the thing
+# it claims to observe is knowable without one, and the tests differ a lot on it.
+#
+# Accruals is the most studied earnings-quality measure there is (Sloan 1996) and
+# measures the gap between profit and cash directly. Stock compensation over revenue
+# is a long way from an accounting problem - most of the time it is a pay policy.
+# Treating those as equal evidence was the actual unsupported claim.
+DEFAULT_WEIGHTS = {
+    "accruals": 1.5,          # direct: profit vs cash, and the deepest literature
+    "working_capital": 1.25,  # the classic channel for pulling revenue forward
+    "goodwill": 1.0,          # real impairment risk, but usually just a deal
+    "share_count_roic": 1.0,  # dilution matters, but many benign funding reasons
+    "tax_rate": 0.75,         # noisy; mix and one-offs move it for ordinary reasons
+    "stock_comp": 0.75,       # weakest inference; often simply competitive pay
+}
+
 
 def composite(flag_scores, weights=None, enforce_minimum=False):
     """Severity: the weighted mean of a company's WORST TWO applicable tests.
@@ -59,7 +79,8 @@ def composite(flag_scores, weights=None, enforce_minimum=False):
         return None
     if enforce_minimum and len(applicable) < MIN_APPLICABLE_FLAGS:
         return None
-    w = {k: (1.0 if weights is None else weights.get(k, 1.0)) for k in applicable}
+    base = DEFAULT_WEIGHTS if weights is None else weights
+    w = {k: base.get(k, 1.0) for k in applicable}
     if not sum(w.values()):
         return None
     # A weight scales how much a test counts towards being one of the worst two.

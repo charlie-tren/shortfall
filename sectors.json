@@ -1,0 +1,3502 @@
+{
+ "MMM": {
+  "sector": "Industrials",
+  "sic": "3841",
+  "sicDesc": "Surgical & Medical Instruments & Apparatus"
+ },
+ "AOS": {
+  "sector": "Industrials",
+  "sic": "3630",
+  "sicDesc": "Household Appliances"
+ },
+ "ABT": {
+  "sector": "Healthcare",
+  "sic": "2834",
+  "sicDesc": "Pharmaceutical Preparations"
+ },
+ "ABBV": {
+  "sector": "Healthcare",
+  "sic": "2834",
+  "sicDesc": "Pharmaceutical Preparations"
+ },
+ "ACN": {
+  "sector": "Other",
+  "sic": "7389",
+  "sicDesc": "Services-Business Services, NEC"
+ },
+ "ADBE": {
+  "sector": "Technology",
+  "sic": "7372",
+  "sicDesc": "Services-Prepackaged Software"
+ },
+ "AMD": {
+  "sector": "Technology",
+  "sic": "3674",
+  "sicDesc": "Semiconductors & Related Devices"
+ },
+ "AES": {
+  "sector": "Utilities",
+  "sic": "4991",
+  "sicDesc": "Cogeneration Services & Small Power Producers"
+ },
+ "AFL": {
+  "sector": "Financials",
+  "sic": "6321",
+  "sicDesc": "Accident & Health Insurance"
+ },
+ "A": {
+  "sector": "Industrials",
+  "sic": "3826",
+  "sicDesc": "Laboratory Analytical Instruments"
+ },
+ "APD": {
+  "sector": "Industrials",
+  "sic": "2810",
+  "sicDesc": "Industrial Inorganic Chemicals"
+ },
+ "ABNB": {
+  "sector": "Other",
+  "sic": "7340",
+  "sicDesc": "Services-To Dwellings & Other Buildings"
+ },
+ "AKAM": {
+  "sector": "Other",
+  "sic": "7389",
+  "sicDesc": "Services-Business Services, NEC"
+ },
+ "ALB": {
+  "sector": "Industrials",
+  "sic": "2821",
+  "sicDesc": "Plastic Materials, Synth Resins & Nonvulcan Elastomers"
+ },
+ "ARE": {
+  "sector": "Real estate",
+  "sic": "6798",
+  "sicDesc": "Real Estate Investment Trusts"
+ },
+ "ALGN": {
+  "sector": "Industrials",
+  "sic": "3842",
+  "sicDesc": "Orthopedic, Prosthetic & Surgical Appliances & Supplies"
+ },
+ "ALLE": {
+  "sector": "Other",
+  "sic": "7381",
+  "sicDesc": "Services-Detective, Guard & Armored Car Services"
+ },
+ "LNT": {
+  "sector": "Utilities",
+  "sic": "4931",
+  "sicDesc": "Electric & Other Services Combined"
+ },
+ "ALL": {
+  "sector": "Financials",
+  "sic": "6331",
+  "sicDesc": "Fire, Marine & Casualty Insurance"
+ },
+ "GOOGL": {
+  "sector": "Technology",
+  "sic": "7370",
+  "sicDesc": "Services-Computer Programming, Data Processing, Etc."
+ },
+ "MO": {
+  "sector": "Industrials",
+  "sic": "2111",
+  "sicDesc": "Cigarettes"
+ },
+ "AMZN": {
+  "sector": "Consumer",
+  "sic": "5961",
+  "sicDesc": "Retail-Catalog & Mail-Order Houses"
+ },
+ "AMCR": {
+  "sector": "Industrials",
+  "sic": "3990",
+  "sicDesc": "Miscellaneous Manufacturing Industries"
+ },
+ "AEE": {
+  "sector": "Utilities",
+  "sic": "4931",
+  "sicDesc": "Electric & Other Services Combined"
+ },
+ "AEP": {
+  "sector": "Utilities",
+  "sic": "4911",
+  "sicDesc": "Electric Services"
+ },
+ "AXP": {
+  "sector": "Financials",
+  "sic": "6199",
+  "sicDesc": "Finance Services"
+ },
+ "AIG": {
+  "sector": "Financials",
+  "sic": "6331",
+  "sicDesc": "Fire, Marine & Casualty Insurance"
+ },
+ "AMT": {
+  "sector": "Real estate",
+  "sic": "6798",
+  "sicDesc": "Real Estate Investment Trusts"
+ },
+ "AWK": {
+  "sector": "Utilities",
+  "sic": "4941",
+  "sicDesc": "Water Supply"
+ },
+ "AMP": {
+  "sector": "Financials",
+  "sic": "6282",
+  "sicDesc": "Investment Advice"
+ },
+ "AME": {
+  "sector": "Industrials",
+  "sic": "3823",
+  "sicDesc": "Industrial Instruments For Measurement, Display, and Control"
+ },
+ "AMGN": {
+  "sector": "Healthcare",
+  "sic": "2836",
+  "sicDesc": "Biological Products, (No Diagnostic Substances)"
+ },
+ "APH": {
+  "sector": "Technology",
+  "sic": "3678",
+  "sicDesc": "Electronic Connectors"
+ },
+ "ADI": {
+  "sector": "Technology",
+  "sic": "3674",
+  "sicDesc": "Semiconductors & Related Devices"
+ },
+ "AON": {
+  "sector": "Financials",
+  "sic": "6411",
+  "sicDesc": "Insurance Agents, Brokers & Service"
+ },
+ "APA": {
+  "sector": "Resources",
+  "sic": "1311",
+  "sicDesc": "Crude Petroleum & Natural Gas"
+ },
+ "APO": {
+  "sector": "Financials",
+  "sic": "6282",
+  "sicDesc": "Investment Advice"
+ },
+ "AAPL": {
+  "sector": "Technology",
+  "sic": "3571",
+  "sicDesc": "Electronic Computers"
+ },
+ "AMAT": {
+  "sector": "Technology",
+  "sic": "3674",
+  "sicDesc": "Semiconductors & Related Devices"
+ },
+ "APP": {
+  "sector": "Technology",
+  "sic": "7370",
+  "sicDesc": "Services-Computer Programming, Data Processing, Etc."
+ },
+ "APTV": {
+  "sector": "Industrials",
+  "sic": "3714",
+  "sicDesc": "Motor Vehicle Parts & Accessories"
+ },
+ "ACGL": {
+  "sector": "Financials",
+  "sic": "6331",
+  "sicDesc": "Fire, Marine & Casualty Insurance"
+ },
+ "ADM": {
+  "sector": "Industrials",
+  "sic": "2070",
+  "sicDesc": "Fats & Oils"
+ },
+ "ARES": {
+  "sector": "Financials",
+  "sic": "6282",
+  "sicDesc": "Investment Advice"
+ },
+ "ANET": {
+  "sector": "Technology",
+  "sic": "3576",
+  "sicDesc": "Computer Communications Equipment"
+ },
+ "AJG": {
+  "sector": "Financials",
+  "sic": "6411",
+  "sicDesc": "Insurance Agents, Brokers & Service"
+ },
+ "AIZ": {
+  "sector": "Financials",
+  "sic": "6399",
+  "sicDesc": "Insurance Carriers, NEC"
+ },
+ "T": {
+  "sector": "Transport & comms",
+  "sic": "4813",
+  "sicDesc": "Telephone Communications (No Radiotelephone)"
+ },
+ "ATO": {
+  "sector": "Utilities",
+  "sic": "4924",
+  "sicDesc": "Natural Gas Distribution"
+ },
+ "ADSK": {
+  "sector": "Technology",
+  "sic": "7372",
+  "sicDesc": "Services-Prepackaged Software"
+ },
+ "ADP": {
+  "sector": "Technology",
+  "sic": "7374",
+  "sicDesc": "Services-Computer Processing & Data Preparation"
+ },
+ "AZO": {
+  "sector": "Consumer",
+  "sic": "5531",
+  "sicDesc": "Retail-Auto & Home Supply Stores"
+ },
+ "AVB": {
+  "sector": "Real estate",
+  "sic": "6798",
+  "sicDesc": "Real Estate Investment Trusts"
+ },
+ "AVY": {
+  "sector": "Industrials",
+  "sic": "2670",
+  "sicDesc": "Converted Paper & Paperboard Prods (No Contaners/Boxes)"
+ },
+ "AXON": {
+  "sector": "Industrials",
+  "sic": "3480",
+  "sicDesc": "Ordnance & Accessories, (No Vehicles/Guided Missiles)"
+ },
+ "BKR": {
+  "sector": "Industrials",
+  "sic": "3533",
+  "sicDesc": "Oil & Gas Field Machinery & Equipment"
+ },
+ "BALL": {
+  "sector": "Industrials",
+  "sic": "3411",
+  "sicDesc": "Metal Cans"
+ },
+ "BAC": {
+  "sector": "Financials",
+  "sic": "6021",
+  "sicDesc": "National Commercial Banks"
+ },
+ "BAX": {
+  "sector": "Industrials",
+  "sic": "3841",
+  "sicDesc": "Surgical & Medical Instruments & Apparatus"
+ },
+ "BDX": {
+  "sector": "Industrials",
+  "sic": "3841",
+  "sicDesc": "Surgical & Medical Instruments & Apparatus"
+ },
+ "BRK-B": {
+  "sector": "Financials",
+  "sic": "6331",
+  "sicDesc": "Fire, Marine & Casualty Insurance"
+ },
+ "BBY": {
+  "sector": "Consumer",
+  "sic": "5731",
+  "sicDesc": "Retail-Radio, Tv & Consumer Electronics Stores"
+ },
+ "TECH": {
+  "sector": "Healthcare",
+  "sic": "2836",
+  "sicDesc": "Biological Products, (No Diagnostic Substances)"
+ },
+ "BIIB": {
+  "sector": "Healthcare",
+  "sic": "2836",
+  "sicDesc": "Biological Products, (No Diagnostic Substances)"
+ },
+ "BLK": {
+  "sector": "Financials",
+  "sic": "6211",
+  "sicDesc": "Security Brokers, Dealers & Flotation Companies"
+ },
+ "BX": {
+  "sector": "Financials",
+  "sic": "6282",
+  "sicDesc": "Investment Advice"
+ },
+ "XYZ": {
+  "sector": "Technology",
+  "sic": "7372",
+  "sicDesc": "Services-Prepackaged Software"
+ },
+ "BNY": {
+  "sector": "Financials",
+  "sic": "6022",
+  "sicDesc": "State Commercial Banks"
+ },
+ "BA": {
+  "sector": "Industrials",
+  "sic": "3721",
+  "sicDesc": "Aircraft"
+ },
+ "BKNG": {
+  "sector": "Transport & comms",
+  "sic": "4700",
+  "sicDesc": "Transportation Services"
+ },
+ "BSX": {
+  "sector": "Industrials",
+  "sic": "3841",
+  "sicDesc": "Surgical & Medical Instruments & Apparatus"
+ },
+ "BMY": {
+  "sector": "Healthcare",
+  "sic": "2834",
+  "sicDesc": "Pharmaceutical Preparations"
+ },
+ "AVGO": {
+  "sector": "Technology",
+  "sic": "3674",
+  "sicDesc": "Semiconductors & Related Devices"
+ },
+ "BR": {
+  "sector": "Other",
+  "sic": "7389",
+  "sicDesc": "Services-Business Services, NEC"
+ },
+ "BRO": {
+  "sector": "Financials",
+  "sic": "6411",
+  "sicDesc": "Insurance Agents, Brokers & Service"
+ },
+ "BF-B": {
+  "sector": "Industrials",
+  "sic": "2080",
+  "sicDesc": "Beverages"
+ },
+ "BLDR": {
+  "sector": "Consumer",
+  "sic": "5211",
+  "sicDesc": "Retail-Lumber & Other Building Materials Dealers"
+ },
+ "BG": {
+  "sector": "Industrials",
+  "sic": "2070",
+  "sicDesc": "Fats & Oils"
+ },
+ "BXP": {
+  "sector": "Real estate",
+  "sic": "6798",
+  "sicDesc": "Real Estate Investment Trusts"
+ },
+ "CHRW": {
+  "sector": "Transport & comms",
+  "sic": "4731",
+  "sicDesc": "Arrangement of  Transportation of  Freight & Cargo"
+ },
+ "CDNS": {
+  "sector": "Technology",
+  "sic": "7372",
+  "sicDesc": "Services-Prepackaged Software"
+ },
+ "CPT": {
+  "sector": "Real estate",
+  "sic": "6798",
+  "sicDesc": "Real Estate Investment Trusts"
+ },
+ "COF": {
+  "sector": "Financials",
+  "sic": "6021",
+  "sicDesc": "National Commercial Banks"
+ },
+ "CAH": {
+  "sector": "Other",
+  "sic": "5122",
+  "sicDesc": "Wholesale-Drugs, Proprietaries & Druggists' Sundries"
+ },
+ "CCL": {
+  "sector": "Transport & comms",
+  "sic": "4400",
+  "sicDesc": "Water Transportation"
+ },
+ "CARR": {
+  "sector": "Industrials",
+  "sic": "3585",
+  "sicDesc": "Air-Cond & Warm Air Heatg Equip & Comm & Indl Refrig Equip"
+ },
+ "CVNA": {
+  "sector": "Consumer",
+  "sic": "5500",
+  "sicDesc": "Retail-Auto Dealers & Gasoline Stations"
+ },
+ "CASY": {
+  "sector": "Consumer",
+  "sic": "5500",
+  "sicDesc": "Retail-Auto Dealers & Gasoline Stations"
+ },
+ "CAT": {
+  "sector": "Industrials",
+  "sic": "3531",
+  "sicDesc": "Construction Machinery & Equip"
+ },
+ "CBOE": {
+  "sector": "Financials",
+  "sic": "6200",
+  "sicDesc": "Security & Commodity Brokers, Dealers, Exchanges & Services"
+ },
+ "CBRE": {
+  "sector": "Real estate",
+  "sic": "6500",
+  "sicDesc": "Real Estate"
+ },
+ "CDW": {
+  "sector": "Consumer",
+  "sic": "5961",
+  "sicDesc": "Retail-Catalog & Mail-Order Houses"
+ },
+ "COR": {
+  "sector": "Other",
+  "sic": "5122",
+  "sicDesc": "Wholesale-Drugs, Proprietaries & Druggists' Sundries"
+ },
+ "CNC": {
+  "sector": "Financials",
+  "sic": "6324",
+  "sicDesc": "Hospital & Medical Service Plans"
+ },
+ "CNP": {
+  "sector": "Utilities",
+  "sic": "4911",
+  "sicDesc": "Electric Services"
+ },
+ "CF": {
+  "sector": "Industrials",
+  "sic": "2870",
+  "sicDesc": "Agricultural Chemicals"
+ },
+ "CRL": {
+  "sector": "Other",
+  "sic": "8731",
+  "sicDesc": "Services-Commercial Physical & Biological Research"
+ },
+ "SCHW": {
+  "sector": "Financials",
+  "sic": "6211",
+  "sicDesc": "Security Brokers, Dealers & Flotation Companies"
+ },
+ "CHTR": {
+  "sector": "Transport & comms",
+  "sic": "4841",
+  "sicDesc": "Cable & Other Pay Television Services"
+ },
+ "CVX": {
+  "sector": "Industrials",
+  "sic": "2911",
+  "sicDesc": "Petroleum Refining"
+ },
+ "CMG": {
+  "sector": "Consumer",
+  "sic": "5812",
+  "sicDesc": "Retail-Eating  Places"
+ },
+ "CB": {
+  "sector": "Financials",
+  "sic": "6331",
+  "sicDesc": "Fire, Marine & Casualty Insurance"
+ },
+ "CHD": {
+  "sector": "Industrials",
+  "sic": "2840",
+  "sicDesc": "Soap, Detergents, Cleang Preparations, Perfumes, Cosmetics"
+ },
+ "CIEN": {
+  "sector": "Industrials",
+  "sic": "3661",
+  "sicDesc": "Telephone & Telegraph Apparatus"
+ },
+ "CI": {
+  "sector": "Financials",
+  "sic": "6324",
+  "sicDesc": "Hospital & Medical Service Plans"
+ },
+ "CINF": {
+  "sector": "Financials",
+  "sic": "6331",
+  "sicDesc": "Fire, Marine & Casualty Insurance"
+ },
+ "CTAS": {
+  "sector": "Industrials",
+  "sic": "2320",
+  "sicDesc": "Men's & Boys' Furnishgs, Work Clothg, & Allied Garments"
+ },
+ "CSCO": {
+  "sector": "Technology",
+  "sic": "3576",
+  "sicDesc": "Computer Communications Equipment"
+ },
+ "C": {
+  "sector": "Financials",
+  "sic": "6021",
+  "sicDesc": "National Commercial Banks"
+ },
+ "CFG": {
+  "sector": "Financials",
+  "sic": "6022",
+  "sicDesc": "State Commercial Banks"
+ },
+ "CLX": {
+  "sector": "Industrials",
+  "sic": "2842",
+  "sicDesc": "Specialty Cleaning, Polishing and Sanitation Preparations"
+ },
+ "CME": {
+  "sector": "Financials",
+  "sic": "6200",
+  "sicDesc": "Security & Commodity Brokers, Dealers, Exchanges & Services"
+ },
+ "CMS": {
+  "sector": "Utilities",
+  "sic": "4931",
+  "sicDesc": "Electric & Other Services Combined"
+ },
+ "KO": {
+  "sector": "Industrials",
+  "sic": "2080",
+  "sicDesc": "Beverages"
+ },
+ "CTSH": {
+  "sector": "Technology",
+  "sic": "7371",
+  "sicDesc": "Services-Computer Programming Services"
+ },
+ "COHR": {
+  "sector": "Industrials",
+  "sic": "3827",
+  "sicDesc": "Optical Instruments & Lenses"
+ },
+ "COIN": {
+  "sector": "Financials",
+  "sic": "6199",
+  "sicDesc": "Finance Services"
+ },
+ "CL": {
+  "sector": "Industrials",
+  "sic": "2844",
+  "sicDesc": "Perfumes, Cosmetics & Other Toilet Preparations"
+ },
+ "CMCSA": {
+  "sector": "Transport & comms",
+  "sic": "4841",
+  "sicDesc": "Cable & Other Pay Television Services"
+ },
+ "FIX": {
+  "sector": "Other",
+  "sic": "1731",
+  "sicDesc": "Electrical Work"
+ },
+ "COP": {
+  "sector": "Industrials",
+  "sic": "2911",
+  "sicDesc": "Petroleum Refining"
+ },
+ "ED": {
+  "sector": "Utilities",
+  "sic": "4931",
+  "sicDesc": "Electric & Other Services Combined"
+ },
+ "STZ": {
+  "sector": "Industrials",
+  "sic": "2080",
+  "sicDesc": "Beverages"
+ },
+ "CEG": {
+  "sector": "Utilities",
+  "sic": "4911",
+  "sicDesc": "Electric Services"
+ },
+ "COO": {
+  "sector": "Industrials",
+  "sic": "3851",
+  "sicDesc": "Ophthalmic Goods"
+ },
+ "CPRT": {
+  "sector": "Consumer",
+  "sic": "5500",
+  "sicDesc": "Retail-Auto Dealers & Gasoline Stations"
+ },
+ "GLW": {
+  "sector": "Industrials",
+  "sic": "3357",
+  "sicDesc": "Drawing & Insulating of  Nonferrous Wire"
+ },
+ "CPAY": {
+  "sector": "Other",
+  "sic": "7389",
+  "sicDesc": "Services-Business Services, NEC"
+ },
+ "CTVA": {
+  "sector": "Other",
+  "sic": "0100",
+  "sicDesc": "Agricultural Production-Crops"
+ },
+ "CSGP": {
+  "sector": "Other",
+  "sic": "7389",
+  "sicDesc": "Services-Business Services, NEC"
+ },
+ "COST": {
+  "sector": "Consumer",
+  "sic": "5331",
+  "sicDesc": "Retail-Variety Stores"
+ },
+ "CRH": {
+  "sector": "Industrials",
+  "sic": "3241",
+  "sicDesc": "Cement, Hydraulic"
+ },
+ "CRWD": {
+  "sector": "Technology",
+  "sic": "7372",
+  "sicDesc": "Services-Prepackaged Software"
+ },
+ "CCI": {
+  "sector": "Real estate",
+  "sic": "6798",
+  "sicDesc": "Real Estate Investment Trusts"
+ },
+ "CSX": {
+  "sector": "Transport & comms",
+  "sic": "4011",
+  "sicDesc": "Railroads, Line-Haul Operating"
+ },
+ "CMI": {
+  "sector": "Industrials",
+  "sic": "3510",
+  "sicDesc": "Engines & Turbines"
+ },
+ "CVS": {
+  "sector": "Consumer",
+  "sic": "5912",
+  "sicDesc": "Retail-Drug Stores and Proprietary Stores"
+ },
+ "DHR": {
+  "sector": "Industrials",
+  "sic": "3823",
+  "sicDesc": "Industrial Instruments For Measurement, Display, and Control"
+ },
+ "DRI": {
+  "sector": "Consumer",
+  "sic": "5812",
+  "sicDesc": "Retail-Eating  Places"
+ },
+ "DDOG": {
+  "sector": "Technology",
+  "sic": "7372",
+  "sicDesc": "Services-Prepackaged Software"
+ },
+ "DVA": {
+  "sector": "Healthcare",
+  "sic": "8090",
+  "sicDesc": "Services-Misc Health & Allied Services, NEC"
+ },
+ "DECK": {
+  "sector": "Industrials",
+  "sic": "3021",
+  "sicDesc": "Rubber & Plastics Footwear"
+ },
+ "DE": {
+  "sector": "Industrials",
+  "sic": "3523",
+  "sicDesc": "Farm Machinery & Equipment"
+ },
+ "DELL": {
+  "sector": "Technology",
+  "sic": "3571",
+  "sicDesc": "Electronic Computers"
+ },
+ "DAL": {
+  "sector": "Transport & comms",
+  "sic": "4512",
+  "sicDesc": "Air Transportation, Scheduled"
+ },
+ "DVN": {
+  "sector": "Resources",
+  "sic": "1311",
+  "sicDesc": "Crude Petroleum & Natural Gas"
+ },
+ "DXCM": {
+  "sector": "Industrials",
+  "sic": "3841",
+  "sicDesc": "Surgical & Medical Instruments & Apparatus"
+ },
+ "FANG": {
+  "sector": "Resources",
+  "sic": "1311",
+  "sicDesc": "Crude Petroleum & Natural Gas"
+ },
+ "DLR": {
+  "sector": "Real estate",
+  "sic": "6798",
+  "sicDesc": "Real Estate Investment Trusts"
+ },
+ "DG": {
+  "sector": "Consumer",
+  "sic": "5331",
+  "sicDesc": "Retail-Variety Stores"
+ },
+ "DLTR": {
+  "sector": "Consumer",
+  "sic": "5331",
+  "sicDesc": "Retail-Variety Stores"
+ },
+ "D": {
+  "sector": "Utilities",
+  "sic": "4911",
+  "sicDesc": "Electric Services"
+ },
+ "DPZ": {
+  "sector": "Other",
+  "sic": "5140",
+  "sicDesc": "Wholesale-Groceries & Related Products"
+ },
+ "DASH": {
+  "sector": "Other",
+  "sic": "7389",
+  "sicDesc": "Services-Business Services, NEC"
+ },
+ "DOV": {
+  "sector": "Industrials",
+  "sic": "3530",
+  "sicDesc": "Construction, Mining & Materials Handling Machinery & Equip"
+ },
+ "DOW": {
+  "sector": "Industrials",
+  "sic": "2821",
+  "sicDesc": "Plastic Materials, Synth Resins & Nonvulcan Elastomers"
+ },
+ "DHI": {
+  "sector": "Other",
+  "sic": "1531",
+  "sicDesc": "Operative Builders"
+ },
+ "DTE": {
+  "sector": "Utilities",
+  "sic": "4911",
+  "sicDesc": "Electric Services"
+ },
+ "DUK": {
+  "sector": "Utilities",
+  "sic": "4931",
+  "sicDesc": "Electric & Other Services Combined"
+ },
+ "DD": {
+  "sector": "Industrials",
+  "sic": "2821",
+  "sicDesc": "Plastic Materials, Synth Resins & Nonvulcan Elastomers"
+ },
+ "ETN": {
+  "sector": "Industrials",
+  "sic": "3590",
+  "sicDesc": "Misc Industrial & Commercial Machinery & Equipment"
+ },
+ "EBAY": {
+  "sector": "Other",
+  "sic": "7389",
+  "sicDesc": "Services-Business Services, NEC"
+ },
+ "ECHO": {
+  "sector": "Transport & comms",
+  "sic": "4899",
+  "sicDesc": "Communications Services, NEC"
+ },
+ "ECL": {
+  "sector": "Industrials",
+  "sic": "2840",
+  "sicDesc": "Soap, Detergents, Cleang Preparations, Perfumes, Cosmetics"
+ },
+ "EIX": {
+  "sector": "Utilities",
+  "sic": "4911",
+  "sicDesc": "Electric Services"
+ },
+ "EW": {
+  "sector": "Industrials",
+  "sic": "3842",
+  "sicDesc": "Orthopedic, Prosthetic & Surgical Appliances & Supplies"
+ },
+ "ELV": {
+  "sector": "Financials",
+  "sic": "6324",
+  "sicDesc": "Hospital & Medical Service Plans"
+ },
+ "EME": {
+  "sector": "Other",
+  "sic": "1731",
+  "sicDesc": "Electrical Work"
+ },
+ "EMR": {
+  "sector": "Industrials",
+  "sic": "3600",
+  "sicDesc": "Electronic & Other Electrical Equipment (No Computer Equip)"
+ },
+ "ETR": {
+  "sector": "Utilities",
+  "sic": "4911",
+  "sicDesc": "Electric Services"
+ },
+ "EOG": {
+  "sector": "Resources",
+  "sic": "1311",
+  "sicDesc": "Crude Petroleum & Natural Gas"
+ },
+ "EQT": {
+  "sector": "Resources",
+  "sic": "1311",
+  "sicDesc": "Crude Petroleum & Natural Gas"
+ },
+ "EFX": {
+  "sector": "Other",
+  "sic": "7320",
+  "sicDesc": "Services-Consumer Credit Reporting, Collection Agencies"
+ },
+ "EQIX": {
+  "sector": "Real estate",
+  "sic": "6798",
+  "sicDesc": "Real Estate Investment Trusts"
+ },
+ "EQR": {
+  "sector": "Real estate",
+  "sic": "6798",
+  "sicDesc": "Real Estate Investment Trusts"
+ },
+ "ERIE": {
+  "sector": "Financials",
+  "sic": "6411",
+  "sicDesc": "Insurance Agents, Brokers & Service"
+ },
+ "ESS": {
+  "sector": "Real estate",
+  "sic": "6798",
+  "sicDesc": "Real Estate Investment Trusts"
+ },
+ "EL": {
+  "sector": "Industrials",
+  "sic": "2844",
+  "sicDesc": "Perfumes, Cosmetics & Other Toilet Preparations"
+ },
+ "EG": {
+  "sector": "Financials",
+  "sic": "6331",
+  "sicDesc": "Fire, Marine & Casualty Insurance"
+ },
+ "EVRG": {
+  "sector": "Utilities",
+  "sic": "4931",
+  "sicDesc": "Electric & Other Services Combined"
+ },
+ "ES": {
+  "sector": "Utilities",
+  "sic": "4911",
+  "sicDesc": "Electric Services"
+ },
+ "EXC": {
+  "sector": "Utilities",
+  "sic": "4931",
+  "sicDesc": "Electric & Other Services Combined"
+ },
+ "EXE": {
+  "sector": "Resources",
+  "sic": "1311",
+  "sicDesc": "Crude Petroleum & Natural Gas"
+ },
+ "EXPE": {
+  "sector": "Transport & comms",
+  "sic": "4700",
+  "sicDesc": "Transportation Services"
+ },
+ "EXPD": {
+  "sector": "Transport & comms",
+  "sic": "4731",
+  "sicDesc": "Arrangement of  Transportation of  Freight & Cargo"
+ },
+ "EXR": {
+  "sector": "Real estate",
+  "sic": "6798",
+  "sicDesc": "Real Estate Investment Trusts"
+ },
+ "XOM": {
+  "sector": "Industrials",
+  "sic": "2911",
+  "sicDesc": "Petroleum Refining"
+ },
+ "FFIV": {
+  "sector": "Technology",
+  "sic": "3576",
+  "sicDesc": "Computer Communications Equipment"
+ },
+ "FDS": {
+  "sector": "Technology",
+  "sic": "7370",
+  "sicDesc": "Services-Computer Programming, Data Processing, Etc."
+ },
+ "FICO": {
+  "sector": "Other",
+  "sic": "7389",
+  "sicDesc": "Services-Business Services, NEC"
+ },
+ "FAST": {
+  "sector": "Consumer",
+  "sic": "5200",
+  "sicDesc": "Retail-Building Materials, Hardware, Garden Supply"
+ },
+ "FRT": {
+  "sector": "Real estate",
+  "sic": "6798",
+  "sicDesc": "Real Estate Investment Trusts"
+ },
+ "FDX": {
+  "sector": "Transport & comms",
+  "sic": "4513",
+  "sicDesc": "Air Courier Services"
+ },
+ "FDXF": {
+  "sector": "Transport & comms",
+  "sic": "4513",
+  "sicDesc": "Air Courier Services"
+ },
+ "FERG": {
+  "sector": "Other",
+  "sic": "5070",
+  "sicDesc": "Wholesale-Hardware & Plumbing & Heating Equipment & Supplies"
+ },
+ "FIS": {
+  "sector": "Other",
+  "sic": "7389",
+  "sicDesc": "Services-Business Services, NEC"
+ },
+ "FITB": {
+  "sector": "Financials",
+  "sic": "6022",
+  "sicDesc": "State Commercial Banks"
+ },
+ "FSLR": {
+  "sector": "Technology",
+  "sic": "3674",
+  "sicDesc": "Semiconductors & Related Devices"
+ },
+ "FE": {
+  "sector": "Utilities",
+  "sic": "4911",
+  "sicDesc": "Electric Services"
+ },
+ "FISV": {
+  "sector": "Other",
+  "sic": "7389",
+  "sicDesc": "Services-Business Services, NEC"
+ },
+ "FLEX": {
+  "sector": "Technology",
+  "sic": "3672",
+  "sicDesc": "Printed Circuit Boards"
+ },
+ "F": {
+  "sector": "Industrials",
+  "sic": "3711",
+  "sicDesc": "Motor Vehicles & Passenger Car Bodies"
+ },
+ "FTNT": {
+  "sector": "Technology",
+  "sic": "3577",
+  "sicDesc": "Computer Peripheral Equipment, NEC"
+ },
+ "FTV": {
+  "sector": "Industrials",
+  "sic": "3823",
+  "sicDesc": "Industrial Instruments For Measurement, Display, and Control"
+ },
+ "FOXA": {
+  "sector": "Transport & comms",
+  "sic": "4833",
+  "sicDesc": "Television Broadcasting Stations"
+ },
+ "BEN": {
+  "sector": "Financials",
+  "sic": "6282",
+  "sicDesc": "Investment Advice"
+ },
+ "FCX": {
+  "sector": "Resources",
+  "sic": "1000",
+  "sicDesc": "Metal Mining"
+ },
+ "GRMN": {
+  "sector": "Industrials",
+  "sic": "3812",
+  "sicDesc": "Search, Detection, Navigation, Guidance, Aeronautical Sys"
+ },
+ "IT": {
+  "sector": "Other",
+  "sic": "8741",
+  "sicDesc": "Services-Management Services"
+ },
+ "GE": {
+  "sector": "Industrials",
+  "sic": "3600",
+  "sicDesc": "Electronic & Other Electrical Equipment (No Computer Equip)"
+ },
+ "GEHC": {
+  "sector": "Industrials",
+  "sic": "3844",
+  "sicDesc": "X-Ray Apparatus & Tubes & Related Irradiation Apparatus"
+ },
+ "GEV": {
+  "sector": "Industrials",
+  "sic": "3600",
+  "sicDesc": "Electronic & Other Electrical Equipment (No Computer Equip)"
+ },
+ "GEN": {
+  "sector": "Technology",
+  "sic": "7372",
+  "sicDesc": "Services-Prepackaged Software"
+ },
+ "GNRC": {
+  "sector": "Industrials",
+  "sic": "3621",
+  "sicDesc": "Motors & Generators"
+ },
+ "GD": {
+  "sector": "Industrials",
+  "sic": "3730",
+  "sicDesc": "Ship & Boat Building & Repairing"
+ },
+ "GIS": {
+  "sector": "Industrials",
+  "sic": "2040",
+  "sicDesc": "Grain Mill Products"
+ },
+ "GM": {
+  "sector": "Industrials",
+  "sic": "3711",
+  "sicDesc": "Motor Vehicles & Passenger Car Bodies"
+ },
+ "GPC": {
+  "sector": "Other",
+  "sic": "5013",
+  "sicDesc": "Wholesale-Motor Vehicle Supplies & New Parts"
+ },
+ "GILD": {
+  "sector": "Healthcare",
+  "sic": "2836",
+  "sicDesc": "Biological Products, (No Diagnostic Substances)"
+ },
+ "GPN": {
+  "sector": "Other",
+  "sic": "7389",
+  "sicDesc": "Services-Business Services, NEC"
+ },
+ "GL": {
+  "sector": "Financials",
+  "sic": "6311",
+  "sicDesc": "Life Insurance"
+ },
+ "GDDY": {
+  "sector": "Technology",
+  "sic": "7373",
+  "sicDesc": "Services-Computer Integrated Systems Design"
+ },
+ "GS": {
+  "sector": "Financials",
+  "sic": "6211",
+  "sicDesc": "Security Brokers, Dealers & Flotation Companies"
+ },
+ "HAL": {
+  "sector": "Resources",
+  "sic": "1389",
+  "sicDesc": "Oil & Gas Field Services, NEC"
+ },
+ "HIG": {
+  "sector": "Financials",
+  "sic": "6331",
+  "sicDesc": "Fire, Marine & Casualty Insurance"
+ },
+ "HAS": {
+  "sector": "Industrials",
+  "sic": "3944",
+  "sicDesc": "Games, Toys & Children's Vehicles (No Dolls & Bicycles)"
+ },
+ "HCA": {
+  "sector": "Healthcare",
+  "sic": "8062",
+  "sicDesc": "Services-General Medical & Surgical Hospitals, NEC"
+ },
+ "DOC": {
+  "sector": "Real estate",
+  "sic": "6798",
+  "sicDesc": "Real Estate Investment Trusts"
+ },
+ "HSIC": {
+  "sector": "Other",
+  "sic": "5047",
+  "sicDesc": "Wholesale-Medical, Dental & Hospital Equipment & Supplies"
+ },
+ "HSY": {
+  "sector": "Industrials",
+  "sic": "2060",
+  "sicDesc": "Sugar & Confectionery Products"
+ },
+ "HPE": {
+  "sector": "Technology",
+  "sic": "3570",
+  "sicDesc": "Computer & office Equipment"
+ },
+ "HLT": {
+  "sector": "Other",
+  "sic": "7011",
+  "sicDesc": "Hotels & Motels"
+ },
+ "HD": {
+  "sector": "Consumer",
+  "sic": "5211",
+  "sicDesc": "Retail-Lumber & Other Building Materials Dealers"
+ },
+ "HONA": {
+  "sector": "Industrials",
+  "sic": "3724",
+  "sicDesc": "Aircraft Engines & Engine Parts"
+ },
+ "HON": {
+  "sector": "Industrials",
+  "sic": "3724",
+  "sicDesc": "Aircraft Engines & Engine Parts"
+ },
+ "HRL": {
+  "sector": "Industrials",
+  "sic": "2011",
+  "sicDesc": "Meat Packing Plants"
+ },
+ "HST": {
+  "sector": "Real estate",
+  "sic": "6798",
+  "sicDesc": "Real Estate Investment Trusts"
+ },
+ "HWM": {
+  "sector": "Industrials",
+  "sic": "3350",
+  "sicDesc": "Rolling Drawing & Extruding of  Nonferrous Metals"
+ },
+ "HPQ": {
+  "sector": "Technology",
+  "sic": "3570",
+  "sicDesc": "Computer & office Equipment"
+ },
+ "HUBB": {
+  "sector": "Technology",
+  "sic": "3670",
+  "sicDesc": "Electronic Components & Accessories"
+ },
+ "HUM": {
+  "sector": "Financials",
+  "sic": "6324",
+  "sicDesc": "Hospital & Medical Service Plans"
+ },
+ "HBAN": {
+  "sector": "Financials",
+  "sic": "6021",
+  "sicDesc": "National Commercial Banks"
+ },
+ "HII": {
+  "sector": "Industrials",
+  "sic": "3730",
+  "sicDesc": "Ship & Boat Building & Repairing"
+ },
+ "IBM": {
+  "sector": "Technology",
+  "sic": "3570",
+  "sicDesc": "Computer & office Equipment"
+ },
+ "IEX": {
+  "sector": "Industrials",
+  "sic": "3561",
+  "sicDesc": "Pumps & Pumping Equipment"
+ },
+ "IDXX": {
+  "sector": "Healthcare",
+  "sic": "2835",
+  "sicDesc": "In Vitro & In Vivo Diagnostic Substances"
+ },
+ "ITW": {
+  "sector": "Industrials",
+  "sic": "3560",
+  "sicDesc": "General Industrial Machinery & Equipment"
+ },
+ "INCY": {
+  "sector": "Other",
+  "sic": "8731",
+  "sicDesc": "Services-Commercial Physical & Biological Research"
+ },
+ "IR": {
+  "sector": "Industrials",
+  "sic": "3560",
+  "sicDesc": "General Industrial Machinery & Equipment"
+ },
+ "PODD": {
+  "sector": "Industrials",
+  "sic": "3841",
+  "sicDesc": "Surgical & Medical Instruments & Apparatus"
+ },
+ "INTC": {
+  "sector": "Technology",
+  "sic": "3674",
+  "sicDesc": "Semiconductors & Related Devices"
+ },
+ "IBKR": {
+  "sector": "Financials",
+  "sic": "6211",
+  "sicDesc": "Security Brokers, Dealers & Flotation Companies"
+ },
+ "ICE": {
+  "sector": "Financials",
+  "sic": "6200",
+  "sicDesc": "Security & Commodity Brokers, Dealers, Exchanges & Services"
+ },
+ "IFF": {
+  "sector": "Industrials",
+  "sic": "2860",
+  "sicDesc": "Industrial Organic Chemicals"
+ },
+ "IP": {
+  "sector": "Industrials",
+  "sic": "2621",
+  "sicDesc": "Paper Mills"
+ },
+ "INTU": {
+  "sector": "Technology",
+  "sic": "7372",
+  "sicDesc": "Services-Prepackaged Software"
+ },
+ "ISRG": {
+  "sector": "Industrials",
+  "sic": "3842",
+  "sicDesc": "Orthopedic, Prosthetic & Surgical Appliances & Supplies"
+ },
+ "IVZ": {
+  "sector": "Financials",
+  "sic": "6282",
+  "sicDesc": "Investment Advice"
+ },
+ "INVH": {
+  "sector": "Real estate",
+  "sic": "6510",
+  "sicDesc": "Real Estate Operators (No Developers) & Lessors"
+ },
+ "IQV": {
+  "sector": "Other",
+  "sic": "8731",
+  "sicDesc": "Services-Commercial Physical & Biological Research"
+ },
+ "IRM": {
+  "sector": "Real estate",
+  "sic": "6798",
+  "sicDesc": "Real Estate Investment Trusts"
+ },
+ "JBHT": {
+  "sector": "Transport & comms",
+  "sic": "4213",
+  "sicDesc": "Trucking (No Local)"
+ },
+ "JBL": {
+  "sector": "Technology",
+  "sic": "3672",
+  "sicDesc": "Printed Circuit Boards"
+ },
+ "JKHY": {
+  "sector": "Technology",
+  "sic": "7373",
+  "sicDesc": "Services-Computer Integrated Systems Design"
+ },
+ "J": {
+  "sector": "Other",
+  "sic": "1600",
+  "sicDesc": "Heavy Construction Other Than Bldg Const - Contractors"
+ },
+ "JNJ": {
+  "sector": "Healthcare",
+  "sic": "2834",
+  "sicDesc": "Pharmaceutical Preparations"
+ },
+ "JCI": {
+  "sector": "Industrials",
+  "sic": "3585",
+  "sicDesc": "Air-Cond & Warm Air Heatg Equip & Comm & Indl Refrig Equip"
+ },
+ "JPM": {
+  "sector": "Financials",
+  "sic": "6021",
+  "sicDesc": "National Commercial Banks"
+ },
+ "KVUE": {
+  "sector": "Industrials",
+  "sic": "2844",
+  "sicDesc": "Perfumes, Cosmetics & Other Toilet Preparations"
+ },
+ "KDP": {
+  "sector": "Industrials",
+  "sic": "2080",
+  "sicDesc": "Beverages"
+ },
+ "KEY": {
+  "sector": "Financials",
+  "sic": "6021",
+  "sicDesc": "National Commercial Banks"
+ },
+ "KEYS": {
+  "sector": "Industrials",
+  "sic": "3823",
+  "sicDesc": "Industrial Instruments For Measurement, Display, and Control"
+ },
+ "KMB": {
+  "sector": "Industrials",
+  "sic": "2670",
+  "sicDesc": "Converted Paper & Paperboard Prods (No Contaners/Boxes)"
+ },
+ "KIM": {
+  "sector": "Real estate",
+  "sic": "6798",
+  "sicDesc": "Real Estate Investment Trusts"
+ },
+ "KMI": {
+  "sector": "Utilities",
+  "sic": "4922",
+  "sicDesc": "Natural Gas Transmission"
+ },
+ "KKR": {
+  "sector": "Financials",
+  "sic": "6282",
+  "sicDesc": "Investment Advice"
+ },
+ "KLAC": {
+  "sector": "Industrials",
+  "sic": "3827",
+  "sicDesc": "Optical Instruments & Lenses"
+ },
+ "KHC": {
+  "sector": "Industrials",
+  "sic": "2030",
+  "sicDesc": "Canned, Frozen & Preservd Fruit, Veg & Food Specialties"
+ },
+ "KR": {
+  "sector": "Consumer",
+  "sic": "5411",
+  "sicDesc": "Retail-Grocery Stores"
+ },
+ "LHX": {
+  "sector": "Industrials",
+  "sic": "3812",
+  "sicDesc": "Search, Detection, Navigation, Guidance, Aeronautical Sys"
+ },
+ "LH": {
+  "sector": "Healthcare",
+  "sic": "8071",
+  "sicDesc": "Services-Medical Laboratories"
+ },
+ "LRCX": {
+  "sector": "Industrials",
+  "sic": "3559",
+  "sicDesc": "Special Industry Machinery, NEC"
+ },
+ "LVS": {
+  "sector": "Other",
+  "sic": "7011",
+  "sicDesc": "Hotels & Motels"
+ },
+ "LDOS": {
+  "sector": "Technology",
+  "sic": "7373",
+  "sicDesc": "Services-Computer Integrated Systems Design"
+ },
+ "LEN": {
+  "sector": "Other",
+  "sic": "1520",
+  "sicDesc": "General Bldg Contractors - Residential Bldgs"
+ },
+ "LII": {
+  "sector": "Industrials",
+  "sic": "3585",
+  "sicDesc": "Air-Cond & Warm Air Heatg Equip & Comm & Indl Refrig Equip"
+ },
+ "LLY": {
+  "sector": "Healthcare",
+  "sic": "2834",
+  "sicDesc": "Pharmaceutical Preparations"
+ },
+ "LIN": {
+  "sector": "Industrials",
+  "sic": "2810",
+  "sicDesc": "Industrial Inorganic Chemicals"
+ },
+ "LYV": {
+  "sector": "Other",
+  "sic": "7900",
+  "sicDesc": "Services-Amusement & Recreation Services"
+ },
+ "LMT": {
+  "sector": "Industrials",
+  "sic": "3760",
+  "sicDesc": "Guided Missiles & Space Vehicles & Parts"
+ },
+ "L": {
+  "sector": "Financials",
+  "sic": "6331",
+  "sicDesc": "Fire, Marine & Casualty Insurance"
+ },
+ "LOW": {
+  "sector": "Consumer",
+  "sic": "5211",
+  "sicDesc": "Retail-Lumber & Other Building Materials Dealers"
+ },
+ "LULU": {
+  "sector": "Industrials",
+  "sic": "2300",
+  "sicDesc": "Apparel & Other Finishd Prods of  Fabrics & Similar Matl"
+ },
+ "LITE": {
+  "sector": "Industrials",
+  "sic": "3669",
+  "sicDesc": "Communications Equipment, NEC"
+ },
+ "LYB": {
+  "sector": "Industrials",
+  "sic": "2860",
+  "sicDesc": "Industrial Organic Chemicals"
+ },
+ "MTB": {
+  "sector": "Financials",
+  "sic": "6022",
+  "sicDesc": "State Commercial Banks"
+ },
+ "MPC": {
+  "sector": "Industrials",
+  "sic": "2911",
+  "sicDesc": "Petroleum Refining"
+ },
+ "MAR": {
+  "sector": "Other",
+  "sic": "7011",
+  "sicDesc": "Hotels & Motels"
+ },
+ "MRSH": {
+  "sector": "Financials",
+  "sic": "6411",
+  "sicDesc": "Insurance Agents, Brokers & Service"
+ },
+ "MLM": {
+  "sector": "Resources",
+  "sic": "1400",
+  "sicDesc": "Mining & Quarrying of  Nonmetallic Minerals (No Fuels)"
+ },
+ "MRVL": {
+  "sector": "Technology",
+  "sic": "3674",
+  "sicDesc": "Semiconductors & Related Devices"
+ },
+ "MAS": {
+  "sector": "Industrials",
+  "sic": "3430",
+  "sicDesc": "Heating Equip, Except Elec & Warm Air; & Plumbing Fixtures"
+ },
+ "MA": {
+  "sector": "Other",
+  "sic": "7389",
+  "sicDesc": "Services-Business Services, NEC"
+ },
+ "MKC": {
+  "sector": "Industrials",
+  "sic": "2090",
+  "sicDesc": "Miscellaneous Food Preparations & Kindred Products"
+ },
+ "MCD": {
+  "sector": "Consumer",
+  "sic": "5812",
+  "sicDesc": "Retail-Eating  Places"
+ },
+ "MCK": {
+  "sector": "Other",
+  "sic": "5122",
+  "sicDesc": "Wholesale-Drugs, Proprietaries & Druggists' Sundries"
+ },
+ "MDT": {
+  "sector": "Industrials",
+  "sic": "3845",
+  "sicDesc": "Electromedical & Electrotherapeutic Apparatus"
+ },
+ "MRK": {
+  "sector": "Healthcare",
+  "sic": "2834",
+  "sicDesc": "Pharmaceutical Preparations"
+ },
+ "META": {
+  "sector": "Technology",
+  "sic": "7370",
+  "sicDesc": "Services-Computer Programming, Data Processing, Etc."
+ },
+ "MET": {
+  "sector": "Financials",
+  "sic": "6311",
+  "sicDesc": "Life Insurance"
+ },
+ "MTD": {
+  "sector": "Industrials",
+  "sic": "3826",
+  "sicDesc": "Laboratory Analytical Instruments"
+ },
+ "MGM": {
+  "sector": "Other",
+  "sic": "7011",
+  "sicDesc": "Hotels & Motels"
+ },
+ "MCHP": {
+  "sector": "Technology",
+  "sic": "3674",
+  "sicDesc": "Semiconductors & Related Devices"
+ },
+ "MU": {
+  "sector": "Technology",
+  "sic": "3674",
+  "sicDesc": "Semiconductors & Related Devices"
+ },
+ "MSFT": {
+  "sector": "Technology",
+  "sic": "7372",
+  "sicDesc": "Services-Prepackaged Software"
+ },
+ "MAA": {
+  "sector": "Real estate",
+  "sic": "6798",
+  "sicDesc": "Real Estate Investment Trusts"
+ },
+ "MRNA": {
+  "sector": "Healthcare",
+  "sic": "2836",
+  "sicDesc": "Biological Products, (No Diagnostic Substances)"
+ },
+ "TAP": {
+  "sector": "Industrials",
+  "sic": "2082",
+  "sicDesc": "Malt Beverages"
+ },
+ "MDLZ": {
+  "sector": "Industrials",
+  "sic": "2000",
+  "sicDesc": "Food and Kindred Products"
+ },
+ "MPWR": {
+  "sector": "Technology",
+  "sic": "3674",
+  "sicDesc": "Semiconductors & Related Devices"
+ },
+ "MNST": {
+  "sector": "Industrials",
+  "sic": "2086",
+  "sicDesc": "Bottled & Canned Soft Drinks & Carbonated Waters"
+ },
+ "MCO": {
+  "sector": "Other",
+  "sic": "7320",
+  "sicDesc": "Services-Consumer Credit Reporting, Collection Agencies"
+ },
+ "MS": {
+  "sector": "Financials",
+  "sic": "6211",
+  "sicDesc": "Security Brokers, Dealers & Flotation Companies"
+ },
+ "MOS": {
+  "sector": "Industrials",
+  "sic": "2870",
+  "sicDesc": "Agricultural Chemicals"
+ },
+ "MSI": {
+  "sector": "Industrials",
+  "sic": "3663",
+  "sicDesc": "Radio & Tv Broadcasting & Communications Equipment"
+ },
+ "MSCI": {
+  "sector": "Other",
+  "sic": "7389",
+  "sicDesc": "Services-Business Services, NEC"
+ },
+ "NDAQ": {
+  "sector": "Financials",
+  "sic": "6200",
+  "sicDesc": "Security & Commodity Brokers, Dealers, Exchanges & Services"
+ },
+ "NTAP": {
+  "sector": "Technology",
+  "sic": "3572",
+  "sicDesc": "Computer Storage Devices"
+ },
+ "NFLX": {
+  "sector": "Other",
+  "sic": "7841",
+  "sicDesc": "Services-Video Tape Rental"
+ },
+ "NEM": {
+  "sector": "Resources",
+  "sic": "1040",
+  "sicDesc": "Gold and Silver Ores"
+ },
+ "NWSA": {
+  "sector": "Industrials",
+  "sic": "2711",
+  "sicDesc": "Newspapers: Publishing or  Publishing & Printing"
+ },
+ "NEE": {
+  "sector": "Utilities",
+  "sic": "4911",
+  "sicDesc": "Electric Services"
+ },
+ "NKE": {
+  "sector": "Industrials",
+  "sic": "3021",
+  "sicDesc": "Rubber & Plastics Footwear"
+ },
+ "NI": {
+  "sector": "Utilities",
+  "sic": "4931",
+  "sicDesc": "Electric & Other Services Combined"
+ },
+ "NDSN": {
+  "sector": "Industrials",
+  "sic": "3569",
+  "sicDesc": "General Industrial Machinery & Equipment, NEC"
+ },
+ "NSC": {
+  "sector": "Transport & comms",
+  "sic": "4011",
+  "sicDesc": "Railroads, Line-Haul Operating"
+ },
+ "NTRS": {
+  "sector": "Financials",
+  "sic": "6022",
+  "sicDesc": "State Commercial Banks"
+ },
+ "NOC": {
+  "sector": "Industrials",
+  "sic": "3812",
+  "sicDesc": "Search, Detection, Navigation, Guidance, Aeronautical Sys"
+ },
+ "NCLH": {
+  "sector": "Transport & comms",
+  "sic": "4400",
+  "sicDesc": "Water Transportation"
+ },
+ "NRG": {
+  "sector": "Utilities",
+  "sic": "4911",
+  "sicDesc": "Electric Services"
+ },
+ "NUE": {
+  "sector": "Industrials",
+  "sic": "3312",
+  "sicDesc": "Steel Works, Blast Furnaces & Rolling Mills (Coke Ovens)"
+ },
+ "NVDA": {
+  "sector": "Technology",
+  "sic": "3674",
+  "sicDesc": "Semiconductors & Related Devices"
+ },
+ "NVR": {
+  "sector": "Other",
+  "sic": "1531",
+  "sicDesc": "Operative Builders"
+ },
+ "NXPI": {
+  "sector": "Technology",
+  "sic": "3674",
+  "sicDesc": "Semiconductors & Related Devices"
+ },
+ "ORLY": {
+  "sector": "Consumer",
+  "sic": "5531",
+  "sicDesc": "Retail-Auto & Home Supply Stores"
+ },
+ "OXY": {
+  "sector": "Resources",
+  "sic": "1311",
+  "sicDesc": "Crude Petroleum & Natural Gas"
+ },
+ "ODFL": {
+  "sector": "Transport & comms",
+  "sic": "4213",
+  "sicDesc": "Trucking (No Local)"
+ },
+ "OMC": {
+  "sector": "Other",
+  "sic": "7311",
+  "sicDesc": "Services-Advertising Agencies"
+ },
+ "ON": {
+  "sector": "Technology",
+  "sic": "3674",
+  "sicDesc": "Semiconductors & Related Devices"
+ },
+ "OKE": {
+  "sector": "Utilities",
+  "sic": "4923",
+  "sicDesc": "Natural Gas Transmisison & Distribution"
+ },
+ "ORCL": {
+  "sector": "Technology",
+  "sic": "7372",
+  "sicDesc": "Services-Prepackaged Software"
+ },
+ "OTIS": {
+  "sector": "Industrials",
+  "sic": "3600",
+  "sicDesc": "Electronic & Other Electrical Equipment (No Computer Equip)"
+ },
+ "PCAR": {
+  "sector": "Industrials",
+  "sic": "3711",
+  "sicDesc": "Motor Vehicles & Passenger Car Bodies"
+ },
+ "PKG": {
+  "sector": "Industrials",
+  "sic": "2650",
+  "sicDesc": "Paperboard Containers & Boxes"
+ },
+ "PLTR": {
+  "sector": "Technology",
+  "sic": "7372",
+  "sicDesc": "Services-Prepackaged Software"
+ },
+ "PANW": {
+  "sector": "Technology",
+  "sic": "3577",
+  "sicDesc": "Computer Peripheral Equipment, NEC"
+ },
+ "PSKY": {
+  "sector": "Transport & comms",
+  "sic": "4833",
+  "sicDesc": "Television Broadcasting Stations"
+ },
+ "PH": {
+  "sector": "Industrials",
+  "sic": "3490",
+  "sicDesc": "Miscellaneous Fabricated Metal Products"
+ },
+ "PAYX": {
+  "sector": "Other",
+  "sic": "8700",
+  "sicDesc": "Services-Engineering, Accounting, Research, Management"
+ },
+ "PYPL": {
+  "sector": "Other",
+  "sic": "7389",
+  "sicDesc": "Services-Business Services, NEC"
+ },
+ "PNR": {
+  "sector": "Industrials",
+  "sic": "3550",
+  "sicDesc": "Special Industry Machinery (No Metalworking Machinery)"
+ },
+ "PEP": {
+  "sector": "Industrials",
+  "sic": "2080",
+  "sicDesc": "Beverages"
+ },
+ "PFE": {
+  "sector": "Healthcare",
+  "sic": "2834",
+  "sicDesc": "Pharmaceutical Preparations"
+ },
+ "PCG": {
+  "sector": "Utilities",
+  "sic": "4931",
+  "sicDesc": "Electric & Other Services Combined"
+ },
+ "PM": {
+  "sector": "Industrials",
+  "sic": "2111",
+  "sicDesc": "Cigarettes"
+ },
+ "PSX": {
+  "sector": "Industrials",
+  "sic": "2911",
+  "sicDesc": "Petroleum Refining"
+ },
+ "PNW": {
+  "sector": "Utilities",
+  "sic": "4911",
+  "sicDesc": "Electric Services"
+ },
+ "PNC": {
+  "sector": "Financials",
+  "sic": "6021",
+  "sicDesc": "National Commercial Banks"
+ },
+ "PPG": {
+  "sector": "Industrials",
+  "sic": "2851",
+  "sicDesc": "Paints, Varnishes, Lacquers, Enamels & Allied Prods"
+ },
+ "PPL": {
+  "sector": "Utilities",
+  "sic": "4911",
+  "sicDesc": "Electric Services"
+ },
+ "PFG": {
+  "sector": "Financials",
+  "sic": "6321",
+  "sicDesc": "Accident & Health Insurance"
+ },
+ "PG": {
+  "sector": "Industrials",
+  "sic": "2840",
+  "sicDesc": "Soap, Detergents, Cleang Preparations, Perfumes, Cosmetics"
+ },
+ "PGR": {
+  "sector": "Financials",
+  "sic": "6331",
+  "sicDesc": "Fire, Marine & Casualty Insurance"
+ },
+ "PLD": {
+  "sector": "Real estate",
+  "sic": "6798",
+  "sicDesc": "Real Estate Investment Trusts"
+ },
+ "PRU": {
+  "sector": "Financials",
+  "sic": "6311",
+  "sicDesc": "Life Insurance"
+ },
+ "PEG": {
+  "sector": "Utilities",
+  "sic": "4931",
+  "sicDesc": "Electric & Other Services Combined"
+ },
+ "PTC": {
+  "sector": "Technology",
+  "sic": "7372",
+  "sicDesc": "Services-Prepackaged Software"
+ },
+ "PSA": {
+  "sector": "Real estate",
+  "sic": "6798",
+  "sicDesc": "Real Estate Investment Trusts"
+ },
+ "PHM": {
+  "sector": "Other",
+  "sic": "1531",
+  "sicDesc": "Operative Builders"
+ },
+ "PWR": {
+  "sector": "Other",
+  "sic": "1731",
+  "sicDesc": "Electrical Work"
+ },
+ "QCOM": {
+  "sector": "Industrials",
+  "sic": "3663",
+  "sicDesc": "Radio & Tv Broadcasting & Communications Equipment"
+ },
+ "DGX": {
+  "sector": "Healthcare",
+  "sic": "8071",
+  "sicDesc": "Services-Medical Laboratories"
+ },
+ "Q": {
+  "sector": "Technology",
+  "sic": "3674",
+  "sicDesc": "Semiconductors & Related Devices"
+ },
+ "RL": {
+  "sector": "Industrials",
+  "sic": "2320",
+  "sicDesc": "Men's & Boys' Furnishgs, Work Clothg, & Allied Garments"
+ },
+ "RJF": {
+  "sector": "Financials",
+  "sic": "6211",
+  "sicDesc": "Security Brokers, Dealers & Flotation Companies"
+ },
+ "RTX": {
+  "sector": "Industrials",
+  "sic": "3724",
+  "sicDesc": "Aircraft Engines & Engine Parts"
+ },
+ "O": {
+  "sector": "Real estate",
+  "sic": "6798",
+  "sicDesc": "Real Estate Investment Trusts"
+ },
+ "REG": {
+  "sector": "Real estate",
+  "sic": "6798",
+  "sicDesc": "Real Estate Investment Trusts"
+ },
+ "REGN": {
+  "sector": "Healthcare",
+  "sic": "2834",
+  "sicDesc": "Pharmaceutical Preparations"
+ },
+ "RF": {
+  "sector": "Financials",
+  "sic": "6021",
+  "sicDesc": "National Commercial Banks"
+ },
+ "RSG": {
+  "sector": "Utilities",
+  "sic": "4953",
+  "sicDesc": "Refuse Systems"
+ },
+ "RMD": {
+  "sector": "Industrials",
+  "sic": "3841",
+  "sicDesc": "Surgical & Medical Instruments & Apparatus"
+ },
+ "RVTY": {
+  "sector": "Industrials",
+  "sic": "3826",
+  "sicDesc": "Laboratory Analytical Instruments"
+ },
+ "HOOD": {
+  "sector": "Financials",
+  "sic": "6211",
+  "sicDesc": "Security Brokers, Dealers & Flotation Companies"
+ },
+ "ROK": {
+  "sector": "Industrials",
+  "sic": "3829",
+  "sicDesc": "Measuring & Controlling Devices, NEC"
+ },
+ "ROL": {
+  "sector": "Other",
+  "sic": "7340",
+  "sicDesc": "Services-To Dwellings & Other Buildings"
+ },
+ "ROP": {
+  "sector": "Industrials",
+  "sic": "3823",
+  "sicDesc": "Industrial Instruments For Measurement, Display, and Control"
+ },
+ "ROST": {
+  "sector": "Consumer",
+  "sic": "5651",
+  "sicDesc": "Retail-Family Clothing Stores"
+ },
+ "RCL": {
+  "sector": "Transport & comms",
+  "sic": "4400",
+  "sicDesc": "Water Transportation"
+ },
+ "SPGI": {
+  "sector": "Other",
+  "sic": "7320",
+  "sicDesc": "Services-Consumer Credit Reporting, Collection Agencies"
+ },
+ "CRM": {
+  "sector": "Technology",
+  "sic": "7372",
+  "sicDesc": "Services-Prepackaged Software"
+ },
+ "SNDK": {
+  "sector": "Technology",
+  "sic": "3572",
+  "sicDesc": "Computer Storage Devices"
+ },
+ "SBAC": {
+  "sector": "Real estate",
+  "sic": "6798",
+  "sicDesc": "Real Estate Investment Trusts"
+ },
+ "SLB": {
+  "sector": "Resources",
+  "sic": "1389",
+  "sicDesc": "Oil & Gas Field Services, NEC"
+ },
+ "STX": {
+  "sector": "Technology",
+  "sic": "3572",
+  "sicDesc": "Computer Storage Devices"
+ },
+ "SRE": {
+  "sector": "Utilities",
+  "sic": "4932",
+  "sicDesc": "Gas & Other Services Combined"
+ },
+ "NOW": {
+  "sector": "Technology",
+  "sic": "7372",
+  "sicDesc": "Services-Prepackaged Software"
+ },
+ "SHW": {
+  "sector": "Consumer",
+  "sic": "5200",
+  "sicDesc": "Retail-Building Materials, Hardware, Garden Supply"
+ },
+ "SPG": {
+  "sector": "Real estate",
+  "sic": "6798",
+  "sicDesc": "Real Estate Investment Trusts"
+ },
+ "SWKS": {
+  "sector": "Technology",
+  "sic": "3674",
+  "sicDesc": "Semiconductors & Related Devices"
+ },
+ "SJM": {
+  "sector": "Industrials",
+  "sic": "2033",
+  "sicDesc": "Canned, Fruits, Veg, Preserves, Jams & Jellies"
+ },
+ "SW": {
+  "sector": "Industrials",
+  "sic": "2650",
+  "sicDesc": "Paperboard Containers & Boxes"
+ },
+ "SNA": {
+  "sector": "Industrials",
+  "sic": "3420",
+  "sicDesc": "Cutlery, Handtools & General Hardware"
+ },
+ "SOLV": {
+  "sector": "Industrials",
+  "sic": "3841",
+  "sicDesc": "Surgical & Medical Instruments & Apparatus"
+ },
+ "SO": {
+  "sector": "Utilities",
+  "sic": "4911",
+  "sicDesc": "Electric Services"
+ },
+ "LUV": {
+  "sector": "Transport & comms",
+  "sic": "4512",
+  "sicDesc": "Air Transportation, Scheduled"
+ },
+ "SWK": {
+  "sector": "Industrials",
+  "sic": "3420",
+  "sicDesc": "Cutlery, Handtools & General Hardware"
+ },
+ "SBUX": {
+  "sector": "Consumer",
+  "sic": "5810",
+  "sicDesc": "Retail-Eating & Drinking Places"
+ },
+ "STT": {
+  "sector": "Financials",
+  "sic": "6022",
+  "sicDesc": "State Commercial Banks"
+ },
+ "STLD": {
+  "sector": "Industrials",
+  "sic": "3312",
+  "sicDesc": "Steel Works, Blast Furnaces & Rolling Mills (Coke Ovens)"
+ },
+ "STE": {
+  "sector": "Industrials",
+  "sic": "3842",
+  "sicDesc": "Orthopedic, Prosthetic & Surgical Appliances & Supplies"
+ },
+ "SYK": {
+  "sector": "Industrials",
+  "sic": "3841",
+  "sicDesc": "Surgical & Medical Instruments & Apparatus"
+ },
+ "SMCI": {
+  "sector": "Technology",
+  "sic": "3571",
+  "sicDesc": "Electronic Computers"
+ },
+ "SYF": {
+  "sector": "Financials",
+  "sic": "6199",
+  "sicDesc": "Finance Services"
+ },
+ "SNPS": {
+  "sector": "Technology",
+  "sic": "7372",
+  "sicDesc": "Services-Prepackaged Software"
+ },
+ "SYY": {
+  "sector": "Other",
+  "sic": "5140",
+  "sicDesc": "Wholesale-Groceries & Related Products"
+ },
+ "TMUS": {
+  "sector": "Transport & comms",
+  "sic": "4812",
+  "sicDesc": "Radiotelephone Communications"
+ },
+ "TROW": {
+  "sector": "Financials",
+  "sic": "6282",
+  "sicDesc": "Investment Advice"
+ },
+ "TTWO": {
+  "sector": "Technology",
+  "sic": "7372",
+  "sicDesc": "Services-Prepackaged Software"
+ },
+ "TPR": {
+  "sector": "Industrials",
+  "sic": "3100",
+  "sicDesc": "Leather & Leather Products"
+ },
+ "TRGP": {
+  "sector": "Utilities",
+  "sic": "4922",
+  "sicDesc": "Natural Gas Transmission"
+ },
+ "TGT": {
+  "sector": "Consumer",
+  "sic": "5331",
+  "sicDesc": "Retail-Variety Stores"
+ },
+ "TEL": {
+  "sector": "Other",
+  "sic": "5065",
+  "sicDesc": "Wholesale-Electronic Parts & Equipment, NEC"
+ },
+ "TDY": {
+  "sector": "Industrials",
+  "sic": "3812",
+  "sicDesc": "Search, Detection, Navigation, Guidance, Aeronautical Sys"
+ },
+ "TER": {
+  "sector": "Industrials",
+  "sic": "3825",
+  "sicDesc": "Instruments For Meas & Testing of  Electricity & Elec Signals"
+ },
+ "TSLA": {
+  "sector": "Industrials",
+  "sic": "3711",
+  "sicDesc": "Motor Vehicles & Passenger Car Bodies"
+ },
+ "TXN": {
+  "sector": "Technology",
+  "sic": "3674",
+  "sicDesc": "Semiconductors & Related Devices"
+ },
+ "TPL": {
+  "sector": "Financials",
+  "sic": "6792",
+  "sicDesc": "Oil Royalty Traders"
+ },
+ "TXT": {
+  "sector": "Industrials",
+  "sic": "3720",
+  "sicDesc": "Aircraft & Parts"
+ },
+ "TMO": {
+  "sector": "Industrials",
+  "sic": "3829",
+  "sicDesc": "Measuring & Controlling Devices, NEC"
+ },
+ "TJX": {
+  "sector": "Consumer",
+  "sic": "5651",
+  "sicDesc": "Retail-Family Clothing Stores"
+ },
+ "TKO": {
+  "sector": "Other",
+  "sic": "7900",
+  "sicDesc": "Services-Amusement & Recreation Services"
+ },
+ "TTD": {
+  "sector": "Technology",
+  "sic": "7370",
+  "sicDesc": "Services-Computer Programming, Data Processing, Etc."
+ },
+ "TSCO": {
+  "sector": "Consumer",
+  "sic": "5200",
+  "sicDesc": "Retail-Building Materials, Hardware, Garden Supply"
+ },
+ "TT": {
+  "sector": "Industrials",
+  "sic": "3822",
+  "sicDesc": "Auto Controls For Regulating Residential & Comml Environments"
+ },
+ "TDG": {
+  "sector": "Industrials",
+  "sic": "3728",
+  "sicDesc": "Aircraft Parts & Auxiliary Equipment, NEC"
+ },
+ "TRV": {
+  "sector": "Financials",
+  "sic": "6331",
+  "sicDesc": "Fire, Marine & Casualty Insurance"
+ },
+ "TRMB": {
+  "sector": "Industrials",
+  "sic": "3829",
+  "sicDesc": "Measuring & Controlling Devices, NEC"
+ },
+ "TFC": {
+  "sector": "Financials",
+  "sic": "6021",
+  "sicDesc": "National Commercial Banks"
+ },
+ "TYL": {
+  "sector": "Technology",
+  "sic": "7372",
+  "sicDesc": "Services-Prepackaged Software"
+ },
+ "TSN": {
+  "sector": "Industrials",
+  "sic": "2015",
+  "sicDesc": "Poultry Slaughtering and Processing"
+ },
+ "USB": {
+  "sector": "Financials",
+  "sic": "6021",
+  "sicDesc": "National Commercial Banks"
+ },
+ "UBER": {
+  "sector": "Other",
+  "sic": "7389",
+  "sicDesc": "Services-Business Services, NEC"
+ },
+ "UDR": {
+  "sector": "Real estate",
+  "sic": "6798",
+  "sicDesc": "Real Estate Investment Trusts"
+ },
+ "ULTA": {
+  "sector": "Consumer",
+  "sic": "5990",
+  "sicDesc": "Retail-Retail Stores, NEC"
+ },
+ "UNP": {
+  "sector": "Transport & comms",
+  "sic": "4011",
+  "sicDesc": "Railroads, Line-Haul Operating"
+ },
+ "UAL": {
+  "sector": "Transport & comms",
+  "sic": "4512",
+  "sicDesc": "Air Transportation, Scheduled"
+ },
+ "UPS": {
+  "sector": "Transport & comms",
+  "sic": "4210",
+  "sicDesc": "Trucking & Courier Services (No Air)"
+ },
+ "URI": {
+  "sector": "Other",
+  "sic": "7359",
+  "sicDesc": "Services-Equipment Rental & Leasing, NEC"
+ },
+ "UNH": {
+  "sector": "Financials",
+  "sic": "6324",
+  "sicDesc": "Hospital & Medical Service Plans"
+ },
+ "UHS": {
+  "sector": "Healthcare",
+  "sic": "8062",
+  "sicDesc": "Services-General Medical & Surgical Hospitals, NEC"
+ },
+ "VLO": {
+  "sector": "Industrials",
+  "sic": "2911",
+  "sicDesc": "Petroleum Refining"
+ },
+ "VEEV": {
+  "sector": "Technology",
+  "sic": "7372",
+  "sicDesc": "Services-Prepackaged Software"
+ },
+ "VTR": {
+  "sector": "Real estate",
+  "sic": "6798",
+  "sicDesc": "Real Estate Investment Trusts"
+ },
+ "VLTO": {
+  "sector": "Industrials",
+  "sic": "3825",
+  "sicDesc": "Instruments For Meas & Testing of  Electricity & Elec Signals"
+ },
+ "VRSN": {
+  "sector": "Technology",
+  "sic": "7371",
+  "sicDesc": "Services-Computer Programming Services"
+ },
+ "VRSK": {
+  "sector": "Technology",
+  "sic": "7374",
+  "sicDesc": "Services-Computer Processing & Data Preparation"
+ },
+ "VZ": {
+  "sector": "Transport & comms",
+  "sic": "4813",
+  "sicDesc": "Telephone Communications (No Radiotelephone)"
+ },
+ "VRTX": {
+  "sector": "Healthcare",
+  "sic": "2834",
+  "sicDesc": "Pharmaceutical Preparations"
+ },
+ "VRT": {
+  "sector": "Technology",
+  "sic": "3679",
+  "sicDesc": "Electronic Components, NEC"
+ },
+ "VTRS": {
+  "sector": "Healthcare",
+  "sic": "2834",
+  "sicDesc": "Pharmaceutical Preparations"
+ },
+ "VICI": {
+  "sector": "Real estate",
+  "sic": "6798",
+  "sicDesc": "Real Estate Investment Trusts"
+ },
+ "V": {
+  "sector": "Other",
+  "sic": "7389",
+  "sicDesc": "Services-Business Services, NEC"
+ },
+ "VST": {
+  "sector": "Utilities",
+  "sic": "4911",
+  "sicDesc": "Electric Services"
+ },
+ "VMC": {
+  "sector": "Resources",
+  "sic": "1400",
+  "sicDesc": "Mining & Quarrying of  Nonmetallic Minerals (No Fuels)"
+ },
+ "WRB": {
+  "sector": "Financials",
+  "sic": "6331",
+  "sicDesc": "Fire, Marine & Casualty Insurance"
+ },
+ "GWW": {
+  "sector": "Other",
+  "sic": "5000",
+  "sicDesc": "Wholesale-Durable Goods"
+ },
+ "WAB": {
+  "sector": "Industrials",
+  "sic": "3743",
+  "sicDesc": "Railroad Equipment"
+ },
+ "WMT": {
+  "sector": "Consumer",
+  "sic": "5331",
+  "sicDesc": "Retail-Variety Stores"
+ },
+ "DIS": {
+  "sector": "Other",
+  "sic": "7990",
+  "sicDesc": "Services-Miscellaneous Amusement & Recreation"
+ },
+ "WBD": {
+  "sector": "Transport & comms",
+  "sic": "4841",
+  "sicDesc": "Cable & Other Pay Television Services"
+ },
+ "WM": {
+  "sector": "Utilities",
+  "sic": "4953",
+  "sicDesc": "Refuse Systems"
+ },
+ "WAT": {
+  "sector": "Industrials",
+  "sic": "3826",
+  "sicDesc": "Laboratory Analytical Instruments"
+ },
+ "WEC": {
+  "sector": "Utilities",
+  "sic": "4931",
+  "sicDesc": "Electric & Other Services Combined"
+ },
+ "WFC": {
+  "sector": "Financials",
+  "sic": "6021",
+  "sicDesc": "National Commercial Banks"
+ },
+ "WELL": {
+  "sector": "Real estate",
+  "sic": "6798",
+  "sicDesc": "Real Estate Investment Trusts"
+ },
+ "WST": {
+  "sector": "Industrials",
+  "sic": "3841",
+  "sicDesc": "Surgical & Medical Instruments & Apparatus"
+ },
+ "WDC": {
+  "sector": "Technology",
+  "sic": "3572",
+  "sicDesc": "Computer Storage Devices"
+ },
+ "WY": {
+  "sector": "Real estate",
+  "sic": "6798",
+  "sicDesc": "Real Estate Investment Trusts"
+ },
+ "WSM": {
+  "sector": "Consumer",
+  "sic": "5700",
+  "sicDesc": "Retail-Home Furniture, Furnishings & Equipment Stores"
+ },
+ "WMB": {
+  "sector": "Utilities",
+  "sic": "4922",
+  "sicDesc": "Natural Gas Transmission"
+ },
+ "WTW": {
+  "sector": "Financials",
+  "sic": "6411",
+  "sicDesc": "Insurance Agents, Brokers & Service"
+ },
+ "WDAY": {
+  "sector": "Technology",
+  "sic": "7374",
+  "sicDesc": "Services-Computer Processing & Data Preparation"
+ },
+ "WYNN": {
+  "sector": "Other",
+  "sic": "7011",
+  "sicDesc": "Hotels & Motels"
+ },
+ "XEL": {
+  "sector": "Utilities",
+  "sic": "4931",
+  "sicDesc": "Electric & Other Services Combined"
+ },
+ "XYL": {
+  "sector": "Industrials",
+  "sic": "3561",
+  "sicDesc": "Pumps & Pumping Equipment"
+ },
+ "YUM": {
+  "sector": "Consumer",
+  "sic": "5812",
+  "sicDesc": "Retail-Eating  Places"
+ },
+ "ZBRA": {
+  "sector": "Industrials",
+  "sic": "3560",
+  "sicDesc": "General Industrial Machinery & Equipment"
+ },
+ "ZBH": {
+  "sector": "Industrials",
+  "sic": "3842",
+  "sicDesc": "Orthopedic, Prosthetic & Surgical Appliances & Supplies"
+ },
+ "ZTS": {
+  "sector": "Healthcare",
+  "sic": "2834",
+  "sicDesc": "Pharmaceutical Preparations"
+ },
+ "360.AX": {
+  "sector": "Technology",
+  "sic": null,
+  "sicDesc": "Technology"
+ },
+ "4DX.AX": {
+  "sector": "Healthcare",
+  "sic": null,
+  "sicDesc": "Healthcare"
+ },
+ "A2M.AX": {
+  "sector": "Consumer",
+  "sic": null,
+  "sicDesc": "Consumer Defensive"
+ },
+ "AAI.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Basic Materials"
+ },
+ "AFI.AX": {
+  "sector": "Financials",
+  "sic": null,
+  "sicDesc": "Financial Services"
+ },
+ "AGL.AX": {
+  "sector": "Utilities",
+  "sic": null,
+  "sicDesc": "Utilities"
+ },
+ "AIA.AX": {
+  "sector": "Industrials",
+  "sic": null,
+  "sicDesc": "Industrials"
+ },
+ "ALD.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Energy"
+ },
+ "ALK.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Basic Materials"
+ },
+ "ALL.AX": {
+  "sector": "Consumer",
+  "sic": null,
+  "sicDesc": "Consumer Cyclical"
+ },
+ "ALQ.AX": {
+  "sector": "Industrials",
+  "sic": null,
+  "sicDesc": "Industrials"
+ },
+ "ALX.AX": {
+  "sector": "Industrials",
+  "sic": null,
+  "sicDesc": "Industrials"
+ },
+ "AMC.AX": {
+  "sector": "Consumer",
+  "sic": null,
+  "sicDesc": "Consumer Cyclical"
+ },
+ "AMP.AX": {
+  "sector": "Financials",
+  "sic": null,
+  "sicDesc": "Financial Services"
+ },
+ "ANN.AX": {
+  "sector": "Healthcare",
+  "sic": null,
+  "sicDesc": "Healthcare"
+ },
+ "ANZ.AX": {
+  "sector": "Financials",
+  "sic": null,
+  "sicDesc": "Financial Services"
+ },
+ "APA.AX": {
+  "sector": "Utilities",
+  "sic": null,
+  "sicDesc": "Utilities"
+ },
+ "APE.AX": {
+  "sector": "Consumer",
+  "sic": null,
+  "sicDesc": "Consumer Cyclical"
+ },
+ "ARB.AX": {
+  "sector": "Consumer",
+  "sic": null,
+  "sicDesc": "Consumer Cyclical"
+ },
+ "ARG.AX": {
+  "sector": "Financials",
+  "sic": null,
+  "sicDesc": "Financial Services"
+ },
+ "ASB.AX": {
+  "sector": "Industrials",
+  "sic": null,
+  "sicDesc": "Industrials"
+ },
+ "ASK.AX": {
+  "sector": "Real estate",
+  "sic": null,
+  "sicDesc": "Real Estate"
+ },
+ "ASX.AX": {
+  "sector": "Financials",
+  "sic": null,
+  "sicDesc": "Financial Services"
+ },
+ "AUB.AX": {
+  "sector": "Financials",
+  "sic": null,
+  "sicDesc": "Financial Services"
+ },
+ "AZJ.AX": {
+  "sector": "Industrials",
+  "sic": null,
+  "sicDesc": "Industrials"
+ },
+ "BEN.AX": {
+  "sector": "Financials",
+  "sic": null,
+  "sicDesc": "Financial Services"
+ },
+ "BFL.AX": {
+  "sector": "Financials",
+  "sic": null,
+  "sicDesc": "Financial Services"
+ },
+ "BGA.AX": {
+  "sector": "Consumer",
+  "sic": null,
+  "sicDesc": "Consumer Defensive"
+ },
+ "BGL.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Basic Materials"
+ },
+ "BHP.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Basic Materials"
+ },
+ "BOQ.AX": {
+  "sector": "Financials",
+  "sic": null,
+  "sicDesc": "Financial Services"
+ },
+ "BPT.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Energy"
+ },
+ "BRG.AX": {
+  "sector": "Consumer",
+  "sic": null,
+  "sicDesc": "Consumer Cyclical"
+ },
+ "BSL.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Basic Materials"
+ },
+ "BWP.AX": {
+  "sector": "Real estate",
+  "sic": null,
+  "sicDesc": "Real Estate"
+ },
+ "BXB.AX": {
+  "sector": "Industrials",
+  "sic": null,
+  "sicDesc": "Industrials"
+ },
+ "CAR.AX": {
+  "sector": "Transport & comms",
+  "sic": null,
+  "sicDesc": "Communication Services"
+ },
+ "CBA.AX": {
+  "sector": "Financials",
+  "sic": null,
+  "sicDesc": "Financial Services"
+ },
+ "CDA.AX": {
+  "sector": "Technology",
+  "sic": null,
+  "sicDesc": "Technology"
+ },
+ "CEN.AX": {
+  "sector": "Utilities",
+  "sic": null,
+  "sicDesc": "Utilities"
+ },
+ "CGF.AX": {
+  "sector": "Financials",
+  "sic": null,
+  "sicDesc": "Financial Services"
+ },
+ "CHC.AX": {
+  "sector": "Real estate",
+  "sic": null,
+  "sicDesc": "Real Estate"
+ },
+ "CIA.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Basic Materials"
+ },
+ "CIP.AX": {
+  "sector": "Real estate",
+  "sic": null,
+  "sicDesc": "Real Estate"
+ },
+ "CLW.AX": {
+  "sector": "Real estate",
+  "sic": null,
+  "sicDesc": "Real Estate"
+ },
+ "CMM.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Basic Materials"
+ },
+ "CNU.AX": {
+  "sector": "Transport & comms",
+  "sic": null,
+  "sicDesc": "Communication Services"
+ },
+ "COH.AX": {
+  "sector": "Healthcare",
+  "sic": null,
+  "sicDesc": "Healthcare"
+ },
+ "COL.AX": {
+  "sector": "Consumer",
+  "sic": null,
+  "sicDesc": "Consumer Defensive"
+ },
+ "CPU.AX": {
+  "sector": "Financials",
+  "sic": null,
+  "sicDesc": "Financial Services"
+ },
+ "CQR.AX": {
+  "sector": "Real estate",
+  "sic": null,
+  "sicDesc": "Real Estate"
+ },
+ "CSC.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Basic Materials"
+ },
+ "CSL.AX": {
+  "sector": "Healthcare",
+  "sic": null,
+  "sicDesc": "Healthcare"
+ },
+ "CTD.AX": {
+  "sector": "Consumer",
+  "sic": null,
+  "sicDesc": "Consumer Cyclical"
+ },
+ "CWY.AX": {
+  "sector": "Industrials",
+  "sic": null,
+  "sicDesc": "Industrials"
+ },
+ "CYL.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Basic Materials"
+ },
+ "DBI.AX": {
+  "sector": "Industrials",
+  "sic": null,
+  "sicDesc": "Industrials"
+ },
+ "DNL.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Basic Materials"
+ },
+ "DOW.AX": {
+  "sector": "Industrials",
+  "sic": null,
+  "sicDesc": "Industrials"
+ },
+ "DRO.AX": {
+  "sector": "Industrials",
+  "sic": null,
+  "sicDesc": "Industrials"
+ },
+ "DRR.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Basic Materials"
+ },
+ "DXS.AX": {
+  "sector": "Real estate",
+  "sic": null,
+  "sicDesc": "Real Estate"
+ },
+ "DYL.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Energy"
+ },
+ "EBO.AX": {
+  "sector": "Healthcare",
+  "sic": null,
+  "sicDesc": "Healthcare"
+ },
+ "EDV.AX": {
+  "sector": "Consumer",
+  "sic": null,
+  "sicDesc": "Consumer Defensive"
+ },
+ "EMR.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Basic Materials"
+ },
+ "EOS.AX": {
+  "sector": "Industrials",
+  "sic": null,
+  "sicDesc": "Industrials"
+ },
+ "EVN.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Basic Materials"
+ },
+ "EVT.AX": {
+  "sector": "Transport & comms",
+  "sic": null,
+  "sicDesc": "Communication Services"
+ },
+ "FBU.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Basic Materials"
+ },
+ "FLT.AX": {
+  "sector": "Consumer",
+  "sic": null,
+  "sicDesc": "Consumer Cyclical"
+ },
+ "FMG.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Basic Materials"
+ },
+ "FPH.AX": {
+  "sector": "Healthcare",
+  "sic": null,
+  "sicDesc": "Healthcare"
+ },
+ "FRW.AX": {
+  "sector": "Industrials",
+  "sic": null,
+  "sicDesc": "Industrials"
+ },
+ "GDG.AX": {
+  "sector": "Financials",
+  "sic": null,
+  "sicDesc": "Financial Services"
+ },
+ "GGP.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Basic Materials"
+ },
+ "GMD.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Basic Materials"
+ },
+ "GMG.AX": {
+  "sector": "Real estate",
+  "sic": null,
+  "sicDesc": "Real Estate"
+ },
+ "GNE.AX": {
+  "sector": "Utilities",
+  "sic": null,
+  "sicDesc": "Utilities"
+ },
+ "GPT.AX": {
+  "sector": "Real estate",
+  "sic": null,
+  "sicDesc": "Real Estate"
+ },
+ "GQG.AX": {
+  "sector": "Financials",
+  "sic": null,
+  "sicDesc": "Financial Services"
+ },
+ "HDN.AX": {
+  "sector": "Real estate",
+  "sic": null,
+  "sicDesc": "Real Estate"
+ },
+ "HUB.AX": {
+  "sector": "Financials",
+  "sic": null,
+  "sicDesc": "Financial Services"
+ },
+ "HVN.AX": {
+  "sector": "Consumer",
+  "sic": null,
+  "sicDesc": "Consumer Cyclical"
+ },
+ "IAG.AX": {
+  "sector": "Financials",
+  "sic": null,
+  "sicDesc": "Financial Services"
+ },
+ "IFL.AX": {
+  "sector": "Unclassified",
+  "sic": null,
+  "sicDesc": null
+ },
+ "IFT.AX": {
+  "sector": "Industrials",
+  "sic": null,
+  "sicDesc": "Industrials"
+ },
+ "IGO.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Basic Materials"
+ },
+ "ILU.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Basic Materials"
+ },
+ "IMD.AX": {
+  "sector": "Industrials",
+  "sic": null,
+  "sicDesc": "Industrials"
+ },
+ "JBH.AX": {
+  "sector": "Consumer",
+  "sic": null,
+  "sicDesc": "Consumer Cyclical"
+ },
+ "JHX.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Basic Materials"
+ },
+ "L1G.AX": {
+  "sector": "Financials",
+  "sic": null,
+  "sicDesc": "Financial Services"
+ },
+ "LLC.AX": {
+  "sector": "Real estate",
+  "sic": null,
+  "sicDesc": "Real Estate"
+ },
+ "LNW.AX": {
+  "sector": "Consumer",
+  "sic": null,
+  "sicDesc": "Consumer Cyclical"
+ },
+ "LOV.AX": {
+  "sector": "Consumer",
+  "sic": null,
+  "sicDesc": "Consumer Cyclical"
+ },
+ "LSF.AX": {
+  "sector": "Financials",
+  "sic": null,
+  "sicDesc": "Financial Services"
+ },
+ "LTR.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Basic Materials"
+ },
+ "LYC.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Basic Materials"
+ },
+ "MCY.AX": {
+  "sector": "Utilities",
+  "sic": null,
+  "sicDesc": "Utilities"
+ },
+ "MEZ.AX": {
+  "sector": "Utilities",
+  "sic": null,
+  "sicDesc": "Utilities"
+ },
+ "MFF.AX": {
+  "sector": "Financials",
+  "sic": null,
+  "sicDesc": "Financial Services"
+ },
+ "MFG.AX": {
+  "sector": "Financials",
+  "sic": null,
+  "sicDesc": "Financial Services"
+ },
+ "MGR.AX": {
+  "sector": "Real estate",
+  "sic": null,
+  "sicDesc": "Real Estate"
+ },
+ "MIN.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Basic Materials"
+ },
+ "MND.AX": {
+  "sector": "Industrials",
+  "sic": null,
+  "sicDesc": "Industrials"
+ },
+ "MPL.AX": {
+  "sector": "Financials",
+  "sic": null,
+  "sicDesc": "Financial Services"
+ },
+ "MQG.AX": {
+  "sector": "Financials",
+  "sic": null,
+  "sicDesc": "Financial Services"
+ },
+ "MSB.AX": {
+  "sector": "Healthcare",
+  "sic": null,
+  "sicDesc": "Healthcare"
+ },
+ "MTS.AX": {
+  "sector": "Consumer",
+  "sic": null,
+  "sicDesc": "Consumer Defensive"
+ },
+ "MXT.AX": {
+  "sector": "Financials",
+  "sic": null,
+  "sicDesc": "Financial Services"
+ },
+ "NAB.AX": {
+  "sector": "Financials",
+  "sic": null,
+  "sicDesc": "Financial Services"
+ },
+ "NEM.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Basic Materials"
+ },
+ "NHC.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Energy"
+ },
+ "NHF.AX": {
+  "sector": "Financials",
+  "sic": null,
+  "sicDesc": "Financial Services"
+ },
+ "NIC.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Basic Materials"
+ },
+ "NSR.AX": {
+  "sector": "Unclassified",
+  "sic": null,
+  "sicDesc": null
+ },
+ "NST.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Basic Materials"
+ },
+ "NWH.AX": {
+  "sector": "Industrials",
+  "sic": null,
+  "sicDesc": "Industrials"
+ },
+ "NWL.AX": {
+  "sector": "Technology",
+  "sic": null,
+  "sicDesc": "Technology"
+ },
+ "NWS.AX": {
+  "sector": "Transport & comms",
+  "sic": null,
+  "sicDesc": "Communication Services"
+ },
+ "NXG.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Energy"
+ },
+ "NXT.AX": {
+  "sector": "Technology",
+  "sic": null,
+  "sicDesc": "Technology"
+ },
+ "OBM.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Basic Materials"
+ },
+ "ORA.AX": {
+  "sector": "Consumer",
+  "sic": null,
+  "sicDesc": "Consumer Cyclical"
+ },
+ "ORG.AX": {
+  "sector": "Utilities",
+  "sic": null,
+  "sicDesc": "Utilities"
+ },
+ "ORI.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Basic Materials"
+ },
+ "PDI.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Basic Materials"
+ },
+ "PDN.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Energy"
+ },
+ "PLS.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Basic Materials"
+ },
+ "PME.AX": {
+  "sector": "Healthcare",
+  "sic": null,
+  "sicDesc": "Healthcare"
+ },
+ "PMV.AX": {
+  "sector": "Consumer",
+  "sic": null,
+  "sicDesc": "Consumer Cyclical"
+ },
+ "PNI.AX": {
+  "sector": "Financials",
+  "sic": null,
+  "sicDesc": "Financial Services"
+ },
+ "PPT.AX": {
+  "sector": "Financials",
+  "sic": null,
+  "sicDesc": "Financial Services"
+ },
+ "PRN.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Basic Materials"
+ },
+ "PRU.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Basic Materials"
+ },
+ "PXA.AX": {
+  "sector": "Technology",
+  "sic": null,
+  "sicDesc": "Technology"
+ },
+ "QAN.AX": {
+  "sector": "Industrials",
+  "sic": null,
+  "sicDesc": "Industrials"
+ },
+ "QBE.AX": {
+  "sector": "Financials",
+  "sic": null,
+  "sicDesc": "Financial Services"
+ },
+ "QUB.AX": {
+  "sector": "Industrials",
+  "sic": null,
+  "sicDesc": "Industrials"
+ },
+ "RDX.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Basic Materials"
+ },
+ "REA.AX": {
+  "sector": "Transport & comms",
+  "sic": null,
+  "sicDesc": "Communication Services"
+ },
+ "REG.AX": {
+  "sector": "Healthcare",
+  "sic": null,
+  "sicDesc": "Healthcare"
+ },
+ "REH.AX": {
+  "sector": "Industrials",
+  "sic": null,
+  "sicDesc": "Industrials"
+ },
+ "RGN.AX": {
+  "sector": "Real estate",
+  "sic": null,
+  "sicDesc": "Real Estate"
+ },
+ "RHC.AX": {
+  "sector": "Healthcare",
+  "sic": null,
+  "sicDesc": "Healthcare"
+ },
+ "RIO.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Basic Materials"
+ },
+ "RMD.AX": {
+  "sector": "Healthcare",
+  "sic": null,
+  "sicDesc": "Healthcare"
+ },
+ "RMS.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Basic Materials"
+ },
+ "RRL.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Basic Materials"
+ },
+ "RSG.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Basic Materials"
+ },
+ "RWC.AX": {
+  "sector": "Industrials",
+  "sic": null,
+  "sicDesc": "Industrials"
+ },
+ "RYM.AX": {
+  "sector": "Healthcare",
+  "sic": null,
+  "sicDesc": "Healthcare"
+ },
+ "S32.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Basic Materials"
+ },
+ "SCG.AX": {
+  "sector": "Real estate",
+  "sic": null,
+  "sicDesc": "Real Estate"
+ },
+ "SDF.AX": {
+  "sector": "Financials",
+  "sic": null,
+  "sicDesc": "Financial Services"
+ },
+ "SEK.AX": {
+  "sector": "Transport & comms",
+  "sic": null,
+  "sicDesc": "Communication Services"
+ },
+ "SFR.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Basic Materials"
+ },
+ "SGH.AX": {
+  "sector": "Unclassified",
+  "sic": null,
+  "sicDesc": null
+ },
+ "SGM.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Basic Materials"
+ },
+ "SGP.AX": {
+  "sector": "Real estate",
+  "sic": null,
+  "sicDesc": "Real Estate"
+ },
+ "SHL.AX": {
+  "sector": "Healthcare",
+  "sic": null,
+  "sicDesc": "Healthcare"
+ },
+ "SIG.AX": {
+  "sector": "Healthcare",
+  "sic": null,
+  "sicDesc": "Healthcare"
+ },
+ "SMR.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Basic Materials"
+ },
+ "SNZ.AX": {
+  "sector": "Healthcare",
+  "sic": null,
+  "sicDesc": "Healthcare"
+ },
+ "SOL.AX": {
+  "sector": "Financials",
+  "sic": null,
+  "sicDesc": "Financial Services"
+ },
+ "SPK.AX": {
+  "sector": "Transport & comms",
+  "sic": null,
+  "sicDesc": "Communication Services"
+ },
+ "STO.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Energy"
+ },
+ "SUL.AX": {
+  "sector": "Consumer",
+  "sic": null,
+  "sicDesc": "Consumer Cyclical"
+ },
+ "SUN.AX": {
+  "sector": "Financials",
+  "sic": null,
+  "sicDesc": "Financial Services"
+ },
+ "TAH.AX": {
+  "sector": "Consumer",
+  "sic": null,
+  "sicDesc": "Consumer Cyclical"
+ },
+ "TCL.AX": {
+  "sector": "Industrials",
+  "sic": null,
+  "sicDesc": "Industrials"
+ },
+ "TLC.AX": {
+  "sector": "Consumer",
+  "sic": null,
+  "sicDesc": "Consumer Cyclical"
+ },
+ "TLS.AX": {
+  "sector": "Transport & comms",
+  "sic": null,
+  "sicDesc": "Communication Services"
+ },
+ "TLX.AX": {
+  "sector": "Healthcare",
+  "sic": null,
+  "sicDesc": "Healthcare"
+ },
+ "TNE.AX": {
+  "sector": "Technology",
+  "sic": null,
+  "sicDesc": "Technology"
+ },
+ "TPG.AX": {
+  "sector": "Transport & comms",
+  "sic": null,
+  "sicDesc": "Communication Services"
+ },
+ "TUA.AX": {
+  "sector": "Transport & comms",
+  "sic": null,
+  "sicDesc": "Communication Services"
+ },
+ "TWE.AX": {
+  "sector": "Consumer",
+  "sic": null,
+  "sicDesc": "Consumer Defensive"
+ },
+ "VAU.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Basic Materials"
+ },
+ "VCX.AX": {
+  "sector": "Real estate",
+  "sic": null,
+  "sicDesc": "Real Estate"
+ },
+ "VEA.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Energy"
+ },
+ "VGN.AX": {
+  "sector": "Industrials",
+  "sic": null,
+  "sicDesc": "Industrials"
+ },
+ "VNT.AX": {
+  "sector": "Industrials",
+  "sic": null,
+  "sicDesc": "Industrials"
+ },
+ "WAF.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Basic Materials"
+ },
+ "WAM.AX": {
+  "sector": "Financials",
+  "sic": null,
+  "sicDesc": "Financial Services"
+ },
+ "WBC.AX": {
+  "sector": "Financials",
+  "sic": null,
+  "sicDesc": "Financial Services"
+ },
+ "WDS.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Energy"
+ },
+ "WES.AX": {
+  "sector": "Consumer",
+  "sic": null,
+  "sicDesc": "Consumer Cyclical"
+ },
+ "WGX.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Basic Materials"
+ },
+ "WHC.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Energy"
+ },
+ "WLE.AX": {
+  "sector": "Financials",
+  "sic": null,
+  "sicDesc": "Financial Services"
+ },
+ "WOR.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Energy"
+ },
+ "WOW.AX": {
+  "sector": "Consumer",
+  "sic": null,
+  "sicDesc": "Consumer Defensive"
+ },
+ "WTC.AX": {
+  "sector": "Technology",
+  "sic": null,
+  "sicDesc": "Technology"
+ },
+ "XRO.AX": {
+  "sector": "Technology",
+  "sic": null,
+  "sicDesc": "Technology"
+ },
+ "XYX.AX": {
+  "sector": "Unclassified",
+  "sic": null,
+  "sicDesc": null
+ },
+ "YAL.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Energy"
+ },
+ "ZIM.AX": {
+  "sector": "Resources",
+  "sic": null,
+  "sicDesc": "Basic Materials"
+ },
+ "ZIP.AX": {
+  "sector": "Financials",
+  "sic": null,
+  "sicDesc": "Financial Services"
+ }
+}

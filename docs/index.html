@@ -35,19 +35,24 @@
   </div>
 
   <header class="hero">
-    <p class="wip">In progress</p>
     <h1>Shortfall</h1>
-    <p class="lede">Six accounting tests, run over the S&amp;P 500 and the ASX&nbsp;200.
-    A high score means several tests fired at once. It does not mean a bad company -
-    every test here has an innocent reading too.</p>
+    <p class="lede">Six accounting tests over the S&amp;P 500 and the ASX&nbsp;200,
+    scored on each company's worst two.</p>
   </header>
+
+  <section class="panel" id="overviewPanel">
+    <div class="panel-head">
+      <h2 id="overviewCount"></h2>
+      <p class="note" id="overviewNote"></p>
+    </div>
+    <div id="overview"></div>
+  </section>
 
   <section class="panel flagged" id="disclosedPanel">
     <div class="panel-head">
       <h2>Told the regulator something went wrong</h2>
-      <p class="note">17 companies restated their accounts, changed
-      auditor, or could not file on time in the last two years. Not a ratio, not an
-      inference - the company disclosed it. Start here.</p>
+      <p class="note">17 companies restated, changed auditor, or
+      filed late in the last two years. From SEC filings, not from the screen.</p>
     </div>
     <div id="disclosed"></div>
   </section>
@@ -63,9 +68,8 @@
   <section class="panel" id="weights">
     <div class="panel-head">
       <h2>Weight the tests yourself</h2>
-      <p class="note">Equal by default, because without a backtest there is no reason to
-      claim one test beats another. Move them and each card shows where equal weighting
-      had it.</p>
+      <p class="note">Weighted by how directly each test observes an accounting
+      problem, not equally. Cards show the default score when you move them.</p>
     </div>
     <div id="sliders"></div>
     <button id="resetWeights" type="button">Reset</button>

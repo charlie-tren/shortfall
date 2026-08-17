@@ -20,8 +20,16 @@ def test_percentile_ranks_single_name_sits_mid():
     assert percentile_ranks({"A": 5.0}) == {"A": 50.0}
 
 
-def test_composite_equal_weights_by_default():
-    assert composite({"accruals": 100.0, "goodwill": 0.0}, weights=None) == 50.0
+def test_default_weights_are_not_equal():
+    """Accruals is weighted 1.5 and goodwill 1.0, so this is 150/2.5, not the 50
+    an equal-weight default would give."""
+    assert composite({"accruals": 100.0, "goodwill": 0.0}, weights=None) == 60.0
+
+
+def test_default_weights_rank_evidence_directness():
+    from score import DEFAULT_WEIGHTS
+    assert DEFAULT_WEIGHTS["accruals"] > DEFAULT_WEIGHTS["goodwill"]
+    assert DEFAULT_WEIGHTS["goodwill"] > DEFAULT_WEIGHTS["stock_comp"]
 
 
 def test_composite_renormalises_over_applicable_flags_only():
@@ -78,3 +86,25 @@ def test_coverage_gate_raises_below_threshold():
 
 def test_coverage_gate_passes_at_threshold():
     assert coverage_gate({"accruals": 0.95, "inventory": 0.60}) == ["inventory"]
+
+
+# --- the JS must agree with the Python -------------------------------------
+
+def test_js_composite_mirrors_python():
+    """The page re-scores client side, so a divergence silently changes the
+    ranking the moment a reader moves a slider. This caught exactly that: the JS
+    was still a plain mean of all six after score.py had moved to severity."""
+    import json
+    import pathlib
+    import re
+    import subprocess
+
+    app = pathlib.Path(__file__).resolve().parent.parent / "docs" / "app.js"
+    src = app.read_text(encoding="utf-8")
+    assert "SEVERITY_TOP_N = 2" in src, "JS lost the severity aggregation"
+    # The JS default weights must match DEFAULT_WEIGHTS exactly.
+    from score import DEFAULT_WEIGHTS
+    block = re.search(r"const DEFAULT_WEIGHTS = \{(.*?)\};", src, re.S).group(1)
+    js = dict(re.findall(r"(\w+):\s*([0-9.]+)", block))
+    assert {k: float(v) for k, v in js.items()} == DEFAULT_WEIGHTS, \
+        f"JS weights {js} != python {DEFAULT_WEIGHTS}"

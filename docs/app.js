@@ -11,8 +11,18 @@ const FLAGS = [
 ];
 
 const NS = "http://www.w3.org/2000/svg";
-const state = { weights: {}, market: "all", eventsOnly: false, tail: null };
-FLAGS.forEach(([k]) => (state.weights[k] = 1));
+/* Defaults are NOT equal - they mirror DEFAULT_WEIGHTS in score.py, which weights
+   each test by how directly it observes an accounting problem. Keep the two in step. */
+const DEFAULT_WEIGHTS = {
+  accruals: 1.5, working_capital: 1.25, goodwill: 1.0,
+  share_count_roic: 1.0, tax_rate: 0.75, stock_comp: 0.75,
+};
+
+const state = {
+  weights: {}, market: "all", sector: "all", size: "all",
+  minScore: 0, minHot: "all", eventsOnly: false, tail: null,
+};
+FLAGS.forEach(([k]) => (state.weights[k] = DEFAULT_WEIGHTS[k]));
 
 function el(tag, props = {}, parent = null) {
   const n = document.createElement(tag);
@@ -32,29 +42,52 @@ function svgEl(tag, attrs = {}, parent = null) {
   return n;
 }
 
-/* Weighted mean over APPLICABLE flags only, renormalising so an inapplicable
-   flag's weight never counts as a zero. Mirrors score.py exactly. */
+/* SEVERITY: the weighted mean of a company's WORST TWO applicable tests.
+   Must mirror composite() in score.py exactly - the page re-scores client side the
+   moment a slider moves, so any divergence means the ranking silently changes as
+   soon as the reader touches anything. This function was a plain mean of all six
+   for a while after score.py had already moved to severity, which meant the live
+   ranking was never the one the build computed. */
+const SEVERITY_TOP_N = 2;
+
 function composite(row, weights) {
-  let num = 0, den = 0;
+  const scored = [];
   FLAGS.forEach(([k]) => {
     const f = row.flags[k];
     if (!f || !f.applicable || f.rank == null) return;
-    num += f.rank * weights[k];
-    den += weights[k];
+    const w = weights[k];
+    if (!w) return;
+    scored.push([f.rank * w, w]);
   });
-  return den ? num / den : null;
+  if (!scored.length) return null;
+  scored.sort((a, b) => b[0] - a[0]);
+  const top = scored.slice(0, SEVERITY_TOP_N);
+  const den = top.reduce((s, x) => s + x[1], 0);
+  return den ? top.reduce((s, x) => s + x[0], 0) / den : null;
 }
 
-function equalWeights() {
+function defaultWeights() {
   const w = {};
-  FLAGS.forEach(([k]) => (w[k] = 1));
+  FLAGS.forEach(([k]) => (w[k] = DEFAULT_WEIGHTS[k]));
   return w;
+}
+
+function hotCount(r) {
+  return FLAGS.filter(([k]) => {
+    const f = r.flags[k];
+    return f && f.applicable && f.rank != null && f.rank >= 90;
+  }).length;
 }
 
 function visible() {
   return window.SHORTFALL.names.filter((r) => {
     if (state.market !== "all" && r.market !== state.market) return false;
+    if (state.sector !== "all" && r.sector !== state.sector) return false;
     if (state.eventsOnly && !(r.events && r.events.length)) return false;
+    if (state.size !== "all") {
+      if (!r.assets || !SIZE_BANDS[state.size](r.assets)) return false;
+    }
+    if (state.minHot !== "all" && hotCount(r) < parseInt(state.minHot, 10)) return false;
     if (state.tail) {
       const f = r.flags[state.tail];
       if (!f || !f.applicable || f.rank == null || f.rank < 90) return false;
@@ -84,16 +117,71 @@ function scored() {
   const rows = visible().map((r) => ({
     row: r,
     score: composite(r, state.weights),
-    base: composite(r, equalWeights()),
-  })).filter((x) => x.score != null);
+    base: composite(r, defaultWeights()),
+  })).filter((x) => x.score != null && x.score >= state.minScore);
   rows.sort((a, b) => b.score - a.score);
   return rows;
 }
 
 function render() {
   const rows = scored();
+  renderOverview(rows);
   renderStrips(rows);
   renderCards(rows);
+}
+
+/* Sector against test: which corners of the market are firing which test.
+   Every cell is the share of that sector's companies sitting in the worst decile
+   of that test. Click a cell to filter to it. */
+function renderOverview(rows) {
+  const host = document.getElementById("overview");
+  host.textContent = "";
+  const sectors = Array.from(new Set(rows.map((r) => r.row.sector).filter(Boolean))).sort();
+  if (!sectors.length) return;
+
+  const table = el("table", { class: "heat" }, host);
+  const head = el("tr", {}, el("thead", {}, table));
+  el("th", { text: "" }, head);
+  FLAGS.forEach(([, label]) => el("th", { text: label }, head));
+  el("th", { class: "n", text: "n" }, head);
+
+  const body = el("tbody", {}, table);
+  sectors.forEach((sec) => {
+    const members = rows.filter((r) => r.row.sector === sec);
+    const tr = el("tr", {}, body);
+    el("th", { class: "rowhead", text: sec }, tr);
+    FLAGS.forEach(([key]) => {
+      const applies = members.filter(({ row }) => {
+        const f = row.flags[key];
+        return f && f.applicable && f.rank != null;
+      });
+      const td = el("td", {}, tr);
+      if (!applies.length) {
+        td.className = "self";
+        td.title = `${sec}: test does not apply`;
+        return;
+      }
+      const hot = applies.filter(({ row }) => row.flags[key].rank >= 90).length;
+      const share = hot / applies.length;
+      td.textContent = hot ? String(hot) : "";
+      td.title = `${sec} - ${hot} of ${applies.length} in the worst decile`;
+      td.style.background =
+        `color-mix(in srgb, var(--warn) ${(Math.min(share / 0.3, 1) * 78).toFixed(0)}%, transparent)`;
+      td.addEventListener("click", () => {
+        state.sector = state.sector === sec ? "all" : sec;
+        state.tail = state.tail === key ? null : key;
+        buildFilters();
+        render();
+      });
+    });
+    el("td", { class: "n", text: String(members.length) }, tr);
+  });
+
+  document.getElementById("overviewCount").textContent =
+    `${rows.length} companies`;
+  document.getElementById("overviewNote").textContent =
+    "Companies in the worst decile of each test, by sector. Ranks are computed "
+    + "within sector, so a REIT is compared with REITs. Click a cell to filter.";
 }
 
 function renderCards(rows) {
@@ -106,7 +194,7 @@ function renderCards(rows) {
     el("span", { class: "ticker", text: row.ticker }, head);
     el("span", { class: "score", text: score.toFixed(0) }, head);
     if (Math.abs(score - base) >= 0.5) {
-      el("span", { class: "base", text: `equal weight: ${base.toFixed(0)}` }, head);
+      el("span", { class: "base", text: `default: ${base.toFixed(0)}` }, head);
     }
     (row.events || []).forEach((e) =>
       el("span", { class: "badge", text: e.label }, card));
@@ -251,39 +339,90 @@ function buildSliders() {
     const wrap = el("label", { class: "slider" }, host);
     el("span", { text: label }, wrap);
     const input = el("input", {
-      type: "range", min: "0", max: "3", step: "0.1", value: "1",
+      type: "range", min: "0", max: "3", step: "0.05",
+      value: String(DEFAULT_WEIGHTS[k]),
       "aria-label": `Weight for ${label}`,
     }, wrap);
-    const out = el("output", { text: "1.0" }, wrap);
+    const out = el("output", { text: DEFAULT_WEIGHTS[k].toFixed(2) }, wrap);
     input.addEventListener("input", () => {
       state.weights[k] = parseFloat(input.value);
-      out.textContent = parseFloat(input.value).toFixed(1);
+      out.textContent = parseFloat(input.value).toFixed(2);
       render();
     });
   });
   document.getElementById("resetWeights").addEventListener("click", () => {
-    state.weights = equalWeights();
-    host.querySelectorAll("input").forEach((i) => { i.value = "1"; });
-    host.querySelectorAll("output").forEach((o) => { o.textContent = "1.0"; });
+    state.weights = defaultWeights();
+    host.querySelectorAll("input").forEach((i, idx) => {
+      i.value = String(DEFAULT_WEIGHTS[FLAGS[idx][0]]);
+    });
+    host.querySelectorAll("output").forEach((o, idx) => {
+      o.textContent = DEFAULT_WEIGHTS[FLAGS[idx][0]].toFixed(2);
+    });
     render();
   });
 }
 
+function dropdown(host, label, values, onChange, allLabel) {
+  const wrap = el("label", { text: label }, host);
+  const sel = el("select", {}, wrap);
+  el("option", { value: "all", text: allLabel }, sel);
+  values.forEach((v) => el("option", { value: String(v), text: String(v) }, sel));
+  sel.addEventListener("change", () => { onChange(sel.value); render(); });
+  return sel;
+}
+
 function buildFilters() {
   const host = document.getElementById("filters");
-  const markets = Array.from(new Set(window.SHORTFALL.names.map((r) => r.market))).sort();
+  host.textContent = "";
+  const all = window.SHORTFALL.names;
+  const uniq = (fn) => Array.from(new Set(all.map(fn).filter(Boolean))).sort();
 
-  const mLabel = el("label", { text: "Market" }, host);
-  const sel = el("select", {}, mLabel);
-  el("option", { value: "all", text: "All markets" }, sel);
-  markets.forEach((m) => el("option", { value: m, text: m }, sel));
-  sel.addEventListener("change", () => { state.market = sel.value; render(); });
+  dropdown(host, "Market", uniq((r) => r.market), (v) => (state.market = v), "All markets");
+  dropdown(host, "Sector", uniq((r) => r.sector), (v) => (state.sector = v), "All sectors");
+
+  const sizes = [["all", "Any size"], ["mega", "Over $100bn"], ["large", "$10bn - $100bn"],
+                 ["mid", "$1bn - $10bn"], ["small", "Under $1bn"]];
+  const sWrap = el("label", { text: "Size" }, host);
+  const sSel = el("select", {}, sWrap);
+  sizes.forEach(([v, t]) => el("option", { value: v, text: t }, sSel));
+  sSel.addEventListener("change", () => { state.size = sSel.value; render(); });
+
+  const minWrap = el("label", { text: "Min score" }, host);
+  const min = el("input", { type: "range", min: "0", max: "95", step: "5", value: "0",
+                            class: "minscore" }, minWrap);
+  const out = el("output", { text: "0" }, minWrap);
+  min.addEventListener("input", () => {
+    state.minScore = parseFloat(min.value);
+    out.textContent = min.value;
+    render();
+  });
+
+  const tWrap = el("label", { text: "Tests firing" }, host);
+  const tSel = el("select", {}, tWrap);
+  [["all", "Any"], ["1", "1 or more above 90"], ["2", "2 or more above 90"],
+   ["3", "3 or more above 90"]].forEach(([v, t]) => el("option", { value: v, text: t }, tSel));
+  tSel.addEventListener("change", () => { state.minHot = tSel.value; render(); });
 
   const eLabel = el("label", { text: "" }, host);
   const cb = el("input", { type: "checkbox" }, eLabel);
-  el("span", { text: "Only companies with a restatement, auditor change or late filing" }, eLabel);
+  el("span", { text: "Disclosed a problem" }, eLabel);
   cb.addEventListener("change", () => { state.eventsOnly = cb.checked; render(); });
+
+  const clear = el("button", { type: "button", text: "Clear", class: "clearBtn" }, host);
+  clear.addEventListener("click", () => {
+    Object.assign(state, { market: "all", sector: "all", size: "all", minScore: 0,
+                           minHot: "all", eventsOnly: false, tail: null });
+    buildFilters();
+    render();
+  });
 }
+
+const SIZE_BANDS = {
+  mega: (a) => a >= 100e9,
+  large: (a) => a >= 10e9 && a < 100e9,
+  mid: (a) => a >= 1e9 && a < 10e9,
+  small: (a) => a < 1e9,
+};
 
 /* The correlation matrix. It is nearly empty, and that IS the content: if the six
    tests corroborated each other a high score would describe a syndrome. They do not,
