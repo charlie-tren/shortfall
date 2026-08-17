@@ -317,6 +317,30 @@ const YVARS = Object.assign({
                     get: (r) => r.short_interest, fmt: (v) => (v * 100).toFixed(0) + "%" },
 }, XVARS);
 
+/* The two lines were unlabelled and they are different kinds of thing: one is the
+   data summarised, the other is a model. Built from what actually RENDERED, so the
+   key can never claim a fit that was suppressed. */
+function chartKey(hostId, svg) {
+  const host = document.getElementById(hostId);
+  if (!host) return;
+  host.textContent = "";
+  if (svg.querySelector(".binline")) {
+    const a = el("span", { class: "key" }, host);
+    el("i", { class: "k-bin" }, a);
+    el("span", { text: "median of each tenth of the companies" }, a);
+  }
+  const fit = svg.querySelector(".trend");
+  if (fit) {
+    const b = el("span", { class: "key" }, host);
+    const wk = fit.getAttribute("class").indexOf("weak") >= 0;
+    el("i", { class: "k-fit" + (wk ? " weak" : "") }, b);
+    el("span", { text: wk ? "fitted line, too weak to rely on" : "fitted line" }, b);
+  }
+  const c = el("span", { class: "key" }, host);
+  el("i", { class: "k-hot" }, c);
+  el("span", { text: "scores 90 or above" }, c);
+}
+
 function renderQuadrant(rows) {
   const svg = document.getElementById("quadSvg");
   if (!svg) return;
@@ -335,8 +359,8 @@ function renderQuadrant(rows) {
     ? "Not enough data for this pair."
     : data.length + " companies. Rank correlation "
       + (rho == null ? "n/a" : rho.toFixed(2))
-      + (weak ? " - indistinguishable from zero at this sample size." : ".")
-    + " Large dots are the median of each tenth of the data.";
+      + (weak ? " - indistinguishable from zero at this sample size." : ".");
+  chartKey("quadKey", svg);
 }
 
 function renderPerf(rows) {
@@ -353,7 +377,8 @@ function renderPerf(rows) {
   document.getElementById("perfNote").textContent = data.length < 20
     ? "Not enough price history for this selection."
     : data.length + " companies. Rank correlation " + (rho == null ? "n/a" : rho.toFixed(2))
-      + (flat ? " - no relationship, so no line is drawn." : ".");
+      + (flat ? " - no fitted line drawn, there is nothing to fit." : ".");
+  chartKey("perfKey", svg);
 }
 
 const PAGE_SIZE = 20;
