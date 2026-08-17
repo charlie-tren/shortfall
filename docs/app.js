@@ -20,7 +20,7 @@ const DEFAULT_WEIGHTS = {
 
 const state = {
   weights: {}, market: "all", sector: "all", size: "all",
-  minScore: 0, minHot: "all", eventsOnly: false, tail: null, page: 0,
+  minScore: 0, minHot: "all", price: "all", eventsOnly: false, tail: null, page: 0,
 };
 FLAGS.forEach(([k]) => (state.weights[k] = DEFAULT_WEIGHTS[k]));
 
@@ -88,6 +88,13 @@ function visible() {
       if (!r.assets || !SIZE_BANDS[state.size](r.assets)) return false;
     }
     if (state.minHot !== "all" && hotCount(r) < parseInt(state.minHot, 10)) return false;
+    if (state.price !== "all") {
+      const v = r.ret_1y;
+      if (v == null) return false;
+      if (state.price === "up" && v < 0.2) return false;
+      if (state.price === "down" && v > -0.2) return false;
+      if (state.price === "flat" && (v <= -0.2 || v >= 0.2)) return false;
+    }
     if (state.tail) {
       const f = r.flags[state.tail];
       if (!f || !f.applicable || f.rank == null || f.rank < 90) return false;
@@ -187,17 +194,14 @@ function renderQuadrant(rows) {
   // No y-axis title in the SVG - it collided with the top tick, twice now. The
   // direction lives in the caption below, where nothing can overlap it.
 
-  /* Colour is the 12-month price change - CONTEXT, not validation. Score and return
-     are uncorrelated (rho -0.025). It is here to separate a flagged company the market
-     has already marked down from one still making highs. */
+  /* One tone, not three. Colouring 482 overlapping dots by price direction made the
+     panel unreadable - price is a FILTER now, in the row below the chart. */
   pts.forEach(({ row, score }) => {
     const x = px(row.short_interest), y = py(score);
     const interesting = score >= midScore && row.short_interest < CROWDED;
-    const r1 = row.ret_1y;
-    const tone = r1 == null ? "unk" : r1 <= -0.2 ? "down" : r1 < 0.2 ? "flat" : "up";
     const dot = svgEl("circle", {
-      cx: x, cy: y, r: interesting ? 5.5 : 3.4,
-      class: `dot t-${tone}` + (interesting ? " hot" : "")
+      cx: x, cy: y, r: interesting ? 5.5 : 3.2,
+      class: "dot" + (interesting ? " hot" : "")
              + (row.events && row.events.length ? " ev" : ""),
     }, svg);
     dot.addEventListener("mouseenter", (e) => showTip(row, score, e.clientX, e.clientY));
@@ -367,8 +371,14 @@ function showTip(row, score, x, y, viewport) {
   }).map(([, label]) => label);
   el("span", {
     class: "t-line",
-    text: `score ${score.toFixed(0)} · ${money(row.assets)} assets · ${row.applicable} of 6 flags`,
+    text: `score ${score.toFixed(0)} · ${money(row.assets)} assets · ${row.applicable} of 6 tests`,
   }, tip);
+  if (row.ret_1y != null || row.short_interest != null) {
+    const bits = [];
+    if (row.ret_1y != null) bits.push(`${(row.ret_1y * 100).toFixed(0)}% over 12m`);
+    if (row.short_interest != null) bits.push(`${(row.short_interest * 100).toFixed(1)}% short`);
+    el("span", { class: "t-line", text: bits.join(" · ") }, tip);
+  }
   if (fired.length) el("span", { class: "t-line", text: "highest: " + fired.join(", ") }, tip);
   (row.events || []).forEach((e) => el("span", { class: "t-event", text: e.label }, tip));
 
@@ -448,6 +458,12 @@ function buildFilters() {
     render();
   });
 
+  const pWrap = el("label", { text: "12m price" }, host);
+  const pSel = el("select", {}, pWrap);
+  [["all", "Any"], ["up", "Up 20%+"], ["flat", "Between -20% and +20%"],
+   ["down", "Down 20%+"]].forEach(([v, t]) => el("option", { value: v, text: t }, pSel));
+  pSel.addEventListener("change", () => { state.price = pSel.value; state.page = 0; render(); });
+
   const tWrap = el("label", { text: "Tests firing" }, host);
   const tSel = el("select", {}, tWrap);
   [["all", "Any"], ["1", "1 or more above 90"], ["2", "2 or more above 90"],
@@ -462,7 +478,8 @@ function buildFilters() {
   const clear = el("button", { type: "button", text: "Clear", class: "clearBtn" }, host);
   clear.addEventListener("click", () => {
     Object.assign(state, { market: "all", sector: "all", size: "all", minScore: 0,
-                           minHot: "all", eventsOnly: false, tail: null });
+                           minHot: "all", price: "all", eventsOnly: false, tail: null,
+                           page: 0 });
     buildFilters();
     render();
   });
