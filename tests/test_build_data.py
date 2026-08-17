@@ -3,8 +3,8 @@ from fetch_us import periods_for, build_records
 from panel import Record
 
 
-def rec(year, **kw):
-    base = dict(ticker="A", name="A", market="m", year=year)
+def rec(year, ticker="A", **kw):
+    base = dict(ticker=ticker, name=ticker, market="m", year=year)
     base.update(kw)
     return Record(**base)
 
@@ -70,3 +70,21 @@ def test_rank_all_keeps_pretax_fallback_population_separate():
     # Each population spans the full 0-100 range independently.
     assert by["T1"] == 0.0 and by["T2"] == 100.0
     assert by["F1"] == 0.0 and by["F2"] == 100.0
+
+
+# --- short interest ---------------------------------------------------------
+
+def test_absent_short_interest_stays_none_never_zero():
+    """'Nobody is short it' and 'we do not know' are different claims, and the
+    quadrant chart draws the first in a corner that means something. Defaulting a
+    missing figure to zero would put unknown companies in that corner."""
+    import build_data
+    saved = build_data.SHORT_INTEREST
+    build_data.SHORT_INTEREST = {"KNOWN": 0.12}
+    try:
+        known = assemble_name([rec(2024, ticker="KNOWN", **FULL), rec(2021, ticker="KNOWN", **PRIOR)])
+        missing = assemble_name([rec(2024, ticker="NOSUCH", **FULL), rec(2021, ticker="NOSUCH", **PRIOR)])
+    finally:
+        build_data.SHORT_INTEREST = saved
+    assert known["short_interest"] == 0.12
+    assert missing["short_interest"] is None

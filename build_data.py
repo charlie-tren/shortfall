@@ -5,6 +5,7 @@ import json
 from correlations import matrix
 from explain import EXPLANATIONS
 from sectors import MIN_PEERS
+from short_interest import load as load_short_interest
 from flags import ALL_FLAGS, goodwill_exceeds_equity
 from panel import latest_with_history
 from score import coverage_gate, percentile_ranks, composite, MIN_APPLICABLE_FLAGS
@@ -14,6 +15,10 @@ try:
     SECTORS = json.load(open("sectors.json", encoding="utf-8"))
 except (OSError, ValueError):
     SECTORS = {}
+
+# US only, and absent means absent - never defaulted to zero. "Nobody is short it"
+# and "we do not know" must not be drawn as the same point.
+SHORT_INTEREST = load_short_interest()
 
 
 def assemble_name(history):
@@ -37,6 +42,7 @@ def assemble_name(history):
         "assets": latest.assets,
         "revenue": latest.revenue,
         "sector": SECTORS.get(latest.ticker, {}).get("sector", "Unclassified"),
+        "short_interest": SHORT_INTEREST.get(latest.ticker),
         "flags": flags,
         "applicable": applicable,
         "goodwill_exceeds_equity": goodwill_exceeds_equity(latest),

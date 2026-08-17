@@ -126,8 +126,87 @@ function scored() {
 function render() {
   const rows = scored();
   renderOverview(rows);
+  renderQuadrant(rows);
   renderStrips(rows);
   renderCards(rows);
+}
+
+/* Score against short interest.
+
+   THE POINT IS THAT THESE DO NOT CORRELATE (rho +0.036, measured). If the screen
+   agreed with short sellers it would only be rediscovering crowded trades. Because
+   the two are independent, points spread over the whole plane, and the top-left
+   corner - flagged by the screen, almost nobody short it - is the only part of this
+   page that is not already in the price.
+
+   Absent short interest is left OUT, never drawn as zero: "nobody is short it" and
+   "we do not know" are different claims. */
+const CROWDED = 0.09;
+
+function renderQuadrant(rows) {
+  const svg = document.getElementById("quadSvg");
+  if (!svg) return;
+  while (svg.firstChild) svg.removeChild(svg.firstChild);
+
+  const pts = rows.filter(({ row }) => row.short_interest != null);
+  const note = document.getElementById("quadNote");
+  if (pts.length < 10) {
+    note.textContent = "Short interest is not available for this selection.";
+    return;
+  }
+
+  const W = 1000, H = 420, L = 46, R = 18, T = 16, B = 42;
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  const maxSI = Math.max(0.2, ...pts.map((p) => p.row.short_interest));
+  const px = (v) => L + Math.min(v / maxSI, 1) * (W - L - R);
+  const py = (v) => H - B - (v / 100) * (H - T - B);
+
+  const midScore = 90;
+  svgEl("rect", { x: L, y: T, width: px(CROWDED) - L, height: py(midScore) - T,
+                  class: "quadhi" }, svg);
+
+  [0, 25, 50, 75, 100].forEach((v) => {
+    svgEl("line", { x1: L, y1: py(v), x2: W - R, y2: py(v), class: "grid" }, svg);
+    const t = svgEl("text", { x: L - 8, y: py(v) + 4, class: "axislabel",
+                              "text-anchor": "end" }, svg);
+    t.textContent = String(v);
+  });
+  for (let s = 0; s <= maxSI + 0.001; s += 0.05) {
+    const t = svgEl("text", { x: px(s), y: H - 14, class: "axislabel",
+                              "text-anchor": "middle" }, svg);
+    t.textContent = (s * 100).toFixed(0) + "%";
+  }
+  svgEl("line", { x1: px(CROWDED), y1: T, x2: px(CROWDED), y2: H - B,
+                  class: "divider" }, svg);
+
+  // Below the band, not inside it - inside, the label sat on top of the very dots
+  // it describes.
+  const lab = svgEl("text", { x: L + 6, y: py(midScore) + 15, class: "quadlabel" }, svg);
+  lab.textContent = "↑ flagged, barely shorted";
+  const lab2 = svgEl("text", { x: W - R - 6, y: py(midScore) + 15, class: "quadlabel",
+                               "text-anchor": "end" }, svg);
+  lab2.textContent = "flagged and already crowded →";
+  const xt = svgEl("text", { x: (L + W - R) / 2, y: H - 2, class: "axistitle",
+                             "text-anchor": "middle" }, svg);
+  xt.textContent = "short interest, % of float";
+
+  pts.forEach(({ row, score }) => {
+    const x = px(row.short_interest), y = py(score);
+    const interesting = score >= midScore && row.short_interest < CROWDED;
+    const dot = svgEl("circle", {
+      cx: x, cy: y, r: interesting ? 4.6 : 3.2,
+      class: "dot" + (interesting ? " hot" : "") + (row.events && row.events.length ? " ev" : ""),
+    }, svg);
+    dot.addEventListener("mouseenter", (e) => showTip(row, score, e.clientX, e.clientY));
+    dot.addEventListener("mouseleave", hideTip);
+  });
+
+  const hot = pts.filter(({ row, score }) => score >= midScore && row.short_interest < CROWDED);
+  note.textContent =
+    `${pts.length} US companies with a short-interest figure. The two are unrelated `
+    + `(rank correlation +0.04), which is what makes the shaded corner worth `
+    + `something: ${hot.length} companies score ${midScore} or above with under `
+    + `${(CROWDED * 100).toFixed(0)}% of float short.`;
 }
 
 /* Sector against test: which corners of the market are firing which test.
