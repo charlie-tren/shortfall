@@ -35,29 +35,30 @@
   </div>
 
   <header class="hero">
-    <p class="wip">In progress - the numbers are real, the presentation is not finished.</p>
+    <p class="wip">In progress</p>
     <h1>Shortfall</h1>
-    <p class="lede">Six tests of accounting quality, run across the S&amp;P 500 and the
-    ASX&nbsp;200. Every company here is flagged by something specific, and every flag
-    has an innocent explanation as well as a worrying one.</p>
+    <p class="lede">Six accounting tests, run over the S&amp;P 500 and the ASX&nbsp;200.
+    A high score means several tests fired at once. It does not mean a bad company -
+    every test here has an innocent reading too.</p>
   </header>
 
-  <section class="panel" id="scatterPanel" aria-label="Every name by score">
+  <section class="panel" id="scatterPanel" aria-label="Score against company size">
     <div class="panel-head">
-      <h2>Every name</h2>
+      <h2>Score against size</h2>
       <p class="note" id="scatterNote"></p>
     </div>
-    <svg id="scatterSvg" role="img" aria-label="Scatter of composite score by rank"></svg>
+    <svg id="scatterSvg" role="img" aria-label="Score against total assets"></svg>
   </section>
 
   <section class="panel" id="weights">
     <div class="panel-head">
-      <h2>Weight the flags yourself</h2>
-      <p class="note">Everything starts equally weighted. The faint line on each point
-      shows where equal weighting put it, so you can see how far you have moved it.</p>
+      <h2>Weight the tests yourself</h2>
+      <p class="note">Equal by default, because without a backtest there is no reason to
+      claim one test beats another. Move them and each card shows where equal weighting
+      had it.</p>
     </div>
     <div id="sliders"></div>
-    <button id="resetWeights" type="button">Reset to equal weight</button>
+    <button id="resetWeights" type="button">Reset</button>
   </section>
 
   <section class="panel" id="filterPanel">
@@ -66,16 +67,26 @@
 
   <section id="cards"></section>
 
+  <div id="tip" role="tooltip"></div>
+
+  <section class="panel" id="agree">
+    <div class="panel-head">
+      <h2>The tests do not agree with each other</h2>
+      <p class="note" id="agreeNote"></p>
+    </div>
+    <div id="matrix"></div>
+  </section>
+
   <section class="panel" id="explain">
-    <h2>What each flag shows</h2>
+    <h2>The six tests</h2>
     <div class="tablewrap">
       <table>
         <thead>
           <tr>
-            <th>Flag</th>
-            <th>What it measures</th>
-            <th>Why it can signal deterioration</th>
-            <th>Why it can be innocent</th>
+            <th>Test</th>
+            <th>Measures</th>
+            <th>The worry</th>
+            <th>The innocent reading</th>
           </tr>
         </thead>
         <tbody id="explainBody"></tbody>
@@ -84,31 +95,20 @@
   </section>
 
   <section class="panel" id="limits">
-    <h2>What this does not do</h2>
+    <h2>Caveats</h2>
     <ul>
-      <li>The screen <strong>has not been backtested</strong>. Nobody knows whether these
-      flags predict anything, including me.</li>
-      <li>Restatements, auditor changes and late filings come from SEC filings, so they
-      are <strong>United States only</strong>. The
-      197 Australian names cannot carry them.</li>
-      <li>Australian operating cash flow is <strong>derived</strong>, because the
-      published cash flow statements do not carry it directly. Where two independent
-      derivations disagree, the accruals flag is dropped for that company rather than
-      guessed.</li>
-      <li>Stock on hand is measured against revenue rather than cost of sales, because
-      cost of sales is not reliably tagged. The ratio therefore moves with gross margin
-      as well as with inventory.</li>
-      <li>A sixth test, on capitalised costs, was dropped: fewer than one company in ten
-      reports the figure it needs.</li>
-      <li>Companies with fewer than three applicable flags are listed separately rather
-      than ranked. There are 41 of them.</li>
-      <li>Banks, insurers and utilities often do not report a revenue line in the standard
-      form, so some tests do not apply to them. Not applicable is shown as not applicable,
-      never as a pass.</li>
+      <li><strong>No backtest.</strong> Nobody knows whether these flags predict anything.</li>
+      <li><strong>Filing events are US only.</strong> 197
+      Australian names cannot carry them.</li>
+      <li><strong>Australian cash flow is derived.</strong> Two routes; where they
+      disagree the accruals flag is dropped, not guessed.</li>
+      <li><strong>Inventory is scaled by revenue,</strong> not cost of sales, which is not
+      reliably tagged.</li>
+      <li><strong>41 companies are unranked,</strong> with fewer than
+      three applicable tests. Not applicable never means a pass.</li>
     </ul>
-    <p class="fineprint">Sources: SEC EDGAR XBRL company facts and filing metadata for the
-    United States; Yahoo Finance for Australia. Figures are as filed. This is not
-    investment advice and not a recommendation about any company.</p>
+    <p class="fineprint">SEC EDGAR for the United States, Yahoo Finance for Australia,
+    as filed. Not investment advice.</p>
   </section>
 
   <footer>

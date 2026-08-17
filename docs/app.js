@@ -74,8 +74,9 @@ function render() {
   renderScatter(rows);
   renderCards(rows);
   const note = document.getElementById("scatterNote");
-  note.textContent = `${rows.length} companies. Hover a point for the name. `
-    + `Cards below are the top ${Math.min(rows.length, 100)} by score.`;
+  note.textContent = `${rows.length} companies, score against total assets. `
+    + `Hover a point for the name. Cards below are the top `
+    + `${Math.min(rows.length, 100)} by score.`;
 }
 
 function renderCards(rows) {
@@ -156,10 +157,8 @@ function renderScatter(rows) {
     const t = svgEl("text", { x: px(Math.pow(10, e)), y: H - 12, class: "axislabel", "text-anchor": "middle" }, svg);
     t.textContent = money(Math.pow(10, e));
   }
-  const yl = svgEl("text", { x: L - 8, y: T + 2, class: "axislabel", "text-anchor": "end" }, svg);
-  yl.textContent = "score";
-  const xl = svgEl("text", { x: W - R, y: H - 12, class: "axislabel", "text-anchor": "end" }, svg);
-  xl.textContent = "total assets";
+  // No inline axis titles. They collided with the end ticks ("score" over 100,
+  // "total assets" over 10.0tn) and the panel heading already names both axes.
 
   const layer = svgEl("g", {}, svg);
   withSize.forEach(({ row, score, base }) => {

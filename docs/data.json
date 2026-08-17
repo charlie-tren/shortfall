@@ -5,6 +5,8 @@
    "name": "Constellation Energy",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 52926000000.0,
+   "revenue": 23568000000.0,
    "flags": {
     "accruals": {
      "value": 0.11984491339068709,
@@ -67,6 +69,8 @@
    "name": "Infratil",
    "market": "Australia (ASX)",
    "year": 2026,
+   "assets": 18175500000.0,
+   "revenue": 2999100000.0,
    "flags": {
     "accruals": {
      "value": 0.02003478417997425,
@@ -116,6 +120,8 @@
    "name": "Advanced Micro Devices",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 69226000000.0,
+   "revenue": 25785000000.0,
    "flags": {
     "accruals": {
      "value": -0.020421410390121873,
@@ -180,6 +186,8 @@
    "name": "AMP",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 34212000000.0,
+   "revenue": 869000000.0,
    "flags": {
     "accruals": {
      "value": 0.04476570733082986,
@@ -229,6 +237,8 @@
    "name": "Orora",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 4848100000.0,
+   "revenue": 2090200000.0,
    "flags": {
     "accruals": {
      "value": 0.11076673308242935,
@@ -280,6 +290,8 @@
    "name": "Generation Development Group",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 5514566000.0,
+   "revenue": 626224000.0,
    "flags": {
     "accruals": {
      "value": 0.005691255082938395,
@@ -330,6 +342,8 @@
    "name": "Sigma Healthcare",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 8287802000.0,
+   "revenue": 6001835000.0,
    "flags": {
     "accruals": {
      "value": -0.01362156292185035,
@@ -379,6 +393,8 @@
    "name": "Auckland International Airport Limited",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 14062600000.0,
+   "revenue": 929300000.0,
    "flags": {
     "accruals": {
      "value": -0.004048521836336994,
@@ -429,6 +445,8 @@
    "name": "Seek",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 4765500000.0,
+   "revenue": 1097000000.0,
    "flags": {
     "accruals": {
      "value": -0.017814751790928764,
@@ -480,6 +498,8 @@
    "name": "Seagate Technology",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 7959000000.0,
+   "revenue": 9097000000.0,
    "flags": {
     "accruals": {
      "value": 0.05109875562615833,
@@ -544,6 +564,8 @@
    "name": "Regeneron Pharmaceuticals",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 37759400000.0,
+   "revenue": 14202000000.0,
    "flags": {
     "accruals": {
      "value": -0.00022303909112982004,
@@ -606,6 +628,8 @@
    "name": "Franklin Resources",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 32390000000.0,
+   "revenue": 8478000000.0,
    "flags": {
     "accruals": {
      "value": -0.016271576302930812,
@@ -667,6 +691,8 @@
    "name": "NetApp",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 8989000000.0,
+   "revenue": 5907000000.0,
    "flags": {
     "accruals": {
      "value": -0.03486218542324872,
@@ -731,6 +757,8 @@
    "name": "Scentre Group",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 35397000000.0,
+   "revenue": 2685000000.0,
    "flags": {
     "accruals": {
      "value": 0.020236397921170032,
@@ -780,6 +808,8 @@
    "name": "Coherent Corp.",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 14197334000.0,
+   "revenue": 4707688000.0,
    "flags": {
     "accruals": {
      "value": -0.048640318467493,
@@ -843,6 +873,8 @@
    "name": "Alcoa",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 16129000000.0,
+   "revenue": 12831000000.0,
    "flags": {
     "accruals": {
      "value": -0.0018547345411188024,
@@ -892,6 +924,8 @@
    "name": "Abacus Storage King",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 3613993000.0,
+   "revenue": 246457000.0,
    "flags": {
     "accruals": {
      "value": 0.058523222949311934,
@@ -943,6 +977,8 @@
    "name": "Qube Holdings",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 6839000000.0,
+   "revenue": 4086500000.0,
    "flags": {
     "accruals": {
      "value": -0.042325998269254546,
@@ -994,6 +1030,8 @@
    "name": "Blackstone Inc.",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 43469875000.0,
+   "revenue": 13229968000.0,
    "flags": {
     "accruals": {
      "value": -0.01683800972582663,
@@ -1055,6 +1093,8 @@
    "name": "Deterra Royalties",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 502374000.0,
+   "revenue": 263433000.0,
    "flags": {
     "accruals": {
      "value": 0.06897168642366334,
@@ -1106,6 +1146,8 @@
    "name": "Revvity",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 12392478000.0,
+   "revenue": 2755026000.0,
    "flags": {
     "accruals": {
      "value": -0.027577303095336802,
@@ -1170,6 +1212,8 @@
    "name": "M&T Bank",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 208105000000.0,
+   "revenue": 1541000000.0,
    "flags": {
     "accruals": {
      "value": -0.004909107066088013,
@@ -1231,6 +1275,8 @@
    "name": "Western Digital",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 25456000000.0,
+   "revenue": 9520000000.0,
    "flags": {
     "accruals": {
      "value": 0.00794526594570735,
@@ -1295,6 +1341,8 @@
    "name": "Gen Digital",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 15363000000.0,
+   "revenue": 3935000000.0,
    "flags": {
     "accruals": {
      "value": -0.036530257544635805,
@@ -1358,6 +1406,8 @@
    "name": "Carrier Global",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 37403000000.0,
+   "revenue": 22486000000.0,
    "flags": {
     "accruals": {
      "value": 0.14356710573157708,
@@ -1422,6 +1472,8 @@
    "name": "Lynas Rare Earths",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 2944218000.0,
+   "revenue": 542665000.0,
    "flags": {
     "accruals": {
      "value": -0.03345787951900276,
@@ -1473,6 +1525,8 @@
    "name": "Transurban",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 35567000000.0,
+   "revenue": 3770000000.0,
    "flags": {
     "accruals": {
      "value": -0.038250231798618896,
@@ -1524,6 +1578,8 @@
    "name": "Chorus",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 6088000000.0,
+   "revenue": 950000000.0,
    "flags": {
     "accruals": {
      "value": -0.09173553719008265,
@@ -1575,6 +1631,8 @@
    "name": "Mirvac",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 15078000000.0,
+   "revenue": 2444000000.0,
    "flags": {
     "accruals": {
      "value": -0.031468303192531175,
@@ -1624,6 +1682,8 @@
    "name": "Expand Energy",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 27894000000.0,
+   "revenue": 4235000000.0,
    "flags": {
     "accruals": {
      "value": -0.10783061272770286,
@@ -1684,6 +1744,8 @@
    "name": "Smurfit Westrock",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 43759000000.0,
+   "revenue": 21109000000.0,
    "flags": {
     "accruals": {
      "value": -0.04026984950700571,
@@ -1745,6 +1807,8 @@
    "name": "Texas Pacific Land Corporation",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 1248020000.0,
+   "revenue": 705823000.0,
    "flags": {
     "accruals": {
      "value": -0.030537119585695997,
@@ -1803,6 +1867,8 @@
    "name": "Bank of Queensland",
    "market": "Australia (ASX)",
    "year": 2024,
+   "assets": 103040000000.0,
+   "revenue": 1597000000.0,
    "flags": {
     "accruals": {
      "value": 0.011036892011209644,
@@ -1852,6 +1918,8 @@
    "name": "Wells Fargo",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 1929845000000.0,
+   "revenue": null,
    "flags": {
     "accruals": {
      "value": 0.008640936143704562,
@@ -1911,6 +1979,8 @@
    "name": "Altria",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 35177000000.0,
+   "revenue": 24018000000.0,
    "flags": {
     "accruals": {
      "value": 0.06809768532957274,
@@ -1973,6 +2043,8 @@
    "name": "Coinbase",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 22541951000.0,
+   "revenue": 6564028000.0,
    "flags": {
     "accruals": {
      "value": -0.027023648635242332,
@@ -2036,6 +2108,8 @@
    "name": "AUB Group",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 4733357000.0,
+   "revenue": 1034061000.0,
    "flags": {
     "accruals": {
      "value": -0.047019523929512044,
@@ -2087,6 +2161,8 @@
    "name": "HP Inc.",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 38930000000.0,
+   "revenue": 53559000000.0,
    "flags": {
     "accruals": {
      "value": -0.02605113940301701,
@@ -2151,6 +2227,8 @@
    "name": "Microchip Technology",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 15632200000.0,
+   "revenue": 4401600000.0,
    "flags": {
     "accruals": {
      "value": -0.056559832825599836,
@@ -2215,6 +2293,8 @@
    "name": "IMDEX",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 830148000.0,
+   "revenue": 431395000.0,
    "flags": {
     "accruals": {
      "value": -0.08453051800046031,
@@ -2266,6 +2346,8 @@
    "name": "eBay Inc.",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 19365000000.0,
+   "revenue": 10283000000.0,
    "flags": {
     "accruals": {
      "value": -0.021422471635964377,
@@ -2329,6 +2411,8 @@
    "name": "Soul Patts",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 11181400000.0,
+   "revenue": 613400000.0,
    "flags": {
     "accruals": {
      "value": 0.003318025311528284,
@@ -2379,6 +2463,8 @@
    "name": "Flight Centre Travel Group",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 4109075000.0,
+   "revenue": 2783944000.0,
    "flags": {
     "accruals": {
      "value": -0.007129095523488362,
@@ -2430,6 +2516,8 @@
    "name": "Corning Inc.",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 27735000000.0,
+   "revenue": 13118000000.0,
    "flags": {
     "accruals": {
      "value": -0.05096470169823064,
@@ -2494,6 +2582,8 @@
    "name": "KeyCorp",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 187168000000.0,
+   "revenue": 4619000000.0,
    "flags": {
     "accruals": {
      "value": -0.00439473803366103,
@@ -2554,6 +2644,8 @@
    "name": "Aristocrat Leisure",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 10392500000.0,
+   "revenue": 6297000000.0,
    "flags": {
     "accruals": {
      "value": -0.028353441986093863,
@@ -2603,6 +2695,8 @@
    "name": "AGL Energy",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 16204000000.0,
+   "revenue": 13840000000.0,
    "flags": {
     "accruals": {
      "value": -0.058936136827239916,
@@ -2653,6 +2747,8 @@
    "name": "Amcor",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 37066000000.0,
+   "revenue": 15009000000.0,
    "flags": {
     "accruals": {
      "value": -0.03280462772905393,
@@ -2705,6 +2801,8 @@
    "name": "Viatris",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 41500900000.0,
+   "revenue": 14739300000.0,
    "flags": {
     "accruals": {
      "value": null,
@@ -2764,6 +2862,8 @@
    "name": "Apollo Global Management",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 377895000000.0,
+   "revenue": 26114000000.0,
    "flags": {
     "accruals": {
      "value": 0.0035494074919400678,
@@ -2825,6 +2925,8 @@
    "name": "Prologis",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 95328909000.0,
+   "revenue": 8201610000.0,
    "flags": {
     "accruals": {
      "value": -0.01253597635534943,
@@ -2884,6 +2986,8 @@
    "name": "Kenvue",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 25601000000.0,
+   "revenue": 15455000000.0,
    "flags": {
     "accruals": {
      "value": -0.02765097657711592,
@@ -2947,6 +3051,8 @@
    "name": "PLS Group",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 4667395000.0,
+   "revenue": 890207000.0,
    "flags": {
     "accruals": {
      "value": -0.07619354234992158,
@@ -2996,6 +3102,8 @@
    "name": "Public Service Enterprise Group",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 54640000000.0,
+   "revenue": 10290000000.0,
    "flags": {
     "accruals": {
      "value": -0.006851329936136495,
@@ -3057,6 +3165,8 @@
    "name": "CAR Group",
    "market": "Australia (ASX)",
    "year": 2026,
+   "assets": 4902604000.0,
+   "revenue": 1253427000.0,
    "flags": {
     "accruals": {
      "value": -0.05380973860214528,
@@ -3106,6 +3216,8 @@
    "name": "Medibank",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 4700300000.0,
+   "revenue": 8546000000.0,
    "flags": {
     "accruals": {
      "value": 0.02554950616363191,
@@ -3156,6 +3268,8 @@
    "name": "Moderna",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 14142000000.0,
+   "revenue": 3236000000.0,
    "flags": {
     "accruals": {
      "value": -0.03420535494964382,
@@ -3218,6 +3332,8 @@
    "name": "Garmin",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 9630527000.0,
+   "revenue": 6296903000.0,
    "flags": {
     "accruals": {
      "value": -0.002307216107669939,
@@ -3281,6 +3397,8 @@
    "name": "Sempra",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 96155000000.0,
+   "revenue": 13185000000.0,
    "flags": {
     "accruals": {
      "value": -0.02230876641794301,
@@ -3345,6 +3463,8 @@
    "name": "Treasury Wine Estates",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 8310900000.0,
+   "revenue": 2938100000.0,
    "flags": {
     "accruals": {
      "value": -0.010813641262322132,
@@ -3396,6 +3516,8 @@
    "name": "James Hardie",
    "market": "Australia (ASX)",
    "year": 2026,
+   "assets": 13688600000.0,
+   "revenue": 4835800000.0,
    "flags": {
     "accruals": {
      "value": -0.05135713719375215,
@@ -3445,6 +3567,8 @@
    "name": "GE Aerospace",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 123140000000.0,
+   "revenue": 38702000000.0,
    "flags": {
     "accruals": {
      "value": 0.012454459587100257,
@@ -3509,6 +3633,8 @@
    "name": "Welltower",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 51044308000.0,
+   "revenue": 7991118000.0,
    "flags": {
     "accruals": {
      "value": -0.027451912428394936,
@@ -3570,6 +3696,8 @@
    "name": "Stockland",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 17743000000.0,
+   "revenue": 3131000000.0,
    "flags": {
     "accruals": {
      "value": 0.028618222567020086,
@@ -3621,6 +3749,8 @@
    "name": "Cadence Design Systems",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 8974482000.0,
+   "revenue": 4641264000.0,
    "flags": {
     "accruals": {
      "value": -0.02800701694820115,
@@ -3684,6 +3814,8 @@
    "name": "TE Connectivity",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 22441000000.0,
+   "revenue": 15845000000.0,
    "flags": {
     "accruals": {
      "value": -0.012480224995605554,
@@ -3748,6 +3880,8 @@
    "name": "Origin Energy",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 20989000000.0,
+   "revenue": 17118000000.0,
    "flags": {
     "accruals": {
      "value": 0.0509133026084019,
@@ -3799,6 +3933,8 @@
    "name": "Nike, Inc.",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 37959000000.0,
+   "revenue": 46309000000.0,
    "flags": {
     "accruals": {
      "value": -0.012745802400149012,
@@ -3862,6 +3998,8 @@
    "name": "Raymond James Financial",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 82282000000.0,
+   "revenue": 14923000000.0,
    "flags": {
     "accruals": {
      "value": -0.0010713494076792355,
@@ -3920,6 +4058,8 @@
    "name": "Supermicro",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 9728348000.0,
+   "revenue": 14989251000.0,
    "flags": {
     "accruals": {
      "value": 0.48087680267446437,
@@ -4013,6 +4153,8 @@
    "name": "Weyerhaeuser",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 16536000000.0,
+   "revenue": 7124000000.0,
    "flags": {
     "accruals": {
      "value": -0.03651660252394164,
@@ -4075,6 +4217,8 @@
    "name": "Vertex Pharmaceuticals",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 22533200000.0,
+   "revenue": 11020100000.0,
    "flags": {
     "accruals": {
      "value": -0.0018999898372636611,
@@ -4137,6 +4281,8 @@
    "name": "Cisco",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 121375000000.0,
+   "revenue": 53803000000.0,
    "flags": {
     "accruals": {
      "value": -0.005032599562343574,
@@ -4201,6 +4347,8 @@
    "name": "Block, Inc.",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 36777595000.0,
+   "revenue": 24121053000.0,
    "flags": {
     "accruals": {
      "value": 0.03408439178595888,
@@ -4264,6 +4412,8 @@
    "name": "Ansell",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 3322400000.0001,
+   "revenue": 2003300000.0,
    "flags": {
     "accruals": {
      "value": -0.04194973343488195,
@@ -4315,6 +4465,8 @@
    "name": "Citizens Financial Group",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 217521000000.0,
+   "revenue": 7809000000.0,
    "flags": {
     "accruals": {
      "value": -0.0022389842656745963,
@@ -4376,6 +4528,8 @@
    "name": "Steadfast Group",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 6427400000.0,
+   "revenue": 1320200000.0,
    "flags": {
     "accruals": {
      "value": -0.026967329311311114,
@@ -4427,6 +4581,8 @@
    "name": "Bendigo & Adelaide Bank",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 103218900000.0,
+   "revenue": 1914900000.0,
    "flags": {
     "accruals": {
      "value": -0.0178166774905316,
@@ -4476,6 +4632,8 @@
    "name": "BNY Mellon",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 416064000000.0,
+   "revenue": 18619000000.0,
    "flags": {
     "accruals": {
      "value": 0.009305749442151437,
@@ -4534,6 +4692,8 @@
    "name": "Zimmer Biomet",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 21365300000.0,
+   "revenue": 7678600000.0,
    "flags": {
     "accruals": {
      "value": -0.027791387282967275,
@@ -4598,6 +4758,8 @@
    "name": "Resolute Mining",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 1178599999.9999,
+   "revenue": 865600000.0,
    "flags": {
     "accruals": {
      "value": -0.09769007024477055,
@@ -4647,6 +4809,8 @@
    "name": "Sims Metal",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 4446100000.0,
+   "revenue": 7494000000.0,
    "flags": {
     "accruals": {
      "value": -0.06760918851862942,
@@ -4697,6 +4861,8 @@
    "name": "CSL",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 39403999999.9997,
+   "revenue": 15430000000.0,
    "flags": {
     "accruals": {
      "value": -0.014439593934853999,
@@ -4748,6 +4914,8 @@
    "name": "IBM",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 137175000000.0,
+   "revenue": 62753000000.0,
    "flags": {
     "accruals": {
      "value": -0.05449019147186656,
@@ -4812,6 +4980,8 @@
    "name": "State Street Corporation",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 353240000000.0,
+   "revenue": 13000000000.0,
    "flags": {
     "accruals": {
      "value": 0.04887601659036615,
@@ -4870,6 +5040,8 @@
    "name": "Goodman Group",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 31565300000.0,
+   "revenue": 2068600000.0,
    "flags": {
     "accruals": {
      "value": 0.02551928569107511,
@@ -4921,6 +5093,8 @@
    "name": "Ampol",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 12159800000.0,
+   "revenue": 31320600000.0,
    "flags": {
     "accruals": {
      "value": -0.05692164484696915,
@@ -4970,6 +5144,8 @@
    "name": "Worley",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 11019000000.0,
+   "revenue": 11222000000.0,
    "flags": {
     "accruals": {
      "value": -0.030908159940418005,
@@ -5022,6 +5198,8 @@
    "name": "QBE Insurance",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 48534999999.9999,
+   "revenue": 19506000000.0,
    "flags": {
     "accruals": {
      "value": -0.0447278119959732,
@@ -5071,6 +5249,8 @@
    "name": "Cooper Companies (The)",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 12222200000.0,
+   "revenue": 3895400000.0,
    "flags": {
     "accruals": {
      "value": -0.02613915596088197,
@@ -5135,6 +5315,8 @@
    "name": "Vicinity Centres",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 16342500000.0,
+   "revenue": 1321900000.0,
    "flags": {
     "accruals": {
      "value": 0.02205293077587524,
@@ -5186,6 +5368,8 @@
    "name": "Genesis Energy",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 6102000000.0,
+   "revenue": 3714500000.0,
    "flags": {
     "accruals": {
      "value": -0.02429446389478078,
@@ -5237,6 +5421,8 @@
    "name": "Oneok",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 64069000000.0,
+   "revenue": 21698000000.0,
    "flags": {
     "accruals": {
      "value": -0.03420870448146952,
@@ -5301,6 +5487,8 @@
    "name": "Keysight Technologies",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 9387000000.0,
+   "revenue": 4979000000.0,
    "flags": {
     "accruals": {
      "value": -0.04748739632460563,
@@ -5365,6 +5553,8 @@
    "name": "Xylem Inc.",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 16493000000.0,
+   "revenue": 8562000000.0,
    "flags": {
     "accruals": {
      "value": -0.022879926391657722,
@@ -5429,6 +5619,8 @@
    "name": "Waters Corporation",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 4553795000.0,
+   "revenue": 2958387000.0,
    "flags": {
     "accruals": {
      "value": -0.027076299289952158,
@@ -5493,6 +5685,8 @@
    "name": "NVR, Inc.",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 6380988000.0,
+   "revenue": 10524479000.0,
    "flags": {
     "accruals": {
      "value": 0.04736532990519339,
@@ -5549,6 +5743,8 @@
    "name": "Redox",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 732214000.0,
+   "revenue": 1243797000.0,
    "flags": {
     "accruals": {
      "value": 0.040801730940278655,
@@ -5599,6 +5795,8 @@
    "name": "Magellan Financial Group",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 1093756000.0,
+   "revenue": 313271000.0,
    "flags": {
     "accruals": {
      "value": 0.010651397159871736,
@@ -5649,6 +5847,8 @@
    "name": "MFF Capital Investments",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 2952719000.0,
+   "revenue": 607833000.0,
    "flags": {
     "accruals": {
      "value": 0.03406076257731057,
@@ -5698,6 +5898,8 @@
    "name": "Harvey Norman",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 8373227000.0,
+   "revenue": 4121467000.0,
    "flags": {
     "accruals": {
      "value": -0.021628732402868174,
@@ -5749,6 +5951,8 @@
    "name": "Edwards Lifesciences",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 13055300000.0,
+   "revenue": 5439500000.0,
    "flags": {
     "accruals": {
      "value": 0.32404487365345586,
@@ -5813,6 +6017,8 @@
    "name": "Trimble Inc.",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 9488300000.0,
+   "revenue": 3683300000.0,
    "flags": {
     "accruals": {
      "value": 0.10227248838529295,
@@ -5902,6 +6108,8 @@
    "name": "Capricorn Metals",
    "market": "Australia (ASX)",
    "year": 2024,
+   "assets": 602507000.0,
+   "revenue": 359727000.0,
    "flags": {
     "accruals": {
      "value": -0.12444757405529251,
@@ -5952,6 +6160,8 @@
    "name": "Medtronic",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 89973000000.0,
+   "revenue": 33537000000.0,
    "flags": {
     "accruals": {
      "value": -0.02634824593908489,
@@ -6016,6 +6226,8 @@
    "name": "Westpac",
    "market": "Australia (ASX)",
    "year": 2024,
+   "assets": 1077544000000.0,
+   "revenue": 21587000000.0,
    "flags": {
     "accruals": {
      "value": 0.025394363831182574,
@@ -6066,6 +6278,8 @@
    "name": "Breville Group",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 1481209000.0,
+   "revenue": 1696551000.0,
    "flags": {
     "accruals": {
      "value": -0.025242002919625268,
@@ -6117,6 +6331,8 @@
    "name": "Lumentum",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 3966100000.0,
+   "revenue": 1645000000.0,
    "flags": {
     "accruals": {
      "value": -0.023288989921248882,
@@ -6179,6 +6395,8 @@
    "name": "Xcel Energy",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 70035000000.0,
+   "revenue": null,
    "flags": {
     "accruals": {
      "value": -0.04033881623096768,
@@ -6238,6 +6456,8 @@
    "name": "S&P Global",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 60221000000.0,
+   "revenue": 14208000000.0,
    "flags": {
     "accruals": {
      "value": -0.030411389785613772,
@@ -6301,6 +6521,8 @@
    "name": "Perseus Mining",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 2480510999.9999,
+   "revenue": 1248082000.0,
    "flags": {
     "accruals": {
      "value": -0.07424136818487774,
@@ -6351,6 +6573,8 @@
    "name": "Zimplats Holdings",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 2625868000.0,
+   "revenue": 826589000.0,
    "flags": {
     "accruals": {
      "value": -0.024702296937990403,
@@ -6401,6 +6625,8 @@
    "name": "GE HealthCare",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 33089000000.0,
+   "revenue": 19672000000.0,
    "flags": {
     "accruals": {
      "value": null,
@@ -6462,6 +6688,8 @@
    "name": "News Corp Class B",
    "market": "Australia (ASX)",
    "year": 2026,
+   "assets": 15544000000.0,
+   "revenue": 9028000000.0,
    "flags": {
     "accruals": {
      "value": -0.042772481319247616,
@@ -6511,6 +6739,8 @@
    "name": "CMS Energy",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 35920000000.0,
+   "revenue": 7515000000.0,
    "flags": {
     "accruals": {
      "value": -0.03937382087359765,
@@ -6568,6 +6798,8 @@
    "name": "4DMedical",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 94811607.0,
+   "revenue": 5778401.0,
    "flags": {
     "accruals": {
      "value": 0.04069347607572252,
@@ -6617,6 +6849,8 @@
    "name": "Rockwell Automation",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 10944000000.0,
+   "revenue": 8264000000.0,
    "flags": {
     "accruals": {
      "value": 0.007990196298474231,
@@ -6681,6 +6915,8 @@
    "name": "Mineral Resources",
    "market": "Australia (ASX)",
    "year": 2024,
+   "assets": 12232000000.0,
+   "revenue": 5259000000.0,
    "flags": {
     "accruals": {
      "value": -0.12837418554142105,
@@ -6731,6 +6967,8 @@
    "name": "Region Group",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 4590900000.0,
+   "revenue": 382000000.0,
    "flags": {
     "accruals": {
      "value": null,
@@ -6780,6 +7018,8 @@
    "name": "Summerset Group Holdings",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 9234870000.0,
+   "revenue": 360861000.0,
    "flags": {
     "accruals": {
      "value": -0.0333458259570209,
@@ -6831,6 +7071,8 @@
    "name": "Marvell Technology",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 20204500000.0,
+   "revenue": 5767300000.0,
    "flags": {
     "accruals": {
      "value": -0.12387227572225037,
@@ -6894,6 +7136,8 @@
    "name": "Computershare",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 5335428000.0,
+   "revenue": 3065222000.0,
    "flags": {
     "accruals": {
      "value": -0.04144691524727218,
@@ -6946,6 +7190,8 @@
    "name": "Cochlear",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 2825000000.0,
+   "revenue": 2343100000.0,
    "flags": {
     "accruals": {
      "value": 0.054325775120733916,
@@ -6997,6 +7243,8 @@
    "name": "Everest Group",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 56341000000.0,
+   "revenue": 17281000000.0,
    "flags": {
     "accruals": {
      "value": -0.06778891620957064,
@@ -7055,6 +7303,8 @@
    "name": "A. O. Smith",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 3240000000.0,
+   "revenue": 3818100000.0,
    "flags": {
     "accruals": {
      "value": -0.014936704938099444,
@@ -7119,6 +7369,8 @@
    "name": "Williams Companies",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 54532000000.0,
+   "revenue": 10503000000.0,
    "flags": {
     "accruals": {
      "value": -0.05130693642157915,
@@ -7183,6 +7435,8 @@
    "name": "Boeing",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 156363000000.0,
+   "revenue": 66517000000.0,
    "flags": {
     "accruals": {
      "value": 0.0017929271410311036,
@@ -7245,6 +7499,8 @@
    "name": "Ciena",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 5572902000.0,
+   "revenue": 4014955000.0,
    "flags": {
     "accruals": {
      "value": -0.07712192032463941,
@@ -7309,6 +7565,8 @@
    "name": "Dalrymple Bay Infrastructure",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 3541533000.0,
+   "revenue": 659358000.0,
    "flags": {
     "accruals": {
      "value": -0.0097821888930014,
@@ -7358,6 +7616,8 @@
    "name": "Danaher Corporation",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 77542000000.0,
+   "revenue": 23875000000.0,
    "flags": {
     "accruals": {
      "value": -0.03442572363142628,
@@ -7422,6 +7682,8 @@
    "name": "ASX",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 17569400000.0,
+   "revenue": 1128000000.0,
    "flags": {
     "accruals": {
      "value": null,
@@ -7472,6 +7734,8 @@
    "name": "New Hope",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 3538763000.0,
+   "revenue": 1750704000.0,
    "flags": {
     "accruals": {
      "value": -0.03751355365678302,
@@ -7523,6 +7787,8 @@
    "name": "Austal",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 2945295000.0,
+   "revenue": 1823337000.0,
    "flags": {
     "accruals": {
      "value": -0.1256674080216381,
@@ -7574,6 +7840,8 @@
    "name": "First Solar",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 12124361000.0,
+   "revenue": 4206289000.0,
    "flags": {
     "accruals": {
      "value": 0.006584852757685555,
@@ -7638,6 +7906,8 @@
    "name": "Micron Technology",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 71461000000.0,
+   "revenue": 25111000000.0,
    "flags": {
     "accruals": {
      "value": -0.11430303836967694,
@@ -7702,6 +7972,8 @@
    "name": "Stanley Black & Decker",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 21848900000.0,
+   "revenue": 15365700000.0,
    "flags": {
     "accruals": {
      "value": -0.035708714270961735,
@@ -7766,6 +8038,8 @@
    "name": "U.S. Bancorp",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 678318000000.0,
+   "revenue": 27455000000.0,
    "flags": {
     "accruals": {
      "value": -0.00752864230304015,
@@ -7825,6 +8099,8 @@
    "name": "Motorola Solutions",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 14595000000.0,
+   "revenue": 10817000000.0,
    "flags": {
     "accruals": {
      "value": -0.05828649171171816,
@@ -7889,6 +8165,8 @@
    "name": "Xero",
    "market": "Australia (ASX)",
    "year": 2026,
+   "assets": 7585563709.1394,
+   "revenue": 2295764676.451,
    "flags": {
     "accruals": {
      "value": -0.10969840653109347,
@@ -7938,6 +8216,8 @@
    "name": "Prudential Financial",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 735587000000.0,
+   "revenue": 70405000000.0,
    "flags": {
     "accruals": {
      "value": -0.007928341521376663,
@@ -7999,6 +8279,8 @@
    "name": "Principal Financial Group",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 313663600000.0,
+   "revenue": 16127700000.0,
    "flags": {
     "accruals": {
      "value": -0.009713754563323093,
@@ -8058,6 +8340,8 @@
    "name": "Qualcomm",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 55575000000.0,
+   "revenue": 38962000000.0,
    "flags": {
     "accruals": {
      "value": -0.038250858787484916,
@@ -8121,6 +8405,8 @@
    "name": "Charter Hall",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 3544200000.0,
+   "revenue": 442200000.0,
    "flags": {
     "accruals": {
      "value": -0.007874344384312525,
@@ -8172,6 +8458,8 @@
    "name": "Lilly (Eli)",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 78715000000.0,
+   "revenue": 45043000000.0,
    "flags": {
     "accruals": {
      "value": 0.024831612380212344,
@@ -8236,6 +8524,8 @@
    "name": "Travelers Companies (The)",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 133189000000.0,
+   "revenue": 46423000000.0,
    "flags": {
     "accruals": {
      "value": -0.031446904891440655,
@@ -8297,6 +8587,8 @@
    "name": "Ventas",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 26186906000.0,
+   "revenue": 4924266000.0,
    "flags": {
     "accruals": {
      "value": null,
@@ -8357,6 +8649,8 @@
    "name": "EQT Corporation",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 39830255000.0,
+   "revenue": 5273309000.0,
    "flags": {
     "accruals": {
      "value": -0.07974758272446131,
@@ -8419,6 +8713,8 @@
    "name": "Corteva",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 40825000000.0,
+   "revenue": 16908000000.0,
    "flags": {
     "accruals": {
      "value": -0.029539136970448934,
@@ -8481,6 +8777,8 @@
    "name": "Thermo Fisher Scientific",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 97321000000.0,
+   "revenue": 42879000000.0,
    "flags": {
     "accruals": {
      "value": -0.023759608665269043,
@@ -8545,6 +8843,8 @@
    "name": "Pfizer",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 213396000000.0,
+   "revenue": 63627000000.0,
    "flags": {
     "accruals": {
      "value": -0.021427743312639094,
@@ -8609,6 +8909,8 @@
    "name": "DTE Energy",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 48846000000.0,
+   "revenue": null,
    "flags": {
     "accruals": {
      "value": -0.04784136921614085,
@@ -8668,6 +8970,8 @@
    "name": "Dell Technologies",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 79746000000.0,
+   "revenue": 95567000000.0,
    "flags": {
     "accruals": {
      "value": 0.0006795492735000494,
@@ -8732,6 +9036,8 @@
    "name": "Ameren",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 44598000000.0,
+   "revenue": 7623000000.0,
    "flags": {
     "accruals": {
      "value": null,
@@ -8793,6 +9099,8 @@
    "name": "Lam Research",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 19839916000.0,
+   "revenue": 18435591000.0,
    "flags": {
     "accruals": {
      "value": -0.04220442707713033,
@@ -8861,6 +9169,8 @@
    "name": "GoDaddy",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 8235400000.0,
+   "revenue": 4573200000.0,
    "flags": {
     "accruals": {
      "value": -0.04440422017303469,
@@ -8923,6 +9233,8 @@
    "name": "Capstone Copper",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 7196877000.0,
+   "revenue": 2359890000.0,
    "flags": {
     "accruals": {
      "value": -0.05446637342869651,
@@ -8972,6 +9284,8 @@
    "name": "WEC Energy Group",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 47363200000.0,
+   "revenue": 8599900000.0,
    "flags": {
     "accruals": {
      "value": null,
@@ -9032,6 +9346,8 @@
    "name": "Brown\u00e2\u20ac\u201cForman",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 8071000000.0,
+   "revenue": 3975000000.0,
    "flags": {
     "accruals": {
      "value": 0.033235221976943834,
@@ -9096,6 +9412,8 @@
    "name": "APA Group",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 19937000000.0,
+   "revenue": 3182000000.0,
    "flags": {
     "accruals": {
      "value": -0.06,
@@ -9147,6 +9465,8 @@
    "name": "Nasdaq, Inc.",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 30395000000.0,
+   "revenue": 7400000000.0,
    "flags": {
     "accruals": {
      "value": -0.02622469651773038,
@@ -9210,6 +9530,8 @@
    "name": "Evolution Mining",
    "market": "Australia (ASX)",
    "year": 2024,
+   "assets": 8818841000.0,
+   "revenue": 3303975000.0,
    "flags": {
     "accruals": {
      "value": -0.11035251816395189,
@@ -9260,6 +9582,8 @@
    "name": "Oracle Corporation",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 148483000000.0,
+   "revenue": 57399000000.0,
    "flags": {
     "accruals": {
      "value": -0.0592488870501791,
@@ -9322,6 +9646,8 @@
    "name": "Broadcom",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 165358000000.0,
+   "revenue": 51574000000.0,
    "flags": {
     "accruals": {
      "value": -0.08196883704126703,
@@ -9386,6 +9712,8 @@
    "name": "BSP Financial Group",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 42984000000.0002,
+   "revenue": 3376000000.0002,
    "flags": {
     "accruals": {
      "value": -0.09155214731791615,
@@ -9436,6 +9764,8 @@
    "name": "The Lottery Corporation",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 4405200000.0,
+   "revenue": 3727200000.0,
    "flags": {
     "accruals": {
      "value": -0.04018518940862545,
@@ -9487,6 +9817,8 @@
    "name": "Robinhood Markets",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 26187000000.0,
+   "revenue": 2951000000.0,
    "flags": {
     "accruals": {
      "value": 0.07158019675423981,
@@ -9546,6 +9878,8 @@
    "name": "Verisk Analytics",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 4264700000.0,
+   "revenue": 2881700000.0,
    "flags": {
     "accruals": {
      "value": -0.043055104972887795,
@@ -9609,6 +9943,8 @@
    "name": "TPG Telecom",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 14511000000.0,
+   "revenue": 5041000000.0,
    "flags": {
     "accruals": {
      "value": -0.11641124832614194,
@@ -9658,6 +9994,8 @@
    "name": "Otis Worldwide",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 11316000000.0,
+   "revenue": 14261000000.0,
    "flags": {
     "accruals": {
      "value": 0.007651751971259273,
@@ -9722,6 +10060,8 @@
    "name": "Goldman Sachs",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 1675972000000.0,
+   "revenue": null,
    "flags": {
     "accruals": {
      "value": 0.016571185019378664,
@@ -9781,6 +10121,8 @@
    "name": "Mercury NZ",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 9958000000.0,
+   "revenue": 3498000000.0,
    "flags": {
     "accruals": {
      "value": -0.04880271351187161,
@@ -9832,6 +10174,8 @@
    "name": "EVT",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 2591154000.0,
+   "revenue": 1195340000.0,
    "flags": {
     "accruals": {
      "value": -0.07595789813624956,
@@ -9883,6 +10227,8 @@
    "name": "Walt Disney Company (The)",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 197046000000.0,
+   "revenue": 91361000000.0,
    "flags": {
     "accruals": {
      "value": -0.04558533002380832,
@@ -9947,6 +10293,8 @@
    "name": "CF Industries",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 13466000000.0,
+   "revenue": 5936000000.0,
    "flags": {
     "accruals": {
      "value": null,
@@ -10008,6 +10356,8 @@
    "name": "Visa Inc.",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 91888000000.0,
+   "revenue": 35926000000.0,
    "flags": {
     "accruals": {
      "value": -0.002258629437470335,
@@ -10069,6 +10419,8 @@
    "name": "PTC Inc.",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 6075364000.0,
+   "revenue": 2298472000.0,
    "flags": {
     "accruals": {
      "value": -0.06052733397529555,
@@ -10132,6 +10484,8 @@
    "name": "Tesla, Inc.",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 122070000000.0,
+   "revenue": 97690000000.0,
    "flags": {
     "accruals": {
      "value": -0.06849506751556705,
@@ -10196,6 +10550,8 @@
    "name": "Dexus",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 15388600000.0,
+   "revenue": 921200000.0,
    "flags": {
     "accruals": {
      "value": -0.04195956553779116,
@@ -10247,6 +10603,8 @@
    "name": "Bank of America",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 3261299000000.0,
+   "revenue": 105856000000.0,
    "flags": {
     "accruals": {
      "value": 0.01110867894651049,
@@ -10308,6 +10666,8 @@
    "name": "Phillips 66",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 72582000000.0,
+   "revenue": 143153000000.0,
    "flags": {
     "accruals": {
      "value": -0.02801131797708042,
@@ -10370,6 +10730,8 @@
    "name": "Eagers Automotive",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 5915695000.0,
+   "revenue": 13045190000.0,
    "flags": {
     "accruals": {
      "value": -0.040872817003210084,
@@ -10419,6 +10781,8 @@
    "name": "Veeva Systems",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 7339756000.0,
+   "revenue": 2746619000.0,
    "flags": {
     "accruals": {
      "value": -0.0567386901619208,
@@ -10481,6 +10845,8 @@
    "name": "Teledyne Technologies",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 14200500000.0,
+   "revenue": 5670000000.0,
    "flags": {
     "accruals": {
      "value": -0.025946450202586988,
@@ -10543,6 +10909,8 @@
    "name": "American International Group",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 161322000000.0,
+   "revenue": 27251000000.0,
    "flags": {
     "accruals": {
      "value": -0.013350879496680122,
@@ -10603,6 +10971,8 @@
    "name": "Freightways Group",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 1380799000.0,
+   "revenue": 1289559000.0,
    "flags": {
     "accruals": {
      "value": -0.0675560693824935,
@@ -10654,6 +11024,8 @@
    "name": "Mosaic Company (The)",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 22924000000.0,
+   "revenue": 11122800000.0,
    "flags": {
     "accruals": {
      "value": -0.048924207081433,
@@ -10718,6 +11090,8 @@
    "name": "Hubbell Incorporated",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 6847700000.0,
+   "revenue": 5628500000.0,
    "flags": {
     "accruals": {
      "value": -0.03046924358164379,
@@ -10782,6 +11156,8 @@
    "name": "Teradyne",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 3708714000.0,
+   "revenue": 2819880000.0,
    "flags": {
     "accruals": {
      "value": -0.03607902564061228,
@@ -10845,6 +11221,8 @@
    "name": "Nib",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 2187200000.0,
+   "revenue": 3589200000.0,
    "flags": {
     "accruals": {
      "value": 0.015853828629875867,
@@ -10895,6 +11273,8 @@
    "name": "Morgan Stanley",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 1215071000000.0,
+   "revenue": null,
    "flags": {
     "accruals": {
      "value": 0.009986864632649774,
@@ -10954,6 +11334,8 @@
    "name": "BHP",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 108790000000.0,
+   "revenue": 51262000000.0,
    "flags": {
     "accruals": {
      "value": -0.09162120178828521,
@@ -11005,6 +11387,8 @@
    "name": "UnitedHealth Group",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 298278000000.0,
+   "revenue": 400278000000.0,
    "flags": {
     "accruals": {
      "value": -0.03426235756069077,
@@ -11069,6 +11453,8 @@
    "name": "MGM Resorts",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 42231627000.0,
+   "revenue": 17240545000.0,
    "flags": {
     "accruals": {
      "value": -0.03820174130845474,
@@ -11133,6 +11519,8 @@
    "name": "Zip",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 3504668000.0,
+   "revenue": 1071595000.0,
    "flags": {
     "accruals": {
      "value": 0.03879329940445,
@@ -11183,6 +11571,8 @@
    "name": "PulteGroup",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 17363763000.0,
+   "revenue": 17946950000.0,
    "flags": {
     "accruals": {
      "value": 0.08385255090810498,
@@ -11241,6 +11631,8 @@
    "name": "Insulet Corporation",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 3087700000.0,
+   "revenue": 2071600000.0,
    "flags": {
     "accruals": {
      "value": -0.004193167603375676,
@@ -11317,6 +11709,8 @@
    "name": "Williams-Sonoma, Inc.",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 5301607000.0,
+   "revenue": 7711541000.0,
    "flags": {
     "accruals": {
      "value": -0.04448577822263598,
@@ -11380,6 +11774,8 @@
    "name": "Tapestry, Inc.",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 7251900000.0,
+   "revenue": 7010700000.0,
    "flags": {
     "accruals": {
      "value": -0.09810464558818643,
@@ -11444,6 +11840,8 @@
    "name": "Kimco Realty",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 20309896000.0,
+   "revenue": 2037014000.0,
    "flags": {
     "accruals": {
      "value": -0.032651997653530156,
@@ -11503,6 +11901,8 @@
    "name": "Genesis Minerals",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 1797922000.0,
+   "revenue": 920141000.0,
    "flags": {
     "accruals": {
      "value": -0.13271454463825472,
@@ -11552,6 +11952,8 @@
    "name": "KLA Corporation",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 15001696000.0,
+   "revenue": 9812247000.0,
    "flags": {
     "accruals": {
      "value": -0.037338660073900874,
@@ -11616,6 +12018,8 @@
    "name": "MetLife",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 677457000000.0,
+   "revenue": 70986000000.0,
    "flags": {
     "accruals": {
      "value": -0.01519661314202284,
@@ -11676,6 +12080,8 @@
    "name": "Intel",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 196485000000.0,
+   "revenue": 53101000000.0,
    "flags": {
     "accruals": {
      "value": -0.13938158569488504,
@@ -11739,6 +12145,8 @@
    "name": "IGO",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 2356300000.0,
+   "revenue": 512500000.0,
    "flags": {
     "accruals": {
      "value": -0.3368168695446641,
@@ -11788,6 +12196,8 @@
    "name": "NRG Energy",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 24022000000.0,
+   "revenue": 28130000000.0,
    "flags": {
     "accruals": {
      "value": -0.04718337994406712,
@@ -11852,6 +12262,8 @@
    "name": "Light & Wonder",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 6462000000.0,
+   "revenue": 3314000000.0,
    "flags": {
     "accruals": {
      "value": -0.08718337120255827,
@@ -11901,6 +12313,8 @@
    "name": "Intuitive Surgical",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 18743200000.0,
+   "revenue": 8352100000.0,
    "flags": {
     "accruals": {
      "value": -0.005405927213051453,
@@ -11964,6 +12378,8 @@
    "name": "Diamondback Energy",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 67292000000.0,
+   "revenue": 11066000000.0,
    "flags": {
     "accruals": {
      "value": -0.05632808199972999,
@@ -12026,6 +12442,8 @@
    "name": "Regions Financial Corporation",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 157302000000.0,
+   "revenue": null,
    "flags": {
     "accruals": {
      "value": 0.0019063251221340502,
@@ -12085,6 +12503,8 @@
    "name": "ON Semiconductor",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 14089800000.0,
+   "revenue": 7082300000.0,
    "flags": {
     "accruals": {
      "value": -0.024435085149240067,
@@ -12149,6 +12569,8 @@
    "name": "Genuine Parts Company",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 19282705000.0,
+   "revenue": 23486569000.0,
    "flags": {
     "accruals": {
      "value": -0.018639688499356488,
@@ -12212,6 +12634,8 @@
    "name": "Alliant Energy",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 22714000000.0,
+   "revenue": 3981000000.0,
    "flags": {
     "accruals": {
      "value": -0.02170599076243999,
@@ -12273,6 +12697,8 @@
    "name": "SGH",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 12930000000.0,
+   "revenue": 10743500000.0,
    "flags": {
     "accruals": {
      "value": -0.06740760003165738,
@@ -12324,6 +12750,8 @@
    "name": "Exelon",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 107784000000.0,
+   "revenue": 23028000000.0,
    "flags": {
     "accruals": {
      "value": null,
@@ -12382,6 +12810,8 @@
    "name": "Citigroup",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 2352945000000.0,
+   "revenue": 80722000000.0,
    "flags": {
     "accruals": {
      "value": 0.013578750646649646,
@@ -12441,6 +12871,8 @@
    "name": "NXP Semiconductors",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 24385000000.0,
+   "revenue": 12614000000.0,
    "flags": {
     "accruals": {
      "value": -0.011161721859739833,
@@ -12505,6 +12937,8 @@
    "name": "Orica",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 9949000000.0,
+   "revenue": 8144500000.0,
    "flags": {
     "accruals": {
      "value": -0.08051239813171128,
@@ -12554,6 +12988,8 @@
    "name": "Ball Corporation",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 17628000000.0,
+   "revenue": 11795000000.0,
    "flags": {
     "accruals": {
      "value": null,
@@ -12615,6 +13051,8 @@
    "name": "TransDigm Group",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 21515000000.0,
+   "revenue": 7940000000.0,
    "flags": {
     "accruals": {
      "value": -0.015687203791469196,
@@ -12679,6 +13117,8 @@
    "name": "a2 Milk Company",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 1942111000.0,
+   "revenue": 1899273000.0,
    "flags": {
     "accruals": {
      "value": 0.0007680203296939396,
@@ -12730,6 +13170,8 @@
    "name": "Tractor Supply",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 9805485000.0,
+   "revenue": 14883231000.0,
    "flags": {
     "accruals": {
      "value": -0.03365285088121095,
@@ -12793,6 +13235,8 @@
    "name": "Marathon Petroleum",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 78858000000.0,
+   "revenue": 138864000000.0,
    "flags": {
     "accruals": {
      "value": -0.06333222117746974,
@@ -12857,6 +13301,8 @@
    "name": "Microsoft",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 533898000000.0,
+   "revenue": 245122000000.0,
    "flags": {
     "accruals": {
      "value": -0.06055417061573628,
@@ -12921,6 +13367,8 @@
    "name": "ALS",
    "market": "Australia (ASX)",
    "year": 2026,
+   "assets": 3902500000.0,
+   "revenue": 3320100000.0,
    "flags": {
     "accruals": {
      "value": -0.04193503835674916,
@@ -12970,6 +13418,8 @@
    "name": "Atlas Arteria",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 7655800000.0,
+   "revenue": 158900000.0,
    "flags": {
     "accruals": {
      "value": 0.021523074796768397,
@@ -13019,6 +13469,8 @@
    "name": "Becton Dickinson",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 54665000000.0,
+   "revenue": 20178000000.0,
    "flags": {
     "accruals": {
      "value": null,
@@ -13081,6 +13533,8 @@
    "name": "Sonic Healthcare",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 16053918000.0,
+   "revenue": 9619183000.0,
    "flags": {
     "accruals": {
      "value": -0.04133810073428302,
@@ -13132,6 +13586,8 @@
    "name": "Copart",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 9187347000.0,
+   "revenue": 4236823000.0,
    "flags": {
     "accruals": {
      "value": -0.013051932319015754,
@@ -13195,6 +13651,8 @@
    "name": "BWP Trust",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 3745924000.0,
+   "revenue": 202698000.0,
    "flags": {
     "accruals": {
      "value": null,
@@ -13244,6 +13702,8 @@
    "name": "Paccar",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 43418900000.0,
+   "revenue": 33663800000.0,
    "flags": {
     "accruals": {
      "value": -0.011369585113416894,
@@ -13304,6 +13764,8 @@
    "name": "Align Technology",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 6214600000.0,
+   "revenue": 3999012000.0,
    "flags": {
     "accruals": {
      "value": -0.051588664189883025,
@@ -13367,6 +13829,8 @@
    "name": "Chubb Limited",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 246548000000.0,
+   "revenue": 55753000000.0,
    "flags": {
     "accruals": {
      "value": -0.02895878297676173,
@@ -13426,6 +13890,8 @@
    "name": "Regis Healthcare",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 2105298000.0,
+   "revenue": 1161288000.0,
    "flags": {
     "accruals": {
      "value": -0.1312790883468962,
@@ -13476,6 +13942,8 @@
    "name": "MSCI",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 5445439000.0,
+   "revenue": 2856128000.0,
    "flags": {
     "accruals": {
      "value": -0.07160000795354982,
@@ -13537,6 +14005,8 @@
    "name": "Johnson & Johnson",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 180104000000.0,
+   "revenue": 88821000000.0,
    "flags": {
     "accruals": {
      "value": -0.05867768119610426,
@@ -13601,6 +14071,8 @@
    "name": "Wisetech Global",
    "market": "Australia (ASX)",
    "year": 2024,
+   "assets": 1889633783.612168,
+   "revenue": 696272332.916697,
    "flags": {
     "accruals": {
      "value": -0.06803759215912465,
@@ -13652,6 +14124,8 @@
    "name": "PPG Industries",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 19433000000.0,
+   "revenue": 15845000000.0,
    "flags": {
     "accruals": {
      "value": -0.014800389483933788,
@@ -13716,6 +14190,8 @@
    "name": "Reliance Worldwide Corporation",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 2199114000.0,
+   "revenue": 1314684000.0,
    "flags": {
     "accruals": {
      "value": -0.049728187110592036,
@@ -13767,6 +14243,8 @@
    "name": "Fidelity National Information Services",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 33784000000.0,
+   "revenue": 10127000000.0,
    "flags": {
     "accruals": {
      "value": null,
@@ -13826,6 +14304,8 @@
    "name": "Synopsys",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 13041089000.0,
+   "revenue": 6127436000.0,
    "flags": {
     "accruals": {
      "value": 0.07257412365799258,
@@ -13890,6 +14370,8 @@
    "name": "Ventia Services Group",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 2902400000.0,
+   "revenue": 6141100000.0,
    "flags": {
     "accruals": {
      "value": -0.036514835221245,
@@ -13939,6 +14421,8 @@
    "name": "NRW Holdings",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 1701075000.0,
+   "revenue": 3267690000.0,
    "flags": {
     "accruals": {
      "value": -0.13509116047194775,
@@ -13990,6 +14474,8 @@
    "name": "Carvana",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 8484000000.0,
+   "revenue": 13673000000.0,
    "flags": {
     "accruals": {
      "value": -0.09103182256509161,
@@ -14053,6 +14539,8 @@
    "name": "Expeditors International",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 4754458000.0,
+   "revenue": 10600515000.0,
    "flags": {
     "accruals": {
      "value": 0.01869142157689577,
@@ -14115,6 +14603,8 @@
    "name": "Ramsay Health Care",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 22475500000.0,
+   "revenue": 17674100000.0,
    "flags": {
     "accruals": {
      "value": -0.0671808529035382,
@@ -14166,6 +14656,8 @@
    "name": "Monadelphous Group",
    "market": "Australia (ASX)",
    "year": 2024,
+   "assets": 887363000.0,
+   "revenue": 2008562000.0,
    "flags": {
     "accruals": {
      "value": -0.15165471988847123,
@@ -14217,6 +14709,8 @@
    "name": "KKR & Co.",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 360099411000.0,
+   "revenue": 21878698000.0,
    "flags": {
     "accruals": {
      "value": -0.010551127065924988,
@@ -14273,6 +14767,8 @@
    "name": "McDonald's",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 55182000000.0,
+   "revenue": 25920000000.0,
    "flags": {
     "accruals": {
      "value": -0.021988879806699065,
@@ -14336,6 +14832,8 @@
    "name": "Equity Residential",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 20834176000.0,
+   "revenue": null,
    "flags": {
     "accruals": {
      "value": -0.026317229256394986,
@@ -14393,6 +14891,8 @@
    "name": "Yum! Brands",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 6727000000.0,
+   "revenue": 7549000000.0,
    "flags": {
     "accruals": {
      "value": -0.03133199567834542,
@@ -14454,6 +14954,8 @@
    "name": "Commonwealth Bank",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 1353799000000.0,
+   "revenue": 28657000000.0,
    "flags": {
     "accruals": {
      "value": 0.008390739586828356,
@@ -14504,6 +15006,8 @@
    "name": "Mondelez International",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 68497000000.0,
+   "revenue": 36441000000.0,
    "flags": {
     "accruals": {
      "value": -0.004274848450188723,
@@ -14568,6 +15072,8 @@
    "name": "Quest Diagnostics",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 16153000000.0,
+   "revenue": 9872000000.0,
    "flags": {
     "accruals": {
      "value": -0.030687655343827672,
@@ -14632,6 +15138,8 @@
    "name": "Aflac",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 117566000000.0,
+   "revenue": 18927000000.0,
    "flags": {
     "accruals": {
      "value": 0.02239960702443817,
@@ -14690,6 +15198,8 @@
    "name": "Northern Trust",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 155508400000.0,
+   "revenue": 8290400000.0,
    "flags": {
     "accruals": {
      "value": 0.016435976839056912,
@@ -14750,6 +15260,8 @@
    "name": "Omnicom Group",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 29620700000.0,
+   "revenue": 15689100000.0,
    "flags": {
     "accruals": {
      "value": -0.00877130614078137,
@@ -14813,6 +15325,8 @@
    "name": "REA Group",
    "market": "Australia (ASX)",
    "year": 2026,
+   "assets": 2917300000.0,
+   "revenue": 2011600000.0,
    "flags": {
     "accruals": {
      "value": -0.07645483321158997,
@@ -14862,6 +15376,8 @@
    "name": "Spark New Zealand",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 4525000000.0,
+   "revenue": 3623000000.0,
    "flags": {
     "accruals": {
      "value": -0.09170305676855896,
@@ -14913,6 +15429,8 @@
    "name": "Abbott Laboratories",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 81414000000.0,
+   "revenue": 41950000000.0,
    "flags": {
     "accruals": {
      "value": 0.06265359443309103,
@@ -14977,6 +15495,8 @@
    "name": "National Australia Bank",
    "market": "Australia (ASX)",
    "year": 2024,
+   "assets": 1080248000000.0,
+   "revenue": 20632000000.0,
    "flags": {
     "accruals": {
      "value": 0.03995735115323435,
@@ -15027,6 +15547,8 @@
    "name": "Ingersoll Rand",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 18009800000.0,
+   "revenue": 7235000000.0,
    "flags": {
     "accruals": {
      "value": -0.033246657313996536,
@@ -15091,6 +15613,8 @@
    "name": "South32",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 13727000000.0,
+   "revenue": 5780000000.0,
    "flags": {
     "accruals": {
      "value": -0.08022308022308022,
@@ -15143,6 +15667,8 @@
    "name": "FirstEnergy",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 52044000000.0,
+   "revenue": 13472000000.0,
    "flags": {
     "accruals": {
      "value": -0.03795220759639325,
@@ -15205,6 +15731,8 @@
    "name": "Pro Medicus",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 338704000.0,
+   "revenue": 212905000.0,
    "flags": {
     "accruals": {
      "value": 0.013022382744085877,
@@ -15256,6 +15784,8 @@
    "name": "IDEX Corporation",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 6745300000.0,
+   "revenue": 3268800000.0,
    "flags": {
     "accruals": {
      "value": -0.025867332778240354,
@@ -15320,6 +15850,8 @@
    "name": "Philip Morris International",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 61784000000.0,
+   "revenue": 37878000000.0,
    "flags": {
     "accruals": {
      "value": -0.08120357547526123,
@@ -15382,6 +15914,8 @@
    "name": "Merck & Co.",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 117106000000.0,
+   "revenue": 64168000000.0,
    "flags": {
     "accruals": {
      "value": -0.03888623252197461,
@@ -15446,6 +15980,8 @@
    "name": "Intercontinental Exchange",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 139428000000.0,
+   "revenue": 11761000000.0,
    "flags": {
     "accruals": {
      "value": -0.013465838148610586,
@@ -15509,6 +16045,8 @@
    "name": "Contact Energy",
    "market": "Australia (ASX)",
    "year": 2026,
+   "assets": 10661000000.0,
+   "revenue": 3196000000.0,
    "flags": {
     "accruals": {
      "value": -0.04269199954217695,
@@ -15558,6 +16096,8 @@
    "name": "Sysco",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 25318000000.0,
+   "revenue": 81370000000.0,
    "flags": {
     "accruals": {
      "value": -0.027248064723183134,
@@ -15619,6 +16159,8 @@
    "name": "Apple Inc.",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 344085000000.0,
+   "revenue": 391035000000.0,
    "flags": {
     "accruals": {
      "value": -0.07029253195603778,
@@ -15681,6 +16223,8 @@
    "name": "Allstate",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 111617000000.0,
+   "revenue": 64106000000.0,
    "flags": {
     "accruals": {
      "value": -0.04075746933421404,
@@ -15741,6 +16285,8 @@
    "name": "Quanta Services",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 18683894000.0,
+   "revenue": 23672795000.0,
    "flags": {
     "accruals": {
      "value": -0.06608682843181514,
@@ -15805,6 +16351,8 @@
    "name": "Northrop Grumman",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 49359000000.0,
+   "revenue": 41033000000.0,
    "flags": {
     "accruals": {
      "value": -0.004462842663941691,
@@ -15869,6 +16417,8 @@
    "name": "Steel Dynamics",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 14935233000.0,
+   "revenue": 17540390000.0,
    "flags": {
     "accruals": {
      "value": -0.020598617736240266,
@@ -15933,6 +16483,8 @@
    "name": "Vistra Corp.",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 37770000000.0,
+   "revenue": 17224000000.0,
    "flags": {
     "accruals": {
      "value": -0.05383397421397874,
@@ -15997,6 +16549,8 @@
    "name": "DoorDash",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 12845000000.0,
+   "revenue": 10722000000.0,
    "flags": {
     "accruals": {
      "value": -0.16965039689241682,
@@ -16058,6 +16612,8 @@
    "name": "Martin Marietta Materials",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 18170000000.0,
+   "revenue": 5662000000.0,
    "flags": {
     "accruals": {
      "value": 0.03224568253491515,
@@ -16122,6 +16678,8 @@
    "name": "Verizon",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 384711000000.0,
+   "revenue": 134788000000.0,
    "flags": {
     "accruals": {
      "value": -0.04957867408486129,
@@ -16183,6 +16741,8 @@
    "name": "Flex Ltd.",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 18272000000.0,
+   "revenue": 25813000000.0,
    "flags": {
     "accruals": {
      "value": -0.0345255965629691,
@@ -16247,6 +16807,8 @@
    "name": "Loews Corporation",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 81943000000.0,
+   "revenue": 17510000000.0,
    "flags": {
     "accruals": {
      "value": -0.019995035372967606,
@@ -16308,6 +16870,8 @@
    "name": "Take-Two Interactive",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 12679900000.0,
+   "revenue": 5633600000.0,
    "flags": {
     "accruals": {
      "value": -0.3215668924701548,
@@ -16368,6 +16932,8 @@
    "name": "GQG Partners",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 493395000.0,
+   "revenue": 779286000.0,
    "flags": {
     "accruals": {
      "value": -0.04147237264340153,
@@ -16417,6 +16983,8 @@
    "name": "Kimberly-Clark",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 16546000000.0,
+   "revenue": 16805000000.0,
    "flags": {
     "accruals": {
      "value": -0.04066096193567424,
@@ -16481,6 +17049,8 @@
    "name": "Walmart",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 260823000000.0,
+   "revenue": 680985000000.0,
    "flags": {
     "accruals": {
      "value": -0.0662754129791786,
@@ -16545,6 +17115,8 @@
    "name": "Paladin Energy",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 1125884000.0001,
+   "revenue": 177676000.0,
    "flags": {
     "accruals": {
      "value": -0.046732041477035476,
@@ -16594,6 +17166,8 @@
    "name": "Dominion Energy",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 102415000000.0,
+   "revenue": 14459000000.0,
    "flags": {
     "accruals": {
      "value": -0.028218161185843638,
@@ -16658,6 +17232,8 @@
    "name": "Charter Hall Long WALE REIT",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 4929568000.0,
+   "revenue": 181624000.0,
    "flags": {
     "accruals": {
      "value": null,
@@ -16707,6 +17283,8 @@
    "name": "Woodside Energy Group",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 66501000000.0,
+   "revenue": 12984000000.0,
    "flags": {
     "accruals": {
      "value": -0.07003482956991351,
@@ -16756,6 +17334,8 @@
    "name": "Mesoblast",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 784683000.0,
+   "revenue": 17198000.0,
    "flags": {
     "accruals": {
      "value": -0.07179351728805725,
@@ -16806,6 +17386,8 @@
    "name": "T-Mobile US",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 208035000000.0,
+   "revenue": 81400000000.0,
    "flags": {
     "accruals": {
      "value": -0.05269931227253155,
@@ -16870,6 +17452,8 @@
    "name": "Santos",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 30530000000.0001,
+   "revenue": 4951000000.0,
    "flags": {
     "accruals": {
      "value": -0.06631983112544233,
@@ -16919,6 +17503,8 @@
    "name": "Ralph Lauren Corporation",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 7080900000.0,
+   "revenue": 7079000000.0,
    "flags": {
     "accruals": {
      "value": -0.06988796910275888,
@@ -16983,6 +17569,8 @@
    "name": "Zebra Technologies",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 7968000000.0,
+   "revenue": 4981000000.0,
    "flags": {
     "accruals": {
      "value": -0.06350661254419275,
@@ -17047,6 +17635,8 @@
    "name": "Sherwin-Williams",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 23632600000.0,
+   "revenue": 23098500000.0,
    "flags": {
     "accruals": {
      "value": -0.02025457745723056,
@@ -17111,6 +17701,8 @@
    "name": "Cummins",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 31540000000.0,
+   "revenue": 34102000000.0,
    "flags": {
     "accruals": {
      "value": null,
@@ -17171,6 +17763,8 @@
    "name": "Jabil",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 17771000000.0,
+   "revenue": 28883000000.0,
    "flags": {
     "accruals": {
      "value": -0.01764152211913406,
@@ -17234,6 +17828,8 @@
    "name": "Roper Technologies",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 31334700000.0,
+   "revenue": 7039200000.0,
    "flags": {
     "accruals": {
      "value": -0.028375421412989772,
@@ -17298,6 +17894,8 @@
    "name": "Reece Group",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 7417453000.0,
+   "revenue": 8978382000.0,
    "flags": {
     "accruals": {
      "value": -0.030938782457194274,
@@ -17349,6 +17947,8 @@
    "name": "Willis Towers Watson",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 27681000000.0,
+   "revenue": 9930000000.0,
    "flags": {
     "accruals": {
      "value": -0.05671909954025823,
@@ -17411,6 +18011,8 @@
    "name": "BlueScope",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 15781000000.0,
+   "revenue": 16252800000.0,
    "flags": {
     "accruals": {
      "value": -0.08449728217680155,
@@ -17462,6 +18064,8 @@
    "name": "Digital Realty",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 45283616000.0,
+   "revenue": 5554968000.0,
    "flags": {
     "accruals": {
      "value": -0.037431957631986104,
@@ -17520,6 +18124,8 @@
    "name": "Hewlett Packard Enterprise",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 70327000000.0,
+   "revenue": 30127000000.0,
    "flags": {
     "accruals": {
      "value": -0.02733287313172366,
@@ -17584,6 +18190,8 @@
    "name": "PG&E Corporation",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 133660000000.0,
+   "revenue": 24419000000.0,
    "flags": {
     "accruals": {
      "value": -0.061960668458270036,
@@ -17645,6 +18253,8 @@
    "name": "EBOS Group",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 7837024873.4789,
+   "revenue": 13208676644.7723,
    "flags": {
     "accruals": {
      "value": -0.028801594067430044,
@@ -17696,6 +18306,8 @@
    "name": "Aptiv",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 23458000000.0,
+   "revenue": 19713000000.0,
    "flags": {
     "accruals": {
      "value": -0.027524276913438447,
@@ -17760,6 +18372,8 @@
    "name": "Rollins, Inc.",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 2819695000.0,
+   "revenue": 3388708000.0,
    "flags": {
     "accruals": {
      "value": -0.05217726916404055,
@@ -17824,6 +18438,8 @@
    "name": "Southern Company",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 145180000000.0,
+   "revenue": 26724000000.0,
    "flags": {
     "accruals": {
      "value": -0.03786848311664576,
@@ -17885,6 +18501,8 @@
    "name": "Lennar",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 41312781000.0,
+   "revenue": 35441452000.0,
    "flags": {
     "accruals": {
      "value": 0.03796919575636034,
@@ -17945,6 +18563,8 @@
    "name": "Southwest Airlines",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 33750000000.0,
+   "revenue": 27483000000.0,
    "flags": {
     "accruals": {
      "value": 8.542506086535586e-05,
@@ -18008,6 +18628,8 @@
    "name": "Extra Space Storage",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 28847926000.0,
+   "revenue": 3256902000.0,
    "flags": {
     "accruals": {
      "value": -0.036684624596664106,
@@ -18068,6 +18690,8 @@
    "name": "Regency Centers",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 12391961000.0,
+   "revenue": 1453904000.0,
    "flags": {
     "accruals": {
      "value": -0.03141238397841901,
@@ -18127,6 +18751,8 @@
    "name": "Analog Devices",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 47967546000.0,
+   "revenue": 9427157000.0,
    "flags": {
     "accruals": {
      "value": -0.046022163018165654,
@@ -18191,6 +18817,8 @@
    "name": "Accenture",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 59868070000.0,
+   "revenue": 64896464000.0,
    "flags": {
     "accruals": {
      "value": -0.03350537970465628,
@@ -18254,6 +18882,8 @@
    "name": "AbbVie",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 135161000000.0,
+   "revenue": 56334000000.0,
    "flags": {
     "accruals": {
      "value": -0.10766585640599988,
@@ -18318,6 +18948,8 @@
    "name": "Textron",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 16838000000.0,
+   "revenue": 13702000000.0,
    "flags": {
     "accruals": {
      "value": -0.011277972339288895,
@@ -18378,6 +19010,8 @@
    "name": "Vici Properties",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 45368940000.0,
+   "revenue": 3849205000.0,
    "flags": {
     "accruals": {
      "value": 0.006649134577826796,
@@ -18437,6 +19071,8 @@
    "name": "Emerald Resources",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 756118000.0,
+   "revenue": 430414000.0,
    "flags": {
     "accruals": {
      "value": -0.09132880275647923,
@@ -18487,6 +19123,8 @@
    "name": "Leidos",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 13010000000.0,
+   "revenue": 16662000000.0,
    "flags": {
     "accruals": {
      "value": -0.014082863256175842,
@@ -18551,6 +19189,8 @@
    "name": "Charles Schwab Corporation",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 479843000000.0,
+   "revenue": 19606000000.0,
    "flags": {
     "accruals": {
      "value": -0.005475848928234848,
@@ -18612,6 +19252,8 @@
    "name": "Mettler Toledo",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 3239999000.0,
+   "revenue": 3872361000.0,
    "flags": {
     "accruals": {
      "value": -0.03190209647286642,
@@ -18676,6 +19318,8 @@
    "name": "Emerson Electric",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 42610000000.0,
+   "revenue": 17492000000.0,
    "flags": {
     "accruals": {
      "value": -0.030609382538738596,
@@ -18740,6 +19384,8 @@
    "name": "AES Corporation",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 47406000000.0,
+   "revenue": 12278000000.0,
    "flags": {
     "accruals": {
      "value": -0.023274225909657827,
@@ -18822,6 +19468,8 @@
    "name": "Targa Resources",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 22734100000.0,
+   "revenue": 16381500000.0,
    "flags": {
     "accruals": {
      "value": -0.1077134675240002,
@@ -18886,6 +19534,8 @@
    "name": "Dow Inc.",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 57312000000.0,
+   "revenue": 42964000000.0,
    "flags": {
     "accruals": {
      "value": null,
@@ -18947,6 +19597,8 @@
    "name": "AppLovin",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 5869259000.0,
+   "revenue": 3224058000.0,
    "flags": {
     "accruals": {
      "value": -0.092445740042745,
@@ -19010,6 +19662,8 @@
    "name": "Aon plc",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 48965000000.0,
+   "revenue": 15698000000.0,
    "flags": {
     "accruals": {
      "value": -0.009189137041146109,
@@ -19073,6 +19727,8 @@
    "name": "Vulcan Materials Company",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 17104800000.0,
+   "revenue": 7417700000.0,
    "flags": {
     "accruals": {
      "value": -0.03144974013048767,
@@ -19136,6 +19792,8 @@
    "name": "Woolworths Group",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 33829000000.0,
+   "revenue": 69077000000.0,
    "flags": {
     "accruals": {
      "value": -0.10586585995720504,
@@ -19187,6 +19845,8 @@
    "name": "Target Corporation",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 57769000000.0,
+   "revenue": 106566000000.0,
    "flags": {
     "accruals": {
      "value": -0.057918232044198895,
@@ -19250,6 +19910,8 @@
    "name": "Premier Investments",
    "market": "Australia (ASX)",
    "year": 2024,
+   "assets": 2523533000.0,
+   "revenue": 1596644000.0,
    "flags": {
     "accruals": {
      "value": -0.059190005200665974,
@@ -19301,6 +19963,8 @@
    "name": "Iron Mountain",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 18717115000.0,
+   "revenue": 6149909000.0,
    "flags": {
     "accruals": {
      "value": null,
@@ -19361,6 +20025,8 @@
    "name": "Baker Hughes",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 38363000000.0,
+   "revenue": 27829000000.0,
    "flags": {
     "accruals": {
      "value": -0.009374834014978487,
@@ -19423,6 +20089,8 @@
    "name": "Zoetis",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 14237000000.0,
+   "revenue": 9256000000.0,
    "flags": {
     "accruals": {
      "value": -0.032745503628650564,
@@ -19487,6 +20155,8 @@
    "name": "Home Depot (The)",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 96119000000.0,
+   "revenue": 159514000000.0,
    "flags": {
     "accruals": {
      "value": -0.05792098419336341,
@@ -19551,6 +20221,8 @@
    "name": "JPMorgan Chase",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 4002814000000.0,
+   "revenue": 177556000000.0,
    "flags": {
     "accruals": {
      "value": 0.025516465865900704,
@@ -19611,6 +20283,8 @@
    "name": "News Corp (Class A)",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 16161000000.0,
+   "revenue": 8252000000.0,
    "flags": {
     "accruals": {
      "value": -0.050666829060349555,
@@ -19682,6 +20356,8 @@
    "name": "Assurant",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 35020600000.0,
+   "revenue": 11877500000.0,
    "flags": {
     "accruals": {
      "value": -0.01667739652003181,
@@ -19742,6 +20418,8 @@
    "name": "Fortescue",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 30515000000.0001,
+   "revenue": 15420000000.0,
    "flags": {
     "accruals": {
      "value": -0.10238547255468394,
@@ -19793,6 +20471,8 @@
    "name": "Ford Motor Company",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 285196000000.0,
+   "revenue": 184992000000.0,
    "flags": {
     "accruals": {
      "value": -0.03417689335477148,
@@ -19856,6 +20536,8 @@
    "name": "Pentair",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 6446500000.0,
+   "revenue": 4082800000.0,
    "flags": {
     "accruals": {
      "value": -0.021722086427154914,
@@ -19919,6 +20601,8 @@
    "name": "Valero Energy",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 60143000000.0,
+   "revenue": 129881000000.0,
    "flags": {
     "accruals": {
      "value": -0.06352324288346496,
@@ -19983,6 +20667,8 @@
    "name": "Equifax",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 11759400000.0,
+   "revenue": 5681100000.0,
    "flags": {
     "accruals": {
      "value": -0.059934940139936936,
@@ -20046,6 +20732,8 @@
    "name": "Australian Foundation Investment Company",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 10580988000.0,
+   "revenue": 329175000.0,
    "flags": {
     "accruals": {
      "value": 0.0005518356462509105,
@@ -20095,6 +20783,8 @@
    "name": "Texas Instruments",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 35509000000.0,
+   "revenue": 15641000000.0,
    "flags": {
     "accruals": {
      "value": -0.04477062056972751,
@@ -20159,6 +20849,8 @@
    "name": "Invesco",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 27008900000.0,
+   "revenue": 6067000000.0,
    "flags": {
     "accruals": {
      "value": -0.023309564965580853,
@@ -20220,6 +20912,8 @@
    "name": "Nucor",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 33940000000.0,
+   "revenue": 30734000000.0,
    "flags": {
     "accruals": {
      "value": -0.05635103926096998,
@@ -20284,6 +20978,8 @@
    "name": "Globe Life",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 29076181000.0,
+   "revenue": 5778069000.0,
    "flags": {
     "accruals": {
      "value": -0.011611814097824382,
@@ -20345,6 +21041,8 @@
    "name": "Nvidia",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 111601000000.0,
+   "revenue": 130497000000.0,
    "flags": {
     "accruals": {
      "value": 0.09914903935622486,
@@ -20409,6 +21107,8 @@
    "name": "Veralto",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 6406000000.0,
+   "revenue": 5193000000.0,
    "flags": {
     "accruals": {
      "value": -0.006942722539052815,
@@ -20472,6 +21172,8 @@
    "name": "D. R. Horton",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 35029700000.0,
+   "revenue": 36801400000.0,
    "flags": {
     "accruals": {
      "value": 0.07503438759386241,
@@ -20532,6 +21234,8 @@
    "name": "Labcorp",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 18379000000.0,
+   "revenue": 13008900000.0,
    "flags": {
     "accruals": {
      "value": -0.04784626297213146,
@@ -20596,6 +21300,8 @@
    "name": "Ramelius Resources",
    "market": "Australia (ASX)",
    "year": 2024,
+   "assets": 1593948000.0,
+   "revenue": 882510000.0,
    "flags": {
     "accruals": {
      "value": -0.17223882561281698,
@@ -20646,6 +21352,8 @@
    "name": "NextEra Energy",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 190144000000.0,
+   "revenue": 23500000000.0,
    "flags": {
     "accruals": {
      "value": -0.03434947352386755,
@@ -20710,6 +21418,8 @@
    "name": "Fletcher Building",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 7898000000.0,
+   "revenue": 6994000000.0,
    "flags": {
     "accruals": {
      "value": -0.10970665394705462,
@@ -20760,6 +21470,8 @@
    "name": "Vertiv",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 9132500000.0,
+   "revenue": 8011800000.0,
    "flags": {
     "accruals": {
      "value": -0.09614149786935965,
@@ -20824,6 +21536,8 @@
    "name": "Lendlease",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 14133000000.0,
+   "revenue": 7603000000.0,
    "flags": {
     "accruals": {
      "value": 0.06471444750040446,
@@ -20874,6 +21588,8 @@
    "name": "Domino's",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 1737013000.0,
+   "revenue": 4706416000.0,
    "flags": {
     "accruals": {
      "value": -0.023873417602798666,
@@ -20938,6 +21654,8 @@
    "name": "Ross Stores",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 14905332000.0,
+   "revenue": 21129219000.0,
    "flags": {
     "accruals": {
      "value": -0.018233451773592462,
@@ -21000,6 +21718,8 @@
    "name": "Newmont",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 57121000000.0,
+   "revenue": 22669000000.0,
    "flags": {
     "accruals": {
      "value": -0.057266237772098355,
@@ -21049,6 +21769,8 @@
    "name": "Aurizon",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 11642000000.0,
+   "revenue": 3869000000.0,
    "flags": {
     "accruals": {
      "value": -0.09966434288665117,
@@ -21099,6 +21821,8 @@
    "name": "Sandfire Resources",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 2868453000.0,
+   "revenue": 1185380000.0,
    "flags": {
     "accruals": {
      "value": -0.14678178308140608,
@@ -21149,6 +21873,8 @@
    "name": "Paychex",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 10554700000.0,
+   "revenue": 5571700000.0,
    "flags": {
     "accruals": {
      "value": -0.021551037740856732,
@@ -21210,6 +21936,8 @@
    "name": "Qantas",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 23356000000.0,
+   "revenue": 23409000000.0,
    "flags": {
     "accruals": {
      "value": -0.12058287795992714,
@@ -21260,6 +21988,8 @@
    "name": "American Tower",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 61077400000.0,
+   "revenue": 10127200000.0,
    "flags": {
     "accruals": {
      "value": null,
@@ -21320,6 +22050,8 @@
    "name": "Fortive",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 17016100000.0,
+   "revenue": 4080900000.0,
    "flags": {
     "accruals": {
      "value": -0.040904388423686704,
@@ -21384,6 +22116,8 @@
    "name": "Argo Investments",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 8028237000.0,
+   "revenue": 283623000.0,
    "flags": {
     "accruals": {
      "value": 0.00435048418833414,
@@ -21433,6 +22167,8 @@
    "name": "Rio Tinto",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 128102000000.0,
+   "revenue": 57638000000.0,
    "flags": {
     "accruals": {
      "value": -0.05947472367554832,
@@ -21482,6 +22218,8 @@
    "name": "Eaton Corporation",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 38381000000.0,
+   "revenue": 24878000000.0,
    "flags": {
     "accruals": {
      "value": -0.013877859216538868,
@@ -21544,6 +22282,8 @@
    "name": "W. R. Berkley Corporation",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 40567268000.0,
+   "revenue": 13638752000.0,
    "flags": {
     "accruals": {
      "value": -0.04943771951710035,
@@ -21604,6 +22344,8 @@
    "name": "Hormel Foods",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 13403483000.0,
+   "revenue": 11920797000.0,
    "flags": {
     "accruals": {
      "value": -0.03430613810891816,
@@ -21668,6 +22410,8 @@
    "name": "IQVIA",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 26899000000.0,
+   "revenue": 15405000000.0,
    "flags": {
     "accruals": {
      "value": -0.050130645763344535,
@@ -21731,6 +22475,8 @@
    "name": "Incyte",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 5444322000.0,
+   "revenue": 4241217000.0,
    "flags": {
     "accruals": {
      "value": -0.04952173688654308,
@@ -21793,6 +22539,8 @@
    "name": "Fifth Third Bancorp",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 212927000000.0,
+   "revenue": null,
    "flags": {
     "accruals": {
      "value": -0.002385959331089284,
@@ -21852,6 +22600,8 @@
    "name": "American Water Works",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 32830000000.0,
+   "revenue": 4653000000.0,
    "flags": {
     "accruals": {
      "value": -0.03149157267773413,
@@ -21915,6 +22665,8 @@
    "name": "Akamai Technologies",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 10368785000.0,
+   "revenue": 3991168000.0,
    "flags": {
     "accruals": {
      "value": -0.10008011319059391,
@@ -21977,6 +22729,8 @@
    "name": "Allegion",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 4487800000.0,
+   "revenue": 3772200000.0,
    "flags": {
     "accruals": {
      "value": -0.017615037559805893,
@@ -22041,6 +22795,8 @@
    "name": "Gartner",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 8534671000.0,
+   "revenue": 6267411000.0,
    "flags": {
     "accruals": {
      "value": -0.028211811547415214,
@@ -22104,6 +22860,8 @@
    "name": "Codan",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 904805000.0,
+   "revenue": 674226000.0,
    "flags": {
     "accruals": {
      "value": -0.05156090530356447,
@@ -22155,6 +22913,8 @@
    "name": "Alphabet Inc. (Class A)",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 450256000000.0,
+   "revenue": 350018000000.0,
    "flags": {
     "accruals": {
      "value": -0.0590654056539158,
@@ -22217,6 +22977,8 @@
    "name": "Halliburton",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 25587000000.0,
+   "revenue": 22944000000.0,
    "flags": {
     "accruals": {
      "value": -0.054266958424507655,
@@ -22279,6 +23041,8 @@
    "name": "Keurig Dr Pepper",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 53430000000.0,
+   "revenue": 15351000000.0,
    "flags": {
     "accruals": {
      "value": -0.014740431981811292,
@@ -22343,6 +23107,8 @@
    "name": "Kinder Morgan",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 71407000000.0,
+   "revenue": 15100000000.0,
    "flags": {
     "accruals": {
      "value": -0.04243577411586286,
@@ -22405,6 +23171,8 @@
    "name": "Marsh McLennan",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 56481000000.0,
+   "revenue": 24458000000.0,
    "flags": {
     "accruals": {
      "value": -0.004631091464056415,
@@ -22468,6 +23236,8 @@
    "name": "Biogen",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 28049300000.0,
+   "revenue": 9675900000.0,
    "flags": {
     "accruals": {
      "value": -0.04530541533607437,
@@ -22532,6 +23302,8 @@
    "name": "Northern Star Resources",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 20432400000.0,
+   "revenue": 6414900000.0,
    "flags": {
     "accruals": {
      "value": -0.09630832030364155,
@@ -22583,6 +23355,8 @@
    "name": "Arthur J. Gallagher & Co.",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 64255000000.0,
+   "revenue": 11555000000.0,
    "flags": {
     "accruals": {
      "value": -0.01933184317042228,
@@ -22644,6 +23418,8 @@
    "name": "NiSource",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 31788100000.0,
+   "revenue": 5282900000.0,
    "flags": {
     "accruals": {
      "value": -0.03248532974470813,
@@ -22707,6 +23483,8 @@
    "name": "Albemarle Corporation",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 16609649000.0,
+   "revenue": 5377526000.0,
    "flags": {
     "accruals": {
      "value": -0.10707046364078109,
@@ -22770,6 +23548,8 @@
    "name": "Downer Group",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 6479000000.0,
+   "revenue": 10472100000.0,
    "flags": {
     "accruals": {
      "value": -0.06438248457723479,
@@ -22821,6 +23601,8 @@
    "name": "Nordson Corporation",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 5871526000.0,
+   "revenue": 2689921000.0,
    "flags": {
     "accruals": {
      "value": -0.015992836510126316,
@@ -22885,6 +23667,8 @@
    "name": "Axon Enterprise",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 4474588000.0,
+   "revenue": 2082526000.0,
    "flags": {
     "accruals": {
      "value": -0.007934790522595684,
@@ -22955,6 +23739,8 @@
    "name": "T. Rowe Price",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 13472000000.0,
+   "revenue": 7093600000.0,
    "flags": {
     "accruals": {
      "value": 0.03219317458098389,
@@ -23015,6 +23801,8 @@
    "name": "Johnson Controls",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 42098000000.0,
+   "revenue": 22952000000.0,
    "flags": {
     "accruals": {
      "value": null,
@@ -23077,6 +23865,8 @@
    "name": "C.H. Robinson",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 5297926000.0,
+   "revenue": 17724956000.0,
    "flags": {
     "accruals": {
      "value": -0.008247296498804641,
@@ -23140,6 +23930,8 @@
    "name": "Skyworks Solutions",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 8331100000.0,
+   "revenue": 4178000000.0,
    "flags": {
     "accruals": {
      "value": -0.14839192763372422,
@@ -23204,6 +23996,8 @@
    "name": "Archer Daniels Midland",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 53271000000.0,
+   "revenue": 85530000000.0,
    "flags": {
     "accruals": {
      "value": -0.018349984244963022,
@@ -23281,6 +24075,8 @@
    "name": "Cigna",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 155881000000.0,
+   "revenue": 247121000000.0,
    "flags": {
     "accruals": {
      "value": -0.04489991640800669,
@@ -23345,6 +24141,8 @@
    "name": "CRH plc",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 50613000000.0,
+   "revenue": 35572000000.0,
    "flags": {
     "accruals": {
      "value": -0.030525478681103568,
@@ -23415,6 +24213,8 @@
    "name": "CrowdStrike",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 8701578000.0,
+   "revenue": 3953624000.0,
    "flags": {
     "accruals": {
      "value": -0.1816893532996727,
@@ -23478,6 +24278,8 @@
    "name": "Illinois Tool Works",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 15067000000.0,
+   "revenue": 15898000000.0,
    "flags": {
     "accruals": {
      "value": null,
@@ -23539,6 +24341,8 @@
    "name": "FactSet",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 4048585000.0,
+   "revenue": 2203056000.0,
    "flags": {
     "accruals": {
      "value": -0.04080396399364935,
@@ -23602,6 +24406,8 @@
    "name": "TJX Companies",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 31749000000.0,
+   "revenue": 56360000000.0,
    "flags": {
     "accruals": {
      "value": -0.04072824248731625,
@@ -23666,6 +24472,8 @@
    "name": "Lowe's",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 43102000000.0,
+   "revenue": 83674000000.0,
    "flags": {
     "accruals": {
      "value": -0.06285263319080768,
@@ -23730,6 +24538,8 @@
    "name": "3M",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 39868000000.0,
+   "revenue": 24575000000.0,
    "flags": {
     "accruals": {
      "value": 0.0520520077834778,
@@ -23794,6 +24604,8 @@
    "name": "Monolithic Power Systems",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 3515822000.0,
+   "revenue": 2207100000.0,
    "flags": {
     "accruals": {
      "value": 0.27012583663505696,
@@ -23863,6 +24675,8 @@
    "name": "CoStar Group",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 9257000000.0,
+   "revenue": 2736000000.0,
    "flags": {
     "accruals": {
      "value": -0.02798087661676762,
@@ -23926,6 +24740,8 @@
    "name": "Arch Capital Group",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 70906000000.0,
+   "revenue": 17440000000.0,
    "flags": {
     "accruals": {
      "value": -0.036375681755153606,
@@ -23986,6 +24802,8 @@
    "name": "Agilent Technologies",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 11914000000.0,
+   "revenue": 6510000000.0,
    "flags": {
     "accruals": {
      "value": -0.04041641151255358,
@@ -24050,6 +24868,8 @@
    "name": "Centene Corporation",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 82445000000.0,
+   "revenue": 163071000000.0,
    "flags": {
     "accruals": {
      "value": 0.03771710376692242,
@@ -24111,6 +24931,8 @@
    "name": "Bunge Global",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 24899000000.0,
+   "revenue": 53108000000.0,
    "flags": {
     "accruals": {
      "value": -0.030355473334526865,
@@ -24174,6 +24996,8 @@
    "name": "McKesson Corporation",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 71081000000.0,
+   "revenue": 359051000000.0,
    "flags": {
     "accruals": {
      "value": -0.04055438866802817,
@@ -24238,6 +25062,8 @@
    "name": "Metcash",
    "market": "Australia (ASX)",
    "year": 2026,
+   "assets": 6996500000.0,
+   "revenue": 17354000000.0,
    "flags": {
     "accruals": {
      "value": -0.040162435378655874,
@@ -24287,6 +25113,8 @@
    "name": "Capital One",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 490144000000.0,
+   "revenue": 39112000000.0,
    "flags": {
     "accruals": {
      "value": -0.02768715517526182,
@@ -24348,6 +25176,8 @@
    "name": "Marriott International",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 26182000000.0,
+   "revenue": 25100000000.0,
    "flags": {
     "accruals": {
      "value": -0.014424560320888615,
@@ -24409,6 +25239,8 @@
    "name": "Humana",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 46479000000.0,
+   "revenue": 117761000000.0,
    "flags": {
     "accruals": {
      "value": -0.0376079705806893,
@@ -24472,6 +25304,8 @@
    "name": "Gilead Sciences",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 58995000000.0,
+   "revenue": 28754000000.0,
    "flags": {
     "accruals": {
      "value": -0.17087186261558784,
@@ -24536,6 +25370,8 @@
    "name": "Verisign",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 1406500000.0,
+   "revenue": 1557400000.0,
    "flags": {
     "accruals": {
      "value": -0.07409285374742514,
@@ -24598,6 +25434,8 @@
    "name": "Idexx Laboratories",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 3293443000.0,
+   "revenue": 3897504000.0,
    "flags": {
     "accruals": {
      "value": -0.012553544986333745,
@@ -24662,6 +25500,8 @@
    "name": "Casey's",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 8220178000.0,
+   "revenue": 15940899000.0,
    "flags": {
     "accruals": {
      "value": -0.07545945184620818,
@@ -24723,6 +25563,8 @@
    "name": "Mid-America Apartment Communities",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 11812369000.0,
+   "revenue": 2191015000.0,
    "flags": {
     "accruals": {
      "value": -0.04899790838873133,
@@ -24781,6 +25623,8 @@
    "name": "Charles River Laboratories",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 7528345000.0,
+   "revenue": 4049989000.0,
    "flags": {
     "accruals": {
      "value": -0.09061353734758493,
@@ -24845,6 +25689,8 @@
    "name": "Honeywell Technologies",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 75196000000.0,
+   "revenue": 34717000000.0,
    "flags": {
     "accruals": {
      "value": -0.005734305629713065,
@@ -24909,6 +25755,8 @@
    "name": "Parker Hannifin",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 28271463000.0,
+   "revenue": 19930000000.0,
    "flags": {
     "accruals": {
      "value": -0.018624065618153468,
@@ -24973,6 +25821,8 @@
    "name": "Jacobs Solutions",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 11610849000.0,
+   "revenue": 11500941000.0,
    "flags": {
     "accruals": {
      "value": -0.018716222114980533,
@@ -25036,6 +25886,8 @@
    "name": "NextDC",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 5688687000.0,
+   "revenue": 427209000.0,
    "flags": {
     "accruals": {
      "value": -0.051933980499907204,
@@ -25086,6 +25938,8 @@
    "name": "Fox Corporation (Class A)",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 23022000000.0,
+   "revenue": 13980000000.0,
    "flags": {
     "accruals": {
      "value": null,
@@ -25147,6 +26001,8 @@
    "name": "Wesfarmers",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 27981000000.0,
+   "revenue": 45576000000.0,
    "flags": {
     "accruals": {
      "value": -0.05939591246156629,
@@ -25198,6 +26054,8 @@
    "name": "ResMed|",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 7141334000.0,
+   "revenue": 4685297000.0,
    "flags": {
     "accruals": {
      "value": -0.05415030247560553,
@@ -25262,6 +26120,8 @@
    "name": "Generac",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 5109331000.0,
+   "revenue": 4295834000.0,
    "flags": {
     "accruals": {
      "value": -0.0831943252351376,
@@ -25326,6 +26186,8 @@
    "name": "Ulta Beauty",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 6001693000.0,
+   "revenue": 11295654000.0,
    "flags": {
     "accruals": {
      "value": -0.023504736305572333,
@@ -25388,6 +26250,8 @@
    "name": "Chevron Corporation",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 256938000000.0,
+   "revenue": 202792000000.0,
    "flags": {
     "accruals": {
      "value": -0.05319243303700561,
@@ -25450,6 +26314,8 @@
    "name": "ResMed",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 8174391000.0,
+   "revenue": 5146327000.0,
    "flags": {
     "accruals": {
      "value": -0.04663654062977573,
@@ -25502,6 +26368,8 @@
    "name": "Fastenal",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 4698000000.0,
+   "revenue": 7546000000.0,
    "flags": {
     "accruals": {
      "value": -0.004955844949732014,
@@ -25571,6 +26439,8 @@
    "name": "Camden Property Trust",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 8852144000.0,
+   "revenue": 7137000.0,
    "flags": {
     "accruals": {
      "value": -0.06707479611212641,
@@ -25628,6 +26498,8 @@
    "name": "Applied Materials",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 33338000000.0,
+   "revenue": 27176000000.0,
    "flags": {
     "accruals": {
      "value": -0.04624063627115509,
@@ -25692,6 +26564,8 @@
    "name": "CVS Health",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 253215000000.0,
+   "revenue": 372809000000.0,
    "flags": {
     "accruals": {
      "value": -0.01786683580445498,
@@ -25756,6 +26630,8 @@
    "name": "Masco",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 5016000000.0,
+   "revenue": 7828000000.0,
    "flags": {
     "accruals": {
      "value": -0.04875228827440023,
@@ -25820,6 +26696,8 @@
    "name": "Deere & Company",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 103119000000.0,
+   "revenue": 51716000000.0,
    "flags": {
     "accruals": {
      "value": -0.020842094967969092,
@@ -25882,6 +26760,8 @@
    "name": "Yancoal Australia",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 12205000000.0,
+   "revenue": 5728000000.0,
    "flags": {
     "accruals": {
      "value": -0.06652823582101706,
@@ -25931,6 +26811,8 @@
    "name": "West Pharmaceutical Services",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 3643400000.0,
+   "revenue": 2893200000.0,
    "flags": {
     "accruals": {
      "value": -0.04300873824084358,
@@ -25995,6 +26877,8 @@
    "name": "PPL Corporation",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 41069000000.0,
+   "revenue": 8462000000.0,
    "flags": {
     "accruals": {
      "value": -0.036162131872237095,
@@ -26059,6 +26943,8 @@
    "name": "W. W. Grainger",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 8829000000.0,
+   "revenue": 17168000000.0,
    "flags": {
     "accruals": {
      "value": -0.023798303487276153,
@@ -26123,6 +27009,8 @@
    "name": "Synchrony Financial",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 119463000000.0,
+   "revenue": null,
    "flags": {
     "accruals": {
      "value": -0.05359117421141039,
@@ -26181,6 +27069,8 @@
    "name": "Automatic Data Processing",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 64096700000.0,
+   "revenue": 19202600000.0,
    "flags": {
     "accruals": {
      "value": -0.006694941902066667,
@@ -26244,6 +27134,8 @@
    "name": "Wabtec",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 18702000000.0,
+   "revenue": 10387000000.0,
    "flags": {
     "accruals": {
      "value": -0.04128416025470947,
@@ -26308,6 +27200,8 @@
    "name": "American Express",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 271461000000.0,
+   "revenue": 38825000000.0,
    "flags": {
     "accruals": {
      "value": -0.014724852554316905,
@@ -26369,6 +27263,8 @@
    "name": "Ora Banda Mining",
    "market": "Australia (ASX)",
    "year": 2024,
+   "assets": 195811000.0,
+   "revenue": 214236000.0,
    "flags": {
     "accruals": {
      "value": -0.055928872853783465,
@@ -26418,6 +27314,8 @@
    "name": "ARB Corporation",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 904774000.0,
+   "revenue": 729949000.0,
    "flags": {
     "accruals": {
      "value": -0.03585766536263371,
@@ -26469,6 +27367,8 @@
    "name": "Waste Management",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 44567000000.0,
+   "revenue": 22063000000.0,
    "flags": {
     "accruals": {
      "value": -0.0683292415040703,
@@ -26532,6 +27432,8 @@
    "name": "Edison International",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 85579000000.0,
+   "revenue": 17599000000.0,
    "flags": {
     "accruals": {
      "value": -0.04458069643892265,
@@ -26594,6 +27496,8 @@
    "name": "Fiserv",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 77176000000.0,
+   "revenue": 20456000000.0,
    "flags": {
     "accruals": {
      "value": -0.04165030404721955,
@@ -26657,6 +27561,8 @@
    "name": "Monster Beverage",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 7719089000.0,
+   "revenue": 7492709000.0,
    "flags": {
     "accruals": {
      "value": null,
@@ -26718,6 +27624,8 @@
    "name": "Challenger",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 34954100000.0,
+   "revenue": 2301600000.0,
    "flags": {
     "accruals": {
      "value": -0.006064861543862729,
@@ -26769,6 +27677,8 @@
    "name": "Pexa Group",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 1683768000.0,
+   "revenue": 393627000.0,
    "flags": {
     "accruals": {
      "value": -0.11134011571852986,
@@ -26819,6 +27729,8 @@
    "name": "Invitation Homes",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 18700951000.0,
+   "revenue": 2618942000.0,
    "flags": {
     "accruals": {
      "value": -0.03311478074500346,
@@ -26876,6 +27788,8 @@
    "name": "CenterPoint Energy",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 43768000000.0,
+   "revenue": 8643000000.0,
    "flags": {
     "accruals": {
      "value": -0.026831810069115867,
@@ -26937,6 +27851,8 @@
    "name": "Insurance Australia Group",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 26309000000.0,
+   "revenue": 14902000000.0,
    "flags": {
     "accruals": {
      "value": null,
@@ -26986,6 +27902,8 @@
    "name": "Lockheed Martin",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 55617000000.0,
+   "revenue": 71043000000.0,
    "flags": {
     "accruals": {
      "value": -0.030275832076466832,
@@ -27050,6 +27968,8 @@
    "name": "PepsiCo",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 99467000000.0,
+   "revenue": 91854000000.0,
    "flags": {
     "accruals": {
      "value": -0.02929556615756994,
@@ -27114,6 +28034,8 @@
    "name": "Live Nation Entertainment",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 19638771000.0,
+   "revenue": 23155625000.0,
    "flags": {
     "accruals": {
      "value": -0.04287158321556063,
@@ -27178,6 +28100,8 @@
    "name": "Molson Coors Beverage Company",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 26064300000.0,
+   "revenue": 13734300000.0,
    "flags": {
     "accruals": {
      "value": -0.030049924293565525,
@@ -27242,6 +28166,8 @@
    "name": "Solventum",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 14457000000.0,
+   "revenue": 8254000000.0,
    "flags": {
     "accruals": {
      "value": -0.04971830985915493,
@@ -27303,6 +28229,8 @@
    "name": "Kraft Heinz",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 88287000000.0,
+   "revenue": 25846000000.0,
    "flags": {
     "accruals": {
      "value": -0.016123072788955695,
@@ -27366,6 +28294,8 @@
    "name": "Stryker Corporation",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 42971000000.0,
+   "revenue": 22595000000.0,
    "flags": {
     "accruals": {
      "value": -0.03013887045594392,
@@ -27430,6 +28360,8 @@
    "name": "RTX Corporation",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 162861000000.0,
+   "revenue": 80738000000.0,
    "flags": {
     "accruals": {
      "value": -0.014689126351122472,
@@ -27494,6 +28426,8 @@
    "name": "Cognizant",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 19966000000.0,
+   "revenue": 19736000000.0,
    "flags": {
     "accruals": {
      "value": 0.006033967073265885,
@@ -27557,6 +28491,8 @@
    "name": "Charter Communications",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 150020000000.0,
+   "revenue": 55085000000.0,
    "flags": {
     "accruals": {
      "value": -0.06289765252529331,
@@ -27620,6 +28556,8 @@
    "name": "Netflix",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 53630374000.0,
+   "revenue": 39000966000.0,
    "flags": {
     "accruals": {
      "value": 0.026389307961091873,
@@ -27679,6 +28617,8 @@
    "name": "Howmet Aerospace",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 10519000000.0,
+   "revenue": 7430000000.0,
    "flags": {
     "accruals": {
      "value": -0.013653506468706736,
@@ -27743,6 +28683,8 @@
    "name": "JB Hi-Fi",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 3882700000.0,
+   "revenue": 10554800000.0,
    "flags": {
     "accruals": {
      "value": -0.06763193247662601,
@@ -27794,6 +28736,8 @@
    "name": "Boston Scientific",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 39395000000.0,
+   "revenue": 16747000000.0,
    "flags": {
     "accruals": {
      "value": null,
@@ -27855,6 +28799,8 @@
    "name": "CBRE Group",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 24383000000.0,
+   "revenue": 35767000000.0,
    "flags": {
     "accruals": {
      "value": -0.0315356587330336,
@@ -27918,6 +28864,8 @@
    "name": "Trane Technologies",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 20146700000.0,
+   "revenue": 19838200000.0,
    "flags": {
     "accruals": {
      "value": -0.02922207665420627,
@@ -27982,6 +28930,8 @@
    "name": "Global Payments",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 46890255000.0,
+   "revenue": 7735970000.0,
    "flags": {
     "accruals": {
      "value": -0.030519418642893273,
@@ -28045,6 +28995,8 @@
    "name": "Cboe Global Markets",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 7789100000.0,
+   "revenue": 4094500000.0,
    "flags": {
     "accruals": {
      "value": -0.043949569930481915,
@@ -28108,6 +29060,8 @@
    "name": "Telstra",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 44968000000.0,
+   "revenue": 22717000000.0,
    "flags": {
     "accruals": {
      "value": -0.11383371263174176,
@@ -28159,6 +29113,8 @@
    "name": "Cleanaway",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 6578200000.0,
+   "revenue": 3788900000.0,
    "flags": {
     "accruals": {
      "value": -0.04637587157450949,
@@ -28210,6 +29166,8 @@
    "name": "Builders FirstSource",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 10583086000.0,
+   "revenue": 16400492000.0,
    "flags": {
     "accruals": {
      "value": -0.07539832253592997,
@@ -28274,6 +29232,8 @@
    "name": "Church & Dwight",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 8883100000.0,
+   "revenue": 6107100000.0,
    "flags": {
     "accruals": {
      "value": -0.0654240415303427,
@@ -28338,6 +29298,8 @@
    "name": "International Paper",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 22800000000.0,
+   "revenue": 15835000000.0,
    "flags": {
     "accruals": {
      "value": -0.048674583704218316,
@@ -28398,6 +29360,8 @@
    "name": "Linde plc",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 80147000000.0,
+   "revenue": 33005000000.0,
    "flags": {
     "accruals": {
      "value": -0.035512369686502065,
@@ -28462,6 +29426,8 @@
    "name": "General Motors",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 279761000000.0,
+   "revenue": 187442000000.0,
    "flags": {
     "accruals": {
      "value": -0.05124949124949125,
@@ -28525,6 +29491,8 @@
    "name": "Cencora",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 69054314000.0,
+   "revenue": 293958599000.0,
    "flags": {
     "accruals": {
      "value": -0.029542349186689847,
@@ -28589,6 +29557,8 @@
    "name": "Federal Realty Investment Trust",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 8524757000.0,
+   "revenue": 1202452000.0,
    "flags": {
     "accruals": {
      "value": -0.032940341904842144,
@@ -28646,6 +29616,8 @@
    "name": "AutoZone",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 17465762000.0,
+   "revenue": 18490268000.0,
    "flags": {
     "accruals": {
      "value": -0.019991506992747595,
@@ -28709,6 +29681,8 @@
    "name": "CME Group",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 137447000000.0,
+   "revenue": 6130100000.0,
    "flags": {
     "accruals": {
      "value": -0.0012330008523202614,
@@ -28771,6 +29745,8 @@
    "name": "Healthpeak Properties",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 19938255000.0,
+   "revenue": 2700449000.0,
    "flags": {
     "accruals": {
      "value": -0.046432222819446194,
@@ -28832,6 +29808,8 @@
    "name": "Devon Energy",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 30489000000.0,
+   "revenue": 15940000000.0,
    "flags": {
     "accruals": {
      "value": -0.1348514887502501,
@@ -28896,6 +29874,8 @@
    "name": "Best Buy",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 14782000000.0,
+   "revenue": 41528000000.0,
    "flags": {
     "accruals": {
      "value": -0.07872533530538842,
@@ -28960,6 +29940,8 @@
    "name": "Hasbro",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 6340300000.0,
+   "revenue": 4745900000.0,
    "flags": {
     "accruals": {
      "value": -0.07170139428003602,
@@ -29031,6 +30013,8 @@
    "name": "J.B. Hunt",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 8312270000.0,
+   "revenue": 12087204000.0,
    "flags": {
     "accruals": {
      "value": -0.10795922195325873,
@@ -29095,6 +30079,8 @@
    "name": "Tyson Foods",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 37310000000.0,
+   "revenue": 53309000000.0,
    "flags": {
     "accruals": {
      "value": -0.048341795398077134,
@@ -29159,6 +30145,8 @@
    "name": "McCormick & Company",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 13070300000.0,
+   "revenue": 6723700000.0,
    "flags": {
     "accruals": {
      "value": -0.01028820866399821,
@@ -29223,6 +30211,8 @@
    "name": "Salesforce",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 102928000000.0,
+   "revenue": 37895000000.0,
    "flags": {
     "accruals": {
      "value": -0.06801446108773816,
@@ -29286,6 +30276,8 @@
    "name": "Bega Cheese",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 2040700000.0,
+   "revenue": 3550100000.0,
    "flags": {
     "accruals": {
      "value": -0.08302428520157913,
@@ -29336,6 +30328,8 @@
    "name": "Amazon",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 624894000000.0,
+   "revenue": 637959000000.0,
    "flags": {
     "accruals": {
      "value": -0.09825044155357458,
@@ -29400,6 +30394,8 @@
    "name": "GPT Group",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 16927800000.0,
+   "revenue": 1031900000.0,
    "flags": {
     "accruals": {
      "value": 0.022047079637319705,
@@ -29449,6 +30445,8 @@
    "name": "CDW Corporation",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 14678400000.0,
+   "revenue": 20998700000.0,
    "flags": {
     "accruals": {
      "value": -0.014268855273039373,
@@ -29513,6 +30511,8 @@
    "name": "Whitehaven Coal",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 11826000000.0,
+   "revenue": 5832000000.0,
    "flags": {
     "accruals": {
      "value": -0.03898208931031688,
@@ -29564,6 +30564,8 @@
    "name": "Atmos Energy",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 26497093000.0,
+   "revenue": 4165187000.0,
    "flags": {
     "accruals": {
      "value": -0.02753418123423418,
@@ -29627,6 +30629,8 @@
    "name": "Tuas",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 498371999.9997,
+   "revenue": 151290000.0,
    "flags": {
     "accruals": {
      "value": -0.14711641840697054,
@@ -29677,6 +30681,8 @@
    "name": "Berkshire Hathaway",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 1153881000000.0,
+   "revenue": 371433000000.0,
    "flags": {
     "accruals": {
      "value": 0.05252401343790231,
@@ -29735,6 +30741,8 @@
    "name": "Newmont",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 56349000000.0,
+   "revenue": 18682000000.0,
    "flags": {
     "accruals": {
      "value": -0.0539090787179831,
@@ -29798,6 +30806,8 @@
    "name": "FedEx",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 85481000000.0,
+   "revenue": 87926000000.0,
    "flags": {
     "accruals": {
      "value": -0.03393034137795911,
@@ -29861,6 +30871,8 @@
    "name": "Caterpillar Inc.",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 87764000000.0,
+   "revenue": 64809000000.0,
    "flags": {
     "accruals": {
      "value": -0.014186258845012555,
@@ -29925,6 +30937,8 @@
    "name": "EchoStar",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 60938687000.0,
+   "revenue": 15825516000.0,
    "flags": {
     "accruals": {
      "value": -0.023248981273068188,
@@ -29988,6 +31002,8 @@
    "name": "Macquarie Group",
    "market": "Australia (ASX)",
    "year": 2026,
+   "assets": 540101000000.0,
+   "revenue": 7216000000.0,
    "flags": {
     "accruals": {
      "value": -0.01559490197113228,
@@ -30037,6 +31053,8 @@
    "name": "Erie Indemnity",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 2888614000.0,
+   "revenue": 3795115000.0,
    "flags": {
     "accruals": {
      "value": -0.004079783933747443,
@@ -30093,6 +31111,8 @@
    "name": "Las Vegas Sands",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 20666000000.0,
+   "revenue": 11298000000.0,
    "flags": {
     "accruals": {
      "value": -0.0828385637545943,
@@ -30156,6 +31176,8 @@
    "name": "Trade Desk (The)",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 6111951000.0,
+   "revenue": 2444831000.0,
    "flags": {
     "accruals": {
      "value": -0.06297452929548268,
@@ -30216,6 +31238,8 @@
    "name": "Elevance Health",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 116889000000.0,
+   "revenue": 177011000000.0,
    "flags": {
     "accruals": {
      "value": 0.0015233574088753283,
@@ -30277,6 +31301,8 @@
    "name": "DaVita",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 17285268000.0,
+   "revenue": 12815550000.0,
    "flags": {
     "accruals": {
      "value": -0.04513323826088218,
@@ -30341,6 +31367,8 @@
    "name": "TKO Group Holdings",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 15111782000.0,
+   "revenue": 4884241000.0,
    "flags": {
     "accruals": {
      "value": -0.038009985091569234,
@@ -30409,6 +31437,8 @@
    "name": "Moody's Corporation",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 15505000000.0,
+   "revenue": 7088000000.0,
    "flags": {
     "accruals": {
      "value": -0.05178079463604076,
@@ -30472,6 +31502,8 @@
    "name": "AT&T",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 394795000000.0,
+   "revenue": 122336000000.0,
    "flags": {
     "accruals": {
      "value": -0.0693965866646713,
@@ -30536,6 +31568,8 @@
    "name": "UDR, Inc.",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 10897586000.0,
+   "revenue": 1671842000.0,
    "flags": {
     "accruals": {
      "value": -0.07069903283344472,
@@ -30595,6 +31629,8 @@
    "name": "Packaging Corporation of America",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 8833200000.0,
+   "revenue": 8383300000.0,
    "flags": {
     "accruals": {
      "value": -0.04408968671314297,
@@ -30659,6 +31695,8 @@
    "name": "Baxter International",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 25782000000.0,
+   "revenue": 10636000000.0,
    "flags": {
     "accruals": {
      "value": -0.06171149506086056,
@@ -30722,6 +31760,8 @@
    "name": "Coca-Cola Company (The)",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 100549000000.0,
+   "revenue": 47061000000.0,
    "flags": {
     "accruals": {
      "value": 0.038597340758226906,
@@ -30786,6 +31826,8 @@
    "name": "Ecolab",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 22387800000.0,
+   "revenue": 15741400000.0,
    "flags": {
     "accruals": {
      "value": -0.03171739641545946,
@@ -30850,6 +31892,8 @@
    "name": "Eversource Energy",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 59594529000.0,
+   "revenue": 11900809000.0,
    "flags": {
     "accruals": {
      "value": null,
@@ -30911,6 +31955,8 @@
    "name": "Kroger",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 52616000000.0,
+   "revenue": 147123000000.0,
    "flags": {
     "accruals": {
      "value": -0.060685990244470085,
@@ -30974,6 +32020,8 @@
    "name": "Avery Dennison",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 8404200000.0,
+   "revenue": 8755700000.0,
    "flags": {
     "accruals": {
      "value": -0.028156976044299988,
@@ -31038,6 +32086,8 @@
    "name": "General Dynamics",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 55880000000.0,
+   "revenue": 47716000000.0,
    "flags": {
     "accruals": {
      "value": -0.005962598247357485,
@@ -31102,6 +32152,8 @@
    "name": "Intuit",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 31682000000.0,
+   "revenue": 16285000000.0,
    "flags": {
     "accruals": {
      "value": -0.06260387811634349,
@@ -31163,6 +32215,8 @@
    "name": "Henry Schein",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 10218000000.0,
+   "revenue": 12673000000.0,
    "flags": {
     "accruals": {
      "value": -0.04328796113703045,
@@ -31227,6 +32281,8 @@
    "name": "Dover Corporation",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 12509160000.0,
+   "revenue": 7745909000.0,
    "flags": {
     "accruals": {
      "value": null,
@@ -31289,6 +32345,8 @@
    "name": "Public Storage",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 19754934000.0,
+   "revenue": 4695616000.0,
    "flags": {
     "accruals": {
      "value": -0.05339399431050585,
@@ -31350,6 +32408,8 @@
    "name": "Darden Restaurants",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 12940200000.0,
+   "revenue": 12076700000.0,
    "flags": {
     "accruals": {
      "value": null,
@@ -31412,6 +32472,8 @@
    "name": "Ameriprise Financial",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 181403000000.0,
+   "revenue": 17926000000.0,
    "flags": {
     "accruals": {
      "value": -0.017913930127820433,
@@ -31472,6 +32534,8 @@
    "name": "American Electric Power",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 103078000000.0,
+   "revenue": 19721000000.0,
    "flags": {
     "accruals": {
      "value": null,
@@ -31531,6 +32595,8 @@
    "name": "Mastercard",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 48081000000.0,
+   "revenue": 28167000000.0,
    "flags": {
     "accruals": {
      "value": -0.04210805377282418,
@@ -31594,6 +32660,8 @@
    "name": "Norwegian Cruise Line Holdings",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 19969811000.0,
+   "revenue": 9479651000.0,
    "flags": {
     "accruals": {
      "value": -0.05775175462076298,
@@ -31658,6 +32726,8 @@
    "name": "Clorox",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 5577000000.0,
+   "revenue": 7093000000.0,
    "flags": {
     "accruals": {
      "value": -0.07226817588158467,
@@ -31722,6 +32792,8 @@
    "name": "Endeavour Group",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 11734000000.0,
+   "revenue": 12058000000.0,
    "flags": {
     "accruals": {
      "value": -0.061572479482927246,
@@ -31773,6 +32845,8 @@
    "name": "Huntington Bancshares",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 204230000000.0,
+   "revenue": 1468000000.0,
    "flags": {
     "accruals": {
      "value": 0.0005284579698067571,
@@ -31834,6 +32908,8 @@
    "name": "Meridian Energy",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 14974000000.0,
+   "revenue": 4794000000.0,
    "flags": {
     "accruals": {
      "value": -0.05400287547778518,
@@ -31884,6 +32960,8 @@
    "name": "Workday, Inc.",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 17977000000.0,
+   "revenue": 8446000000.0,
    "flags": {
     "accruals": {
      "value": -0.11240523976879956,
@@ -31947,6 +33025,8 @@
    "name": "Union Pacific Corporation",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 67715000000.0,
+   "revenue": 24250000000.0,
    "flags": {
     "accruals": {
      "value": -0.038547390746549795,
@@ -32008,6 +33088,8 @@
    "name": "DuPont",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 36636000000.0,
+   "revenue": 6719000000.0,
    "flags": {
     "accruals": {
      "value": null,
@@ -32070,6 +33152,8 @@
    "name": "Evergy",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 32282100000.0,
+   "revenue": 5847300000.0,
    "flags": {
     "accruals": {
      "value": -0.03510058774988855,
@@ -32133,6 +33217,8 @@
    "name": "Corporate Travel Management",
    "market": "Australia (ASX)",
    "year": 2024,
+   "assets": 1643103000.0,
+   "revenue": 707675000.0,
    "flags": {
     "accruals": {
      "value": null,
@@ -32183,6 +33269,8 @@
    "name": "Hartford (The)",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 80917000000.0,
+   "revenue": 26535000000.0,
    "flags": {
     "accruals": {
      "value": -0.03548577335015885,
@@ -32244,6 +33332,8 @@
    "name": "L1 Group",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 249392000.0,
+   "revenue": 135931000.0,
    "flags": {
     "accruals": {
      "value": -0.15184713204689732,
@@ -32293,6 +33383,8 @@
    "name": "Procter & Gamble",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 122639000000.0,
+   "revenue": 84039000000.0,
    "flags": {
     "accruals": {
      "value": -0.04082219701826191,
@@ -32357,6 +33449,8 @@
    "name": "Tabcorp",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 3140200000.0,
+   "revenue": 2614600000.0,
    "flags": {
     "accruals": {
      "value": -0.11294656488549619,
@@ -32408,6 +33502,8 @@
    "name": "HUB24",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 662413000.0,
+   "revenue": 400399000.0,
    "flags": {
     "accruals": {
      "value": -0.10818062058270377,
@@ -32459,6 +33555,8 @@
    "name": "Hilton Worldwide",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 16522000000.0,
+   "revenue": 11174000000.0,
    "flags": {
     "accruals": {
      "value": -0.029947060113397865,
@@ -32522,6 +33620,8 @@
    "name": "Progressive Corporation",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 105745000000.0,
+   "revenue": 75372000000.0,
    "flags": {
     "accruals": {
      "value": -0.0682898228723076,
@@ -32582,6 +33682,8 @@
    "name": "F5, Inc.",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 5900641000.0,
+   "revenue": 2816120000.0,
    "flags": {
     "accruals": {
      "value": -0.04011575274127836,
@@ -32645,6 +33747,8 @@
    "name": "PayPal",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 78725000000.0,
+   "revenue": 31797000000.0,
    "flags": {
     "accruals": {
      "value": -0.041058853509518864,
@@ -32708,6 +33812,8 @@
    "name": "Coles Group",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 20294000000.0,
+   "revenue": 44352000000.0,
    "flags": {
     "accruals": {
      "value": -0.09223662643421249,
@@ -32759,6 +33865,8 @@
    "name": "Occidental Petroleum",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 85445000000.0,
+   "revenue": 22019000000.0,
    "flags": {
     "accruals": {
      "value": null,
@@ -32819,6 +33927,8 @@
    "name": "ConocoPhillips",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 122780000000.0,
+   "revenue": 54745000000.0,
    "flags": {
     "accruals": {
      "value": -0.09948606335503694,
@@ -32880,6 +33990,8 @@
    "name": "Bio-Techne",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 2670424000.0,
+   "revenue": 1159060000.0,
    "flags": {
     "accruals": {
      "value": -0.04846202966501561,
@@ -32944,6 +34056,8 @@
    "name": "Pinnacle West Capital",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 26102760000.0,
+   "revenue": 5124915000.0,
    "flags": {
     "accruals": {
      "value": null,
@@ -33002,6 +34116,8 @@
    "name": "Lovisa",
    "market": "Australia (ASX)",
    "year": 2024,
+   "assets": 532799000.0,
+   "revenue": 698664000.0,
    "flags": {
     "accruals": {
      "value": -0.19996727555693386,
@@ -33053,6 +34169,8 @@
    "name": "Realty Income",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 68835039000.0,
+   "revenue": 5271142000.0,
    "flags": {
     "accruals": {
      "value": -0.04284669177745001,
@@ -33113,6 +34231,8 @@
    "name": "Steris",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 10008362000.0,
+   "revenue": 5459500000.0,
    "flags": {
     "accruals": {
      "value": -0.04975862868017406,
@@ -33177,6 +34297,8 @@
    "name": "Cardinal Health",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 47002000000.0,
+   "revenue": 226827000000.0,
    "flags": {
     "accruals": {
      "value": -0.062196099385519635,
@@ -33241,6 +34363,8 @@
    "name": "Cincinnati Financial",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 36501000000.0,
+   "revenue": 11337000000.0,
    "flags": {
     "accruals": {
      "value": -0.010307492420961455,
@@ -33298,6 +34422,8 @@
    "name": "LyondellBasell",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 35746000000.0,
+   "revenue": 33394000000.0,
    "flags": {
     "accruals": {
      "value": -0.06741264124487945,
@@ -33359,6 +34485,8 @@
    "name": "Lennox International",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 3620000000.0,
+   "revenue": 5341300000.0,
    "flags": {
     "accruals": {
      "value": -0.0410303307422649,
@@ -33430,6 +34558,8 @@
    "name": "O'Reilly Automotive",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 14893741000.0,
+   "revenue": 16708479000.0,
    "flags": {
     "accruals": {
      "value": -0.046087675709889364,
@@ -33494,6 +34624,8 @@
    "name": "United Airlines Holdings",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 74083000000.0,
+   "revenue": 57063000000.0,
    "flags": {
     "accruals": {
      "value": -0.08672952812579639,
@@ -33557,6 +34689,8 @@
    "name": "Palantir Technologies",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 6340884000.0,
+   "revenue": 2865507000.0,
    "flags": {
     "accruals": {
      "value": -0.12734149419849883,
@@ -33617,6 +34751,8 @@
    "name": "Meta Platforms",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 276054000000.0,
+   "revenue": 164501000000.0,
    "flags": {
     "accruals": {
      "value": -0.11457115906003239,
@@ -33680,6 +34816,8 @@
    "name": "Brown & Brown",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 17612000000.0,
+   "revenue": 4805000000.0,
    "flags": {
     "accruals": {
      "value": -0.011140175411601784,
@@ -33741,6 +34879,8 @@
    "name": "Huntington Ingalls Industries",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 12141000000.0,
+   "revenue": 11535000000.0,
    "flags": {
     "accruals": {
      "value": 0.013444082890905977,
@@ -33804,6 +34944,8 @@
    "name": "Costco",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 73386000000.0,
+   "revenue": 254453000000.0,
    "flags": {
     "accruals": {
      "value": -0.05400077493559197,
@@ -33866,6 +35008,8 @@
    "name": "Comcast",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 266211000000.0,
+   "revenue": 123731000000.0,
    "flags": {
     "accruals": {
      "value": -0.04324114631785501,
@@ -33929,6 +35073,8 @@
    "name": "Fortinet",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 9763100000.0,
+   "revenue": 5955800000.0,
    "flags": {
     "accruals": {
      "value": -0.06026097755845376,
@@ -33993,6 +35139,8 @@
    "name": "L3Harris",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 42001000000.0,
+   "revenue": 21325000000.0,
    "flags": {
     "accruals": {
      "value": -0.025260491348819424,
@@ -34057,6 +35205,8 @@
    "name": "Air Products",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 40017200000.0,
+   "revenue": 12100600000.0,
    "flags": {
     "accruals": {
      "value": null,
@@ -34118,6 +35268,8 @@
    "name": "Delta Air Lines",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 75372000000.0,
+   "revenue": 61643000000.0,
    "flags": {
     "accruals": {
      "value": -0.0613088527406453,
@@ -34181,6 +35333,8 @@
    "name": "Datadog",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 5785339000.0,
+   "revenue": 2684275000.0,
    "flags": {
     "accruals": {
      "value": -0.14130726496390286,
@@ -34243,6 +35397,8 @@
    "name": "Deckers Brands",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 3964353000.0,
+   "revenue": 4985612000.0,
    "flags": {
     "accruals": {
      "value": -0.02145350564265055,
@@ -34306,6 +35462,8 @@
    "name": "Amcor",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 16165000000.0,
+   "revenue": 13640000000.0,
    "flags": {
     "accruals": {
      "value": -0.05405569743402651,
@@ -34361,7 +35519,14 @@
     "OperatingIncome": "OperatingIncomeLoss",
     "TotalDebt": "LongTermDebtAndCapitalLeaseObligations"
    },
-   "events": [],
+   "events": [
+    {
+     "kind": "auditor_change",
+     "date": "2026-08-14",
+     "form": "8-K",
+     "label": "Auditor changed"
+    }
+   ],
    "composite": 34.921745024316444
   },
   {
@@ -34369,6 +35534,8 @@
    "name": "Snap-on",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 7896800000.0,
+   "revenue": 5108400000.0,
    "flags": {
     "accruals": {
      "value": -0.02248457099930707,
@@ -34433,6 +35600,8 @@
    "name": "Uber",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 51244000000.0,
+   "revenue": 43978000000.0,
    "flags": {
     "accruals": {
      "value": 0.06046051388101353,
@@ -34495,6 +35664,8 @@
    "name": "Hershey Company (The)",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 12946861000.0,
+   "revenue": 11202263000.0,
    "flags": {
     "accruals": {
      "value": -0.02497862960839688,
@@ -34557,6 +35728,8 @@
    "name": "J.M. Smucker Company (The)",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 18425600000.0,
+   "revenue": 8726100000.0,
    "flags": {
     "accruals": {
      "value": -0.12624893982333837,
@@ -34618,6 +35791,8 @@
    "name": "Tyler Technologies",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 5180015000.0,
+   "revenue": 2137803000.0,
    "flags": {
     "accruals": {
      "value": -0.07337299645986203,
@@ -34681,6 +35856,8 @@
    "name": "Chipotle Mexican Grill",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 9204374000.0,
+   "revenue": 11313853000.0,
    "flags": {
     "accruals": {
      "value": -0.06621656218751333,
@@ -34745,6 +35922,8 @@
    "name": "Amphenol",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 21440200000.0,
+   "revenue": 15223000000.0,
    "flags": {
     "accruals": {
      "value": -0.020581247728266423,
@@ -34809,6 +35988,8 @@
    "name": "Constellation Brands",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 22806200000.0,
+   "revenue": 10208700000.0,
    "flags": {
     "accruals": {
      "value": -0.13511729163706868,
@@ -34870,6 +36051,8 @@
    "name": "APA Corporation",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 19390000000.0,
+   "revenue": null,
    "flags": {
     "accruals": {
      "value": -0.16261477161171103,
@@ -34929,6 +36112,8 @@
    "name": "ServiceNow",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 20383000000.0,
+   "revenue": 10984000000.0,
    "flags": {
     "accruals": {
      "value": -0.15048980672491397,
@@ -34991,6 +36176,8 @@
    "name": "Fisher & Paykel Healthcare",
    "market": "Australia (ASX)",
    "year": 2026,
+   "assets": 2853600000.0,
+   "revenue": 2308400000.0,
    "flags": {
     "accruals": {
      "value": -0.07205240174672489,
@@ -35040,6 +36227,8 @@
    "name": "United Parcel Service",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 70070000000.0,
+   "revenue": 91070000000.0,
    "flags": {
     "accruals": {
      "value": -0.06159217183364437,
@@ -35104,6 +36293,8 @@
    "name": "Expedia Group",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 22388000000.0,
+   "revenue": 13691000000.0,
    "flags": {
     "accruals": {
      "value": -0.08453327276856688,
@@ -35167,6 +36358,8 @@
    "name": "Est\u00c3\u00a9e Lauder Companies (The)",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 19760000000.0,
+   "revenue": 15608000000.0,
    "flags": {
     "accruals": {
      "value": null,
@@ -35228,6 +36421,8 @@
    "name": "Super Retail Group",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 3336600000.0,
+   "revenue": 4070100000.0,
    "flags": {
     "accruals": {
      "value": -0.10772890498340884,
@@ -35279,6 +36474,8 @@
    "name": "Freeport-McMoRan",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 54848000000.0,
+   "revenue": 25455000000.0,
    "flags": {
     "accruals": {
      "value": -0.09819848352180637,
@@ -35340,6 +36537,8 @@
    "name": "Dollar Tree",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 18644000000.0,
+   "revenue": 17578500000.0,
    "flags": {
     "accruals": {
      "value": null,
@@ -35398,6 +36597,8 @@
    "name": "Starbucks",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 31893100000.0,
+   "revenue": 36176200000.0,
    "flags": {
     "accruals": {
      "value": -0.07645629478262009,
@@ -35462,6 +36663,8 @@
    "name": "Catalyst Metals",
    "market": "Australia (ASX)",
    "year": 2024,
+   "assets": 340481000.0,
+   "revenue": 317014000.0,
    "flags": {
     "accruals": {
      "value": -0.1437649412109089,
@@ -35512,6 +36715,8 @@
    "name": "Pinnacle Investment Management",
    "market": "Australia (ASX)",
    "year": 2026,
+   "assets": 1483572000.0,
+   "revenue": 86649000.0,
    "flags": {
     "accruals": {
      "value": -0.13502625888654138,
@@ -35561,6 +36766,8 @@
    "name": "Republic Services",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 32402000000.0,
+   "revenue": 18418000000.0,
    "flags": {
     "accruals": {
      "value": -0.059325111264338995,
@@ -35625,6 +36832,8 @@
    "name": "Norfolk Southern",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 43682000000.0,
+   "revenue": 12123000000.0,
    "flags": {
     "accruals": {
      "value": -0.0335153631612253,
@@ -35686,6 +36895,8 @@
    "name": "International Flavors & Fragrances",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 28723000000.0,
+   "revenue": 11484000000.0,
    "flags": {
     "accruals": {
      "value": null,
@@ -35747,6 +36958,8 @@
    "name": "Jack Henry & Associates",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 2911770000.0,
+   "revenue": 2215543000.0,
    "flags": {
     "accruals": {
      "value": -0.06573715094181773,
@@ -35810,6 +37023,8 @@
    "name": "Ares Management",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 24884308000.0,
+   "revenue": 3690668000.0,
    "flags": {
     "accruals": {
      "value": -0.09473756302755419,
@@ -35868,6 +37083,8 @@
    "name": "Ametek",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 14631169000.0,
+   "revenue": 6941180000.0,
    "flags": {
     "accruals": {
      "value": -0.030533033176323943,
@@ -35932,6 +37149,8 @@
    "name": "Cintas",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 9366529000.0,
+   "revenue": 10340181000.0,
    "flags": {
     "accruals": {
      "value": -0.03890167861011624,
@@ -35996,6 +37215,8 @@
    "name": "Schlumberger",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 48935000000.0,
+   "revenue": 36289000000.0,
    "flags": {
     "accruals": {
      "value": -0.04419353506997482,
@@ -36060,6 +37281,8 @@
    "name": "SBA Communications",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 11417336000.0,
+   "revenue": 2679634000.0,
    "flags": {
     "accruals": {
      "value": -0.0542078203530255,
@@ -36121,6 +37344,8 @@
    "name": "Dexcom",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 6484500000.0,
+   "revenue": 4033000000.0,
    "flags": {
     "accruals": {
      "value": -0.06483645776139305,
@@ -36191,6 +37416,8 @@
    "name": "Westgold Resources",
    "market": "Australia (ASX)",
    "year": 2024,
+   "assets": 1052499899.0,
+   "revenue": 716472565.0,
    "flags": {
     "accruals": {
      "value": -0.2749631831375464,
@@ -36241,6 +37468,8 @@
    "name": "Equinix",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 35085000000.0,
+   "revenue": 8748000000.0,
    "flags": {
     "accruals": {
      "value": -0.07186724932089288,
@@ -36304,6 +37533,8 @@
    "name": "Perenti",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 3325839000.0,
+   "revenue": 3489546000.0,
    "flags": {
     "accruals": {
      "value": -0.11658310680451513,
@@ -36355,6 +37586,8 @@
    "name": "Duke Energy",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 186343000000.0,
+   "revenue": 30050000000.0,
    "flags": {
     "accruals": {
      "value": -0.042969309209439595,
@@ -36418,6 +37651,8 @@
    "name": "Lululemon Athletica",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 7603292000.0,
+   "revenue": 10588126000.0,
    "flags": {
     "accruals": {
      "value": -0.062346340476534125,
@@ -36481,6 +37716,8 @@
    "name": "Autodesk",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 10833000000.0,
+   "revenue": 6131000000.0,
    "flags": {
     "accruals": {
      "value": -0.04772234273318872,
@@ -36544,6 +37781,8 @@
    "name": "Warner Bros. Discovery",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 104560000000.0,
+   "revenue": 39321000000.0,
    "flags": {
     "accruals": {
      "value": -0.1468082017622967,
@@ -36606,6 +37845,8 @@
    "name": "Bristol Myers Squibb",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 92603000000.0,
+   "revenue": 48300000000.0,
    "flags": {
     "accruals": {
      "value": -0.25711272781499983,
@@ -36669,6 +37910,8 @@
    "name": "Beach Energy",
    "market": "Australia (ASX)",
    "year": 2026,
+   "assets": 5407800000.0,
+   "revenue": 1921200000.0,
    "flags": {
     "accruals": {
      "value": -0.11381261986061088,
@@ -36718,6 +37961,8 @@
    "name": "Netwealth Group",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 257318000.0,
+   "revenue": 312296000.0,
    "flags": {
     "accruals": {
      "value": -0.0462171332396308,
@@ -36767,6 +38012,8 @@
    "name": "Regis Resources",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 2276203000.0,
+   "revenue": 1647412000.0,
    "flags": {
     "accruals": {
      "value": -0.2570664565336495,
@@ -36817,6 +38064,8 @@
    "name": "Consolidated Edison",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 70562000000.0,
+   "revenue": 15256000000.0,
    "flags": {
     "accruals": {
      "value": -0.052773772216256495,
@@ -36880,6 +38129,8 @@
    "name": "Perpetual",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 3417800000.0,
+   "revenue": 1348300000.0,
    "flags": {
     "accruals": {
      "value": -0.08076866656887194,
@@ -36929,6 +38180,8 @@
    "name": "Adobe Inc.",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 30230000000.0,
+   "revenue": 21505000000.0,
    "flags": {
     "accruals": {
      "value": -0.08318752187171924,
@@ -36992,6 +38245,8 @@
    "name": "Universal Health Services",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 14469749000.0,
+   "revenue": 15827935000.0,
    "flags": {
     "accruals": {
      "value": -0.06505556723620284,
@@ -37055,6 +38310,8 @@
    "name": "Wynn Resorts",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 12977963000.0,
+   "revenue": 7127961000.0,
    "flags": {
     "accruals": {
      "value": -0.06859335810911958,
@@ -37118,6 +38375,8 @@
    "name": "Colgate-Palmolive",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 16046000000.0,
+   "revenue": 20101000000.0,
    "flags": {
     "accruals": {
      "value": -0.07509479330435587,
@@ -37182,6 +38441,8 @@
    "name": "Corpay",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 17957031000.0,
+   "revenue": 3974589000.0,
    "flags": {
     "accruals": {
      "value": -0.05602590687848393,
@@ -37245,6 +38506,8 @@
    "name": "Fair Isaac",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 1706608000.0,
+   "revenue": 1717526000.0,
    "flags": {
     "accruals": {
      "value": -0.07281721970615668,
@@ -37308,6 +38571,8 @@
    "name": "CSX Corporation",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 42764000000.0,
+   "revenue": 14540000000.0,
    "flags": {
     "accruals": {
      "value": -0.04182948072124665,
@@ -37371,6 +38636,8 @@
    "name": "HomeCo Daily Needs REIT",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 4960700000.0,
+   "revenue": 364700000.0,
    "flags": {
     "accruals": {
      "value": null,
@@ -37420,6 +38687,8 @@
    "name": "AvalonBay Communities",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 21000737000.0,
+   "revenue": 2913757000.0,
    "flags": {
     "accruals": {
      "value": -0.025234992118683602,
@@ -37479,6 +38748,8 @@
    "name": "Host Hotels & Resorts",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 13048000000.0,
+   "revenue": 5684000000.0,
    "flags": {
     "accruals": {
      "value": -0.0633426910758768,
@@ -37538,6 +38809,8 @@
    "name": "Entergy",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 64790032000.0,
+   "revenue": 11879653000.0,
    "flags": {
     "accruals": {
      "value": null,
@@ -37596,6 +38869,8 @@
    "name": "Royal Caribbean Group",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 37070000000.0,
+   "revenue": 16484000000.0,
    "flags": {
     "accruals": {
      "value": -0.06614866830099306,
@@ -37660,6 +38935,8 @@
    "name": "United Rentals",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 28163000000.0,
+   "revenue": 15345000000.0,
    "flags": {
     "accruals": {
      "value": -0.07333680607233219,
@@ -37724,6 +39001,8 @@
    "name": "HCA Healthcare",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 59513000000.0,
+   "revenue": 70603000000.0,
    "flags": {
     "accruals": {
      "value": -0.08216100376758495,
@@ -37786,6 +39065,8 @@
    "name": "Comfort Systems USA",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 4711088000.0,
+   "revenue": 7027476000.0,
    "flags": {
     "accruals": {
      "value": -0.08148623361803603,
@@ -37849,6 +39130,8 @@
    "name": "Amgen",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 91839000000.0,
+   "revenue": 33424000000.0,
    "flags": {
     "accruals": {
      "value": -0.07830977866905124,
@@ -37913,6 +39196,8 @@
    "name": "General Mills",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 33396100000.0,
+   "revenue": 19486600000.0,
    "flags": {
     "accruals": {
      "value": -0.01854261598805499,
@@ -37977,6 +39262,8 @@
    "name": "EOG Resources",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 47186000000.0,
+   "revenue": 23698000000.0,
    "flags": {
     "accruals": {
      "value": -0.1260942631503795,
@@ -38039,6 +39326,8 @@
    "name": "Centuria Industrial REIT",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 3928420000.0,
+   "revenue": 233316000.0,
    "flags": {
     "accruals": {
      "value": null,
@@ -38088,6 +39377,8 @@
    "name": "Champion Iron",
    "market": "Australia (ASX)",
    "year": 2026,
+   "assets": 3497261000.0,
+   "revenue": 1769731000.0,
    "flags": {
     "accruals": {
      "value": -0.08186796031903365,
@@ -38137,6 +39428,8 @@
    "name": "Ryman Healthcare",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 12063362000.0,
+   "revenue": 713797000.0,
    "flags": {
     "accruals": {
      "value": -0.06734767954946037,
@@ -38186,6 +39479,8 @@
    "name": "Bellevue Gold",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 1245001000.0,
+   "revenue": 505837000.0,
    "flags": {
     "accruals": {
      "value": -0.16943890932000996,
@@ -38235,6 +39530,8 @@
    "name": "Old Dominion",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 5491395000.0,
+   "revenue": 5814810000.0,
    "flags": {
     "accruals": {
      "value": -0.08600856359646333,
@@ -38296,6 +39593,8 @@
    "name": "Arista Networks",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 14043900000.0,
+   "revenue": 7003100000.0,
    "flags": {
     "accruals": {
      "value": -0.3090095406623227,
@@ -38359,6 +39658,8 @@
    "name": "Broadridge Financial Solutions",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 8230600000.0,
+   "revenue": 6506800000.0,
    "flags": {
     "accruals": {
      "value": -0.04412707018927445,
@@ -38420,6 +39721,8 @@
    "name": "West African Resources",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 2715600000.0,
+   "revenue": 1533800000.0,
    "flags": {
     "accruals": {
      "value": -0.13467238107422333,
@@ -38469,6 +39772,8 @@
    "name": "Palo Alto Networks",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 20951700000.0,
+   "revenue": 8027500000.0,
    "flags": {
     "accruals": {
      "value": -0.03465524402642972,
@@ -38530,6 +39835,8 @@
    "name": "Carnival Corporation",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 49057000000.0,
+   "revenue": 25021000000.0,
    "flags": {
     "accruals": {
      "value": -0.08162807989651344,
@@ -38593,6 +39900,8 @@
    "name": "Airbnb",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 20959000000.0,
+   "revenue": 11102000000.0,
    "flags": {
     "accruals": {
      "value": -0.08987842515142774,
@@ -38656,6 +39965,8 @@
    "name": "Emcor",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 7716473000.0,
+   "revenue": 14566116000.0,
    "flags": {
     "accruals": {
      "value": -0.055946331593722656,
@@ -38716,6 +40027,8 @@
    "name": "Dollar General",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 31132733000.0,
+   "revenue": 40612308000.0,
    "flags": {
     "accruals": {
      "value": -0.060418589723177395,
@@ -38779,6 +40092,8 @@
    "name": "Booking Holdings",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 27708000000.0,
+   "revenue": 23739000000.0,
    "flags": {
     "accruals": {
      "value": -0.09379442843419789,
@@ -38842,6 +40157,8 @@
    "name": "TechnologyOne",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 891402000.0,
+   "revenue": 598502000.0,
    "flags": {
     "accruals": {
      "value": -0.19030082930929706,
@@ -38891,6 +40208,8 @@
    "name": "Crown Castle",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 32736000000.0,
+   "revenue": 4460000000.0,
    "flags": {
     "accruals": {
      "value": -0.19213336514039545,
@@ -38962,6 +40281,8 @@
    "name": "Alexandria Real Estate Equities",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 37527449000.0,
+   "revenue": 3116394000.0,
    "flags": {
     "accruals": {
      "value": -0.031806010028338126,
@@ -39018,6 +40339,8 @@
    "name": "BlackRock",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 138615000000.0,
+   "revenue": 12794000000.0,
    "flags": {
     "accruals": {
      "value": 0.010793427696256292,
@@ -39077,6 +40400,8 @@
    "name": "BXP, Inc.",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 26084980000.0,
+   "revenue": 3407719000.0,
    "flags": {
     "accruals": {
      "value": -0.04683072592804505,
@@ -39132,6 +40457,8 @@
    "name": "Essex Property Trust",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 12927359000.0,
+   "revenue": 1774450000.0,
    "flags": {
     "accruals": {
      "value": null,
@@ -39187,6 +40514,8 @@
    "name": "ExxonMobil",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": null,
+   "revenue": null,
    "flags": {
     "accruals": {
      "value": null,
@@ -39234,6 +40563,8 @@
    "name": "FedEx Freight",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": null,
+   "revenue": 8892000000.0,
    "flags": {
     "accruals": {
      "value": null,
@@ -39288,6 +40619,8 @@
    "name": "Ferguson Enterprises",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 16530000000.0,
+   "revenue": 29635000000.0,
    "flags": {
     "accruals": {
      "value": -0.008348457350272231,
@@ -39349,6 +40682,8 @@
    "name": "GE Vernova",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 51485000000.0,
+   "revenue": 34935000000.0,
    "flags": {
     "accruals": {
      "value": -0.021125750466159866,
@@ -39409,6 +40744,8 @@
    "name": "Honeywell Aerospace",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": null,
+   "revenue": null,
    "flags": {
     "accruals": {
      "value": null,
@@ -39456,6 +40793,8 @@
    "name": "Interactive Brokers",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 150142000000.0,
+   "revenue": 1977000000.0,
    "flags": {
     "accruals": {
      "value": null,
@@ -39512,6 +40851,8 @@
    "name": "Paramount Skydance Corporation",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 46172000000.0,
+   "revenue": 29213000000.0,
    "flags": {
     "accruals": {
      "value": -0.15035086199428224,
@@ -39571,6 +40912,8 @@
    "name": "PNC Financial Services",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 560038000000.0,
+   "revenue": 21555000000.0,
    "flags": {
     "accruals": {
      "value": null,
@@ -39628,6 +40971,8 @@
    "name": "Qnity Electronics",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 12273000000.0,
+   "revenue": 4335000000.0,
    "flags": {
     "accruals": {
      "value": null,
@@ -39693,6 +41038,8 @@
    "name": "Sandisk",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 14234000000.0,
+   "revenue": 7355000000.0,
    "flags": {
     "accruals": {
      "value": -0.12118870310524098,
@@ -39752,6 +41099,8 @@
    "name": "Simon Property Group",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 32405691000.0,
+   "revenue": 5963798000.0,
    "flags": {
     "accruals": {
      "value": null,
@@ -39809,6 +41158,8 @@
    "name": "Truist Financial",
    "market": "United States (NYSE & Nasdaq)",
    "year": 2024,
+   "assets": 531176000000.0,
+   "revenue": null,
    "flags": {
     "accruals": {
      "value": null,
@@ -39866,6 +41217,8 @@
    "name": "Life360",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 959688000.0,
+   "revenue": 489481000.0,
    "flags": {
     "accruals": {
      "value": 0.08877959105610062,
@@ -39915,6 +41268,8 @@
    "name": "Alkane Resources",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": null,
+   "revenue": null,
    "flags": {
     "accruals": {
      "value": null,
@@ -39962,6 +41317,8 @@
    "name": "Australia & New Zealand Banking Group",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 1297108000000.0,
+   "revenue": 22307000000.0,
    "flags": {
     "accruals": {
      "value": null,
@@ -40011,6 +41368,8 @@
    "name": "Brambles",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": null,
+   "revenue": null,
    "flags": {
     "accruals": {
      "value": null,
@@ -40058,6 +41417,8 @@
    "name": "Charter Hall Retail REIT",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 4288300000.0,
+   "revenue": 196600000.0,
    "flags": {
     "accruals": {
      "value": null,
@@ -40107,6 +41468,8 @@
    "name": "Dyno Nobel",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 7829900000.0,
+   "revenue": 3710100000.0,
    "flags": {
     "accruals": {
      "value": -0.07738333651707203,
@@ -40156,6 +41519,8 @@
    "name": "Droneshield",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 412185000.0,
+   "revenue": 216547000.0,
    "flags": {
     "accruals": {
      "value": -0.03234886676110324,
@@ -40205,6 +41570,8 @@
    "name": "Deep Yellow",
    "market": "Australia (ASX)",
    "year": 2024,
+   "assets": 625079197.0,
+   "revenue": 15949.0,
    "flags": {
     "accruals": {
      "value": -0.013872790786598402,
@@ -40254,6 +41621,8 @@
    "name": "Electro Optic Systems Holdings",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 374737000.0,
+   "revenue": 128458000.0,
    "flags": {
     "accruals": {
      "value": 0.11033437275620657,
@@ -40303,6 +41672,8 @@
    "name": "Greatland Resources",
    "market": "Australia (ASX)",
    "year": 2024,
+   "assets": 0.0,
+   "revenue": 0.0,
    "flags": {
     "accruals": {
      "value": null,
@@ -40351,6 +41722,8 @@
    "name": "Iluka Resources",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 4220100000.0,
+   "revenue": 1015400000.0,
    "flags": {
     "accruals": {
      "value": -0.058004144947560135,
@@ -40400,6 +41773,8 @@
    "name": "L1 Long Short Fund",
    "market": "Australia (ASX)",
    "year": 2024,
+   "assets": 4477730000.0,
+   "revenue": 285679000.0,
    "flags": {
     "accruals": {
      "value": null,
@@ -40449,6 +41824,8 @@
    "name": "Liontown Resources",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 1563541000.0,
+   "revenue": 297565000.0,
    "flags": {
     "accruals": {
      "value": -0.13158711397286385,
@@ -40498,6 +41875,8 @@
    "name": "Metrics Master Income Trust",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 2459500000.0,
+   "revenue": 176243000.0,
    "flags": {
     "accruals": {
      "value": null,
@@ -40547,6 +41926,8 @@
    "name": "Nickel Industries",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 4264418345.9999,
+   "revenue": 1649099517.0,
    "flags": {
     "accruals": {
      "value": -0.0600392515777292,
@@ -40596,6 +41977,8 @@
    "name": "Nexgen Energy",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 2472933000.0,
+   "revenue": 0.0,
    "flags": {
     "accruals": {
      "value": -0.1269505222053491,
@@ -40644,6 +42027,8 @@
    "name": "Predictive Discovery",
    "market": "Australia (ASX)",
    "year": 2024,
+   "assets": 176590026.0,
+   "revenue": null,
    "flags": {
     "accruals": {
      "value": -0.022595068900120193,
@@ -40693,6 +42078,8 @@
    "name": "Stanmore Resources",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 2920800000.0001,
+   "revenue": 1881200000.0,
    "flags": {
     "accruals": {
      "value": -0.1398121682319291,
@@ -40742,6 +42129,8 @@
    "name": "Suncorp",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 30164000000.0,
+   "revenue": 15425000000.0,
    "flags": {
     "accruals": {
      "value": null,
@@ -40791,6 +42180,8 @@
    "name": "Telix Pharmaceuticals",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 1163986000.0,
+   "revenue": 803794000.0,
    "flags": {
     "accruals": {
      "value": 0.009663722785733464,
@@ -40840,6 +42231,8 @@
    "name": "Vault Minerals",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": null,
+   "revenue": null,
    "flags": {
     "accruals": {
      "value": null,
@@ -40887,6 +42280,8 @@
    "name": "Viva Energy",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 12471300000.0,
+   "revenue": 28438200000.0,
    "flags": {
     "accruals": {
      "value": -0.09190701153818007,
@@ -40936,6 +42331,8 @@
    "name": "Virgin Australia Holdings",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 4872100000.0,
+   "revenue": null,
    "flags": {
     "accruals": {
      "value": null,
@@ -40983,6 +42380,8 @@
    "name": "WAM Capital",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 2029262728.0,
+   "revenue": 323930072.0,
    "flags": {
     "accruals": {
      "value": null,
@@ -41032,6 +42431,8 @@
    "name": "WAM Leaders",
    "market": "Australia (ASX)",
    "year": 2025,
+   "assets": 1875229908.0,
+   "revenue": 109994490.0,
    "flags": {
     "accruals": {
      "value": null,
@@ -41092,54 +42493,59 @@
   {
    "key": "accruals",
    "flag": "Accruals vs cash",
-   "measures": "The gap between reported profit and the cash actually collected, scaled by assets.",
-   "deterioration": "Profit that never turns into cash is the oldest warning in accounting. The gap has to close eventually, usually by profit falling.",
-   "innocent": "A company growing quickly funds working capital before it collects. Fast growth and early-stage contracts both widen the gap without anything being wrong."
+   "measures": "Profit not backed by cash, over assets.",
+   "deterioration": "The gap has to close, usually by profit falling.",
+   "innocent": "Growth funds working capital before it collects."
   },
   {
    "key": "working_capital",
    "flag": "Receivables and inventory",
-   "measures": "Whether money owed by customers, or stock on hand, is growing faster than sales.",
-   "deterioration": "Customers paying more slowly, or stock that is not selling, often show up here before they reach the profit line.",
-   "innocent": "Stock builds ahead of a genuine demand ramp or a new product launch, and a shift towards larger customers lengthens payment terms by agreement."
+   "measures": "Working capital growing faster than sales.",
+   "deterioration": "Slower payers, or stock that is not selling.",
+   "innocent": "Stock ahead of a launch. Bigger customers, longer terms."
   },
   {
    "key": "share_count_roic",
    "flag": "Share count vs returns",
-   "measures": "Whether the number of shares is rising while the return on invested capital falls.",
-   "deterioration": "Issuing shares into falling returns dilutes existing holders to fund something earning less than it used to.",
-   "innocent": "A company issuing stock to fund an acquisition or a build-out will show lower returns while the investment is still being made."
+   "measures": "Dilution while return on capital falls.",
+   "deterioration": "Issuing shares into worse economics.",
+   "innocent": "Funding an acquisition that has not paid off yet."
   },
   {
    "key": "goodwill",
    "flag": "Goodwill",
-   "measures": "Whether goodwill, the premium paid over book value in acquisitions, is growing as a share of total assets.",
-   "deterioration": "Goodwill is the asset most likely to be written off. A rising share means more of the balance sheet rests on deals having worked.",
-   "innocent": "A company that has just made a large acquisition it will do perfectly well out of looks exactly like this."
+   "measures": "Acquisition premium as a share of assets.",
+   "deterioration": "The asset most likely to be written off.",
+   "innocent": "A big deal that will work out fine."
   },
   {
    "key": "tax_rate",
    "flag": "Effective tax rate",
-   "measures": "How much the tax rate moves around from year to year.",
-   "deterioration": "A rate that jumps about can point to one-off items or aggressive positions holding up reported profit.",
-   "innocent": "Where profits are earned changes, and one-off settlements and rate changes move the rate for entirely ordinary reasons."
+   "measures": "How much the rate moves year to year.",
+   "deterioration": "One-offs propping up reported profit.",
+   "innocent": "Profit mix shifts. Settlements. Rate changes."
   },
   {
    "key": "stock_comp",
    "flag": "Stock compensation",
-   "measures": "Whether pay issued in shares is growing as a share of revenue.",
-   "deterioration": "Stock compensation is a real cost that does not leave the bank account. Rising fast, it flatters cash flow while diluting holders.",
-   "innocent": "Competing for engineers means paying in stock. Plenty of good companies pay this way on purpose."
+   "measures": "Share-based pay as a share of revenue.",
+   "deterioration": "A real cost that never leaves the bank account.",
+   "innocent": "Paying up for engineers, on purpose."
   },
   {
    "key": "events",
-   "flag": "Restatements, auditor changes, late filings",
-   "measures": "Whether the company told the SEC it restated its accounts, changed auditor, or could not file on time in the last two years.",
-   "deterioration": "These are not inferences. They are events the company disclosed itself, and they are the most direct evidence on this page.",
-   "innocent": "Auditors are changed for cost and rotation rules, and a late filing can follow an acquisition or a system migration rather than a problem with the numbers."
+   "flag": "Filing events",
+   "measures": "Restatement, auditor change or late filing, two years.",
+   "deterioration": "Not an inference. The company disclosed it.",
+   "innocent": "Auditor rotation. A systems migration."
   }
  ],
- "as_of": "2026-08-14",
+ "as_of": "2026-08-17",
+ "asx_unavailable": [
+  "IFL.AX",
+  "NSR.AX",
+  "XYX.AX"
+ ],
  "asx_cfo_dropped": [
   "ALK.AX",
   "ANZ.AX",
@@ -41161,5 +42567,122 @@
   "VGN.AX",
   "WAM.AX",
   "WLE.AX"
- ]
+ ],
+ "correlations": {
+  "pairs": [
+   {
+    "a": "accruals",
+    "b": "working_capital",
+    "rho": 0.031,
+    "n": 527
+   },
+   {
+    "a": "accruals",
+    "b": "share_count_roic",
+    "rho": -0.083,
+    "n": 530
+   },
+   {
+    "a": "accruals",
+    "b": "goodwill",
+    "rho": 0.112,
+    "n": 493
+   },
+   {
+    "a": "accruals",
+    "b": "tax_rate",
+    "rho": -0.121,
+    "n": 561
+   },
+   {
+    "a": "accruals",
+    "b": "stock_comp",
+    "rho": 0.019,
+    "n": 421
+   },
+   {
+    "a": "working_capital",
+    "b": "share_count_roic",
+    "rho": 0.084,
+    "n": 487
+   },
+   {
+    "a": "working_capital",
+    "b": "goodwill",
+    "rho": 0.039,
+    "n": 454
+   },
+   {
+    "a": "working_capital",
+    "b": "tax_rate",
+    "rho": -0.017,
+    "n": 493
+   },
+   {
+    "a": "working_capital",
+    "b": "stock_comp",
+    "rho": 0.169,
+    "n": 379
+   },
+   {
+    "a": "share_count_roic",
+    "b": "goodwill",
+    "rho": 0.033,
+    "n": 488
+   },
+   {
+    "a": "share_count_roic",
+    "b": "tax_rate",
+    "rho": 0.004,
+    "n": 496
+   },
+   {
+    "a": "share_count_roic",
+    "b": "stock_comp",
+    "rho": 0.036,
+    "n": 422
+   },
+   {
+    "a": "goodwill",
+    "b": "tax_rate",
+    "rho": -0.014,
+    "n": 458
+   },
+   {
+    "a": "goodwill",
+    "b": "stock_comp",
+    "rho": 0.054,
+    "n": 397
+   },
+   {
+    "a": "tax_rate",
+    "b": "stock_comp",
+    "rho": 0.056,
+    "n": 396
+   }
+  ],
+  "mean_abs": 0.058,
+  "strongest": {
+   "a": "working_capital",
+   "b": "stock_comp",
+   "rho": 0.169,
+   "n": 379
+  },
+  "order": [
+   "accruals",
+   "working_capital",
+   "share_count_roic",
+   "goodwill",
+   "tax_rate",
+   "stock_comp"
+  ],
+  "short": {
+   "accruals": "Accruals",
+   "working_capital": "Recv/inv",
+   "share_count_roic": "Shares",
+   "goodwill": "Goodwill",
+   "tax_rate": "Tax",
+   "stock_comp": "Stock comp"
+  }
+ }
 }
