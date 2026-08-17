@@ -137,7 +137,7 @@ function renderQuadrant(rows) {
     return;
   }
 
-  const W = 1000, H = 620, L = 52, R = 26, T = 26, B = 52;
+  const W = 1000, H = 640, L = 56, R = 26, T = 26, B = 74;
   svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
   /* SQUARE-ROOT x scale. Short interest is heavily skewed - median 3.5%, a handful
      past 25% - so a linear axis crushed most of the market into the left tenth and
@@ -167,7 +167,7 @@ function renderQuadrant(rows) {
   });
   for (const s of [0, 0.01, 0.025, 0.05, 0.09, 0.15, 0.25, 0.4]) {
     if (s > maxSI) continue;
-    const t = svgEl("text", { x: px(s), y: H - 16, class: "axislabel",
+    const t = svgEl("text", { x: px(s), y: H - 40, class: "axislabel",
                               "text-anchor": "middle" }, svg);
     t.textContent = (s * 100).toFixed(s > 0 && s < 0.03 ? 1 : 0) + "%";
   }
@@ -177,22 +177,28 @@ function renderQuadrant(rows) {
   // Below the band, not inside it - inside, the label sat on top of the very dots
   // it describes.
   const lab = svgEl("text", { x: L + 6, y: py(midScore) + 15, class: "quadlabel" }, svg);
-  lab.textContent = "↑ flagged, barely shorted";
+  lab.textContent = "flagged, barely shorted";
   const lab2 = svgEl("text", { x: W - R - 6, y: py(midScore) + 15, class: "quadlabel",
                                "text-anchor": "end" }, svg);
-  lab2.textContent = "flagged and already crowded →";
-  const xt = svgEl("text", { x: (L + W - R) / 2, y: H - 4, class: "axistitle",
+  lab2.textContent = "flagged and already crowded";
+  const xt = svgEl("text", { x: (L + W - R) / 2, y: H - 10, class: "axistitle",
                              "text-anchor": "middle" }, svg);
   xt.textContent = "short interest, % of float";
   // No y-axis title in the SVG - it collided with the top tick, twice now. The
   // direction lives in the caption below, where nothing can overlap it.
 
+  /* Colour is the 12-month price change - CONTEXT, not validation. Score and return
+     are uncorrelated (rho -0.025). It is here to separate a flagged company the market
+     has already marked down from one still making highs. */
   pts.forEach(({ row, score }) => {
     const x = px(row.short_interest), y = py(score);
     const interesting = score >= midScore && row.short_interest < CROWDED;
+    const r1 = row.ret_1y;
+    const tone = r1 == null ? "unk" : r1 <= -0.2 ? "down" : r1 < 0.2 ? "flat" : "up";
     const dot = svgEl("circle", {
-      cx: x, cy: y, r: interesting ? 5 : 3,
-      class: "dot" + (interesting ? " hot" : "") + (row.events && row.events.length ? " ev" : ""),
+      cx: x, cy: y, r: interesting ? 5.5 : 3.4,
+      class: `dot t-${tone}` + (interesting ? " hot" : "")
+             + (row.events && row.events.length ? " ev" : ""),
     }, svg);
     dot.addEventListener("mouseenter", (e) => showTip(row, score, e.clientX, e.clientY));
     dot.addEventListener("mouseleave", hideTip);
@@ -200,11 +206,8 @@ function renderQuadrant(rows) {
 
   const hot = pts.filter(({ row, score }) => score >= midScore && row.short_interest < CROWDED);
   note.textContent =
-    `Score up the side, higher is worse. Short interest along the bottom. `
-    + `${pts.length} US companies with a short-interest figure. The two are unrelated `
-    + `(rank correlation +0.04), which is what makes the shaded corner worth `
-    + `something: ${hot.length} companies score ${midScore} or above with under `
-    + `${(CROWDED * 100).toFixed(0)}% of float short.`;
+    `${hot.length} companies score ${midScore}+ with almost nobody short them. `
+    + `Score and short interest are unrelated, which is the point.`;
 }
 
 const PAGE_SIZE = 20;

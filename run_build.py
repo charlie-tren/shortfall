@@ -14,6 +14,7 @@ from build_data import assemble_name, finalise, write, write_js
 from edgar import load_ticker_lookup, normalise_ticker, dedupe_by_cik, submissions
 from events import extract_events, LABELS
 from fetch_us import sweep, build_records
+from returns import fetch as fetch_returns, save as save_returns
 from short_interest import fetch as fetch_short_interest, save as save_short_interest
 
 YEARS = (2024, 2023, 2022, 2021)
@@ -90,8 +91,10 @@ def main(as_of=None):
     # Refresh short interest before assembling, so the cards carry this week's figure.
     us_tickers = [n["ticker"] for n in names if n["market"].startswith("United States")]
     save_short_interest(fetch_short_interest(us_tickers, log=log))
+    save_returns(fetch_returns([n["ticker"] for n in names]))
     import build_data
     build_data.SHORT_INTEREST = build_data.load_short_interest()
+    build_data.RETURNS = build_data.load_returns()
 
     rows = [x for x in (assemble_name(v) for v in history.values()) if x]
     attach_events(rows, lookup, as_of, log)
