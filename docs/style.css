@@ -69,6 +69,8 @@ body {
 .bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 34px; }
 .home { color: var(--soft); text-decoration: none; font-size: 14px; }
 .home:hover { color: var(--accent); }
+/* House standard: the back-link sits top right on every property. */
+.home { order: 2; }
 .back { margin-right: 7px; }
 .toggle {
   background: none; border: 1px solid var(--rule); color: var(--soft);
