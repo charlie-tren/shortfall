@@ -43,11 +43,20 @@
 
   <section class="panel" id="quadPanel" aria-label="Score against short interest">
     <div class="panel-head">
-      <h2>Flagged, but is anyone short it</h2>
+      <h2>Short interest against</h2>
+      <label class="xpick">Plot against <select id="xvar"></select></label>
       <p class="note" id="quadNote"></p>
     </div>
     <svg id="quadSvg" role="img" aria-label="Score against short interest"></svg>
 
+  </section>
+
+  <section class="panel" id="perfPanel" aria-label="Score against 12-month return">
+    <div class="panel-head">
+      <h2>Score against price</h2>
+      <p class="note" id="perfNote"></p>
+    </div>
+    <svg id="perfSvg" role="img" aria-label="Score against 12-month return"></svg>
   </section>
 
   <section class="panel" id="stripPanel" aria-label="Where each company sits on each test">

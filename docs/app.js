@@ -32,6 +32,7 @@ const DEFAULT_WEIGHTS = {
 const state = {
   weights: {}, market: "all", sector: "all", size: "all",
   minScore: 0, minHot: "all", price: "all", eventsOnly: false, tail: null, page: 0,
+  xvar: "assets",
   perTest: {},
 };
 FLAGS.forEach(([k]) => (state.weights[k] = DEFAULT_WEIGHTS[k]));
@@ -134,6 +135,7 @@ function scored() {
 function render() {
   const rows = scored();
   renderQuadrant(rows);
+  renderPerf(rows);
   renderStrips(rows);
   renderCards(rows);
 }
@@ -150,77 +152,141 @@ function render() {
    "we do not know" are different claims. */
 const CROWDED = 0.09;
 
+/* X-axis variables the reader can put short interest against. Each carries its own
+   accessor and formatter; `log` marks the ones that need a log scale to be readable. */
+const XVARS = {
+  assets:           { label: "Total assets", log: true,  get: (r) => r.assets,
+                      fmt: (v) => money(v) },
+  turnover:         { label: "Revenue / assets", get: (r) => (r.revenue && r.assets) ? r.revenue / r.assets : null,
+                      fmt: (v) => v.toFixed(2) },
+  score:            { label: "Score", get: (r) => r.composite, fmt: (v) => v.toFixed(0) },
+  ret:              { label: "12-month return", get: (r) => r.ret_1y,
+                      fmt: (v) => (v * 100).toFixed(0) + "%" },
+  accruals:         { label: "Accruals", get: (r) => flagVal(r, "accruals"),
+                      fmt: (v) => (v * 100).toFixed(1) + "%" },
+  working_capital:  { label: "Receivables & inventory", get: (r) => flagVal(r, "working_capital"),
+                      fmt: (v) => (v * 100).toFixed(0) + "%" },
+  goodwill:         { label: "Goodwill share", get: (r) => flagVal(r, "goodwill"),
+                      fmt: (v) => (v * 100).toFixed(1) + "pp" },
+  tax_rate:         { label: "Tax rate swing", get: (r) => flagVal(r, "tax_rate"),
+                      fmt: (v) => (v * 100).toFixed(1) + "pp" },
+  stock_comp:       { label: "Stock compensation", get: (r) => flagVal(r, "stock_comp"),
+                      fmt: (v) => (v * 100).toFixed(1) + "pp" },
+};
+
+function flagVal(r, k) {
+  const f = r.flags[k];
+  return f && f.applicable && f.value != null ? f.value : null;
+}
+
+function spearman(pairs) {
+  if (pairs.length < 20) return null;
+  const rank = (vals) => {
+    const idx = vals.map((v, i) => [v, i]).sort((a, b) => a[0] - b[0]);
+    const out = new Array(vals.length);
+    idx.forEach(([, i], r) => { out[i] = r; });
+    return out;
+  };
+  const x = rank(pairs.map((p) => p[0])), y = rank(pairs.map((p) => p[1]));
+  const mx = x.reduce((a, b) => a + b, 0) / x.length;
+  const my = y.reduce((a, b) => a + b, 0) / y.length;
+  let n = 0, dx = 0, dy = 0;
+  x.forEach((v, i) => { n += (v - mx) * (y[i] - my); dx += (v - mx) ** 2; dy += (y[i] - my) ** 2; });
+  return dx && dy ? n / Math.sqrt(dx * dy) : null;
+}
+
+/* Generic scatter. Both panels use it so they cannot drift apart in style. */
+function scatter(svg, data, opts) {
+  while (svg.firstChild) svg.removeChild(svg.firstChild);
+  const W = 1000, H = 480, L = 66, R = 26, T = 22, B = 62;
+  svg.setAttribute("viewBox", "0 0 " + W + " " + H);
+  if (data.length < 20) return null;
+
+  const clip = (vals) => {
+    const s = [...vals].sort((a, b) => a - b);
+    return [s[Math.floor(0.02 * (s.length - 1))], s[Math.floor(0.98 * (s.length - 1))]];
+  };
+  const tx = opts.logX ? (v) => Math.log10(Math.max(v, 1)) : (v) => v;
+  const ty = opts.sqrtY ? (v) => Math.sqrt(Math.max(v, 0)) : (v) => v;
+  const [xlo, xhi] = clip(data.map((d) => tx(d.x)));
+  const [ylo, yhi] = clip(data.map((d) => ty(d.y)));
+  const px = (v) => L + Math.max(0, Math.min(1, (tx(v) - xlo) / ((xhi - xlo) || 1))) * (W - L - R);
+  const py = (v) => H - B - Math.max(0, Math.min(1, (ty(v) - ylo) / ((yhi - ylo) || 1))) * (H - T - B);
+
+  for (let i = 0; i <= 4; i++) {
+    const raw = ylo + (i / 4) * (yhi - ylo);
+    const v = opts.sqrtY ? raw * raw : raw;
+    const y = H - B - (i / 4) * (H - T - B);
+    svgEl("line", { x1: L, y1: y, x2: W - R, y2: y, class: "grid" }, svg);
+    const t = svgEl("text", { x: L - 10, y: y + 5, class: "axislabel", "text-anchor": "end" }, svg);
+    t.textContent = opts.fmtY(v);
+  }
+  for (let i = 0; i <= 4; i++) {
+    const raw = xlo + (i / 4) * (xhi - xlo);
+    const v = opts.logX ? Math.pow(10, raw) : raw;
+    const t = svgEl("text", { x: px(v), y: H - 34, class: "axislabel", "text-anchor": "middle" }, svg);
+    t.textContent = opts.fmtX(v);
+  }
+  const xt = svgEl("text", { x: (L + W - R) / 2, y: H - 8, class: "axistitle", "text-anchor": "middle" }, svg);
+  xt.textContent = opts.xLabel;
+  const yt = svgEl("text", { x: -(T + (H - B - T) / 2), y: 16, class: "axistitle",
+                             "text-anchor": "middle", transform: "rotate(-90)" }, svg);
+  yt.textContent = opts.yLabel;
+
+  const xs = data.map((d) => tx(d.x)), ys = data.map((d) => ty(d.y));
+  const mx = xs.reduce((a, b) => a + b, 0) / xs.length;
+  const my = ys.reduce((a, b) => a + b, 0) / ys.length;
+  let num = 0, den = 0;
+  xs.forEach((v, i) => { num += (v - mx) * (ys[i] - my); den += (v - mx) ** 2; });
+  const rho = spearman(data.map((d) => [tx(d.x), ty(d.y)]));
+  // Only draw a fit when there is something to fit. A trend line over rho 0.02 is a
+  // decoration that asserts a relationship the data does not contain.
+  if (den && rho != null && Math.abs(rho) >= 0.15) {
+    const sl = num / den;
+    const at = (t_) => { const raw = my + sl * (t_ - mx); return opts.sqrtY ? raw * raw : raw; };
+    svgEl("line", { x1: px(opts.logX ? Math.pow(10, xlo) : xlo), y1: py(at(xlo)),
+                    x2: px(opts.logX ? Math.pow(10, xhi) : xhi), y2: py(at(xhi)),
+                    class: "trend" }, svg);
+  }
+
+  data.forEach((d) => {
+    const dot = svgEl("circle", { cx: px(d.x), cy: py(d.y), r: 3.4,
+                                  class: "dot" + (d.row.composite >= 90 ? " hot" : "") }, svg);
+    dot.addEventListener("mouseenter", (e) => showTip(d.row, d.row.composite, e.clientX, e.clientY));
+    dot.addEventListener("mouseleave", hideTip);
+  });
+  return rho;
+}
+
 function renderQuadrant(rows) {
   const svg = document.getElementById("quadSvg");
   if (!svg) return;
-  while (svg.firstChild) svg.removeChild(svg.firstChild);
-  const pts = rows.filter(({ row }) => row.short_interest != null && row.assets > 0);
-  const note = document.getElementById("quadNote");
-  if (pts.length < 20) { note.textContent = "Not enough short-interest data for this selection."; return; }
-
-  const W = 1000, H = 560, L = 62, R = 26, T = 24, B = 74;
-  svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
-
-  /* SIZE against SHORT INTEREST - the only strong relationship in this dataset
-     (Spearman -0.52, n=482): small companies are far more heavily shorted.
-     Plotting score against short interest hid this, and worse, it meant the
-     "barely shorted" corner was mostly just measuring "big". Here the trend is
-     drawn, and what matters is DISTANCE FROM IT. */
-  const lx = pts.map((p) => Math.log10(p.row.assets));
-  const xlo = Math.floor(Math.min(...lx)), xhi = Math.ceil(Math.max(...lx));
-  const si = pts.map((p) => p.row.short_interest);
-  const yhi = Math.max(...si);
-  const px = (v) => L + ((Math.log10(v) - xlo) / (xhi - xlo || 1)) * (W - L - R);
-  const py = (v) => H - B - Math.sqrt(Math.min(v, yhi) / yhi) * (H - T - B);
-
-  for (const v of [0, 0.01, 0.03, 0.06, 0.1, 0.2, 0.35, 0.5]) {
-    if (v > yhi) continue;
-    svgEl("line", { x1: L, y1: py(v), x2: W - R, y2: py(v), class: "grid" }, svg);
-    const t = svgEl("text", { x: L - 10, y: py(v) + 5, class: "axislabel", "text-anchor": "end" }, svg);
-    t.textContent = (v * 100).toFixed(0) + "%";
-  }
-  for (let e = xlo; e <= xhi; e++) {
-    const t = svgEl("text", { x: px(Math.pow(10, e)), y: H - 42, class: "axislabel", "text-anchor": "middle" }, svg);
-    t.textContent = money(Math.pow(10, e));
-  }
-  const xt = svgEl("text", { x: (L + W - R) / 2, y: H - 12, class: "axistitle", "text-anchor": "middle" }, svg);
-  xt.textContent = "total assets";
-  const yt = svgEl("text", { x: -(T + (H - B - T) / 2), y: 14, class: "axistitle",
-                             "text-anchor": "middle", transform: "rotate(-90)" }, svg);
-  yt.textContent = "short interest";
-
-  /* Least-squares fit through log(size) vs sqrt(short interest), so "expected for
-     a company this size" is a line on the chart rather than an assertion. */
-  const xs = pts.map((p) => Math.log10(p.row.assets));
-  const ys = pts.map((p) => Math.sqrt(p.row.short_interest));
-  const mx = xs.reduce((a2, b2) => a2 + b2, 0) / xs.length;
-  const my = ys.reduce((a2, b2) => a2 + b2, 0) / ys.length;
-  let num = 0, den = 0;
-  xs.forEach((x, i) => { num += (x - mx) * (ys[i] - my); den += (x - mx) ** 2; });
-  const slope = den ? num / den : 0;
-  const fit = (lgx) => Math.pow(my + slope * (lgx - mx), 2);
-  const fx1 = Math.pow(10, xlo), fx2 = Math.pow(10, xhi);
-  svgEl("line", { x1: px(fx1), y1: py(Math.max(fit(xlo), 0)), x2: px(fx2),
-                  y2: py(Math.max(fit(xhi), 0)), class: "trend" }, svg);
-
-  let below = 0;
-  pts.forEach(({ row, score }) => {
-    const expected = Math.max(fit(Math.log10(row.assets)), 0);
-    const quiet = score >= 90 && row.short_interest < expected;
-    if (quiet) below += 1;
-    const dot = svgEl("circle", {
-      cx: px(row.assets), cy: py(row.short_interest),
-      r: 3.4,
-      class: "dot" + (quiet ? " hot" : score >= 90 ? " mid" : ""),
-    }, svg);
-    dot.addEventListener("mouseenter", (e) => showTip(row, score, e.clientX, e.clientY));
-    dot.addEventListener("mouseleave", hideTip);
+  const v = XVARS[state.xvar] || XVARS.assets;
+  const data = rows.map(({ row }) => ({ row, x: v.get(row), y: row.short_interest }))
+                   .filter((d) => d.x != null && d.y != null);
+  const rho = scatter(svg, data, {
+    logX: !!v.log, sqrtY: true, xLabel: v.label, yLabel: "Short interest",
+    fmtX: v.fmt, fmtY: (y) => (y * 100).toFixed(0) + "%",
   });
+  document.getElementById("quadNote").textContent = data.length < 20
+    ? "Not enough short-interest data for this selection."
+    : data.length + " companies. Rank correlation " + (rho == null ? "n/a" : rho.toFixed(2)) + ".";
+}
 
-  note.textContent =
-    `Small companies get shorted more - that is the trend line (rho -0.52). `
-    + `${below} companies score 90+ and sit BELOW it: less shorted than their size `
-    + `would predict.`;
+function renderPerf(rows) {
+  const svg = document.getElementById("perfSvg");
+  if (!svg) return;
+  const data = rows.map(({ row, score }) => ({ row, x: score, y: row.ret_1y }))
+                   .filter((d) => d.x != null && d.y != null);
+  const rho = scatter(svg, data, {
+    logX: false, sqrtY: false, xLabel: "Score", yLabel: "12-month return",
+    fmtX: (x) => x.toFixed(0), fmtY: (y) => (y * 100).toFixed(0) + "%",
+  });
+  const flat = rho != null && Math.abs(rho) < 0.15;
+  document.getElementById("perfNote").textContent = data.length < 20
+    ? "Not enough price history for this selection."
+    : data.length + " companies. Rank correlation " + (rho == null ? "n/a" : rho.toFixed(2))
+      + (flat ? " - no relationship, so no line is drawn." : ".");
 }
 
 const PAGE_SIZE = 20;
@@ -561,6 +627,10 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("prevPage" + sfx).addEventListener("click", () => goPage(-1, sfx));
     document.getElementById("nextPage" + sfx).addEventListener("click", () => goPage(1, sfx));
   });
+  const xsel = document.getElementById("xvar");
+  Object.entries(XVARS).forEach(([k, v]) => el("option", { value: k, text: v.label }, xsel));
+  xsel.value = state.xvar;
+  xsel.addEventListener("change", () => { state.xvar = xsel.value; render(); });
   buildSliders();
   buildFilters();
   buildTestHeader();
