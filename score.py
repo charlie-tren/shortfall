@@ -34,23 +34,41 @@ def percentile_ranks(values):
     return {k: 100.0 * i / (n - 1) for i, (k, _) in enumerate(ordered)}
 
 
-def composite(flag_scores, weights=None, enforce_minimum=False):
-    """Weighted mean over APPLICABLE flags only.
+SEVERITY_TOP_N = 2
 
-    Renormalisation is the whole point: if a flag does not apply, its weight is
-    removed from the denominator rather than contributing a zero.
+
+def composite(flag_scores, weights=None, enforce_minimum=False):
+    """Severity: the weighted mean of a company's WORST TWO applicable tests.
+
+    NOT the mean of all six, which is what this used to be. The correlation matrix
+    is why: the tests are near-independent (mean |rho| 0.058), so averaging all of
+    them rewards a company that is mildly odd on everything and buries one that is
+    extreme on two. The second is the interesting company.
+
+    Measured on the built universe, the mean-of-all version ranked Supermicro 70th,
+    AES 323rd, Archer-Daniels-Midland 397th and Crown Castle dead last at 656 - every
+    company that had actually disclosed an accounting problem sat mid-table or worse,
+    while an airport sat near the top.
+
+    Weights still apply, and are still renormalised over applicable tests only, so a
+    reader who cranks one slider changes WHICH tests are most likely to be a company's
+    worst two.
     """
     applicable = {k: v for k, v in flag_scores.items() if v is not None}
     if not applicable:
         return None
     if enforce_minimum and len(applicable) < MIN_APPLICABLE_FLAGS:
         return None
-    if weights is None:
-        return sum(applicable.values()) / len(applicable)
-    total = sum(weights.get(k, 1.0) for k in applicable)
-    if not total:
+    w = {k: (1.0 if weights is None else weights.get(k, 1.0)) for k in applicable}
+    if not sum(w.values()):
         return None
-    return sum(v * weights.get(k, 1.0) for k, v in applicable.items()) / total
+    # A weight scales how much a test counts towards being one of the worst two.
+    scored = sorted(((v * w[k], w[k]) for k, v in applicable.items()),
+                    key=lambda t: t[0], reverse=True)[:SEVERITY_TOP_N]
+    weight_sum = sum(x[1] for x in scored)
+    if not weight_sum:
+        return None
+    return sum(x[0] for x in scored) / weight_sum
 
 
 def coverage_gate(coverage_by_flag):

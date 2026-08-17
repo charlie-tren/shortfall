@@ -42,12 +42,22 @@
     every test here has an innocent reading too.</p>
   </header>
 
-  <section class="panel" id="scatterPanel" aria-label="Score against company size">
+  <section class="panel flagged" id="disclosedPanel">
     <div class="panel-head">
-      <h2>Score against size</h2>
-      <p class="note" id="scatterNote"></p>
+      <h2>Told the regulator something went wrong</h2>
+      <p class="note">{{ disclosed|length }} companies restated their accounts, changed
+      auditor, or could not file on time in the last two years. Not a ratio, not an
+      inference - the company disclosed it. Start here.</p>
     </div>
-    <svg id="scatterSvg" role="img" aria-label="Score against total assets"></svg>
+    <div id="disclosed"></div>
+  </section>
+
+  <section class="panel" id="stripPanel" aria-label="Where each company sits on each test">
+    <div class="panel-head">
+      <h2>The tail of each test</h2>
+      <p class="note" id="stripNote"></p>
+    </div>
+    <div id="strips"></div>
   </section>
 
   <section class="panel" id="weights">

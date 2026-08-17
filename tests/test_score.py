@@ -41,9 +41,29 @@ def test_composite_none_below_minimum_applicable():
                      enforce_minimum=True) is None
 
 
-def test_composite_allowed_at_exactly_the_minimum():
+def test_composite_is_the_worst_two_not_the_mean_of_all():
+    # Mean of all three would be 60. Severity takes the worst two: (90+60)/2.
     got = composite({"a": 90.0, "b": 60.0, "c": 30.0}, weights=None, enforce_minimum=True)
-    assert got == 60.0
+    assert got == 75.0
+
+
+def test_extreme_on_two_beats_mildly_odd_on_six():
+    """The whole point of severity. Under a mean-of-all the mild company wins."""
+    extreme = composite({"a": 99.0, "b": 97.0, "c": 10.0, "d": 5.0, "e": 5.0, "f": 5.0})
+    mild = composite({"a": 65.0, "b": 64.0, "c": 63.0, "d": 62.0, "e": 61.0, "f": 60.0})
+    assert extreme > mild
+    # And confirm the old aggregator would have got it backwards.
+    mean = lambda d: sum(d.values()) / len(d)
+    assert mean({"a": 99.0, "b": 97.0, "c": 10.0, "d": 5.0, "e": 5.0, "f": 5.0}) \
+        < mean({"a": 65.0, "b": 64.0, "c": 63.0, "d": 62.0, "e": 61.0, "f": 60.0})
+
+
+def test_a_single_extreme_is_tempered_by_the_second_worst():
+    # One test at 100 and nothing else should not top the list on its own.
+    lone = composite({"a": 100.0, "b": 2.0, "c": 1.0})
+    both = composite({"a": 100.0, "b": 96.0, "c": 1.0})
+    assert both > lone
+    assert lone == 51.0
 
 
 def test_composite_none_when_all_weights_zero():

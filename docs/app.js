@@ -11,7 +11,7 @@ const FLAGS = [
 ];
 
 const NS = "http://www.w3.org/2000/svg";
-const state = { weights: {}, market: "all", eventsOnly: false };
+const state = { weights: {}, market: "all", eventsOnly: false, tail: null };
 FLAGS.forEach(([k]) => (state.weights[k] = 1));
 
 function el(tag, props = {}, parent = null) {
@@ -55,7 +55,28 @@ function visible() {
   return window.SHORTFALL.names.filter((r) => {
     if (state.market !== "all" && r.market !== state.market) return false;
     if (state.eventsOnly && !(r.events && r.events.length)) return false;
+    if (state.tail) {
+      const f = r.flags[state.tail];
+      if (!f || !f.applicable || f.rank == null || f.rank < 90) return false;
+    }
     return true;
+  });
+}
+
+/* The disclosed list is deliberately NOT re-ranked by the sliders. These are facts
+   the company reported, not percentiles, so a reader's weighting has nothing to say
+   about them. Built once. */
+function buildDisclosed() {
+  const host = document.getElementById("disclosed");
+  host.textContent = "";
+  (window.SHORTFALL.disclosed || []).forEach((row) => {
+    const item = el("a", { class: "disc", href: "#" + row.ticker }, host);
+    el("span", { class: "d-name", text: row.name }, item);
+    el("span", { class: "d-ticker", text: row.ticker }, item);
+    const kinds = [...new Set(row.events.map((e) => e.label))];
+    const tags = el("span", { class: "d-tags" }, item);
+    kinds.forEach((k) => el("span", { class: "badge", text: k }, tags));
+    el("span", { class: "d-score", text: row.composite.toFixed(0) }, item);
   });
 }
 
@@ -71,12 +92,8 @@ function scored() {
 
 function render() {
   const rows = scored();
-  renderScatter(rows);
+  renderStrips(rows);
   renderCards(rows);
-  const note = document.getElementById("scatterNote");
-  note.textContent = `${rows.length} companies, score against total assets. `
-    + `Hover a point for the name. Cards below are the top `
-    + `${Math.min(rows.length, 100)} by score.`;
 }
 
 function renderCards(rows) {
@@ -127,57 +144,81 @@ function money(v) {
   return String(Math.round(v));
 }
 
-/* X is company SIZE on a log scale, Y is the score.
+/* One strip per test: every company as a tick along the 0-100 axis, with the top
+   decile picked out. Replaces a score-against-size scatter that had no relationship
+   in it and so drew a formless blob.
 
-   The first version plotted score against rank position, which can only ever draw
-   a descending curve - it looked like analysis and contained none. Size is a real
-   second dimension: it separates "a big company scoring high", which is worth a
-   look, from "a small one", which usually is not. */
-function renderScatter(rows) {
-  const svg = document.getElementById("scatterSvg");
-  while (svg.firstChild) svg.removeChild(svg.firstChild);
-  const W = svg.clientWidth || 900, H = 340;
-  const L = 40, R = 16, T = 14, B = 34;
+   This is the view that serves the actual question. A short candidate is a company
+   sitting in the far tail of one or two tests, and a strip shows exactly who is out
+   there and how far from the pack. Click a strip to keep only its tail. */
+function renderStrips(rows) {
+  const host = document.getElementById("strips");
+  host.textContent = "";
+  const W = 1000, H = 34, L = 4, R = 4;
+  const px = (v) => L + (v / 100) * (W - L - R);
 
-  const withSize = rows.filter((r) => r.row.assets && r.row.assets > 0);
-  if (!withSize.length) return;
-  svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  FLAGS.forEach(([key, label]) => {
+    const present = rows.filter(({ row }) => {
+      const f = row.flags[key];
+      return f && f.applicable && f.rank != null && f.value != null;
+    });
+    if (!present.length) return;
+    const strip = el("div", { class: "strip" + (state.tail === key ? " active" : "") }, host);
+    const head = el("div", { class: "strip-head" }, strip);
+    el("span", { class: "strip-name", text: label }, head);
+    el("span", { class: "strip-n", text: `${present.length} companies` }, head);
 
-  const logs = withSize.map((r) => Math.log10(r.row.assets));
-  const lo = Math.floor(Math.min(...logs)), hi = Math.ceil(Math.max(...logs));
-  const px = (v) => L + ((Math.log10(v) - lo) / (hi - lo || 1)) * (W - L - R);
-  const py = (v) => H - B - (v / 100) * (H - T - B);
+    const svg = document.createElementNS(NS, "svg");
+    svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+    svg.setAttribute("class", "stripSvg");
+    svg.setAttribute("preserveAspectRatio", "none");
+    strip.appendChild(svg);
 
-  [0, 25, 50, 75, 100].forEach((v) => {
-    svgEl("line", { x1: L, y1: py(v), x2: W - R, y2: py(v), class: "grid" }, svg);
-    const t = svgEl("text", { x: L - 8, y: py(v) + 4, class: "axislabel", "text-anchor": "end" }, svg);
-    t.textContent = String(v);
+    /* RAW values, not percentile ranks. Ranks are uniform by construction, so a
+       strip of them is an evenly spaced comb with exactly 10% inside any 10% band -
+       it can only ever draw one shape, which is no information at all. The raw
+       values are genuinely skewed, so the clump and the outliers are real.
+
+       Clipped to the 2nd-98th percentile so a single extreme does not squash the
+       rest against the axis; anything beyond is pinned to the edge. */
+    const vals = present.map(({ row }) => row.flags[key].value).sort((a, b) => a - b);
+    const at = (q) => vals[Math.min(vals.length - 1, Math.max(0, Math.floor(q * (vals.length - 1))))];
+    const lo = at(0.02), hi = at(0.98);
+    const span = (hi - lo) || 1;
+    const vx = (v) => L + Math.max(0, Math.min(1, (v - lo) / span)) * (W - L - R);
+    const cut = at(0.90);
+
+    svgEl("line", { x1: L, y1: H / 2, x2: W - R, y2: H / 2, class: "grid" }, svg);
+    svgEl("rect", { x: vx(cut), y: 2, width: (W - R) - vx(cut), height: H - 4,
+                    class: "tailband" }, svg);
+
+    present.forEach(({ row }) => {
+      const f = row.flags[key];
+      const x = vx(f.value);
+      const hot = f.rank >= 90;
+      const ev = row.events && row.events.length;
+      const tick = svgEl("line", {
+        x1: x, y1: hot ? 4 : 9, x2: x, y2: hot ? H - 4 : H - 9,
+        class: "tick" + (hot ? " hot" : "") + (ev ? " ev" : ""),
+      }, svg);
+      tick.addEventListener("mouseenter", (e) => showTip(row, row.composite, e.clientX, e.clientY, true));
+      tick.addEventListener("mouseleave", hideTip);
+    });
+
+    strip.addEventListener("click", () => {
+      state.tail = state.tail === key ? null : key;
+      render();
+    });
   });
-  for (let e = lo; e <= hi; e++) {
-    const t = svgEl("text", { x: px(Math.pow(10, e)), y: H - 12, class: "axislabel", "text-anchor": "middle" }, svg);
-    t.textContent = money(Math.pow(10, e));
-  }
-  // No inline axis titles. They collided with the end ticks ("score" over 100,
-  // "total assets" over 10.0tn) and the panel heading already names both axes.
 
-  const layer = svgEl("g", {}, svg);
-  withSize.forEach(({ row, score, base }) => {
-    const x = px(row.assets), y = py(score), yb = py(base);
-    if (Math.abs(y - yb) > 1) {
-      svgEl("line", { x1: x, y1: yb, x2: x, y2: y, class: "shift" }, layer);
-    }
-    const flagged = row.events && row.events.length;
-    const dot = svgEl("circle", {
-      cx: x, cy: y, r: flagged ? 4.5 : 3.2,
-      class: flagged ? "dot flagged" : "dot",
-      "data-ticker": row.ticker,
-    }, layer);
-    dot.addEventListener("mouseenter", () => showTip(row, score, x, y));
-    dot.addEventListener("mouseleave", hideTip);
-  });
+  const n = rows.length;
+  document.getElementById("stripNote").textContent =
+    `Each mark is one company, placed by how extreme it is on that test. `
+    + `The shaded band is the worst 10%. Click a test to keep only its tail`
+    + (state.tail ? ` - showing ${FLAGS.find((f) => f[0] === state.tail)[1]}, ${n} companies.` : `.`);
 }
 
-function showTip(row, score, x, y) {
+function showTip(row, score, x, y, viewport) {
   const tip = document.getElementById("tip");
   tip.textContent = "";
   el("strong", { text: row.name }, tip);
@@ -193,10 +234,7 @@ function showTip(row, score, x, y) {
   if (fired.length) el("span", { class: "t-line", text: "highest: " + fired.join(", ") }, tip);
   (row.events || []).forEach((e) => el("span", { class: "t-event", text: e.label }, tip));
 
-  const svg = document.getElementById("scatterSvg");
-  const box = svg.getBoundingClientRect();
-  const sx = box.left + (x / svg.viewBox.baseVal.width) * box.width;
-  const sy = box.top + (y / svg.viewBox.baseVal.height) * box.height;
+  const sx = x, sy = y;
   tip.style.display = "block";
   const tw = tip.offsetWidth;
   tip.style.left = Math.max(8, Math.min(window.innerWidth - tw - 8, sx - tw / 2)) + "px";
@@ -306,6 +344,7 @@ function buildExplain() {
 document.addEventListener("DOMContentLoaded", () => {
   buildSliders();
   buildFilters();
+  buildDisclosed();
   buildMatrix();
   buildExplain();
   render();
@@ -320,5 +359,5 @@ document.addEventListener("DOMContentLoaded", () => {
     lbl.textContent = dark ? "Light" : "Dark";
     render();
   });
-  window.addEventListener("resize", () => renderScatter(scored()));
+  window.addEventListener("resize", () => renderStrips(scored()));
 });

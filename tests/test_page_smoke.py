@@ -34,9 +34,24 @@ def page_with(pw, errors):
     browser = pw.chromium.launch()
     page = browser.new_page()
     page.on("console", lambda m: errors.append(m.text) if m.type == "error" else None)
+    # pageerror is an UNCAUGHT EXCEPTION and must fail the suite. Listening only for
+    # console errors let a null reference through: render() kept writing to a note
+    # element that had been deleted with the scatter panel, which threw during init
+    # and silently stopped the theme toggle ever being wired up. The page still
+    # rendered, so every other assertion passed.
+    page.on("pageerror", lambda e: errors.append(f"UNCAUGHT: {e}"))
     page.goto(URL)
     page.wait_for_selector(".card")
     return browser, page
+
+
+def test_no_uncaught_exceptions_during_init(server):
+    with sync_playwright() as pw:
+        errors = []
+        browser, page = page_with(pw, errors)
+        page.wait_for_timeout(400)
+        assert not [e for e in errors if e.startswith("UNCAUGHT")], errors
+        browser.close()
 
 
 def test_page_loads_without_application_errors(server):

@@ -38,6 +38,15 @@ def assemble_name(history):
     }
 
 
+# How serious a disclosure is, for ordering the disclosed list only. This never
+# enters a score - it decides which of two disclosed companies is listed first.
+EVENT_SEVERITY = {"restatement": 3, "auditor_change": 2, "late_filing": 1}
+
+
+def EVENT_WEIGHT(row):
+    return max((EVENT_SEVERITY.get(e["kind"], 0) for e in row["events"]), default=0)
+
+
 def applicable_coverage(rows, flag_key):
     """Fraction of names where the flag applies. This is what the gate tests."""
     if not rows:
@@ -89,7 +98,16 @@ def finalise(rows):
             included.append(r)
 
     included.sort(key=lambda r: r["composite"], reverse=True)
+
+    # Companies that TOLD the regulator something went wrong get their own list rather
+    # than a number blended into the ratio score. They are a different kind of evidence:
+    # a restatement is a disclosed fact, not a percentile, and any exchange rate between
+    # the two would be invented. Ordered by how serious the disclosure is, then severity.
+    disclosed = [r for r in included if r["events"]]
+    disclosed.sort(key=lambda r: (EVENT_WEIGHT(r), r["composite"]), reverse=True)
+
     return {
+        "disclosed": disclosed,
         "names": included,
         "excluded": excluded,
         "coverage": coverage,
