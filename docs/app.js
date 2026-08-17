@@ -100,12 +100,16 @@ function renderCards(rows) {
     FLAGS.forEach(([k, label]) => {
       const f = row.flags[k];
       const on = f && f.applicable && f.rank != null;
-      el("dt", { text: label }, list);
+      // Each label/value pair gets its own wrapper. Without it the dt and dd flow
+      // through the grid independently and a value ends up beside the WRONG flag,
+      // which on this page is a correctness bug rather than a cosmetic one.
+      const pair = el("div", { class: "pair" }, list);
+      el("dt", { text: label }, pair);
       el("dd", {
         class: on ? "on" : "na",
         text: on ? f.rank.toFixed(0) : "not applicable",
         title: f && !f.applicable ? f.reason : "",
-      }, list);
+      }, pair);
     });
     el("p", { class: "applicable",
               text: `${row.applicable} of 6 flags applicable` }, card);
