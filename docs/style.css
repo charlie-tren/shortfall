@@ -343,3 +343,5 @@ table.heat td.n, table.heat th.n { color: var(--na); }
 .thcol.on .throw output { color: var(--accent); }
 @media (max-width: 900px) { #testHead { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 520px) { #testHead { display: none; } }
+
+#quadSvg .dot.hot { stroke: none; }

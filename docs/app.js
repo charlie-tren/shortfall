@@ -184,7 +184,10 @@ function renderQuadrant(rows) {
     t.textContent = money(Math.pow(10, e));
   }
   const xt = svgEl("text", { x: (L + W - R) / 2, y: H - 12, class: "axistitle", "text-anchor": "middle" }, svg);
-  xt.textContent = "total assets →   (short interest up the side)";
+  xt.textContent = "total assets";
+  const yt = svgEl("text", { x: -(T + (H - B - T) / 2), y: 14, class: "axistitle",
+                             "text-anchor": "middle", transform: "rotate(-90)" }, svg);
+  yt.textContent = "short interest";
 
   /* Least-squares fit through log(size) vs sqrt(short interest), so "expected for
      a company this size" is a line on the chart rather than an assertion. */
@@ -207,15 +210,13 @@ function renderQuadrant(rows) {
     if (quiet) below += 1;
     const dot = svgEl("circle", {
       cx: px(row.assets), cy: py(row.short_interest),
-      r: quiet ? 6 : score >= 90 ? 4.2 : 2.6,
+      r: 3.4,
       class: "dot" + (quiet ? " hot" : score >= 90 ? " mid" : ""),
     }, svg);
     dot.addEventListener("mouseenter", (e) => showTip(row, score, e.clientX, e.clientY));
     dot.addEventListener("mouseleave", hideTip);
   });
 
-  const lab = svgEl("text", { x: L + 8, y: T + 14, class: "quadlabel" }, svg);
-  lab.textContent = "the line is normal short interest for a company that size";
   note.textContent =
     `Small companies get shorted more - that is the trend line (rho -0.52). `
     + `${below} companies score 90+ and sit BELOW it: less shorted than their size `
@@ -277,7 +278,7 @@ function renderPager(total, pages) {
   const from = total ? state.page * PAGE_SIZE + 1 : 0;
   const to = Math.min((state.page + 1) * PAGE_SIZE, total);
   const label = total
-    ? `${from}-${to} of ${total}, worst first`
+    ? `${from}-${to} of ${total}`
     : "nothing matches these filters";
   ["", "Top"].forEach((sfx) => {
     const info = document.getElementById("pageInfo" + sfx);
