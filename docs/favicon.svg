@@ -1,10 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <!-- Shortfall mark: expected height as an outline, delivered height solid.
-       The gap between them is the shortfall.
-       Ink-black ground - the estate's other tiles are slate-blue, warm-charcoal
-       and cream, so near-black reads as a distinct tab at 16px without shouting.
-       Accent is the site's own slate, not a warning colour. -->
+  <!-- Shortfall mark: expected height, delivered height, and the gap between them.
+       BOTH BARS ARE SOLID. An outlined bar was correct at 192px and disappeared at
+       16px, where a 3px stroke scales below one pixel against a near-black ground.
+       The dim/bright contrast carries the same idea and survives a tab strip. -->
   <rect width="64" height="64" rx="14" fill="#0b0e13"/>
-  <rect x="16" y="14" width="13" height="36" rx="2.5" fill="none" stroke="#4a6a85" stroke-width="3"/>
-  <rect x="36" y="34" width="13" height="16" rx="2.5" fill="#9dc0dd"/>
+  <rect x="16" y="14" width="13" height="36" rx="2.5" fill="#43607a"/>
+  <rect x="36" y="34" width="13" height="16" rx="2.5" fill="#a8cbe6"/>
 </svg>
