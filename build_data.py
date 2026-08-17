@@ -150,6 +150,27 @@ def finalise(rows):
         else:
             included.append(r)
 
+    # MEASURED BIAS, now corrected: taking the worst TWO tests rewards having more
+    # tests to draw from. Median severity ran 63.6 with three applicable tests against
+    # 73.8 with five, so banks, insurers and REITs - which have the fewest applicable
+    # tests - were structurally under-flagged, and financials are where accounting
+    # quality matters most. Severity is therefore re-expressed as a percentile WITHIN
+    # each applicable-count cohort: 90 means "worse than 90% of companies scored on the
+    # same number of tests".
+    cohorts = {}
+    for r in included:
+        cohorts.setdefault(r["applicable"], []).append(r)
+    for members in cohorts.values():
+        raw = {r["ticker"]: r["composite"] for r in members}
+        ranked = percentile_ranks(raw)
+        for r in members:
+            r["severity_raw"] = round(r["composite"], 2)
+            if len(members) >= 20:
+                r["composite"] = ranked[r["ticker"]]
+                r["cohort_ranked"] = True
+            else:
+                r["cohort_ranked"] = False
+
     included.sort(key=lambda r: r["composite"], reverse=True)
 
     # Companies that TOLD the regulator something went wrong get their own list rather

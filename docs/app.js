@@ -11,6 +11,17 @@ const FLAGS = [
 ];
 
 const NS = "http://www.w3.org/2000/svg";
+
+/* The MAGNITUDE, not just the rank. A 99th-percentile accrual could be 4% of assets
+   or 40%; those are different theses and a rank alone cannot tell them apart. */
+const FORMAT = {
+  accruals:         (v) => (v * 100).toFixed(1) + "% of assets",
+  working_capital:  (v) => (v >= 0 ? "+" : "") + (v * 100).toFixed(0) + "% vs sales",
+  share_count_roic: (v) => (v * 100).toFixed(1) + " dilution x fall",
+  goodwill:         (v) => (v >= 0 ? "+" : "") + (v * 100).toFixed(1) + "pp of assets",
+  tax_rate:         (v) => (v * 100).toFixed(1) + "pp swing",
+  stock_comp:       (v) => (v >= 0 ? "+" : "") + (v * 100).toFixed(1) + "pp of revenue",
+};
 /* Defaults are NOT equal - they mirror DEFAULT_WEIGHTS in score.py, which weights
    each test by how directly it observes an accounting problem. Keep the two in step. */
 const DEFAULT_WEIGHTS = {
@@ -21,6 +32,7 @@ const DEFAULT_WEIGHTS = {
 const state = {
   weights: {}, market: "all", sector: "all", size: "all",
   minScore: 0, minHot: "all", price: "all", eventsOnly: false, tail: null, page: 0,
+  perTest: {},
 };
 FLAGS.forEach(([k]) => (state.weights[k] = DEFAULT_WEIGHTS[k]));
 
@@ -88,6 +100,12 @@ function visible() {
       if (!r.assets || !SIZE_BANDS[state.size](r.assets)) return false;
     }
     if (state.minHot !== "all" && hotCount(r) < parseInt(state.minHot, 10)) return false;
+    for (const [k, min] of Object.entries(state.perTest)) {
+      if (!min) continue;
+      const f = r.flags[k];
+      // A test that does not apply cannot clear a minimum on it.
+      if (!f || !f.applicable || f.rank == null || f.rank < min) return false;
+    }
     if (state.price !== "all") {
       const v = r.ret_1y;
       if (v == null) return false;
@@ -251,7 +269,12 @@ function renderCards(rows) {
         text: on ? f.rank.toFixed(0) : "n/a",
         title: f && !f.applicable ? f.reason : "",
       }, pair);
-      if (on) dd.style.setProperty("--w", f.rank.toFixed(0) + "%");
+      if (on) {
+        dd.style.setProperty("--w", f.rank.toFixed(0) + "%");
+        if (f.value != null && FORMAT[k]) {
+          el("span", { class: "mag", text: FORMAT[k](f.value) }, pair);
+        }
+      }
     });
     el("p", { class: "applicable",
               text: `${row.applicable} of 6 tests apply. Ranked against `
@@ -475,11 +498,28 @@ function buildFilters() {
   el("span", { text: "Disclosed a problem" }, eLabel);
   cb.addEventListener("change", () => { state.eventsOnly = cb.checked; state.page = 0; render(); });
 
+  const per = el("div", { class: "pertest" }, host);
+  el("span", { class: "pertest-label", text: "Minimum rank per test" }, per);
+  FLAGS.forEach(([k, label]) => {
+    const wrap = el("label", { class: "ptf" }, per);
+    el("span", { text: label }, wrap);
+    const inp = el("input", { type: "range", min: "0", max: "95", step: "5",
+                              value: String(state.perTest[k] || 0),
+                              "aria-label": `Minimum rank for ${label}` }, wrap);
+    const out = el("output", { text: state.perTest[k] ? String(state.perTest[k]) : "any" }, wrap);
+    inp.addEventListener("input", () => {
+      state.perTest[k] = parseFloat(inp.value);
+      out.textContent = inp.value === "0" ? "any" : inp.value;
+      state.page = 0;
+      render();
+    });
+  });
+
   const clear = el("button", { type: "button", text: "Clear", class: "clearBtn" }, host);
   clear.addEventListener("click", () => {
     Object.assign(state, { market: "all", sector: "all", size: "all", minScore: 0,
                            minHot: "all", price: "all", eventsOnly: false, tail: null,
-                           page: 0 });
+                           page: 0, perTest: {} });
     buildFilters();
     render();
   });
