@@ -5,3 +5,6 @@ data/cache/
 *.pkl
 *.log
 shot-*.png
+
+# a working screenshot, not a site asset
+live-final.png
