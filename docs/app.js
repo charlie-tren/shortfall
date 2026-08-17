@@ -154,82 +154,72 @@ function renderQuadrant(rows) {
   const svg = document.getElementById("quadSvg");
   if (!svg) return;
   while (svg.firstChild) svg.removeChild(svg.firstChild);
-
-  const pts = rows.filter(({ row }) => row.short_interest != null);
+  const pts = rows.filter(({ row }) => row.short_interest != null && row.assets > 0);
   const note = document.getElementById("quadNote");
-  if (pts.length < 10) {
-    note.textContent = "Short interest is not available for this selection.";
-    return;
-  }
+  if (pts.length < 20) { note.textContent = "Not enough short-interest data for this selection."; return; }
 
-  const W = 1000, H = 640, L = 56, R = 26, T = 26, B = 74;
+  const W = 1000, H = 560, L = 62, R = 26, T = 24, B = 74;
   svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
-  /* SQUARE-ROOT x scale. Short interest is heavily skewed - median 3.5%, a handful
-     past 25% - so a linear axis crushed most of the market into the left tenth and
-     left the rest of the panel empty. Sqrt spreads the crowded low end without
-     hiding the outliers; ticks are labelled at their true values. */
-  const maxSI = Math.max(0.2, ...pts.map((p) => p.row.short_interest));
-  const px = (v) => L + Math.sqrt(Math.min(v, maxSI) / maxSI) * (W - L - R);
-  /* Y domain is the DATA range, not 0-100. Severity is the mean of a company's worst
-     two percentile ranks, so it is bounded well above zero in practice - 612 of 656
-     scores sit above 50. A 0-100 axis threw away the bottom half of the panel and
-     crushed everything into the top, which is what made this look cramped. */
-  const scores = pts.map((p) => p.score);
-  const yLo = Math.max(0, Math.floor((Math.min(...scores) - 3) / 5) * 5);
-  const py = (v) => H - B - ((v - yLo) / (100 - yLo)) * (H - T - B);
 
-  const midScore = 90;
-  svgEl("rect", { x: L, y: T, width: px(CROWDED) - L, height: py(midScore) - T,
-                  class: "quadhi" }, svg);
+  /* SIZE against SHORT INTEREST - the only strong relationship in this dataset
+     (Spearman -0.52, n=482): small companies are far more heavily shorted.
+     Plotting score against short interest hid this, and worse, it meant the
+     "barely shorted" corner was mostly just measuring "big". Here the trend is
+     drawn, and what matters is DISTANCE FROM IT. */
+  const lx = pts.map((p) => Math.log10(p.row.assets));
+  const xlo = Math.floor(Math.min(...lx)), xhi = Math.ceil(Math.max(...lx));
+  const si = pts.map((p) => p.row.short_interest);
+  const yhi = Math.max(...si);
+  const px = (v) => L + ((Math.log10(v) - xlo) / (xhi - xlo || 1)) * (W - L - R);
+  const py = (v) => H - B - Math.sqrt(Math.min(v, yhi) / yhi) * (H - T - B);
 
-  const ticks = [];
-  for (let v = Math.ceil(yLo / 10) * 10; v <= 100; v += 10) ticks.push(v);
-  ticks.forEach((v) => {
+  for (const v of [0, 0.01, 0.03, 0.06, 0.1, 0.2, 0.35, 0.5]) {
+    if (v > yhi) continue;
     svgEl("line", { x1: L, y1: py(v), x2: W - R, y2: py(v), class: "grid" }, svg);
-    const t = svgEl("text", { x: L - 8, y: py(v) + 4, class: "axislabel",
-                              "text-anchor": "end" }, svg);
-    t.textContent = String(v);
-  });
-  for (const s of [0, 0.01, 0.025, 0.05, 0.09, 0.15, 0.25, 0.4]) {
-    if (s > maxSI) continue;
-    const t = svgEl("text", { x: px(s), y: H - 40, class: "axislabel",
-                              "text-anchor": "middle" }, svg);
-    t.textContent = (s * 100).toFixed(s > 0 && s < 0.03 ? 1 : 0) + "%";
+    const t = svgEl("text", { x: L - 10, y: py(v) + 5, class: "axislabel", "text-anchor": "end" }, svg);
+    t.textContent = (v * 100).toFixed(0) + "%";
   }
-  svgEl("line", { x1: px(CROWDED), y1: T, x2: px(CROWDED), y2: H - B,
-                  class: "divider" }, svg);
+  for (let e = xlo; e <= xhi; e++) {
+    const t = svgEl("text", { x: px(Math.pow(10, e)), y: H - 42, class: "axislabel", "text-anchor": "middle" }, svg);
+    t.textContent = money(Math.pow(10, e));
+  }
+  const xt = svgEl("text", { x: (L + W - R) / 2, y: H - 12, class: "axistitle", "text-anchor": "middle" }, svg);
+  xt.textContent = "total assets →   (short interest up the side)";
 
-  // Below the band, not inside it - inside, the label sat on top of the very dots
-  // it describes.
-  const lab = svgEl("text", { x: L + 6, y: py(midScore) + 15, class: "quadlabel" }, svg);
-  lab.textContent = "flagged, barely shorted";
-  const lab2 = svgEl("text", { x: W - R - 6, y: py(midScore) + 15, class: "quadlabel",
-                               "text-anchor": "end" }, svg);
-  lab2.textContent = "flagged and already crowded";
-  const xt = svgEl("text", { x: (L + W - R) / 2, y: H - 10, class: "axistitle",
-                             "text-anchor": "middle" }, svg);
-  xt.textContent = "short interest, % of float";
-  // No y-axis title in the SVG - it collided with the top tick, twice now. The
-  // direction lives in the caption below, where nothing can overlap it.
+  /* Least-squares fit through log(size) vs sqrt(short interest), so "expected for
+     a company this size" is a line on the chart rather than an assertion. */
+  const xs = pts.map((p) => Math.log10(p.row.assets));
+  const ys = pts.map((p) => Math.sqrt(p.row.short_interest));
+  const mx = xs.reduce((a2, b2) => a2 + b2, 0) / xs.length;
+  const my = ys.reduce((a2, b2) => a2 + b2, 0) / ys.length;
+  let num = 0, den = 0;
+  xs.forEach((x, i) => { num += (x - mx) * (ys[i] - my); den += (x - mx) ** 2; });
+  const slope = den ? num / den : 0;
+  const fit = (lgx) => Math.pow(my + slope * (lgx - mx), 2);
+  const fx1 = Math.pow(10, xlo), fx2 = Math.pow(10, xhi);
+  svgEl("line", { x1: px(fx1), y1: py(Math.max(fit(xlo), 0)), x2: px(fx2),
+                  y2: py(Math.max(fit(xhi), 0)), class: "trend" }, svg);
 
-  /* One tone, not three. Colouring 482 overlapping dots by price direction made the
-     panel unreadable - price is a FILTER now, in the row below the chart. */
+  let below = 0;
   pts.forEach(({ row, score }) => {
-    const x = px(row.short_interest), y = py(score);
-    const interesting = score >= midScore && row.short_interest < CROWDED;
+    const expected = Math.max(fit(Math.log10(row.assets)), 0);
+    const quiet = score >= 90 && row.short_interest < expected;
+    if (quiet) below += 1;
     const dot = svgEl("circle", {
-      cx: x, cy: y, r: interesting ? 5.5 : 3.2,
-      class: "dot" + (interesting ? " hot" : "")
-             + (row.events && row.events.length ? " ev" : ""),
+      cx: px(row.assets), cy: py(row.short_interest),
+      r: quiet ? 6 : score >= 90 ? 4.2 : 2.6,
+      class: "dot" + (quiet ? " hot" : score >= 90 ? " mid" : ""),
     }, svg);
     dot.addEventListener("mouseenter", (e) => showTip(row, score, e.clientX, e.clientY));
     dot.addEventListener("mouseleave", hideTip);
   });
 
-  const hot = pts.filter(({ row, score }) => score >= midScore && row.short_interest < CROWDED);
+  const lab = svgEl("text", { x: L + 8, y: T + 14, class: "quadlabel" }, svg);
+  lab.textContent = "the line is normal short interest for a company that size";
   note.textContent =
-    `${hot.length} companies score ${midScore}+ with almost nobody short them. `
-    + `Score and short interest are unrelated, which is the point.`;
+    `Small companies get shorted more - that is the trend line (rho -0.52). `
+    + `${below} companies score 90+ and sit BELOW it: less shorted than their size `
+    + `would predict.`;
 }
 
 const PAGE_SIZE = 20;
@@ -454,6 +444,33 @@ function dropdown(host, label, values, onChange, allLabel) {
   return sel;
 }
 
+/* The per-test filters sit as COLUMN HEADINGS over the card list, in the same six
+   column grid the cards use, so each control is directly above the number it
+   filters. They were in the generic filter row, which meant reading a card and
+   then hunting back up the page for the matching slider. */
+function buildTestHeader() {
+  const host = document.getElementById("testHead");
+  if (!host) return;
+  host.textContent = "";
+  FLAGS.forEach(([k, label]) => {
+    const col = el("div", { class: "thcol" }, host);
+    el("span", { class: "thname", text: label }, col);
+    const row = el("div", { class: "throw" }, col);
+    const inp = el("input", { type: "range", min: "0", max: "95", step: "5",
+                              value: String(state.perTest[k] || 0),
+                              "aria-label": `Minimum rank for ${label}` }, row);
+    const out = el("output", { text: state.perTest[k] ? "≥ " + state.perTest[k] : "any" }, row);
+    inp.addEventListener("input", () => {
+      state.perTest[k] = parseFloat(inp.value);
+      out.textContent = inp.value === "0" ? "any" : "≥ " + inp.value;
+      col.classList.toggle("on", inp.value !== "0");
+      state.page = 0;
+      render();
+    });
+    col.classList.toggle("on", (state.perTest[k] || 0) !== 0);
+  });
+}
+
 function buildFilters() {
   const host = document.getElementById("filters");
   host.textContent = "";
@@ -498,29 +515,13 @@ function buildFilters() {
   el("span", { text: "Disclosed a problem" }, eLabel);
   cb.addEventListener("change", () => { state.eventsOnly = cb.checked; state.page = 0; render(); });
 
-  const per = el("div", { class: "pertest" }, host);
-  el("span", { class: "pertest-label", text: "Minimum rank per test" }, per);
-  FLAGS.forEach(([k, label]) => {
-    const wrap = el("label", { class: "ptf" }, per);
-    el("span", { text: label }, wrap);
-    const inp = el("input", { type: "range", min: "0", max: "95", step: "5",
-                              value: String(state.perTest[k] || 0),
-                              "aria-label": `Minimum rank for ${label}` }, wrap);
-    const out = el("output", { text: state.perTest[k] ? String(state.perTest[k]) : "any" }, wrap);
-    inp.addEventListener("input", () => {
-      state.perTest[k] = parseFloat(inp.value);
-      out.textContent = inp.value === "0" ? "any" : inp.value;
-      state.page = 0;
-      render();
-    });
-  });
-
   const clear = el("button", { type: "button", text: "Clear", class: "clearBtn" }, host);
   clear.addEventListener("click", () => {
     Object.assign(state, { market: "all", sector: "all", size: "all", minScore: 0,
                            minHot: "all", price: "all", eventsOnly: false, tail: null,
                            page: 0, perTest: {} });
     buildFilters();
+    buildTestHeader();
     render();
   });
 }
@@ -561,6 +562,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   buildSliders();
   buildFilters();
+  buildTestHeader();
   buildExplain();
   render();
   const btn = document.getElementById("themeBtn");

@@ -321,3 +321,25 @@ table.heat td.n, table.heat th.n { color: var(--na); }
   gap: 8px; font-size: 13px; }
 .ptf input { width: 100%; accent-color: var(--accent); }
 .ptf output { font-family: var(--mono); font-size: 11px; color: var(--soft); text-align: right; }
+
+.trend { stroke: var(--na); stroke-width: 1.6; stroke-dasharray: 6 5; opacity: 0.9; }
+#quadSvg .dot { fill: var(--na); opacity: 0.3; }
+#quadSvg .dot.mid { fill: var(--accent); opacity: 0.75; }
+#quadSvg .dot.hot { fill: var(--warn); opacity: 1; stroke: var(--ink); stroke-width: 0.8; }
+
+/* Column headings over the card list, matching .flags exactly so each control sits
+   above the number it filters. Card padding is 16px 18px - mirror it here. */
+#testHead {
+  display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px;
+  padding: 10px 18px; margin-bottom: 8px;
+  border-bottom: 1px solid var(--rule);
+}
+.thcol { min-width: 0; }
+.thname { display: block; font-size: 11px; color: var(--na); line-height: 1.3; }
+.throw { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 6px; }
+.throw input { width: 100%; accent-color: var(--accent); height: 14px; }
+.throw output { font-family: var(--mono); font-size: 10px; color: var(--na); }
+.thcol.on .thname { color: var(--accent); }
+.thcol.on .throw output { color: var(--accent); }
+@media (max-width: 900px) { #testHead { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 520px) { #testHead { display: none; } }
