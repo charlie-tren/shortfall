@@ -33,6 +33,7 @@ const state = {
   weights: {}, market: "all", sector: "all", size: "all",
   minScore: 0, minHot: "all", price: "all", eventsOnly: false, tail: null, page: 0,
   xvar: "assets",
+  yvar: "short_interest",
   perTest: {},
 };
 FLAGS.forEach(([k]) => (state.weights[k] = DEFAULT_WEIGHTS[k]));
@@ -172,7 +173,30 @@ const XVARS = {
                       fmt: (v) => (v * 100).toFixed(1) + "pp" },
   stock_comp:       { label: "Stock compensation", get: (r) => flagVal(r, "stock_comp"),
                       fmt: (v) => (v * 100).toFixed(1) + "pp" },
+
+  /* LEVELS. Everything above this line is a CHANGE, and changes barely correlate
+     with anything - measured mean |rho| 0.075 against 0.308 for level-vs-level
+     pairs, because differencing removes the component two ratios share. These are
+     the same quantities before the difference is taken. */
+  l_receivables:    { label: "Receivables / revenue", group: "level",
+                      get: (r) => lvl(r, "receivables_to_revenue"), fmt: (v) => v.toFixed(2) },
+  l_inventory:      { label: "Inventory / revenue", group: "level",
+                      get: (r) => lvl(r, "inventory_to_revenue"), fmt: (v) => v.toFixed(2) },
+  l_goodwill:       { label: "Goodwill / assets", group: "level",
+                      get: (r) => lvl(r, "goodwill_to_assets"), fmt: (v) => (v * 100).toFixed(0) + "%" },
+  l_stockcomp:      { label: "Stock comp / revenue", group: "level",
+                      get: (r) => lvl(r, "stock_comp_to_revenue"), fmt: (v) => (v * 100).toFixed(1) + "%" },
+  l_etr:            { label: "Effective tax rate", group: "level",
+                      get: (r) => lvl(r, "effective_tax_rate"), fmt: (v) => (v * 100).toFixed(0) + "%" },
+  l_roic:           { label: "Return on invested capital", group: "level",
+                      get: (r) => lvl(r, "roic"), fmt: (v) => (v * 100).toFixed(0) + "%" },
+  l_debt:           { label: "Debt / assets", group: "level",
+                      get: (r) => lvl(r, "debt_to_assets"), fmt: (v) => (v * 100).toFixed(0) + "%" },
 };
+
+function lvl(r, k) {
+  return r.levels ? r.levels[k] : null;
+}
 
 function flagVal(r, k) {
   const f = r.flags[k];
@@ -207,7 +231,8 @@ function scatter(svg, data, opts) {
     return [s[Math.floor(0.02 * (s.length - 1))], s[Math.floor(0.98 * (s.length - 1))]];
   };
   const tx = opts.logX ? (v) => Math.log10(Math.max(v, 1)) : (v) => v;
-  const ty = opts.sqrtY ? (v) => Math.sqrt(Math.max(v, 0)) : (v) => v;
+  const ty = opts.logY ? (v) => Math.log10(Math.max(v, 1))
+           : opts.sqrtY ? (v) => Math.sqrt(Math.max(v, 0)) : (v) => v;
   const [xlo, xhi] = clip(data.map((d) => tx(d.x)));
   const [ylo, yhi] = clip(data.map((d) => ty(d.y)));
   const px = (v) => L + Math.max(0, Math.min(1, (tx(v) - xlo) / ((xhi - xlo) || 1))) * (W - L - R);
@@ -215,7 +240,7 @@ function scatter(svg, data, opts) {
 
   for (let i = 0; i <= 4; i++) {
     const raw = ylo + (i / 4) * (yhi - ylo);
-    const v = opts.sqrtY ? raw * raw : raw;
+    const v = opts.logY ? Math.pow(10, raw) : opts.sqrtY ? raw * raw : raw;
     const y = H - B - (i / 4) * (H - T - B);
     svgEl("line", { x1: L, y1: y, x2: W - R, y2: y, class: "grid" }, svg);
     const t = svgEl("text", { x: L - 10, y: y + 5, class: "axislabel", "text-anchor": "end" }, svg);
@@ -244,10 +269,38 @@ function scatter(svg, data, opts) {
      styling has to carry the strength the geometry cannot. */
   if (den && rho != null && opts.alwaysFit !== false) {
     const sl = num / den;
-    const at = (t_) => { const raw = my + sl * (t_ - mx); return opts.sqrtY ? raw * raw : raw; };
+    const at = (t_) => {
+      const raw = my + sl * (t_ - mx);
+      return opts.logY ? Math.pow(10, raw) : opts.sqrtY ? raw * raw : raw;
+    };
     svgEl("line", { x1: px(opts.logX ? Math.pow(10, xlo) : xlo), y1: py(at(xlo)),
                     x2: px(opts.logX ? Math.pow(10, xhi) : xhi), y2: py(at(xhi)),
                     class: "trend" + (Math.abs(rho) < 0.15 ? " weak" : "") }, svg);
+  }
+
+  /* BINNED MEDIANS on top of the cloud. A scatter of 500 points hides a real
+     relationship in overplotting - the eye cannot average. Splitting x into deciles
+     and drawing the median y of each makes the shape visible without asserting
+     anything: these are the data, summarised, not a model fitted to them. */
+  if (opts.bins !== false && data.length >= 100) {
+    const sorted = [...data].sort((p, q) => tx(p.x) - tx(q.x));
+    const k = Math.max(1, Math.floor(sorted.length / 10));
+    const med = [];
+    for (let i = 0; i < 10; i++) {
+      const chunk = i === 9 ? sorted.slice(9 * k) : sorted.slice(i * k, (i + 1) * k);
+      if (chunk.length < 5) continue;
+      const mid = (arr) => {
+        const s = [...arr].sort((m, n) => m - n);
+        return s[Math.floor(s.length / 2)];
+      };
+      med.push([mid(chunk.map((c) => c.x)), mid(chunk.map((c) => c.y))]);
+    }
+    if (med.length > 2) {
+      const d = med.map(([mxv, myv], i) => `${i ? "L" : "M"}${px(mxv).toFixed(1)},${py(myv).toFixed(1)}`).join(" ");
+      svgEl("path", { d, class: "binline" }, svg);
+      med.forEach(([mxv, myv]) => svgEl("circle", { cx: px(mxv), cy: py(myv), r: 5,
+                                                    class: "binpt" }, svg));
+    }
   }
 
   data.forEach((d) => {
@@ -259,19 +312,31 @@ function scatter(svg, data, opts) {
   return rho;
 }
 
+const YVARS = Object.assign({
+  short_interest: { label: "Short interest", sqrt: true,
+                    get: (r) => r.short_interest, fmt: (v) => (v * 100).toFixed(0) + "%" },
+}, XVARS);
+
 function renderQuadrant(rows) {
   const svg = document.getElementById("quadSvg");
   if (!svg) return;
-  const v = XVARS[state.xvar] || XVARS.assets;
-  const data = rows.map(({ row }) => ({ row, x: v.get(row), y: row.short_interest }))
+  const vx = XVARS[state.xvar] || XVARS.assets;
+  const vy = YVARS[state.yvar] || YVARS.short_interest;
+  const data = rows.map(({ row }) => ({ row, x: vx.get(row), y: vy.get(row) }))
                    .filter((d) => d.x != null && d.y != null);
   const rho = scatter(svg, data, {
-    logX: !!v.log, sqrtY: true, xLabel: v.label, yLabel: "Short interest",
-    fmtX: v.fmt, fmtY: (y) => (y * 100).toFixed(0) + "%",
+    logX: !!vx.log, logY: !!vy.log, sqrtY: !!vy.sqrt,
+    xLabel: vx.label, yLabel: vy.label, fmtX: vx.fmt, fmtY: vy.fmt,
   });
+  // n=500 gives a standard error on rho of 0.045, so anything under about 0.09 is
+  // not distinguishable from zero and the page should not imply otherwise.
+  const weak = rho != null && Math.abs(rho) < 0.09;
   document.getElementById("quadNote").textContent = data.length < 20
-    ? "Not enough short-interest data for this selection."
-    : data.length + " companies. Rank correlation " + (rho == null ? "n/a" : rho.toFixed(2)) + ".";
+    ? "Not enough data for this pair."
+    : data.length + " companies. Rank correlation "
+      + (rho == null ? "n/a" : rho.toFixed(2))
+      + (weak ? " - indistinguishable from zero at this sample size." : ".")
+    + " Large dots are the median of each tenth of the data.";
 }
 
 function renderPerf(rows) {
@@ -280,7 +345,7 @@ function renderPerf(rows) {
   const data = rows.map(({ row, score }) => ({ row, x: score, y: row.ret_1y }))
                    .filter((d) => d.x != null && d.y != null);
   const rho = scatter(svg, data, {
-    logX: false, sqrtY: false, alwaysFit: false,
+    logX: false, sqrtY: false, alwaysFit: false, bins: true,
     xLabel: "Score", yLabel: "12-month return",
     fmtX: (x) => x.toFixed(0), fmtY: (y) => (y * 100).toFixed(0) + "%",
   });
@@ -629,10 +694,18 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("prevPage" + sfx).addEventListener("click", () => goPage(-1, sfx));
     document.getElementById("nextPage" + sfx).addEventListener("click", () => goPage(1, sfx));
   });
+  const fill = (sel, vars) => {
+    const changes = el("optgroup", { label: "Change over time" }, sel);
+    const lv = el("optgroup", { label: "Level, latest year" }, sel);
+    Object.entries(vars).forEach(([k, v]) =>
+      el("option", { value: k, text: v.label }, v.group === "level" ? lv : changes));
+  };
   const xsel = document.getElementById("xvar");
-  Object.entries(XVARS).forEach(([k, v]) => el("option", { value: k, text: v.label }, xsel));
-  xsel.value = state.xvar;
+  const ysel = document.getElementById("yvar");
+  fill(xsel, XVARS); fill(ysel, YVARS);
+  xsel.value = state.xvar; ysel.value = state.yvar;
   xsel.addEventListener("change", () => { state.xvar = xsel.value; render(); });
+  ysel.addEventListener("change", () => { state.yvar = ysel.value; render(); });
   buildSliders();
   buildFilters();
   buildTestHeader();

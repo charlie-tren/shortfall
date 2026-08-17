@@ -26,6 +26,45 @@ SHORT_INTEREST = load_short_interest()
 RETURNS = load_returns()
 
 
+def levels(latest):
+    """LEVELS, not changes - "high" rather than "rising".
+
+    Measured 17/08/2026: level-vs-level pairs correlate at mean |rho| 0.308 while
+    change-vs-change pairs manage 0.075. Differencing removes the shared component,
+    which is most of what two financial ratios have in common. Five of the six tests
+    are changes, so the page had almost nothing left to correlate.
+
+    These are the same quantities the tests are built on, before the difference is
+    taken, so a reader can ask "high, rising, or both".
+    """
+    def ratio(n, d):
+        if n is None or not d:
+            return None
+        return n / d
+
+    etr = None
+    if latest.tax_expense is not None and latest.net_income is not None:
+        pretax = latest.net_income + latest.tax_expense
+        if pretax > 0:
+            etr = latest.tax_expense / pretax
+
+    roic = None
+    if latest.operating_income is not None and latest.equity:
+        invested = latest.equity + (latest.total_debt or 0.0)
+        if invested:
+            roic = latest.operating_income / invested
+
+    return {
+        "receivables_to_revenue": ratio(latest.receivables, latest.revenue),
+        "inventory_to_revenue": ratio(latest.inventory, latest.revenue),
+        "goodwill_to_assets": ratio(latest.goodwill, latest.assets),
+        "stock_comp_to_revenue": ratio(latest.stock_comp, latest.revenue),
+        "effective_tax_rate": etr,
+        "roic": roic,
+        "debt_to_assets": ratio(latest.total_debt, latest.assets),
+    }
+
+
 def assemble_name(history):
     """One name's flag results, or None if there is too little history."""
     got = latest_with_history(history, need=2)
@@ -47,6 +86,7 @@ def assemble_name(history):
         "assets": latest.assets,
         "revenue": latest.revenue,
         "sector": SECTORS.get(latest.ticker, {}).get("sector", "Unclassified"),
+        "levels": levels(latest),
         "short_interest": SHORT_INTEREST.get(latest.ticker),
         "ret_1y": RETURNS.get(latest.ticker),
         "flags": flags,
