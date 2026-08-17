@@ -280,3 +280,17 @@ table.heat td.n, table.heat th.n { color: var(--na); }
 #quadSvg .dot:hover { opacity: 1; }
 #quadSvg .dot.hot { fill: var(--warn); opacity: 0.85; }
 #quadSvg .dot.ev { stroke: var(--warn); stroke-width: 1.5; }
+
+/* Pager under the card list. */
+.pager { display: flex; align-items: center; justify-content: center; gap: 16px; margin: 18px 0 0; }
+.pager button {
+  background: none; border: 1px solid var(--rule); color: var(--soft);
+  border-radius: 7px; padding: 6px 15px; font: inherit; font-size: 16px; cursor: pointer;
+}
+.pager button:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
+.pager button:disabled { opacity: 0.3; cursor: default; }
+#pageInfo { font-family: var(--mono); font-size: 12px; color: var(--na); min-width: 130px; text-align: center; }
+
+/* Active test is obvious, and each strip says what clicking does. */
+.strip.active .strip-name { color: var(--accent); }
+.strip.active .strip-name::after { content: " - showing only this tail"; font-size: 11px; color: var(--na); }

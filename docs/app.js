@@ -20,7 +20,7 @@ const DEFAULT_WEIGHTS = {
 
 const state = {
   weights: {}, market: "all", sector: "all", size: "all",
-  minScore: 0, minHot: "all", eventsOnly: false, tail: null,
+  minScore: 0, minHot: "all", eventsOnly: false, tail: null, page: 0,
 };
 FLAGS.forEach(([k]) => (state.weights[k] = DEFAULT_WEIGHTS[k]));
 
@@ -96,23 +96,6 @@ function visible() {
   });
 }
 
-/* The disclosed list is deliberately NOT re-ranked by the sliders. These are facts
-   the company reported, not percentiles, so a reader's weighting has nothing to say
-   about them. Built once. */
-function buildDisclosed() {
-  const host = document.getElementById("disclosed");
-  host.textContent = "";
-  (window.SHORTFALL.disclosed || []).forEach((row) => {
-    const item = el("a", { class: "disc", href: "#" + row.ticker }, host);
-    el("span", { class: "d-name", text: row.name }, item);
-    el("span", { class: "d-ticker", text: row.ticker }, item);
-    const kinds = [...new Set(row.events.map((e) => e.label))];
-    const tags = el("span", { class: "d-tags" }, item);
-    kinds.forEach((k) => el("span", { class: "badge", text: k }, tags));
-    el("span", { class: "d-score", text: row.composite.toFixed(0) }, item);
-  });
-}
-
 function scored() {
   const rows = visible().map((r) => ({
     row: r,
@@ -125,7 +108,6 @@ function scored() {
 
 function render() {
   const rows = scored();
-  renderOverview(rows);
   renderQuadrant(rows);
   renderStrips(rows);
   renderCards(rows);
@@ -155,10 +137,14 @@ function renderQuadrant(rows) {
     return;
   }
 
-  const W = 1000, H = 420, L = 46, R = 18, T = 16, B = 42;
+  const W = 1000, H = 520, L = 46, R = 22, T = 18, B = 46;
   svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+  /* SQUARE-ROOT x scale. Short interest is heavily skewed - median 3.5%, a handful
+     past 25% - so a linear axis crushed most of the market into the left tenth and
+     left the rest of the panel empty. Sqrt spreads the crowded low end without
+     hiding the outliers; ticks are labelled at their true values. */
   const maxSI = Math.max(0.2, ...pts.map((p) => p.row.short_interest));
-  const px = (v) => L + Math.min(v / maxSI, 1) * (W - L - R);
+  const px = (v) => L + Math.sqrt(Math.min(v, maxSI) / maxSI) * (W - L - R);
   const py = (v) => H - B - (v / 100) * (H - T - B);
 
   const midScore = 90;
@@ -171,10 +157,11 @@ function renderQuadrant(rows) {
                               "text-anchor": "end" }, svg);
     t.textContent = String(v);
   });
-  for (let s = 0; s <= maxSI + 0.001; s += 0.05) {
-    const t = svgEl("text", { x: px(s), y: H - 14, class: "axislabel",
+  for (const s of [0, 0.01, 0.025, 0.05, 0.09, 0.15, 0.25, 0.4]) {
+    if (s > maxSI) continue;
+    const t = svgEl("text", { x: px(s), y: H - 16, class: "axislabel",
                               "text-anchor": "middle" }, svg);
-    t.textContent = (s * 100).toFixed(0) + "%";
+    t.textContent = (s * 100).toFixed(s > 0 && s < 0.03 ? 1 : 0) + "%";
   }
   svgEl("line", { x1: px(CROWDED), y1: T, x2: px(CROWDED), y2: H - B,
                   class: "divider" }, svg);
@@ -194,7 +181,7 @@ function renderQuadrant(rows) {
     const x = px(row.short_interest), y = py(score);
     const interesting = score >= midScore && row.short_interest < CROWDED;
     const dot = svgEl("circle", {
-      cx: x, cy: y, r: interesting ? 4.6 : 3.2,
+      cx: x, cy: y, r: interesting ? 5 : 3.4,
       class: "dot" + (interesting ? " hot" : "") + (row.events && row.events.length ? " ev" : ""),
     }, svg);
     dot.addEventListener("mouseenter", (e) => showTip(row, score, e.clientX, e.clientY));
@@ -209,80 +196,14 @@ function renderQuadrant(rows) {
     + `${(CROWDED * 100).toFixed(0)}% of float short.`;
 }
 
-/* Sector against test: which corners of the market are firing which test.
-   Cells count companies past a single MARKET-WIDE cut - see the note inside, a
-   sector-relative cut would make every cell identical. Click a cell to filter. */
-function renderOverview(rows) {
-  const host = document.getElementById("overview");
-  host.textContent = "";
-  const sectors = Array.from(new Set(rows.map((r) => r.row.sector).filter(Boolean))).sort();
-  if (!sectors.length) return;
-
-  // One market-wide 90th-percentile cut per test, computed across everything shown.
-  const cutoffs = {};
-  FLAGS.forEach(([key]) => {
-    const vals = rows.map(({ row }) => {
-      const f = row.flags[key];
-      return f && f.applicable ? f.value : null;
-    }).filter((v) => v != null).sort((a, b) => a - b);
-    cutoffs[key] = vals.length ? vals[Math.floor(0.9 * (vals.length - 1))] : Infinity;
-  });
-
-  const table = el("table", { class: "heat" }, host);
-  const head = el("tr", {}, el("thead", {}, table));
-  el("th", { text: "" }, head);
-  FLAGS.forEach(([, label]) => el("th", { text: label }, head));
-  el("th", { class: "n", text: "n" }, head);
-
-  const body = el("tbody", {}, table);
-  sectors.forEach((sec) => {
-    const members = rows.filter((r) => r.row.sector === sec);
-    const tr = el("tr", {}, body);
-    el("th", { class: "rowhead", text: sec }, tr);
-    FLAGS.forEach(([key]) => {
-      const applies = members.filter(({ row }) => {
-        const f = row.flags[key];
-        return f && f.applicable && f.value != null;
-      });
-      const td = el("td", {}, tr);
-      if (!applies.length) {
-        td.className = "self";
-        td.title = `${sec}: test does not apply`;
-        return;
-      }
-      /* Counted against the MARKET-WIDE threshold, not the sector's own.
-         Scoring is sector-relative, which is right - but a heatmap of sector-relative
-         deciles is uniform by construction: every sector has exactly 10% of itself in
-         its own worst 10%, so the cells only ever track sector size. Against one
-         market-wide cut the differences are real, and this is where you see that
-         stock compensation is concentrated in technology. */
-      const hot = applies.filter(({ row }) => row.flags[key].value >= cutoffs[key]).length;
-      const share = hot / applies.length;
-      td.textContent = hot ? String(hot) : "";
-      td.title = `${sec} - ${hot} of ${applies.length} past the market-wide cut`;
-      td.style.background =
-        `color-mix(in srgb, var(--warn) ${(Math.min(share / 0.3, 1) * 78).toFixed(0)}%, transparent)`;
-      td.addEventListener("click", () => {
-        state.sector = state.sector === sec ? "all" : sec;
-        state.tail = state.tail === key ? null : key;
-        buildFilters();
-        render();
-      });
-    });
-    el("td", { class: "n", text: String(members.length) }, tr);
-  });
-
-  document.getElementById("overviewCount").textContent =
-    `${rows.length} companies`;
-  document.getElementById("overviewNote").textContent =
-    "Companies past the market-wide worst-10% cut on each test. Scores elsewhere "
-    + "are ranked within sector, so a REIT is compared with REITs. Click a cell to filter.";
-}
+const PAGE_SIZE = 20;
 
 function renderCards(rows) {
   const host = document.getElementById("cards");
   host.textContent = "";
-  rows.slice(0, 100).forEach(({ row, score, base }) => {
+  const pages = Math.max(1, Math.ceil(rows.length / PAGE_SIZE));
+  if (state.page >= pages) state.page = 0;
+  rows.slice(state.page * PAGE_SIZE, (state.page + 1) * PAGE_SIZE).forEach(({ row, score, base }) => {
     const card = el("article", { class: "card" }, host);
     const head = el("header", {}, card);
     el("h3", { text: row.name }, head);
@@ -318,6 +239,17 @@ function renderCards(rows) {
               text: `${row.applicable} of 6 tests apply. Ranked against `
                     + `${row.ranked_against === "universe" ? "the whole market" : row.sector}.` }, card);
   });
+  renderPager(rows.length, pages);
+}
+
+function renderPager(total, pages) {
+  const info = document.getElementById("pageInfo");
+  if (!info) return;
+  const from = total ? state.page * PAGE_SIZE + 1 : 0;
+  const to = Math.min((state.page + 1) * PAGE_SIZE, total);
+  info.textContent = total ? `${from}-${to} of ${total}` : "nothing matches these filters";
+  document.getElementById("prevPage").disabled = state.page === 0;
+  document.getElementById("nextPage").disabled = state.page >= pages - 1;
 }
 
 /* Money formatted the way a reader reads it, not the way it is stored. */
@@ -393,6 +325,7 @@ function renderStrips(rows) {
 
     strip.addEventListener("click", () => {
       state.tail = state.tail === key ? null : key;
+      state.page = 0;
       render();
     });
   });
@@ -465,7 +398,7 @@ function dropdown(host, label, values, onChange, allLabel) {
   const sel = el("select", {}, wrap);
   el("option", { value: "all", text: allLabel }, sel);
   values.forEach((v) => el("option", { value: String(v), text: String(v) }, sel));
-  sel.addEventListener("change", () => { onChange(sel.value); render(); });
+  sel.addEventListener("change", () => { onChange(sel.value); state.page = 0; render(); });
   return sel;
 }
 
@@ -483,7 +416,7 @@ function buildFilters() {
   const sWrap = el("label", { text: "Size" }, host);
   const sSel = el("select", {}, sWrap);
   sizes.forEach(([v, t]) => el("option", { value: v, text: t }, sSel));
-  sSel.addEventListener("change", () => { state.size = sSel.value; render(); });
+  sSel.addEventListener("change", () => { state.size = sSel.value; state.page = 0; render(); });
 
   const minWrap = el("label", { text: "Min score" }, host);
   const min = el("input", { type: "range", min: "0", max: "95", step: "5", value: "0",
@@ -492,6 +425,7 @@ function buildFilters() {
   min.addEventListener("input", () => {
     state.minScore = parseFloat(min.value);
     out.textContent = min.value;
+    state.page = 0;
     render();
   });
 
@@ -499,12 +433,12 @@ function buildFilters() {
   const tSel = el("select", {}, tWrap);
   [["all", "Any"], ["1", "1 or more above 90"], ["2", "2 or more above 90"],
    ["3", "3 or more above 90"]].forEach(([v, t]) => el("option", { value: v, text: t }, tSel));
-  tSel.addEventListener("change", () => { state.minHot = tSel.value; render(); });
+  tSel.addEventListener("change", () => { state.minHot = tSel.value; state.page = 0; render(); });
 
   const eLabel = el("label", { text: "" }, host);
   const cb = el("input", { type: "checkbox" }, eLabel);
   el("span", { text: "Disclosed a problem" }, eLabel);
-  cb.addEventListener("change", () => { state.eventsOnly = cb.checked; render(); });
+  cb.addEventListener("change", () => { state.eventsOnly = cb.checked; state.page = 0; render(); });
 
   const clear = el("button", { type: "button", text: "Clear", class: "clearBtn" }, host);
   clear.addEventListener("click", () => {
@@ -522,50 +456,6 @@ const SIZE_BANDS = {
   small: (a) => a < 1e9,
 };
 
-/* The correlation matrix. It is nearly empty, and that IS the content: if the six
-   tests corroborated each other a high score would describe a syndrome. They do not,
-   so it describes a company that is mildly unusual in several unrelated ways. */
-function buildMatrix() {
-  const c = window.SHORTFALL.correlations;
-  const host = document.getElementById("matrix");
-  if (!c || !c.pairs.length) return;
-
-  const rho = {};
-  c.pairs.forEach((p) => { rho[p.a + "|" + p.b] = p; rho[p.b + "|" + p.a] = p; });
-
-  const table = el("table", { class: "matrix" }, host);
-  const head = el("tr", {}, el("thead", {}, table));
-  el("th", { text: "" }, head);
-  c.order.forEach((k) => el("th", { text: c.short[k] }, head));
-
-  const body = el("tbody", {}, table);
-  c.order.forEach((a) => {
-    const tr = el("tr", {}, body);
-    el("th", { text: c.short[a], class: "rowhead" }, tr);
-    c.order.forEach((b) => {
-      const td = el("td", {}, tr);
-      if (a === b) { td.className = "self"; td.textContent = ""; return; }
-      const p = rho[a + "|" + b];
-      if (!p) { td.textContent = ""; return; }
-      td.textContent = p.rho.toFixed(2);
-      td.title = `${c.short[a]} vs ${c.short[b]}: Spearman ${p.rho}, n=${p.n}`;
-      // Opacity carries magnitude; hue carries sign. Nothing here gets past ~0.17,
-      // so the whole grid reading as blank is the honest rendering.
-      const mag = Math.min(Math.abs(p.rho) / 0.35, 1);
-      td.style.background = p.rho >= 0
-        ? `color-mix(in srgb, var(--accent) ${(mag * 70).toFixed(0)}%, transparent)`
-        : `color-mix(in srgb, var(--warn) ${(mag * 70).toFixed(0)}%, transparent)`;
-    });
-  });
-
-  const s = c.strongest;
-  document.getElementById("agreeNote").textContent =
-    `Rank correlation between every pair. Mean strength ${c.mean_abs}; the strongest of `
-    + `${c.pairs.length} pairs is ${c.short[s.a]} against ${c.short[s.b]} at ${s.rho}. `
-    + `Near enough independent - so a high score is a company that is mildly unusual in `
-    + `several unrelated ways, not one failing a single underlying test.`;
-}
-
 function buildExplain() {
   const body = document.getElementById("explainBody");
   body.textContent = "";
@@ -578,11 +468,17 @@ function buildExplain() {
   });
 }
 
+function goPage(delta) {
+  state.page = Math.max(0, state.page + delta);
+  render();
+  document.getElementById("cards").scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("prevPage").addEventListener("click", () => goPage(-1));
+  document.getElementById("nextPage").addEventListener("click", () => goPage(1));
   buildSliders();
   buildFilters();
-  buildDisclosed();
-  buildMatrix();
   buildExplain();
   render();
   const btn = document.getElementById("themeBtn");

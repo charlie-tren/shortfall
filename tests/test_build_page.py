@@ -48,7 +48,9 @@ def test_render_escapes_company_names():
     assert "<script>alert(1)</script>" not in html
 
 
-def test_matrix_and_tooltip_containers_exist():
+def test_chart_and_pager_containers_exist():
     html = render({**BASE, "names": [row()]})
-    assert 'id="matrix"' in html
+    assert 'id="quadSvg"' in html
+    assert 'id="strips"' in html
     assert 'id="tip"' in html
+    assert 'id="pager"' in html

@@ -86,12 +86,16 @@ def test_sliders_reorder_and_reset_restores(server):
 def test_equal_weight_baseline_is_shown_when_weights_move(server):
     with sync_playwright() as pw:
         browser, page = page_with(pw, [])
+        # 20 cards a page now, so this asserts SOME card shows the default score,
+        # not a count that assumed the old 100-card list.
         assert page.locator(".card .base").count() == 0
         sliders = page.locator("#sliders input")
         sliders.nth(3).fill("3")
         sliders.nth(3).dispatch_event("input")
-        page.wait_for_timeout(250)
-        assert page.locator(".card .base").count() > 10
+        sliders.nth(5).fill("0")
+        sliders.nth(5).dispatch_event("input")
+        page.wait_for_timeout(300)
+        assert page.locator(".card .base").count() > 0
         browser.close()
 
 
@@ -161,4 +165,34 @@ def test_both_themes_render(server):
         page.wait_for_timeout(150)
         assert page.locator("html").get_attribute("data-theme") != start
         assert page.locator(".card").count() > 10
+        browser.close()
+
+
+def test_pager_walks_the_list(server):
+    with sync_playwright() as pw:
+        browser, page = page_with(pw, [])
+        assert page.locator(".card").count() == 20
+        first = page.locator("#pageInfo").text_content()
+        assert page.locator("#prevPage").is_disabled()
+        page.click("#nextPage")
+        page.wait_for_timeout(300)
+        assert page.locator("#pageInfo").text_content() != first
+        assert not page.locator("#prevPage").is_disabled()
+        page.click("#prevPage")
+        page.wait_for_timeout(300)
+        assert page.locator("#pageInfo").text_content() == first
+        browser.close()
+
+
+def test_filtering_returns_to_page_one(server):
+    """Otherwise you sit on page 6 of a list that now has two entries."""
+    with sync_playwright() as pw:
+        browser, page = page_with(pw, [])
+        page.click("#nextPage")
+        page.click("#nextPage")
+        page.wait_for_timeout(300)
+        assert page.locator("#pageInfo").text_content().startswith("41-")
+        page.select_option("#filters select", label="Australia (ASX)")
+        page.wait_for_timeout(300)
+        assert page.locator("#pageInfo").text_content().startswith("1-")
         browser.close()

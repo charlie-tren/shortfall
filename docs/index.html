@@ -41,14 +41,6 @@
     the tail</strong>, against peers in the same sector.</p>
   </header>
 
-  <section class="panel" id="overviewPanel">
-    <div class="panel-head">
-      <h2 id="overviewCount"></h2>
-      <p class="note" id="overviewNote"></p>
-    </div>
-    <div id="overview"></div>
-  </section>
-
   <section class="panel" id="quadPanel" aria-label="Score against short interest">
     <div class="panel-head">
       <h2>Flagged, but is anyone short it</h2>
@@ -57,18 +49,9 @@
     <svg id="quadSvg" role="img" aria-label="Score against short interest"></svg>
   </section>
 
-  <section class="panel flagged" id="disclosedPanel">
-    <div class="panel-head">
-      <h2>Told the regulator something went wrong</h2>
-      <p class="note">17 companies restated, changed auditor, or
-      filed late in the last two years. From SEC filings, not from the screen.</p>
-    </div>
-    <div id="disclosed"></div>
-  </section>
-
   <section class="panel" id="stripPanel" aria-label="Where each company sits on each test">
     <div class="panel-head">
-      <h2>The tail of each test</h2>
+      <h2>Find the outliers</h2>
       <p class="note" id="stripNote"></p>
     </div>
     <div id="strips"></div>
@@ -76,7 +59,7 @@
 
   <section class="panel" id="weights">
     <div class="panel-head">
-      <h2>Weight the tests yourself</h2>
+      <h2>Weighting</h2>
       <p class="note">Weighted by how directly each test observes an accounting
       problem, not equally. Cards show the default score when you move them.</p>
     </div>
@@ -89,16 +72,13 @@
   </section>
 
   <section id="cards"></section>
+  <nav class="pager" id="pager" aria-label="Result pages">
+    <button type="button" id="prevPage" aria-label="Previous page">&larr;</button>
+    <span id="pageInfo"></span>
+    <button type="button" id="nextPage" aria-label="Next page">&rarr;</button>
+  </nav>
 
   <div id="tip" role="tooltip"></div>
-
-  <section class="panel" id="agree">
-    <div class="panel-head">
-      <h2>The tests do not agree with each other</h2>
-      <p class="note" id="agreeNote"></p>
-    </div>
-    <div id="matrix"></div>
-  </section>
 
   <section class="panel" id="explain">
     <h2>The six tests</h2>
@@ -120,7 +100,11 @@
   <section class="panel" id="limits">
     <h2>Caveats</h2>
     <ul>
-      <li><strong>No backtest.</strong> Nobody knows whether these flags predict anything.</li>
+      <li><strong>No backtest.</strong> Nobody knows whether these tests predict anything.</li>
+      <li><strong>The tests miss the known cases.</strong> The 17
+      companies that restated, changed auditor or filed late sit at a median rank of
+      291 of 656 - no higher than everyone else. Short sellers spotted
+      them (5.4% of float against 3.5%); these tests did not.</li>
       <li><strong>Filing events are US only.</strong> 197
       Australian names cannot carry them.</li>
       <li><strong>Australian cash flow is derived.</strong> Two routes; where they
