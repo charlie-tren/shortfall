@@ -9,7 +9,10 @@ import time
 import urllib.error
 import urllib.request
 
-UA = {"User-Agent": "charlie.t@rochford-group.com (shortfall; charlietrenorden.com)"}
+# SEC asks for a contactable User-Agent. This repo is public, so the contact point is
+# the site rather than a work address - there is no reason to put an employer's domain
+# in the request log of a public screener.
+UA = {"User-Agent": "shortfall (+https://charlietrenorden.com/shortfall/)"}
 PAUSE = 0.25
 
 

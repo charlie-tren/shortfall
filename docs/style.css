@@ -68,6 +68,11 @@ body {
 .toggle .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
 
 .hero { margin-bottom: 40px; }
+.wip {
+  display: inline-block; margin: 0 0 14px; padding: 4px 11px;
+  border: 1px solid var(--rule); border-radius: 99px;
+  font-family: var(--mono); font-size: 12px; color: var(--soft);
+}
 h1 { font-size: 46px; margin: 0 0 12px; letter-spacing: -0.015em; font-weight: 600; }
 .lede { color: var(--soft); max-width: 60ch; margin: 0; font-size: 18px; }
 
