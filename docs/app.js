@@ -137,7 +137,7 @@ function renderQuadrant(rows) {
     return;
   }
 
-  const W = 1000, H = 520, L = 46, R = 22, T = 18, B = 46;
+  const W = 1000, H = 620, L = 52, R = 26, T = 26, B = 52;
   svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
   /* SQUARE-ROOT x scale. Short interest is heavily skewed - median 3.5%, a handful
      past 25% - so a linear axis crushed most of the market into the left tenth and
@@ -145,13 +145,21 @@ function renderQuadrant(rows) {
      hiding the outliers; ticks are labelled at their true values. */
   const maxSI = Math.max(0.2, ...pts.map((p) => p.row.short_interest));
   const px = (v) => L + Math.sqrt(Math.min(v, maxSI) / maxSI) * (W - L - R);
-  const py = (v) => H - B - (v / 100) * (H - T - B);
+  /* Y domain is the DATA range, not 0-100. Severity is the mean of a company's worst
+     two percentile ranks, so it is bounded well above zero in practice - 612 of 656
+     scores sit above 50. A 0-100 axis threw away the bottom half of the panel and
+     crushed everything into the top, which is what made this look cramped. */
+  const scores = pts.map((p) => p.score);
+  const yLo = Math.max(0, Math.floor((Math.min(...scores) - 3) / 5) * 5);
+  const py = (v) => H - B - ((v - yLo) / (100 - yLo)) * (H - T - B);
 
   const midScore = 90;
   svgEl("rect", { x: L, y: T, width: px(CROWDED) - L, height: py(midScore) - T,
                   class: "quadhi" }, svg);
 
-  [0, 25, 50, 75, 100].forEach((v) => {
+  const ticks = [];
+  for (let v = Math.ceil(yLo / 10) * 10; v <= 100; v += 10) ticks.push(v);
+  ticks.forEach((v) => {
     svgEl("line", { x1: L, y1: py(v), x2: W - R, y2: py(v), class: "grid" }, svg);
     const t = svgEl("text", { x: L - 8, y: py(v) + 4, class: "axislabel",
                               "text-anchor": "end" }, svg);
@@ -173,15 +181,17 @@ function renderQuadrant(rows) {
   const lab2 = svgEl("text", { x: W - R - 6, y: py(midScore) + 15, class: "quadlabel",
                                "text-anchor": "end" }, svg);
   lab2.textContent = "flagged and already crowded →";
-  const xt = svgEl("text", { x: (L + W - R) / 2, y: H - 2, class: "axistitle",
+  const xt = svgEl("text", { x: (L + W - R) / 2, y: H - 4, class: "axistitle",
                              "text-anchor": "middle" }, svg);
   xt.textContent = "short interest, % of float";
+  // No y-axis title in the SVG - it collided with the top tick, twice now. The
+  // direction lives in the caption below, where nothing can overlap it.
 
   pts.forEach(({ row, score }) => {
     const x = px(row.short_interest), y = py(score);
     const interesting = score >= midScore && row.short_interest < CROWDED;
     const dot = svgEl("circle", {
-      cx: x, cy: y, r: interesting ? 5 : 3.4,
+      cx: x, cy: y, r: interesting ? 5 : 3,
       class: "dot" + (interesting ? " hot" : "") + (row.events && row.events.length ? " ev" : ""),
     }, svg);
     dot.addEventListener("mouseenter", (e) => showTip(row, score, e.clientX, e.clientY));
@@ -190,7 +200,8 @@ function renderQuadrant(rows) {
 
   const hot = pts.filter(({ row, score }) => score >= midScore && row.short_interest < CROWDED);
   note.textContent =
-    `${pts.length} US companies with a short-interest figure. The two are unrelated `
+    `Score up the side, higher is worse. Short interest along the bottom. `
+    + `${pts.length} US companies with a short-interest figure. The two are unrelated `
     + `(rank correlation +0.04), which is what makes the shaded corner worth `
     + `something: ${hot.length} companies score ${midScore} or above with under `
     + `${(CROWDED * 100).toFixed(0)}% of float short.`;
@@ -243,13 +254,18 @@ function renderCards(rows) {
 }
 
 function renderPager(total, pages) {
-  const info = document.getElementById("pageInfo");
-  if (!info) return;
   const from = total ? state.page * PAGE_SIZE + 1 : 0;
   const to = Math.min((state.page + 1) * PAGE_SIZE, total);
-  info.textContent = total ? `${from}-${to} of ${total}` : "nothing matches these filters";
-  document.getElementById("prevPage").disabled = state.page === 0;
-  document.getElementById("nextPage").disabled = state.page >= pages - 1;
+  const label = total
+    ? `${from}-${to} of ${total}, worst first`
+    : "nothing matches these filters";
+  ["", "Top"].forEach((sfx) => {
+    const info = document.getElementById("pageInfo" + sfx);
+    if (!info) return;
+    info.textContent = label;
+    document.getElementById("prevPage" + sfx).disabled = state.page === 0;
+    document.getElementById("nextPage" + sfx).disabled = state.page >= pages - 1;
+  });
 }
 
 /* Money formatted the way a reader reads it, not the way it is stored. */
@@ -468,15 +484,21 @@ function buildExplain() {
   });
 }
 
-function goPage(delta) {
+function goPage(delta, from) {
   state.page = Math.max(0, state.page + delta);
   render();
-  document.getElementById("cards").scrollIntoView({ behavior: "smooth", block: "start" });
+  // Paging from the bottom arrows jumps you back to the top of the list; paging
+  // from the top arrows should leave you where you already are.
+  if (from !== "Top") {
+    document.getElementById("pagerTop").scrollIntoView({ behavior: "smooth", block: "start" });
+  }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("prevPage").addEventListener("click", () => goPage(-1));
-  document.getElementById("nextPage").addEventListener("click", () => goPage(1));
+  ["", "Top"].forEach((sfx) => {
+    document.getElementById("prevPage" + sfx).addEventListener("click", () => goPage(-1, sfx));
+    document.getElementById("nextPage" + sfx).addEventListener("click", () => goPage(1, sfx));
+  });
   buildSliders();
   buildFilters();
   buildExplain();

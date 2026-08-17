@@ -51,7 +51,7 @@
 
   <section class="panel" id="stripPanel" aria-label="Where each company sits on each test">
     <div class="panel-head">
-      <h2>Find the outliers</h2>
+      <h2>Test by test</h2>
       <p class="note" id="stripNote"></p>
     </div>
     <div id="strips"></div>
@@ -71,7 +71,14 @@
     <div id="filters"></div>
   </section>
 
+  <nav class="pager top" id="pagerTop" aria-label="Result pages">
+    <button type="button" id="prevPageTop" aria-label="Previous page">&larr;</button>
+    <span id="pageInfoTop"></span>
+    <button type="button" id="nextPageTop" aria-label="Next page">&rarr;</button>
+  </nav>
+
   <section id="cards"></section>
+
   <nav class="pager" id="pager" aria-label="Result pages">
     <button type="button" id="prevPage" aria-label="Previous page">&larr;</button>
     <span id="pageInfo"></span>
