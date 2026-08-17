@@ -40,6 +40,21 @@ def sector_from_sic(sic):
         return "Healthcare"
     if 7370 <= code <= 7379 or 3570 <= code <= 3579 or 3670 <= code <= 3679:
         return "Technology"
+    # Measured gap: 57 names were landing in "Other", the largest groups being
+    # business services (73xx), hotels (70xx), drug wholesale (51xx), contract
+    # research (873x) and construction (15xx-17xx). Each has a natural home.
+    if 7300 <= code <= 7399:
+        return "Technology"          # 73xx is software and business services
+    if 8730 <= code <= 8739:
+        return "Healthcare"          # contract research
+    if 7000 <= code <= 7099 or 5800 <= code <= 5899 or 7900 <= code <= 7999:
+        return "Consumer"            # hotels, eating places, entertainment
+    if 5000 <= code <= 5199:
+        return "Consumer"            # wholesale
+    if 1500 <= code <= 1799:
+        return "Industrials"         # construction and trades
+    if 8200 <= code <= 8299 or 8700 <= code <= 8749:
+        return "Industrials"         # education, engineering and management services
     if 2000 <= code <= 3999:
         return "Industrials"
     if 5200 <= code <= 5999:

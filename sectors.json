@@ -20,7 +20,7 @@
   "sicDesc": "Pharmaceutical Preparations"
  },
  "ACN": {
-  "sector": "Other",
+  "sector": "Technology",
   "sic": "7389",
   "sicDesc": "Services-Business Services, NEC"
  },
@@ -55,12 +55,12 @@
   "sicDesc": "Industrial Inorganic Chemicals"
  },
  "ABNB": {
-  "sector": "Other",
+  "sector": "Technology",
   "sic": "7340",
   "sicDesc": "Services-To Dwellings & Other Buildings"
  },
  "AKAM": {
-  "sector": "Other",
+  "sector": "Technology",
   "sic": "7389",
   "sicDesc": "Services-Business Services, NEC"
  },
@@ -80,7 +80,7 @@
   "sicDesc": "Orthopedic, Prosthetic & Surgical Appliances & Supplies"
  },
  "ALLE": {
-  "sector": "Other",
+  "sector": "Technology",
   "sic": "7381",
   "sicDesc": "Services-Detective, Guard & Armored Car Services"
  },
@@ -365,7 +365,7 @@
   "sicDesc": "Semiconductors & Related Devices"
  },
  "BR": {
-  "sector": "Other",
+  "sector": "Technology",
   "sic": "7389",
   "sicDesc": "Services-Business Services, NEC"
  },
@@ -415,7 +415,7 @@
   "sicDesc": "National Commercial Banks"
  },
  "CAH": {
-  "sector": "Other",
+  "sector": "Consumer",
   "sic": "5122",
   "sicDesc": "Wholesale-Drugs, Proprietaries & Druggists' Sundries"
  },
@@ -460,7 +460,7 @@
   "sicDesc": "Retail-Catalog & Mail-Order Houses"
  },
  "COR": {
-  "sector": "Other",
+  "sector": "Consumer",
   "sic": "5122",
   "sicDesc": "Wholesale-Drugs, Proprietaries & Druggists' Sundries"
  },
@@ -480,7 +480,7 @@
   "sicDesc": "Agricultural Chemicals"
  },
  "CRL": {
-  "sector": "Other",
+  "sector": "Healthcare",
   "sic": "8731",
   "sicDesc": "Services-Commercial Physical & Biological Research"
  },
@@ -595,7 +595,7 @@
   "sicDesc": "Cable & Other Pay Television Services"
  },
  "FIX": {
-  "sector": "Other",
+  "sector": "Industrials",
   "sic": "1731",
   "sicDesc": "Electrical Work"
  },
@@ -635,7 +635,7 @@
   "sicDesc": "Drawing & Insulating of  Nonferrous Wire"
  },
  "CPAY": {
-  "sector": "Other",
+  "sector": "Technology",
   "sic": "7389",
   "sicDesc": "Services-Business Services, NEC"
  },
@@ -645,7 +645,7 @@
   "sicDesc": "Agricultural Production-Crops"
  },
  "CSGP": {
-  "sector": "Other",
+  "sector": "Technology",
   "sic": "7389",
   "sicDesc": "Services-Business Services, NEC"
  },
@@ -760,12 +760,12 @@
   "sicDesc": "Electric Services"
  },
  "DPZ": {
-  "sector": "Other",
+  "sector": "Consumer",
   "sic": "5140",
   "sicDesc": "Wholesale-Groceries & Related Products"
  },
  "DASH": {
-  "sector": "Other",
+  "sector": "Technology",
   "sic": "7389",
   "sicDesc": "Services-Business Services, NEC"
  },
@@ -780,7 +780,7 @@
   "sicDesc": "Plastic Materials, Synth Resins & Nonvulcan Elastomers"
  },
  "DHI": {
-  "sector": "Other",
+  "sector": "Industrials",
   "sic": "1531",
   "sicDesc": "Operative Builders"
  },
@@ -805,7 +805,7 @@
   "sicDesc": "Misc Industrial & Commercial Machinery & Equipment"
  },
  "EBAY": {
-  "sector": "Other",
+  "sector": "Technology",
   "sic": "7389",
   "sicDesc": "Services-Business Services, NEC"
  },
@@ -835,7 +835,7 @@
   "sicDesc": "Hospital & Medical Service Plans"
  },
  "EME": {
-  "sector": "Other",
+  "sector": "Industrials",
   "sic": "1731",
   "sicDesc": "Electrical Work"
  },
@@ -860,7 +860,7 @@
   "sicDesc": "Crude Petroleum & Natural Gas"
  },
  "EFX": {
-  "sector": "Other",
+  "sector": "Technology",
   "sic": "7320",
   "sicDesc": "Services-Consumer Credit Reporting, Collection Agencies"
  },
@@ -945,7 +945,7 @@
   "sicDesc": "Services-Computer Programming, Data Processing, Etc."
  },
  "FICO": {
-  "sector": "Other",
+  "sector": "Technology",
   "sic": "7389",
   "sicDesc": "Services-Business Services, NEC"
  },
@@ -970,12 +970,12 @@
   "sicDesc": "Air Courier Services"
  },
  "FERG": {
-  "sector": "Other",
+  "sector": "Consumer",
   "sic": "5070",
   "sicDesc": "Wholesale-Hardware & Plumbing & Heating Equipment & Supplies"
  },
  "FIS": {
-  "sector": "Other",
+  "sector": "Technology",
   "sic": "7389",
   "sicDesc": "Services-Business Services, NEC"
  },
@@ -995,7 +995,7 @@
   "sicDesc": "Electric Services"
  },
  "FISV": {
-  "sector": "Other",
+  "sector": "Technology",
   "sic": "7389",
   "sicDesc": "Services-Business Services, NEC"
  },
@@ -1040,7 +1040,7 @@
   "sicDesc": "Search, Detection, Navigation, Guidance, Aeronautical Sys"
  },
  "IT": {
-  "sector": "Other",
+  "sector": "Industrials",
   "sic": "8741",
   "sicDesc": "Services-Management Services"
  },
@@ -1085,7 +1085,7 @@
   "sicDesc": "Motor Vehicles & Passenger Car Bodies"
  },
  "GPC": {
-  "sector": "Other",
+  "sector": "Consumer",
   "sic": "5013",
   "sicDesc": "Wholesale-Motor Vehicle Supplies & New Parts"
  },
@@ -1095,7 +1095,7 @@
   "sicDesc": "Biological Products, (No Diagnostic Substances)"
  },
  "GPN": {
-  "sector": "Other",
+  "sector": "Technology",
   "sic": "7389",
   "sicDesc": "Services-Business Services, NEC"
  },
@@ -1140,7 +1140,7 @@
   "sicDesc": "Real Estate Investment Trusts"
  },
  "HSIC": {
-  "sector": "Other",
+  "sector": "Consumer",
   "sic": "5047",
   "sicDesc": "Wholesale-Medical, Dental & Hospital Equipment & Supplies"
  },
@@ -1155,7 +1155,7 @@
   "sicDesc": "Computer & office Equipment"
  },
  "HLT": {
-  "sector": "Other",
+  "sector": "Consumer",
   "sic": "7011",
   "sicDesc": "Hotels & Motels"
  },
@@ -1235,7 +1235,7 @@
   "sicDesc": "General Industrial Machinery & Equipment"
  },
  "INCY": {
-  "sector": "Other",
+  "sector": "Healthcare",
   "sic": "8731",
   "sicDesc": "Services-Commercial Physical & Biological Research"
  },
@@ -1295,7 +1295,7 @@
   "sicDesc": "Real Estate Operators (No Developers) & Lessors"
  },
  "IQV": {
-  "sector": "Other",
+  "sector": "Healthcare",
   "sic": "8731",
   "sicDesc": "Services-Commercial Physical & Biological Research"
  },
@@ -1320,7 +1320,7 @@
   "sicDesc": "Services-Computer Integrated Systems Design"
  },
  "J": {
-  "sector": "Other",
+  "sector": "Industrials",
   "sic": "1600",
   "sicDesc": "Heavy Construction Other Than Bldg Const - Contractors"
  },
@@ -1410,7 +1410,7 @@
   "sicDesc": "Special Industry Machinery, NEC"
  },
  "LVS": {
-  "sector": "Other",
+  "sector": "Consumer",
   "sic": "7011",
   "sicDesc": "Hotels & Motels"
  },
@@ -1420,7 +1420,7 @@
   "sicDesc": "Services-Computer Integrated Systems Design"
  },
  "LEN": {
-  "sector": "Other",
+  "sector": "Industrials",
   "sic": "1520",
   "sicDesc": "General Bldg Contractors - Residential Bldgs"
  },
@@ -1440,7 +1440,7 @@
   "sicDesc": "Industrial Inorganic Chemicals"
  },
  "LYV": {
-  "sector": "Other",
+  "sector": "Consumer",
   "sic": "7900",
   "sicDesc": "Services-Amusement & Recreation Services"
  },
@@ -1485,7 +1485,7 @@
   "sicDesc": "Petroleum Refining"
  },
  "MAR": {
-  "sector": "Other",
+  "sector": "Consumer",
   "sic": "7011",
   "sicDesc": "Hotels & Motels"
  },
@@ -1510,7 +1510,7 @@
   "sicDesc": "Heating Equip, Except Elec & Warm Air; & Plumbing Fixtures"
  },
  "MA": {
-  "sector": "Other",
+  "sector": "Technology",
   "sic": "7389",
   "sicDesc": "Services-Business Services, NEC"
  },
@@ -1525,7 +1525,7 @@
   "sicDesc": "Retail-Eating  Places"
  },
  "MCK": {
-  "sector": "Other",
+  "sector": "Consumer",
   "sic": "5122",
   "sicDesc": "Wholesale-Drugs, Proprietaries & Druggists' Sundries"
  },
@@ -1555,7 +1555,7 @@
   "sicDesc": "Laboratory Analytical Instruments"
  },
  "MGM": {
-  "sector": "Other",
+  "sector": "Consumer",
   "sic": "7011",
   "sicDesc": "Hotels & Motels"
  },
@@ -1605,7 +1605,7 @@
   "sicDesc": "Bottled & Canned Soft Drinks & Carbonated Waters"
  },
  "MCO": {
-  "sector": "Other",
+  "sector": "Technology",
   "sic": "7320",
   "sicDesc": "Services-Consumer Credit Reporting, Collection Agencies"
  },
@@ -1625,7 +1625,7 @@
   "sicDesc": "Radio & Tv Broadcasting & Communications Equipment"
  },
  "MSCI": {
-  "sector": "Other",
+  "sector": "Technology",
   "sic": "7389",
   "sicDesc": "Services-Business Services, NEC"
  },
@@ -1710,7 +1710,7 @@
   "sicDesc": "Semiconductors & Related Devices"
  },
  "NVR": {
-  "sector": "Other",
+  "sector": "Industrials",
   "sic": "1531",
   "sicDesc": "Operative Builders"
  },
@@ -1735,7 +1735,7 @@
   "sicDesc": "Trucking (No Local)"
  },
  "OMC": {
-  "sector": "Other",
+  "sector": "Technology",
   "sic": "7311",
   "sicDesc": "Services-Advertising Agencies"
  },
@@ -1790,12 +1790,12 @@
   "sicDesc": "Miscellaneous Fabricated Metal Products"
  },
  "PAYX": {
-  "sector": "Other",
+  "sector": "Industrials",
   "sic": "8700",
   "sicDesc": "Services-Engineering, Accounting, Research, Management"
  },
  "PYPL": {
-  "sector": "Other",
+  "sector": "Technology",
   "sic": "7389",
   "sicDesc": "Services-Business Services, NEC"
  },
@@ -1890,12 +1890,12 @@
   "sicDesc": "Real Estate Investment Trusts"
  },
  "PHM": {
-  "sector": "Other",
+  "sector": "Industrials",
   "sic": "1531",
   "sicDesc": "Operative Builders"
  },
  "PWR": {
-  "sector": "Other",
+  "sector": "Industrials",
   "sic": "1731",
   "sicDesc": "Electrical Work"
  },
@@ -1975,7 +1975,7 @@
   "sicDesc": "Measuring & Controlling Devices, NEC"
  },
  "ROL": {
-  "sector": "Other",
+  "sector": "Technology",
   "sic": "7340",
   "sicDesc": "Services-To Dwellings & Other Buildings"
  },
@@ -1995,7 +1995,7 @@
   "sicDesc": "Water Transportation"
  },
  "SPGI": {
-  "sector": "Other",
+  "sector": "Technology",
   "sic": "7320",
   "sicDesc": "Services-Consumer Credit Reporting, Collection Agencies"
  },
@@ -2125,7 +2125,7 @@
   "sicDesc": "Services-Prepackaged Software"
  },
  "SYY": {
-  "sector": "Other",
+  "sector": "Consumer",
   "sic": "5140",
   "sicDesc": "Wholesale-Groceries & Related Products"
  },
@@ -2160,7 +2160,7 @@
   "sicDesc": "Retail-Variety Stores"
  },
  "TEL": {
-  "sector": "Other",
+  "sector": "Consumer",
   "sic": "5065",
   "sicDesc": "Wholesale-Electronic Parts & Equipment, NEC"
  },
@@ -2205,7 +2205,7 @@
   "sicDesc": "Retail-Family Clothing Stores"
  },
  "TKO": {
-  "sector": "Other",
+  "sector": "Consumer",
   "sic": "7900",
   "sicDesc": "Services-Amusement & Recreation Services"
  },
@@ -2260,7 +2260,7 @@
   "sicDesc": "National Commercial Banks"
  },
  "UBER": {
-  "sector": "Other",
+  "sector": "Technology",
   "sic": "7389",
   "sicDesc": "Services-Business Services, NEC"
  },
@@ -2290,7 +2290,7 @@
   "sicDesc": "Trucking & Courier Services (No Air)"
  },
  "URI": {
-  "sector": "Other",
+  "sector": "Technology",
   "sic": "7359",
   "sicDesc": "Services-Equipment Rental & Leasing, NEC"
  },
@@ -2360,7 +2360,7 @@
   "sicDesc": "Real Estate Investment Trusts"
  },
  "V": {
-  "sector": "Other",
+  "sector": "Technology",
   "sic": "7389",
   "sicDesc": "Services-Business Services, NEC"
  },
@@ -2380,7 +2380,7 @@
   "sicDesc": "Fire, Marine & Casualty Insurance"
  },
  "GWW": {
-  "sector": "Other",
+  "sector": "Consumer",
   "sic": "5000",
   "sicDesc": "Wholesale-Durable Goods"
  },
@@ -2395,7 +2395,7 @@
   "sicDesc": "Retail-Variety Stores"
  },
  "DIS": {
-  "sector": "Other",
+  "sector": "Consumer",
   "sic": "7990",
   "sicDesc": "Services-Miscellaneous Amusement & Recreation"
  },
@@ -2465,7 +2465,7 @@
   "sicDesc": "Services-Computer Processing & Data Preparation"
  },
  "WYNN": {
-  "sector": "Other",
+  "sector": "Consumer",
   "sic": "7011",
   "sicDesc": "Hotels & Motels"
  },

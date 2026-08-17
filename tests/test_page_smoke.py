@@ -68,18 +68,21 @@ def test_page_loads_without_application_errors(server):
 def test_sliders_reorder_and_reset_restores(server):
     with sync_playwright() as pw:
         browser, page = page_with(pw, [])
-        first = page.locator(".card .ticker").first.text_content()
+        # Compare the whole page, not just the top name. Several companies tie at
+        # exactly 100 once severity is a cohort percentile, so the first ticker can
+        # legitimately stay put while everything under it reorders.
+        first = page.locator(".card .ticker").all_text_contents()
         sliders = page.locator("#sliders input")
         sliders.nth(3).fill("3")
         sliders.nth(3).dispatch_event("input")
         sliders.nth(0).fill("0")
         sliders.nth(0).dispatch_event("input")
-        page.wait_for_timeout(250)
-        skewed = page.locator(".card .ticker").first.text_content()
+        page.wait_for_timeout(300)
+        skewed = page.locator(".card .ticker").all_text_contents()
         assert skewed != first, "reweighting did not change the ranking"
         page.click("#resetWeights")
-        page.wait_for_timeout(250)
-        assert page.locator(".card .ticker").first.text_content() == first
+        page.wait_for_timeout(300)
+        assert page.locator(".card .ticker").all_text_contents() == first
         browser.close()
 
 
