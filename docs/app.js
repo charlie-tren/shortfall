@@ -239,14 +239,15 @@ function scatter(svg, data, opts) {
   let num = 0, den = 0;
   xs.forEach((v, i) => { num += (v - mx) * (ys[i] - my); den += (v - mx) ** 2; });
   const rho = spearman(data.map((d) => [tx(d.x), ty(d.y)]));
-  // Only draw a fit when there is something to fit. A trend line over rho 0.02 is a
-  // decoration that asserts a relationship the data does not contain.
-  if (den && rho != null && Math.abs(rho) >= 0.15) {
+  /* The fit is always drawn where asked for, but a WEAK one is drawn faintly and the
+     caption still prints rho. A line through rho 0.01 looks like a finding, so the
+     styling has to carry the strength the geometry cannot. */
+  if (den && rho != null && opts.alwaysFit !== false) {
     const sl = num / den;
     const at = (t_) => { const raw = my + sl * (t_ - mx); return opts.sqrtY ? raw * raw : raw; };
     svgEl("line", { x1: px(opts.logX ? Math.pow(10, xlo) : xlo), y1: py(at(xlo)),
                     x2: px(opts.logX ? Math.pow(10, xhi) : xhi), y2: py(at(xhi)),
-                    class: "trend" }, svg);
+                    class: "trend" + (Math.abs(rho) < 0.15 ? " weak" : "") }, svg);
   }
 
   data.forEach((d) => {
@@ -279,7 +280,8 @@ function renderPerf(rows) {
   const data = rows.map(({ row, score }) => ({ row, x: score, y: row.ret_1y }))
                    .filter((d) => d.x != null && d.y != null);
   const rho = scatter(svg, data, {
-    logX: false, sqrtY: false, xLabel: "Score", yLabel: "12-month return",
+    logX: false, sqrtY: false, alwaysFit: false,
+    xLabel: "Score", yLabel: "12-month return",
     fmtX: (x) => x.toFixed(0), fmtY: (y) => (y * 100).toFixed(0) + "%",
   });
   const flat = rho != null && Math.abs(rho) < 0.15;

@@ -353,3 +353,45 @@ table.heat td.n, table.heat th.n { color: var(--na); }
   border: 1px solid var(--rule); border-radius: 6px; padding: 5px 9px; }
 #perfSvg .dot { fill: var(--na); opacity: 0.3; }
 #perfSvg .dot.hot { fill: var(--warn); opacity: 0.95; }
+
+.trend.weak { opacity: 0.35; stroke-dasharray: 2 6; }
+
+/* --- UI pass ---------------------------------------------------------------
+   Measured, not eyeballed: nothing overflowed and nothing scrolled sideways, but
+   seven distinct text styles sat under 11.5px and 14 controls were under 30px
+   tall, which is below a comfortable tap target on a phone. */
+
+/* Floors on the smallest type. */
+.strip-n, .flags .mag, .thname, .throw output, .card .score-of,
+#pageInfo, #pageInfoTop, .axislabel { font-size: 12px; }
+.flags dt { font-size: 12px; }
+.flags dd.na { font-size: 12px; }
+
+/* Controls big enough to hit. */
+#filters select, .xpick select { min-height: 34px; }
+.pager button { min-height: 36px; min-width: 46px; }
+.clearBtn { min-height: 34px; }
+input[type="range"] { height: 30px; }
+
+/* Panels were all the same weight, so the page read as one long undifferentiated
+   column. Give the section heads a little more air and a consistent rhythm. */
+.panel { padding: 22px 24px; margin-bottom: 26px; }
+.panel-head { margin-bottom: 18px; }
+h2 { font-size: 21px; }
+.note { font-size: 15px; max-width: 70ch; }
+
+/* The card is the unit that gets read most; let it breathe and respond to hover. */
+.card { padding: 18px 20px; transition: border-color .15s; }
+.card:hover { border-color: var(--accent-soft); }
+.card header { gap: 12px; }
+
+/* Mobile: the six-column test grid was cramped even at three columns. */
+@media (max-width: 620px) {
+  .page { padding: 14px 13px 56px; }
+  .panel { padding: 16px 15px; margin-bottom: 18px; }
+  #quadSvg, #perfSvg { height: 340px; }
+  .flags { grid-template-columns: repeat(2, 1fr); gap: 14px 12px; }
+  #filters { gap: 12px; }
+  #filters label { width: 100%; justify-content: space-between; }
+  #filters select { flex: 1; margin-left: 10px; }
+}
