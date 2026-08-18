@@ -136,7 +136,6 @@ function scored() {
 function render() {
   const rows = scored();
   renderQuadrant(rows);
-  renderPerf(rows);
   renderStrips(rows);
   renderCards(rows);
 }
@@ -361,24 +360,6 @@ function renderQuadrant(rows) {
       + (rho == null ? "n/a" : rho.toFixed(2))
       + (weak ? " - indistinguishable from zero at this sample size." : ".");
   chartKey("quadKey", svg);
-}
-
-function renderPerf(rows) {
-  const svg = document.getElementById("perfSvg");
-  if (!svg) return;
-  const data = rows.map(({ row, score }) => ({ row, x: score, y: row.ret_1y }))
-                   .filter((d) => d.x != null && d.y != null);
-  const rho = scatter(svg, data, {
-    logX: false, sqrtY: false, alwaysFit: false, bins: true,
-    xLabel: "Score", yLabel: "12-month return",
-    fmtX: (x) => x.toFixed(0), fmtY: (y) => (y * 100).toFixed(0) + "%",
-  });
-  const flat = rho != null && Math.abs(rho) < 0.15;
-  document.getElementById("perfNote").textContent = data.length < 20
-    ? "Not enough price history for this selection."
-    : data.length + " companies. Rank correlation " + (rho == null ? "n/a" : rho.toFixed(2))
-      + (flat ? " - no fitted line drawn, there is nothing to fit." : ".");
-  chartKey("perfKey", svg);
 }
 
 const PAGE_SIZE = 20;
