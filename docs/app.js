@@ -484,9 +484,8 @@ function renderStrips(rows) {
 
   const n = rows.length;
   document.getElementById("stripNote").textContent =
-    `Every company on all six tests, placed by its own figure. `
-    + `The shaded band is the worst 10%. Click a test to keep only its tail`
-    + (state.tail ? ` - showing ${FLAGS.find((f) => f[0] === state.tail)[1]}, ${n} companies.` : `.`);
+    `One mark per company. Shaded band is the worst 10%. Click a test to filter to it`
+    + (state.tail ? ` - ${FLAGS.find((f) => f[0] === state.tail)[1]}, ${n} companies.` : `.`);
 }
 
 function showTip(row, score, x, y, viewport) {
