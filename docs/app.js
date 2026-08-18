@@ -321,14 +321,11 @@ function renderQuadrant(rows) {
     logX: !!vx.log, logY: !!vy.log, sqrtY: !!vy.sqrt,
     xLabel: vx.label, yLabel: vy.label, fmtX: vx.fmt, fmtY: vy.fmt,
   });
-  // n=500 gives a standard error on rho of 0.045, so anything under about 0.09 is
-  // not distinguishable from zero and the page should not imply otherwise.
-  const weak = rho != null && Math.abs(rho) < 0.09;
   document.getElementById("quadNote").textContent = data.length < 20
     ? "Not enough data for this pair."
     : data.length + " companies. Rank correlation "
-      + (rho == null ? "n/a" : rho.toFixed(2))
-      + (weak ? " - indistinguishable from zero at this sample size." : ".");
+      // +0 avoids "-0.00" when rho rounds to zero from below.
+      + (rho == null ? "n/a" : (rho + 0).toFixed(2).replace("-0.00", "0.00")) + ".";
   chartKey("quadKey", svg);
 }
 
