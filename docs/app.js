@@ -340,6 +340,10 @@ function chartKey(hostId, svg) {
   el("span", { text: "scores 90 or above" }, c);
 }
 
+function isDefaultPair() {
+  return state.yvar === "short_interest" && state.xvar === "assets";
+}
+
 function renderQuadrant(rows) {
   const svg = document.getElementById("quadSvg");
   if (!svg) return;
@@ -358,7 +362,9 @@ function renderQuadrant(rows) {
     ? "Not enough data for this pair."
     : data.length + " companies. Rank correlation "
       + (rho == null ? "n/a" : rho.toFixed(2))
-      + (weak ? " - indistinguishable from zero at this sample size." : ".");
+      + (weak ? " - indistinguishable from zero at this sample size." : ".")
+      + (isDefaultPair() ? " Small companies get shorted more; this is market"
+                         + " structure, not a result from the screen." : "");
   chartKey("quadKey", svg);
 }
 
@@ -508,7 +514,7 @@ function renderStrips(rows) {
 
   const n = rows.length;
   document.getElementById("stripNote").textContent =
-    `Each mark is one company, placed by how extreme it is on that test. `
+    `Every company on all six tests, placed by its own figure. `
     + `The shaded band is the worst 10%. Click a test to keep only its tail`
     + (state.tail ? ` - showing ${FLAGS.find((f) => f[0] === state.tail)[1]}, ${n} companies.` : `.`);
 }
