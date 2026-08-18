@@ -62,7 +62,8 @@ function svgEl(tag, attrs = {}, parent = null) {
    soon as the reader touches anything. This function was a plain mean of all six
    for a while after score.py had already moved to severity, which meant the live
    ranking was never the one the build computed. */
-const SEVERITY_TOP_N = 2;
+// null means every applicable test counts. Mirrors score.py.
+const SEVERITY_TOP_N = null;
 
 function composite(row, weights) {
   const scored = [];
@@ -75,7 +76,7 @@ function composite(row, weights) {
   });
   if (!scored.length) return null;
   scored.sort((a, b) => b[0] - a[0]);
-  const top = scored.slice(0, SEVERITY_TOP_N);
+  const top = SEVERITY_TOP_N ? scored.slice(0, SEVERITY_TOP_N) : scored;
   const den = top.reduce((s, x) => s + x[1], 0);
   return den ? top.reduce((s, x) => s + x[0], 0) / den : null;
 }
@@ -274,7 +275,7 @@ function scatter(svg, data, opts) {
     };
     svgEl("line", { x1: px(opts.logX ? Math.pow(10, xlo) : xlo), y1: py(at(xlo)),
                     x2: px(opts.logX ? Math.pow(10, xhi) : xhi), y2: py(at(xhi)),
-                    class: "trend" + (Math.abs(rho) < 0.15 ? " weak" : "") }, svg);
+                    class: "trend" }, svg);
   }
 
   data.forEach((d) => {
@@ -301,17 +302,12 @@ function chartKey(hostId, svg) {
   const fit = svg.querySelector(".trend");
   if (fit) {
     const b = el("span", { class: "key" }, host);
-    const wk = fit.getAttribute("class").indexOf("weak") >= 0;
-    el("i", { class: "k-fit" + (wk ? " weak" : "") }, b);
-    el("span", { text: wk ? "fitted line, too weak to rely on" : "fitted line" }, b);
+    el("i", { class: "k-fit" }, b);
+    el("span", { text: "line of best fit" }, b);
   }
   const c = el("span", { class: "key" }, host);
   el("i", { class: "k-hot" }, c);
   el("span", { text: "scores 90 or above" }, c);
-}
-
-function isDefaultPair() {
-  return state.yvar === "short_interest" && state.xvar === "assets";
 }
 
 function renderQuadrant(rows) {
@@ -332,9 +328,7 @@ function renderQuadrant(rows) {
     ? "Not enough data for this pair."
     : data.length + " companies. Rank correlation "
       + (rho == null ? "n/a" : rho.toFixed(2))
-      + (weak ? " - indistinguishable from zero at this sample size." : ".")
-      + (isDefaultPair() ? " Small companies get shorted more; this is market"
-                         + " structure, not a result from the screen." : "");
+      + (weak ? " - indistinguishable from zero at this sample size." : ".");
   chartKey("quadKey", svg);
 }
 
@@ -484,7 +478,7 @@ function renderStrips(rows) {
 
   const n = rows.length;
   document.getElementById("stripNote").textContent =
-    `One mark per company. Shaded band is the worst 10%. Click a test to filter to it`
+    `Worst 10% shaded. Click a test to filter`
     + (state.tail ? ` - ${FLAGS.find((f) => f[0] === state.tail)[1]}, ${n} companies.` : `.`);
 }
 

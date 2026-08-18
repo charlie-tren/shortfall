@@ -34,7 +34,18 @@ def percentile_ranks(values):
     return {k: 100.0 * i / (n - 1) for i, (k, _) in enumerate(ordered)}
 
 
-SEVERITY_TOP_N = 2
+# Score on ALL applicable tests, not just the worst two.
+#
+# Worst-two was the earlier default, on the argument that six near-independent tests
+# get diluted by averaging and a short candidate is extreme on one or two rather than
+# mildly odd on everything. Measured 18/08/2026, the two orderings share only 15 of
+# their top 50 and move the median name 99 places, so the choice is not cosmetic.
+#
+# All six wins because it uses every observation and is the less opinionated of the
+# two, and there is no backtest to justify the opinionated one. The applicability bias
+# that worst-two was partly guarding against is handled by the cohort ranking below.
+# SEVERITY_TOP_N = None means "use them all".
+SEVERITY_TOP_N = None
 
 # Default weights, by HOW DIRECT THE EVIDENCE IS - not equal.
 #
@@ -58,21 +69,11 @@ DEFAULT_WEIGHTS = {
 
 
 def composite(flag_scores, weights=None, enforce_minimum=False):
-    """Severity: the weighted mean of a company's WORST TWO applicable tests.
+    """Weighted mean over every APPLICABLE test - see SEVERITY_TOP_N above.
 
-    NOT the mean of all six, which is what this used to be. The correlation matrix
-    is why: the tests are near-independent (mean |rho| 0.058), so averaging all of
-    them rewards a company that is mildly odd on everything and buries one that is
-    extreme on two. The second is the interesting company.
-
-    Measured on the built universe, the mean-of-all version ranked Supermicro 70th,
-    AES 323rd, Archer-Daniels-Midland 397th and Crown Castle dead last at 656 - every
-    company that had actually disclosed an accounting problem sat mid-table or worse,
-    while an airport sat near the top.
-
-    Weights still apply, and are still renormalised over applicable tests only, so a
-    reader who cranks one slider changes WHICH tests are most likely to be a company's
-    worst two.
+    Renormalisation is the point: a test that does not apply has its weight removed
+    from the denominator rather than contributing a zero, so a bank is never scored
+    as though it passed a test it was never given.
     """
     applicable = {k: v for k, v in flag_scores.items() if v is not None}
     if not applicable:
@@ -83,9 +84,10 @@ def composite(flag_scores, weights=None, enforce_minimum=False):
     w = {k: base.get(k, 1.0) for k in applicable}
     if not sum(w.values()):
         return None
-    # A weight scales how much a test counts towards being one of the worst two.
     scored = sorted(((v * w[k], w[k]) for k, v in applicable.items()),
-                    key=lambda t: t[0], reverse=True)[:SEVERITY_TOP_N]
+                    key=lambda t: t[0], reverse=True)
+    if SEVERITY_TOP_N:
+        scored = scored[:SEVERITY_TOP_N]
     weight_sum = sum(x[1] for x in scored)
     if not weight_sum:
         return None

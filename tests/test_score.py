@@ -49,29 +49,29 @@ def test_composite_none_below_minimum_applicable():
                      enforce_minimum=True) is None
 
 
-def test_composite_is_the_worst_two_not_the_mean_of_all():
-    # Mean of all three would be 60. Severity takes the worst two: (90+60)/2.
+def test_composite_is_the_mean_of_every_applicable_test():
+    """All six, not the worst two. Switched 18/08/2026: the two orderings shared
+    only 15 of their top 50, and all-six is the less opinionated choice with no
+    backtest to justify the other."""
     got = composite({"a": 90.0, "b": 60.0, "c": 30.0}, weights=None, enforce_minimum=True)
-    assert got == 75.0
+    assert got == 60.0
 
 
-def test_extreme_on_two_beats_mildly_odd_on_six():
-    """The whole point of severity. Under a mean-of-all the mild company wins."""
+def test_mildly_odd_on_six_now_outranks_extreme_on_two():
+    """The deliberate consequence of scoring on ALL applicable tests, documented
+    rather than hidden. A company extreme on two and clean on four now ranks below
+    one that is moderately poor across the board. Under the old worst-two rule it
+    was the other way round."""
     extreme = composite({"a": 99.0, "b": 97.0, "c": 10.0, "d": 5.0, "e": 5.0, "f": 5.0})
     mild = composite({"a": 65.0, "b": 64.0, "c": 63.0, "d": 62.0, "e": 61.0, "f": 60.0})
-    assert extreme > mild
-    # And confirm the old aggregator would have got it backwards.
-    mean = lambda d: sum(d.values()) / len(d)
-    assert mean({"a": 99.0, "b": 97.0, "c": 10.0, "d": 5.0, "e": 5.0, "f": 5.0}) \
-        < mean({"a": 65.0, "b": 64.0, "c": 63.0, "d": 62.0, "e": 61.0, "f": 60.0})
+    assert mild > extreme
 
 
-def test_a_single_extreme_is_tempered_by_the_second_worst():
-    # One test at 100 and nothing else should not top the list on its own.
+def test_a_single_extreme_is_diluted_by_the_rest():
     lone = composite({"a": 100.0, "b": 2.0, "c": 1.0})
     both = composite({"a": 100.0, "b": 96.0, "c": 1.0})
     assert both > lone
-    assert lone == 51.0
+    assert abs(lone - 103.0 / 3) < 1e-9
 
 
 def test_composite_none_when_all_weights_zero():
@@ -101,7 +101,7 @@ def test_js_composite_mirrors_python():
 
     app = pathlib.Path(__file__).resolve().parent.parent / "docs" / "app.js"
     src = app.read_text(encoding="utf-8")
-    assert "SEVERITY_TOP_N = 2" in src, "JS lost the severity aggregation"
+    assert "const SEVERITY_TOP_N = null;" in src,         "JS aggregation drifted from score.py - both must score on all applicable tests"
     # The JS default weights must match DEFAULT_WEIGHTS exactly.
     from score import DEFAULT_WEIGHTS
     block = re.search(r"const DEFAULT_WEIGHTS = \{(.*?)\};", src, re.S).group(1)

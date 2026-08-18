@@ -37,13 +37,13 @@
   <header class="hero">
     <h1>Shortfall</h1>
     <p class="lede">Six accounting tests over the S&amp;P 500 and the ASX&nbsp;200.
-    Each company is scored 0-100 on its worst two. <strong>Higher means further into
-    the tail</strong>, against peers in the same sector.</p>
+    Scored 0-100 across every test that applies, ranked against sector peers.
+    Higher is worse.</p>
   </header>
 
   <section class="panel" id="quadPanel" aria-label="Score against short interest">
     <div class="panel-head">
-      <h2>Compare any two</h2>
+      <h2>Cross-plot</h2>
       <label class="xpick"><select id="yvar"></select> against <select id="xvar"></select></label>
       <p class="note" id="quadNote"></p>
     </div>
@@ -64,7 +64,7 @@
     <div class="panel-head">
       <h2>Weighting</h2>
       <p class="note">Weighted by how directly each test observes an accounting
-      problem, not equally. Cards show the default score when you move them.</p>
+      problem. Move one and cards show the default alongside.</p>
     </div>
     <div id="sliders"></div>
     <button id="resetWeights" type="button">Reset</button>
@@ -99,9 +99,9 @@
         <thead>
           <tr>
             <th>Test</th>
-            <th>Measures</th>
-            <th>The worry</th>
-            <th>The innocent reading</th>
+            <th>What it is</th>
+            <th>Bear reading</th>
+            <th>Bull reading</th>
           </tr>
         </thead>
         <tbody id="explainBody"></tbody>
@@ -112,22 +112,22 @@
   <section class="panel" id="limits">
     <h2>Caveats</h2>
     <ul>
-      <li><strong>No backtest.</strong> Nobody knows whether these tests predict anything.
+      <li>No backtest. Nobody knows whether these tests predict anything.
       Score against 12-month return is rho 0.01 - but that is not evidence they fail
       either. One year of 656 names cannot detect an effect the size the academic work
       on accruals reports. It would take a decade of point-in-time cross-sections and
       decile portfolio sorts to answer the question at all.</li>
-      <li><strong>The tests miss the known cases.</strong> The 18
+      <li>The tests miss the known cases. The 18
       companies that restated, changed auditor or filed late sit at a median rank of
       291 of 656 - no higher than everyone else. Short sellers spotted
       them (5.4% of float against 3.5%); these tests did not.</li>
-      <li><strong>Filing events are US only.</strong> 197
+      <li>Filing events are US only. 197
       Australian names cannot carry them.</li>
-      <li><strong>Australian cash flow is derived.</strong> Two routes; where they
+      <li>Australian cash flow is derived. Two routes; where they
       disagree the accruals flag is dropped, not guessed.</li>
-      <li><strong>Inventory is scaled by revenue,</strong> not cost of sales, which is not
+      <li>Inventory is scaled by revenue, not cost of sales, which is not
       reliably tagged.</li>
-      <li><strong>41 companies are unranked,</strong> with fewer than
+      <li>41 companies are unranked, with fewer than
       three applicable tests. Not applicable never means a pass.</li>
     </ul>
     <p class="fineprint">SEC EDGAR for the United States, Yahoo Finance for Australia,

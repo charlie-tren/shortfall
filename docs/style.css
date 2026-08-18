@@ -322,7 +322,7 @@ table.heat td.n, table.heat th.n { color: var(--na); }
 .ptf input { width: 100%; accent-color: var(--accent); }
 .ptf output { font-family: var(--mono); font-size: 11px; color: var(--soft); text-align: right; }
 
-.trend { stroke: var(--na); stroke-width: 1.6; stroke-dasharray: 6 5; opacity: 0.9; }
+.trend { stroke: var(--ink); stroke-width: 2; stroke-dasharray: 7 5; opacity: 0.75; }
 #quadSvg .dot { fill: var(--na); opacity: 0.3; }
 #quadSvg .dot.mid { fill: var(--accent); opacity: 0.75; }
 #quadSvg .dot.hot { fill: var(--warn); opacity: 1; stroke: var(--ink); stroke-width: 0.8; }
@@ -352,7 +352,6 @@ table.heat td.n, table.heat th.n { color: var(--na); }
 .xpick select { font: inherit; font-size: 14px; background: var(--bg); color: var(--ink);
   border: 1px solid var(--rule); border-radius: 6px; padding: 5px 9px; }
 
-.trend.weak { opacity: 0.35; stroke-dasharray: 2 6; }
 
 /* --- UI pass ---------------------------------------------------------------
    Measured, not eyeballed: nothing overflowed and nothing scrolled sideways, but
@@ -403,5 +402,4 @@ h2 { font-size: 21px; }
 .chartkey .key { display: inline-flex; align-items: center; gap: 8px; }
 .chartkey i { display: inline-block; font-style: normal; }
 .chartkey .k-fit { width: 26px; height: 0; border-top: 2px dashed var(--na); }
-.chartkey .k-fit.weak { opacity: 0.5; }
 .chartkey .k-hot { width: 9px; height: 9px; border-radius: 50%; background: var(--warn); }
