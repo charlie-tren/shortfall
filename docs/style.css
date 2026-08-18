@@ -394,18 +394,14 @@ h2 { font-size: 21px; }
   #filters select { flex: 1; margin-left: 10px; }
 }
 
-/* Binned medians: the summary the eye cannot compute from 500 overlapping points. */
-.binline { fill: none; stroke: var(--accent); stroke-width: 2.4; opacity: 0.85; }
-.binpt { fill: var(--accent); stroke: var(--raised); stroke-width: 2; }
-#quadSvg .dot { opacity: 0.22; }
-#quadSvg .dot.hot { opacity: 0.7; }
+#quadSvg .dot { opacity: 0.4; }
+#quadSvg .dot.hot { opacity: 0.9; }
 
 /* Key for the chart lines. */
 .chartkey { display: flex; flex-wrap: wrap; gap: 8px 22px; margin: 12px 0 0;
   font-size: 13px; color: var(--na); }
 .chartkey .key { display: inline-flex; align-items: center; gap: 8px; }
 .chartkey i { display: inline-block; font-style: normal; }
-.chartkey .k-bin { width: 26px; height: 3px; background: var(--accent); border-radius: 2px; }
 .chartkey .k-fit { width: 26px; height: 0; border-top: 2px dashed var(--na); }
 .chartkey .k-fit.weak { opacity: 0.5; }
 .chartkey .k-hot { width: 9px; height: 9px; border-radius: 50%; background: var(--warn); }

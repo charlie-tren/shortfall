@@ -277,31 +277,6 @@ function scatter(svg, data, opts) {
                     class: "trend" + (Math.abs(rho) < 0.15 ? " weak" : "") }, svg);
   }
 
-  /* BINNED MEDIANS on top of the cloud. A scatter of 500 points hides a real
-     relationship in overplotting - the eye cannot average. Splitting x into deciles
-     and drawing the median y of each makes the shape visible without asserting
-     anything: these are the data, summarised, not a model fitted to them. */
-  if (opts.bins !== false && data.length >= 100) {
-    const sorted = [...data].sort((p, q) => tx(p.x) - tx(q.x));
-    const k = Math.max(1, Math.floor(sorted.length / 10));
-    const med = [];
-    for (let i = 0; i < 10; i++) {
-      const chunk = i === 9 ? sorted.slice(9 * k) : sorted.slice(i * k, (i + 1) * k);
-      if (chunk.length < 5) continue;
-      const mid = (arr) => {
-        const s = [...arr].sort((m, n) => m - n);
-        return s[Math.floor(s.length / 2)];
-      };
-      med.push([mid(chunk.map((c) => c.x)), mid(chunk.map((c) => c.y))]);
-    }
-    if (med.length > 2) {
-      const d = med.map(([mxv, myv], i) => `${i ? "L" : "M"}${px(mxv).toFixed(1)},${py(myv).toFixed(1)}`).join(" ");
-      svgEl("path", { d, class: "binline" }, svg);
-      med.forEach(([mxv, myv]) => svgEl("circle", { cx: px(mxv), cy: py(myv), r: 5,
-                                                    class: "binpt" }, svg));
-    }
-  }
-
   data.forEach((d) => {
     const dot = svgEl("circle", { cx: px(d.x), cy: py(d.y), r: 3.4,
                                   class: "dot" + (d.row.composite >= 90 ? " hot" : "") }, svg);
@@ -323,11 +298,6 @@ function chartKey(hostId, svg) {
   const host = document.getElementById(hostId);
   if (!host) return;
   host.textContent = "";
-  if (svg.querySelector(".binline")) {
-    const a = el("span", { class: "key" }, host);
-    el("i", { class: "k-bin" }, a);
-    el("span", { text: "median of each tenth of the companies" }, a);
-  }
   const fit = svg.querySelector(".trend");
   if (fit) {
     const b = el("span", { class: "key" }, host);
