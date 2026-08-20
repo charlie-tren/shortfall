@@ -468,14 +468,11 @@ function renderStrips(rows) {
     if (state.tail !== key) {
       const first = sm.findIndex((_, i) => lo + ((i + 0.5) / RIDGE_BINS) * span >= cut);
       if (first > 0 && first < RIDGE_BINS - 1) {
-        const tailPts = pts.slice(first);
-        /* The tail is drawn as a DOTTED CONTINUATION of the curve. No fill: the
-           tail is where the curve is lowest, so a filled region there has almost no
-           area and reads as nothing. Dashing the line itself survives a sliver.
-           The boundary line stays, because on tax rate and stock compensation the
-           curve is flat enough that the dash alone would be hard to place. */
-        svgEl("path", { d: `M${tailPts.join(" L")}`, class: "ridgetailline" }, svg);
-        svgEl("line", { x1: px(cut), y1: base - 12, x2: px(cut), y2: base,
+        /* Just the boundary. Filling, hatching and dashing the tail were all tried:
+           each depends on the region having some height, and on tests where the tail
+           runs flat along the baseline there is none. A full-height dashed line at
+           the cut works the same on every row. */
+        svgEl("line", { x1: px(cut), y1: by(peak) - 6, x2: px(cut), y2: base,
                         class: "ridgecut" }, svg);
       }
     }

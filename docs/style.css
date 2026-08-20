@@ -453,10 +453,8 @@ h2 { font-size: 21px; }
 .ridgeSvg { width: 100%; height: 74px; display: block; overflow: visible; }
 .ridgefill { fill: var(--accent); opacity: 0.28; }
 .ridgeline { fill: none; stroke: var(--accent); stroke-width: 1.8; }
-/* Tail as a dotted continuation of the curve, drawn over the solid line. */
-.ridgetailline { fill: none; stroke: var(--accent); stroke-width: 2.4;
-  stroke-dasharray: 2 3; stroke-linecap: round; }
-.ridgecut { stroke: var(--accent); stroke-width: 1.4; opacity: 0.85; }
+/* Boundary line at the worst-10% cut. Nothing else marks the tail. */
+.ridgecut { stroke: var(--na); stroke-width: 1.2; stroke-dasharray: 3 3; }
 .ridgemark { stroke: var(--ink); stroke-width: 1; opacity: 0.55; pointer-events: none; }
 .ridgehit { fill: transparent; }
 .ridgelabel { fill: var(--ink); font-size: 14px; font-family: var(--serif); }
