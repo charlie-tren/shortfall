@@ -373,9 +373,6 @@ function renderCards(rows) {
         }
       }
     });
-    el("p", { class: "applicable",
-              text: `${row.applicable} of 6 tests apply. Ranked against `
-                    + `${row.ranked_against === "universe" ? "the whole market" : row.sector}.` }, card);
   });
   renderPager(rows.length, pages);
 }
@@ -464,9 +461,22 @@ function renderStrips(rows) {
     const pts = sm.map((v, i) => `${bx(i).toFixed(1)},${by(v).toFixed(1)}`);
     svgEl("path", { d: `M${bx(0).toFixed(1)},${base} L${pts.join(" L")} L${bx(RIDGE_BINS - 1).toFixed(1)},${base} Z`,
                     class: "ridgefill" }, svg);
+
+    /* The worst 10% is a COLOURED SECTION of the curve rather than a bar drawn
+       across it. Suppressed while this test is the active filter, because then the
+       whole list is that tail and the highlight would be marking everything. */
+    if (state.tail !== key) {
+      const first = sm.findIndex((_, i) => lo + ((i + 0.5) / RIDGE_BINS) * span >= cut);
+      if (first > 0 && first < RIDGE_BINS - 1) {
+        const tailPts = pts.slice(first);
+        svgEl("path", { d: `M${bx(first).toFixed(1)},${base} L${tailPts.join(" L")} `
+                          + `L${bx(RIDGE_BINS - 1).toFixed(1)},${base} Z`,
+                        class: "ridgetail" }, svg);
+        svgEl("path", { d: `M${tailPts.join(" L")}`, class: "ridgetailline" }, svg);
+      }
+    }
     svgEl("path", { d: `M${pts.join(" L")}`, class: "ridgeline" }, svg);
     svgEl("line", { x1: PAD_L, y1: base, x2: W - PAD_R, y2: base, class: "grid" }, svg);
-    svgEl("line", { x1: px(cut), y1: by(peak) - 4, x2: px(cut), y2: base, class: "ridgecut" }, svg);
 
     const name = svgEl("text", { x: PAD_L - 14, y: base - 2, class: "ridgelabel",
                                  "text-anchor": "end" }, svg);
