@@ -453,8 +453,10 @@ h2 { font-size: 21px; }
 .ridgeSvg { width: 100%; height: 74px; display: block; overflow: visible; }
 .ridgefill { fill: var(--accent); opacity: 0.28; }
 .ridgeline { fill: none; stroke: var(--accent); stroke-width: 1.8; }
-.ridgetail { fill: var(--warn); opacity: 0.5; }
-.ridgetailline { fill: none; stroke: var(--warn); stroke-width: 1.8; }
+/* Hatch, so a thin tail still reads. Stroke is a CSS var so both themes work. */
+.ridgetail { opacity: 0.85; }
+.hatchline { stroke: var(--accent); stroke-width: 1.6; }
+.ridgecut { stroke: var(--accent); stroke-width: 1.4; opacity: 0.9; }
 .ridgemark { stroke: var(--ink); stroke-width: 1; opacity: 0.55; pointer-events: none; }
 .ridgehit { fill: transparent; }
 .ridgelabel { fill: var(--ink); font-size: 14px; font-family: var(--serif); }

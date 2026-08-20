@@ -469,10 +469,25 @@ function renderStrips(rows) {
       const first = sm.findIndex((_, i) => lo + ((i + 0.5) / RIDGE_BINS) * span >= cut);
       if (first > 0 && first < RIDGE_BINS - 1) {
         const tailPts = pts.slice(first);
+        /* Hatched, not filled. The tail is where the curve is LOWEST, so a solid
+           fill there has almost no area to colour and reads as nothing. Diagonal
+           lines stay visible in a sliver. The pattern id must be unique per SVG:
+           an id defined in one inline SVG is not reachable from another. */
+        const pid = `hatch-${key}`;
+        const defs = svgEl("defs", {}, svg);
+        const pat = svgEl("pattern", {
+          id: pid, width: 4, height: 4, patternUnits: "userSpaceOnUse",
+          patternTransform: "rotate(45)",
+        }, defs);
+        svgEl("line", { x1: 0, y1: 0, x2: 0, y2: 4, class: "hatchline" }, pat);
         svgEl("path", { d: `M${bx(first).toFixed(1)},${base} L${tailPts.join(" L")} `
                           + `L${bx(RIDGE_BINS - 1).toFixed(1)},${base} Z`,
-                        class: "ridgetail" }, svg);
-        svgEl("path", { d: `M${tailPts.join(" L")}`, class: "ridgetailline" }, svg);
+                        fill: `url(#${pid})`, class: "ridgetail" }, svg);
+        /* On tests where the tail sits almost on the baseline - tax rate, stock
+           compensation - the hatched region has no height to show, so the boundary
+           line is what makes the cut locatable at all. */
+        svgEl("line", { x1: px(cut), y1: base - 12, x2: px(cut), y2: base,
+                        class: "ridgecut" }, svg);
       }
     }
     svgEl("path", { d: `M${pts.join(" L")}`, class: "ridgeline" }, svg);
