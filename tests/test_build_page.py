@@ -23,7 +23,7 @@ def row(**kw):
 def test_render_includes_the_name_and_the_backtest_caveat():
     html = render({**BASE, "names": [row()]})
     assert "Shortfall" in html
-    assert "never been backtested" in html
+    assert "not been backtested" in html
 
 
 def test_asx_count_in_the_us_only_caveat_comes_from_the_data():

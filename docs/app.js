@@ -412,61 +412,87 @@ function money(v) {
    This is the view that serves the actual question. A short candidate is a company
    sitting in the far tail of one or two tests, and a strip shows exactly who is out
    there and how far from the pack. Click a strip to keep only its tail. */
+/* RIDGELINE, one density curve per test, with the companies still reachable.
+
+   A density curve has no individual points to hover, so the companies are binned
+   behind it and each bin gets an invisible hit area. Hovering a section names the
+   companies in it rather than leaving the reader with a shape and no way in.
+
+   Values are the RAW figures, clipped to the 2nd-98th percentile: percentile ranks
+   are uniform by construction and would draw six identical flat curves. */
+const RIDGE_BINS = 52;
+
 function renderStrips(rows) {
   const host = document.getElementById("strips");
   host.textContent = "";
-  const W = 1000, H = 34, L = 4, R = 4;
-  const px = (v) => L + (v / 100) * (W - L - R);
+  const W = 1000, RH = 74, PAD_L = 168, PAD_R = 26;
 
   FLAGS.forEach(([key, label]) => {
     const present = rows.filter(({ row }) => {
       const f = row.flags[key];
-      return f && f.applicable && f.rank != null && f.value != null;
+      return f && f.applicable && f.value != null;
     });
-    if (!present.length) return;
-    const strip = el("div", { class: "strip" + (state.tail === key ? " active" : "") }, host);
-    const head = el("div", { class: "strip-head" }, strip);
-    el("span", { class: "strip-name", text: label }, head);
-    el("span", { class: "strip-n", text: `${present.length} companies` }, head);
+    if (present.length < 12) return;
 
+    const row_ = el("div", { class: "ridge" + (state.tail === key ? " active" : "") }, host);
     const svg = document.createElementNS(NS, "svg");
-    svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
-    svg.setAttribute("class", "stripSvg");
-    svg.setAttribute("preserveAspectRatio", "none");
-    strip.appendChild(svg);
+    svg.setAttribute("viewBox", `0 0 ${W} ${RH}`);
+    svg.setAttribute("class", "ridgeSvg");
+    row_.appendChild(svg);
 
-    /* RAW values, not percentile ranks. Ranks are uniform by construction, so a
-       strip of them is an evenly spaced comb with exactly 10% inside any 10% band -
-       it can only ever draw one shape, which is no information at all. The raw
-       values are genuinely skewed, so the clump and the outliers are real.
-
-       Clipped to the 2nd-98th percentile so a single extreme does not squash the
-       rest against the axis; anything beyond is pinned to the edge. */
-    const vals = present.map(({ row }) => row.flags[key].value).sort((a, b) => a - b);
+    const vals = present.map((p) => p.row.flags[key].value).sort((a, b) => a - b);
     const at = (q) => vals[Math.min(vals.length - 1, Math.max(0, Math.floor(q * (vals.length - 1))))];
-    const lo = at(0.02), hi = at(0.98);
-    const span = (hi - lo) || 1;
-    const vx = (v) => L + Math.max(0, Math.min(1, (v - lo) / span)) * (W - L - R);
+    const lo = at(0.02), hi = at(0.98), span = (hi - lo) || 1;
     const cut = at(0.90);
+    const px = (v) => PAD_L + Math.max(0, Math.min(1, (v - lo) / span)) * (W - PAD_L - PAD_R);
 
-    svgEl("line", { x1: L, y1: H / 2, x2: W - R, y2: H / 2, class: "grid" }, svg);
-    svgEl("rect", { x: vx(cut), y: 2, width: (W - R) - vx(cut), height: H - 4,
-                    class: "tailband" }, svg);
+    // bin the companies, then smooth once for the curve
+    const bins = Array.from({ length: RIDGE_BINS }, () => []);
+    present.forEach((p) => {
+      const i = Math.min(RIDGE_BINS - 1,
+        Math.max(0, Math.floor(((p.row.flags[key].value - lo) / span) * RIDGE_BINS)));
+      bins[i].push(p);
+    });
+    const raw = bins.map((b) => b.length);
+    const sm = raw.map((_, i) =>
+      (raw[Math.max(0, i - 1)] + 2 * raw[i] + raw[Math.min(RIDGE_BINS - 1, i + 1)]) / 4);
+    const peak = Math.max(...sm) || 1;
+    const base = RH - 16, height = RH - 30;
+    const bx = (i) => PAD_L + (i / (RIDGE_BINS - 1)) * (W - PAD_L - PAD_R);
+    const by = (v) => base - (v / peak) * height;
 
-    present.forEach(({ row }) => {
-      const f = row.flags[key];
-      const x = vx(f.value);
-      const hot = f.rank >= 90;
-      const ev = row.events && row.events.length;
-      const tick = svgEl("line", {
-        x1: x, y1: hot ? 4 : 9, x2: x, y2: hot ? H - 4 : H - 9,
-        class: "tick" + (hot ? " hot" : "") + (ev ? " ev" : ""),
-      }, svg);
-      tick.addEventListener("mouseenter", (e) => showTip(row, row.composite, e.clientX, e.clientY, true));
-      tick.addEventListener("mouseleave", hideTip);
+    const pts = sm.map((v, i) => `${bx(i).toFixed(1)},${by(v).toFixed(1)}`);
+    svgEl("path", { d: `M${bx(0).toFixed(1)},${base} L${pts.join(" L")} L${bx(RIDGE_BINS - 1).toFixed(1)},${base} Z`,
+                    class: "ridgefill" }, svg);
+    svgEl("path", { d: `M${pts.join(" L")}`, class: "ridgeline" }, svg);
+    svgEl("line", { x1: PAD_L, y1: base, x2: W - PAD_R, y2: base, class: "grid" }, svg);
+    svgEl("line", { x1: px(cut), y1: by(peak) - 4, x2: px(cut), y2: base, class: "ridgecut" }, svg);
+
+    const name = svgEl("text", { x: PAD_L - 14, y: base - 2, class: "ridgelabel",
+                                 "text-anchor": "end" }, svg);
+    name.textContent = label;
+    const n = svgEl("text", { x: PAD_L - 14, y: base - 20, class: "ridgen",
+                              "text-anchor": "end" }, svg);
+    n.textContent = `${present.length} companies`;
+
+    // invisible hit areas, one per bin
+    const bw = (W - PAD_L - PAD_R) / RIDGE_BINS;
+    bins.forEach((members, i) => {
+      const hit = svgEl("rect", { x: PAD_L + i * bw, y: 4, width: bw, height: RH - 20,
+                                  class: "ridgehit" }, svg);
+      if (!members.length) return;
+      hit.addEventListener("mouseenter", (e) => {
+        svgEl("line", { x1: PAD_L + (i + 0.5) * bw, y1: 4,
+                        x2: PAD_L + (i + 0.5) * bw, y2: base, class: "ridgemark" }, svg);
+        showBinTip(members, key, label, e.clientX, e.clientY);
+      });
+      hit.addEventListener("mouseleave", () => {
+        svg.querySelectorAll(".ridgemark").forEach((m) => m.remove());
+        hideTip();
+      });
     });
 
-    strip.addEventListener("click", () => {
+    row_.addEventListener("click", () => {
       state.tail = state.tail === key ? null : key;
       state.page = 0;
       render();
@@ -475,8 +501,30 @@ function renderStrips(rows) {
 
   const n = rows.length;
   document.getElementById("stripNote").textContent =
-    `Worst 10% shaded. Click a test to filter`
+    `Worst 10% marked. Hover for names, click a test to filter`
     + (state.tail ? ` - ${FLAGS.find((f) => f[0] === state.tail)[1]}, ${n} companies.` : `.`);
+}
+
+/* Names the companies under the pointer. Sorted worst-first and capped, because a
+   bin in the spike can hold sixty of them. */
+function showBinTip(members, key, label, x, y) {
+  const tip = document.getElementById("tip");
+  tip.textContent = "";
+  const sorted = [...members].sort((a, b) => b.row.flags[key].value - a.row.flags[key].value);
+  el("strong", { text: label }, tip);
+  el("span", { class: "t-line", text: `${members.length} compan${members.length === 1 ? "y" : "ies"} here` }, tip);
+  sorted.slice(0, 7).forEach(({ row }) => {
+    const f = row.flags[key];
+    el("span", { class: "t-line",
+                 text: `${row.ticker} · ${FORMAT[key] ? FORMAT[key](f.value) : f.value.toFixed(2)}` }, tip);
+  });
+  if (sorted.length > 7) {
+    el("span", { class: "t-line", text: `and ${sorted.length - 7} more` }, tip);
+  }
+  tip.style.display = "block";
+  const tw = tip.offsetWidth;
+  tip.style.left = Math.max(8, Math.min(window.innerWidth - tw - 8, x - tw / 2)) + "px";
+  tip.style.top = (y + window.scrollY - tip.offsetHeight - 16) + "px";
 }
 
 function showTip(row, score, x, y, viewport) {
