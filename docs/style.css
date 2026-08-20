@@ -11,6 +11,26 @@
   font-display: swap;
 }
 
+/* Spectral, self-hosted. The homepage already uses it, so the estate stays
+   consistent, and self-hosting keeps the third-party request count at zero the way
+   the display face does. 400, 600 and italic: the table's first column is 600 and
+   would otherwise be synthesised from the regular. */
+@font-face {
+  font-family: "Spectral";
+  src: url("spectral-400.woff2") format("woff2");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Spectral";
+  src: url("spectral-400i.woff2") format("woff2");
+  font-weight: 400; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: "Spectral";
+  src: url("spectral-600.woff2") format("woff2");
+  font-weight: 600; font-style: normal; font-display: swap;
+}
+
 :root {
   --display: "Big Shoulders Display", "Arial Narrow", Impact, sans-serif;
   --bg: #eef0f3;
@@ -22,7 +42,7 @@
   --accent-soft: #7fa3c0;
   --warn: #8a4b2a;
   --na: #9aa3ad;
-  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --serif: "Spectral", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
   --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
 }
 
@@ -60,7 +80,7 @@ body {
   color: var(--ink);
   font-family: var(--serif);
   font-size: 17px;
-  line-height: 1.55;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
 
