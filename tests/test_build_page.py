@@ -23,24 +23,24 @@ def row(**kw):
 def test_render_includes_the_name_and_the_backtest_caveat():
     html = render({**BASE, "names": [row()]})
     assert "Shortfall" in html
-    assert "No backtest" in html
+    assert "never been backtested" in html
 
 
 def test_asx_count_in_the_us_only_caveat_comes_from_the_data():
     html = render({**BASE, "names": [row(), row(ticker="BBB")],
                    "excluded": [row(ticker="CCC")]})
-    assert "3\n      Australian names" in html or "3 Australian names" in html
+    assert "3\n      Australian companies" in html or "3 Australian companies" in html
 
 
 def test_asx_count_is_zero_when_there_are_no_asx_names():
     html = render({**BASE, "names": [row(market="United States (NYSE & Nasdaq)")]})
-    assert "0\n      Australian names" in html or "0 Australian names" in html
+    assert "0\n      Australian companies" in html or "0 Australian companies" in html
 
 
 def test_unranked_count_comes_from_the_data():
     html = render({**BASE, "names": [row()],
                    "excluded": [row(ticker="X"), row(ticker="Y")]})
-    assert "2 companies are unranked" in html
+    assert "2 companies have fewer than three tests" in html
 
 
 def test_render_escapes_company_names():
