@@ -109,21 +109,21 @@
   </section>
 
   <section class="panel" id="limits">
-    <h2>Caveats</h2>
+    <h2>Limits</h2>
     <ul>
-      <li>No backtest. Score against 12-month return is rho 0.01, on one year of
-      656 names. That is too small to detect an effect this size either
-      way.</li>
-      <li>The 18 companies that restated or lost an auditor sit at a
-      median rank of 291 of 656. Short interest picked them up; these
+      <li>These tests have never been backtested. I do not know whether they predict
+      anything.</li>
+      <li>The 18 companies here that restated their accounts or
+      changed auditor score no worse than average. Short sellers spotted them. These
       tests did not.</li>
-      <li>Filing events are US only. The 197
-      Australian names cannot carry them.</li>
-      <li>Australian cash flow is derived from two routes. Where they disagree the
-      accruals test is dropped.</li>
-      <li>Inventory is scaled by revenue, not cost of sales.</li>
-      <li>41 companies are unranked, with fewer than three applicable
-      tests. Not applicable is not a pass.</li>
+      <li>Restatements and auditor changes come from SEC filings, so the
+      197 Australian companies have none.</li>
+      <li>Australian filings do not report operating cash flow, so it is worked back two
+      ways. Where the two disagree, the accruals test is dropped for that company.</li>
+      <li>Inventory is measured against revenue rather than cost of sales, which is not
+      reliably tagged.</li>
+      <li>41 companies have fewer than three tests that apply, so they
+      are not ranked. A test that does not apply is not a pass.</li>
     </ul>
     <p class="fineprint">SEC EDGAR for the United States, Yahoo Finance for Australia,
     as filed. Not investment advice.</p>
