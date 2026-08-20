@@ -573,6 +573,22 @@ function hideTip() {
 
 function buildSliders() {
   const host = document.getElementById("sliders");
+  host.textContent = "";
+  const outs = [];
+
+  /* The number shown is each test's SHARE of the total, so the six always sum to
+     100%. The underlying sliders are multipliers, but only their ratios matter -
+     composite() renormalises - so a share is the honest reading of what a weight
+     does. Move one and the other five visibly give ground. */
+  const refresh = () => {
+    const total = FLAGS.reduce((s, [k]) => s + state.weights[k], 0);
+    outs.forEach(({ key, out }) => {
+      out.textContent = total
+        ? (100 * state.weights[key] / total).toFixed(0) + "%"
+        : "0%";
+    });
+  };
+
   FLAGS.forEach(([k, label]) => {
     const wrap = el("label", { class: "slider" }, host);
     el("span", { text: label }, wrap);
@@ -581,21 +597,24 @@ function buildSliders() {
       value: String(DEFAULT_WEIGHTS[k]),
       "aria-label": `Weight for ${label}`,
     }, wrap);
-    const out = el("output", { text: DEFAULT_WEIGHTS[k].toFixed(2) }, wrap);
+    const out = el("output", {}, wrap);
+    outs.push({ key: k, out });
     input.addEventListener("input", () => {
       state.weights[k] = parseFloat(input.value);
-      out.textContent = parseFloat(input.value).toFixed(2);
+      refresh();
+      state.page = 0;
       render();
     });
   });
+  refresh();
+
   document.getElementById("resetWeights").addEventListener("click", () => {
     state.weights = defaultWeights();
     host.querySelectorAll("input").forEach((i, idx) => {
       i.value = String(DEFAULT_WEIGHTS[FLAGS[idx][0]]);
     });
-    host.querySelectorAll("output").forEach((o, idx) => {
-      o.textContent = DEFAULT_WEIGHTS[FLAGS[idx][0]].toFixed(2);
-    });
+    refresh();
+    state.page = 0;
     render();
   });
 }
@@ -653,9 +672,10 @@ function buildFilters() {
   sSel.addEventListener("change", () => { state.size = sSel.value; state.page = 0; render(); });
 
   const minWrap = el("label", { text: "Min score" }, host);
+  const scoreRow = el("span", { class: "scorewrap" }, minWrap);
   const min = el("input", { type: "range", min: "0", max: "95", step: "5", value: "0",
-                            class: "minscore" }, minWrap);
-  const out = el("output", { text: "0" }, minWrap);
+                            class: "minscore" }, scoreRow);
+  const out = el("output", { text: "0" }, scoreRow);
   min.addEventListener("input", () => {
     state.minScore = parseFloat(min.value);
     out.textContent = min.value;
@@ -675,7 +695,7 @@ function buildFilters() {
    ["3", "3 or more above 90"]].forEach(([v, t]) => el("option", { value: v, text: t }, tSel));
   tSel.addEventListener("change", () => { state.minHot = tSel.value; state.page = 0; render(); });
 
-  const eLabel = el("label", { text: "" }, host);
+  const eLabel = el("label", { class: "check" }, host);
   const cb = el("input", { type: "checkbox" }, eLabel);
   el("span", { text: "Disclosed a problem" }, eLabel);
   cb.addEventListener("change", () => { state.eventsOnly = cb.checked; state.page = 0; render(); });
