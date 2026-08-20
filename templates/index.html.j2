@@ -92,7 +92,7 @@
   <div id="tip" role="tooltip"></div>
 
   <section class="panel" id="explain">
-    <h2>The Six Tests</h2>
+    <h2>The Tests</h2>
     <div class="tablewrap">
       <table>
         <thead>
@@ -111,23 +111,19 @@
   <section class="panel" id="limits">
     <h2>Caveats</h2>
     <ul>
-      <li>No backtest. Nobody knows whether these tests predict anything.
-      Score against 12-month return is rho 0.01 - but that is not evidence they fail
-      either. One year of 656 names cannot detect an effect the size the academic work
-      on accruals reports. It would take a decade of point-in-time cross-sections and
-      decile portfolio sorts to answer the question at all.</li>
-      <li>The tests miss the known cases. The {{ disclosed|length }}
-      companies that restated, changed auditor or filed late sit at a median rank of
-      291 of {{ names|length }} - no higher than everyone else. Short sellers spotted
-      them (5.4% of float against 3.5%); these tests did not.</li>
-      <li>Filing events are US only. {{ counts.get("Australia (ASX)", 0) }}
+      <li>No backtest. Score against 12-month return is rho 0.01, on one year of
+      {{ names|length }} names. That is too small to detect an effect this size either
+      way.</li>
+      <li>The {{ disclosed|length }} companies that restated or lost an auditor sit at a
+      median rank of 291 of {{ names|length }}. Short interest picked them up; these
+      tests did not.</li>
+      <li>Filing events are US only. The {{ counts.get("Australia (ASX)", 0) }}
       Australian names cannot carry them.</li>
-      <li>Australian cash flow is derived. Two routes; where they
-      disagree the accruals flag is dropped, not guessed.</li>
-      <li>Inventory is scaled by revenue, not cost of sales, which is not
-      reliably tagged.</li>
-      <li>{{ excluded|length }} companies are unranked, with fewer than
-      three applicable tests. Not applicable never means a pass.</li>
+      <li>Australian cash flow is derived from two routes. Where they disagree the
+      accruals test is dropped.</li>
+      <li>Inventory is scaled by revenue, not cost of sales.</li>
+      <li>{{ excluded|length }} companies are unranked, with fewer than three applicable
+      tests. Not applicable is not a pass.</li>
     </ul>
     <p class="fineprint">SEC EDGAR for the United States, Yahoo Finance for Australia,
     as filed. Not investment advice.</p>

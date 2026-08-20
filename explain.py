@@ -1,58 +1,58 @@
-"""Copy for the explanation table.
+"""Copy for the tests table.
 
-Kept SHORT on purpose. An earlier version ran three full sentences per cell across
-four columns and nobody was going to read it. The columns are a reference you scan
-while looking at a card, not an essay.
+FLAT STATEMENTS, not epigrams. An earlier version gave every cell the same pithy
+rhythm - "paying up for engineers, on purpose", "not an inference, the company
+disclosed it" - and the uniformity was the tell. Say what the thing is and stop.
 """
 
 EXPLANATIONS = [
     {
         "key": "accruals",
         "flag": "Accruals vs cash",
-        "measures": "Profit not backed by cash, over assets.",
-        "deterioration": "The gap has to close, usually by profit falling.",
-        "innocent": "Growth funds working capital before it collects.",
+        "measures": "Profit minus operating cash flow, over assets.",
+        "deterioration": "Profit is not converting to cash.",
+        "innocent": "Growth ties up cash before it is collected.",
     },
     {
         "key": "working_capital",
         "flag": "Receivables and inventory",
-        "measures": "Working capital growing faster than sales.",
-        "deterioration": "Slower payers, or stock that is not selling.",
-        "innocent": "Stock ahead of a launch. Bigger customers, longer terms.",
+        "measures": "Receivables and stock growing faster than sales.",
+        "deterioration": "Customers paying slower, or stock not moving.",
+        "innocent": "Stock built for a launch, or bigger customers on longer terms.",
     },
     {
         "key": "share_count_roic",
         "flag": "Share count vs returns",
-        "measures": "Dilution while return on capital falls.",
-        "deterioration": "Issuing shares into worse economics.",
-        "innocent": "Funding an acquisition that has not paid off yet.",
+        "measures": "Share count rising while return on capital falls.",
+        "deterioration": "Dilution funding worse returns.",
+        "innocent": "A recent acquisition not yet earning.",
     },
     {
         "key": "goodwill",
         "flag": "Goodwill",
-        "measures": "Acquisition premium as a share of assets.",
-        "deterioration": "The asset most likely to be written off.",
-        "innocent": "A big deal that will work out fine.",
+        "measures": "Goodwill as a share of assets.",
+        "deterioration": "First asset to be written down.",
+        "innocent": "A recent acquisition.",
     },
     {
         "key": "tax_rate",
         "flag": "Effective tax rate",
-        "measures": "How much the rate moves year to year.",
-        "deterioration": "One-offs propping up reported profit.",
-        "innocent": "Profit mix shifts. Settlements. Rate changes.",
+        "measures": "Year-to-year movement in the tax rate.",
+        "deterioration": "One-offs flattering reported profit.",
+        "innocent": "Changed profit mix, settlements, rate changes.",
     },
     {
         "key": "stock_comp",
         "flag": "Stock compensation",
         "measures": "Share-based pay as a share of revenue.",
-        "deterioration": "A real cost that never leaves the bank account.",
-        "innocent": "Paying up for engineers, on purpose.",
+        "deterioration": "A cost that dilutes holders without touching cash.",
+        "innocent": "Competing for staff.",
     },
     {
         "key": "events",
         "flag": "Filing events",
-        "measures": "Restatement, auditor change or late filing, two years.",
-        "deterioration": "Not an inference. The company disclosed it.",
-        "innocent": "Auditor rotation. A systems migration.",
+        "measures": "Restatement, auditor change or late filing in two years.",
+        "deterioration": "Disclosed by the company itself.",
+        "innocent": "Auditor rotation, or a systems migration.",
     },
 ]
