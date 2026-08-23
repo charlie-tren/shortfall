@@ -222,7 +222,19 @@ function spearman(pairs) {
 /* Generic scatter. Both panels use it so they cannot drift apart in style. */
 function scatter(svg, data, opts) {
   while (svg.firstChild) svg.removeChild(svg.firstChild);
-  const W = 1000, H = 480, L = 66, R = 26, T = 22, B = 62;
+  /* Draw at CONTAINER pixel scale. A fixed 1000-unit viewBox scaled into a 317px
+     phone shrank every label with it: the 14px axis text rendered at 4px, and the
+     2.08:1 viewBox letterboxed inside a 560px-tall box so the plot used a third of
+     its own panel. One viewBox unit is one CSS pixel now, so type is its stated size
+     and the drawing fills the box. */
+  const box = svg.getBoundingClientRect();
+  const W = Math.max(280, Math.round(box.width) || 1000);
+  const H = Math.max(220, Math.round(box.height) || 480);
+  const narrow = W < 520;
+  /* R and B measured off the render, not chosen: at R=14 the final x tick ("624.9bn")
+     ran off the right edge, and at B=44 the bottom y label sat on top of the first
+     x label. */
+  const L = narrow ? 46 : 66, R = narrow ? 32 : 26, T = narrow ? 14 : 22, B = narrow ? 54 : 62;
   svg.setAttribute("viewBox", "0 0 " + W + " " + H);
   if (data.length < 20) return null;
 
@@ -422,7 +434,12 @@ const RIDGE_BINS = 52;
 function renderStrips(rows) {
   const host = document.getElementById("strips");
   host.textContent = "";
-  const W = 1000, RH = 74, PAD_L = 168, PAD_R = 26;
+  /* Container scale here too, for the same reason: the ridge labels were rendering
+     at 4px. PAD_L is a share of the width rather than a fixed 168, which on a phone
+     was over half the row. */
+  const hostW = Math.round(host.getBoundingClientRect().width) || 1000;
+  const W = Math.max(280, hostW), RH = 74, PAD_R = W < 520 ? 12 : 26;
+  const PAD_L = Math.min(168, Math.round(W * 0.42));
 
   FLAGS.forEach(([key, label]) => {
     const present = rows.filter(({ row }) => {
@@ -773,5 +790,12 @@ document.addEventListener("DOMContentLoaded", () => {
     lbl.textContent = dark ? "Light" : "Dark";
     render();
   });
-  window.addEventListener("resize", () => renderStrips(scored()));
+  /* Both charts size themselves from their container, so both must redraw when it
+     changes. Only the strips did, so a rotated phone left the scatter at the old
+     width. Debounced: resize fires continuously during a drag. */
+  let resizeT;
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeT);
+    resizeT = setTimeout(() => { const rows = scored(); renderStrips(rows); renderQuadrant(rows); }, 120);
+  });
 });
