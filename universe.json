@@ -267,11 +267,6 @@
    "market": "United States (NYSE & Nasdaq)"
   },
   {
-   "ticker": "AVB",
-   "name": "AvalonBay Communities",
-   "market": "United States (NYSE & Nasdaq)"
-  },
-  {
    "ticker": "AVY",
    "name": "Avery Dennison",
    "market": "United States (NYSE & Nasdaq)"
@@ -874,11 +869,6 @@
   {
    "ticker": "EQIX",
    "name": "Equinix",
-   "market": "United States (NYSE & Nasdaq)"
-  },
-  {
-   "ticker": "EQR",
-   "name": "Equity Residential",
    "market": "United States (NYSE & Nasdaq)"
   },
   {
@@ -1942,6 +1932,11 @@
    "market": "United States (NYSE & Nasdaq)"
   },
   {
+   "ticker": "RDDT",
+   "name": "Reddit",
+   "market": "United States (NYSE & Nasdaq)"
+  },
+  {
    "ticker": "RTX",
    "name": "RTX Corporation",
    "market": "United States (NYSE & Nasdaq)"
@@ -2384,6 +2379,11 @@
   {
    "ticker": "VST",
    "name": "Vistra Corp.",
+   "market": "United States (NYSE & Nasdaq)"
+  },
+  {
+   "ticker": "VMRK",
+   "name": "Vivmark Residential",
    "market": "United States (NYSE & Nasdaq)"
   },
   {
