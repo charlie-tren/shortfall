@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Shortfall</title>
-<meta name="description" content="Six tests of accounting quality across the S&amp;P 500 and ASX 200. Companies whose numbers are deteriorating, and the specific flag that fired. A flag is not a thesis.">
+<meta name="description" content="Six accounting tests over the S&amp;P 500 and ASX 200. Every company scored against its sector peers.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Shortfall">
-<meta property="og:description" content="Companies whose accounting quality is deteriorating, and the specific flag that fired.">
+<meta property="og:description" content="Six accounting tests over the S&amp;P 500 and ASX 200. Every company scored against its sector peers.">
 <meta property="og:url" content="https://charlietrenorden.com/shortfall/">
 <meta property="og:image" content="https://charlietrenorden.com/shortfall/og.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -111,19 +111,13 @@
   <section class="panel" id="limits">
     <h2>Limits</h2>
     <ul>
-      <li>The tests have not been backtested. Whether they predict anything is
-      unknown.</li>
-      <li>The {{ disclosed|length }} companies that restated their accounts or changed
-      auditor score no worse than average here. Short interest identified them; these
-      tests did not.</li>
-      <li>Restatements and auditor changes come from SEC filings, so the
-      {{ counts.get("Australia (ASX)", 0) }} Australian companies have none.</li>
-      <li>Australian filings do not report operating cash flow, so it is worked back two
-      ways. Where the two disagree, the accruals test is dropped for that company.</li>
-      <li>Inventory is measured against revenue rather than cost of sales, which is not
-      reliably tagged.</li>
-      <li>{{ excluded|length }} companies have fewer than three tests that apply, so they
-      are not ranked. A test that does not apply is not a pass.</li>
+      <li>No restatement or auditor-change data for the
+      {{ counts.get("Australia (ASX)", 0) }} Australian companies. SEC filings only.</li>
+      <li>Australian filings omit operating cash flow. Derived two ways; the accruals
+      test is dropped where they disagree.</li>
+      <li>Inventory measured against revenue. Cost of sales is not reliably
+      tagged.</li>
+      <li>{{ excluded|length }} companies unranked: fewer than three tests apply.</li>
     </ul>
     <p class="fineprint">SEC EDGAR for the United States, Yahoo Finance for Australia,
     as filed. Not investment advice.</p>
