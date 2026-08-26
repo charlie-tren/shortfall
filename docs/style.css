@@ -409,7 +409,7 @@ input[type="range"] { height: 30px; }
    column. Give the section heads a little more air and a consistent rhythm. */
 .panel { padding: 22px 24px; margin-bottom: 26px; }
 .panel-head { margin-bottom: 18px; }
-h2 { font-size: 21px; }
+h2 { font-size: 24px; }
 .note { font-size: 15px; max-width: 70ch; }
 
 /* The card is the unit that gets read most; let it breathe and respond to hover. */
