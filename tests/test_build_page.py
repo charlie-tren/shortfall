@@ -20,10 +20,13 @@ def row(**kw):
     return base
 
 
-def test_render_includes_the_name_and_the_backtest_caveat():
+def test_render_includes_the_name_and_the_advice_disclaimer():
+    # The backtest caveat was cut from Limits on 25/08/2026 (3e28cd3). The
+    # claim-limiting line that survives is the fineprint, and that is the one
+    # that must never silently vanish from a page about accounting red flags.
     html = render({**BASE, "names": [row()]})
     assert "Shortfall" in html
-    assert "not been backtested" in html
+    assert "Not investment advice" in html
 
 
 def test_asx_count_in_the_us_only_caveat_comes_from_the_data():
@@ -40,7 +43,9 @@ def test_asx_count_is_zero_when_there_are_no_asx_names():
 def test_unranked_count_comes_from_the_data():
     html = render({**BASE, "names": [row()],
                    "excluded": [row(ticker="X"), row(ticker="Y")]})
-    assert "2 companies have fewer than three tests" in html
+    # Bind the count and its subject, not the sentence around them - the wording
+    # has already been rewritten once (042c194) and broke this test.
+    assert "2 companies unranked" in html
 
 
 def test_render_escapes_company_names():
