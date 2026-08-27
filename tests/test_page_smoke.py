@@ -60,6 +60,12 @@ def test_page_loads_without_application_errors(server):
         browser, page = page_with(pw, errors)
         assert page.locator(".card").count() > 10
         # The Cloudflare beacon cannot pass CORS from localhost; that is not ours.
+        # This passes in CI only because the analytics gate suppresses BOTH beacons for
+        # automation, so a headless browser never requests them and there is no DNS
+        # lookup to fail. Before that gate landed this test failed on the runner with a
+        # bare "Failed to load resource: net::ERR_NAME_NOT_RESOLVED", which carries no
+        # URL and so slips past the filter below. If the gate is ever removed, filter on
+        # requestfailed (which does carry a URL) rather than widening this list.
         ours = [e for e in errors if "cloudflareinsights" not in e and "ERR_FAILED" not in e]
         assert ours == [], ours
         browser.close()
