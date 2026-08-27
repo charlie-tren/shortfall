@@ -1,0 +1,37 @@
+name: Page smoke
+
+# The eleven checks that actually load the built page in a browser were excluded from
+# refresh.yml with --ignore, so the only tests that would catch a JS error taking the
+# whole table out never ran anywhere. They are the ones that found a null reference
+# which silently stopped the theme toggle being wired up.
+#
+# A separate workflow rather than a step in refresh.yml, on purpose: that job has a
+# 45-minute budget and publishes the data, and a chromium install has no business
+# being able to delay or fail the weekly pull. This one commits nothing, so the worst
+# it can do is go red.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "docs/**"
+      - "templates/**"
+      - "tests/test_page_smoke.py"
+      - ".github/workflows/page-smoke.yml"
+  # Weekly, after the data refresh has rebuilt the page it is smoking.
+  # Odd minute - GitHub drops on-the-hour scheduled runs under load.
+  schedule:
+    - cron: "29 23 * * 0"
+  workflow_dispatch:
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.11"
+      - run: pip install pytest playwright
+      - run: python -m playwright install --with-deps chromium
+      - run: python -m pytest tests/test_page_smoke.py -q
