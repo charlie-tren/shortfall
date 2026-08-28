@@ -297,3 +297,59 @@ def test_no_peer_list_means_no_links_rather_than_broken_ones(server):
             "#cards .card .alsoon a", "ns => ns.map(a => a.textContent)")
         assert set(labels) == {"DCF Studio"}, labels
         browser.close()
+
+
+def test_a_lookup_leaves_the_charts_populated(server):
+    """The bug this fixes: arriving from Consensus Drift or DCF Studio filtered the
+    page to one company, which emptied the cross-plot and the distributions - both are
+    about a POPULATION and one company has no distribution. The charts now keep the
+    population and mark the company instead, which is also the more useful answer,
+    since where a company sits against its peers is Shortfall's whole subject."""
+    with sync_playwright() as pw:
+        browser = pw.chromium.launch()
+        page = browser.new_page()
+        page.goto(URL)
+        page.wait_for_selector("#cards .card")
+        page.wait_for_timeout(400)
+        before = page.eval_on_selector_all("#quadSvg .dot", "ns => ns.length")
+        assert before > 100
+
+        page.goto(URL + "?q=AMD")
+        page.wait_for_selector("#cards .card")
+        page.wait_for_timeout(400)
+        assert page.eval_on_selector_all("#cards .card", "ns => ns.length") == 1
+        assert page.eval_on_selector_all("#quadSvg .dot", "ns => ns.length") == before
+        assert page.eval_on_selector_all("#quadSvg .dot.found", "ns => ns.length") == 1
+        assert page.eval_on_selector_all(".ridgefound", "ns => ns.length") > 0
+        assert "what you searched for" in page.locator("#quadKey").text_content()
+        browser.close()
+
+
+def test_the_other_filters_still_narrow_the_charts(server):
+    """Only the LOOKUP is exempt. A market or sector filter must still drive the
+    charts, or the page would show a population the reader did not ask for."""
+    with sync_playwright() as pw:
+        browser, page = page_with(pw, [])
+        page.wait_for_timeout(300)
+        before = page.eval_on_selector_all("#quadSvg .dot", "ns => ns.length")
+        page.select_option("#filters select", label="Australia (ASX)")
+        page.wait_for_timeout(400)
+        assert page.eval_on_selector_all("#quadSvg .dot", "ns => ns.length") < before
+        browser.close()
+
+
+def test_a_match_missing_from_the_pair_says_so(server):
+    """Short interest is a US disclosure, so no ASX name appears against it. Absent
+    and unmarked is indistinguishable from present and unfound - the note has to say
+    which, or the reader concludes the mark is broken."""
+    with sync_playwright() as pw:
+        browser = pw.chromium.launch()
+        page = browser.new_page()
+        page.goto(URL + "?q=CBA.AX")
+        page.wait_for_selector("#cards .card")
+        page.wait_for_timeout(400)
+        assert page.eval_on_selector_all("#quadSvg .dot.found", "ns => ns.length") == 0
+        note = page.locator("#quadNote").text_content()
+        assert "not on this pair" in note, note
+        assert "Commonwealth Bank" in note, note
+        browser.close()

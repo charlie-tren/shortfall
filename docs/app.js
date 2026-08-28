@@ -106,8 +106,14 @@ function matches(r, q) {
   return name.split(/[^a-z0-9]+/).some((w) => w.startsWith(q));
 }
 
-function visible() {
-  const q = state.q.trim().toLowerCase();
+/* `useQuery` is how the charts and the card list part company. A lookup names ONE
+   company; the cross-plot and the distributions are about a population, and filtering
+   them to one name empties both - which is exactly what a reader arriving from
+   Consensus Drift or DCF Studio saw. So the charts keep the whole (otherwise filtered)
+   population and MARK the company instead, which is the more useful answer anyway:
+   Shortfall's subject is where a company sits against its peers. */
+function visible(useQuery = true) {
+  const q = useQuery ? state.q.trim().toLowerCase() : "";
   return window.SHORTFALL.names.filter((r) => {
     if (q && !matches(r, q)) return false;
     if (state.market !== "all" && r.market !== state.market) return false;
@@ -138,8 +144,8 @@ function visible() {
   });
 }
 
-function scored() {
-  const rows = visible().map((r) => ({
+function scored(useQuery = true) {
+  const rows = visible(useQuery).map((r) => ({
     row: r,
     score: composite(r, state.weights),
     base: composite(r, defaultWeights()),
@@ -150,8 +156,12 @@ function scored() {
 
 function render() {
   const rows = scored();
-  renderQuadrant(rows);
-  renderStrips(rows);
+  // The charts ignore the lookup and mark the match instead. Everything else on the
+  // page - the dropdowns, the sliders, the per-test minimums - still narrows them.
+  const found = new Set(state.q.trim() ? rows.map(({ row }) => row.ticker) : []);
+  const population = state.q.trim() ? scored(false) : rows;
+  renderQuadrant(population, found);
+  renderStrips(population, found);
   renderCards(rows);
 }
 
@@ -304,9 +314,16 @@ function scatter(svg, data, opts) {
                     class: "trend" }, svg);
   }
 
-  data.forEach((d) => {
-    const dot = svgEl("circle", { cx: px(d.x), cy: py(d.y), r: 3.4,
-                                  class: "dot" + (d.row.composite >= 90 ? " hot" : "") }, svg);
+  /* The looked-up company is drawn LAST and larger, so it is not buried under the
+     five hundred dots it has to be found among. */
+  const found = opts.found || new Set();
+  const order = data.slice().sort((a, b) => Number(found.has(a.row.ticker))
+                                          - Number(found.has(b.row.ticker)));
+  order.forEach((d) => {
+    const hit = found.has(d.row.ticker);
+    const dot = svgEl("circle", { cx: px(d.x), cy: py(d.y), r: hit ? 6 : 3.4,
+                                  class: "dot" + (d.row.composite >= 90 ? " hot" : "")
+                                       + (hit ? " found" : "") }, svg);
     dot.addEventListener("mouseenter", (e) => showTip(d.row, d.row.composite, e.clientX, e.clientY));
     dot.addEventListener("mouseleave", hideTip);
   });
@@ -334,9 +351,16 @@ function chartKey(hostId, svg) {
   const c = el("span", { class: "key" }, host);
   el("i", { class: "k-hot" }, c);
   el("span", { text: "scores 90 or above" }, c);
+  // Only while a lookup is running: an entry for a mark that is not on the chart is
+  // worse than no entry.
+  if (svg.querySelector(".found")) {
+    const f = el("span", { class: "key" }, host);
+    el("i", { class: "k-found" }, f);
+    el("span", { text: "what you searched for" }, f);
+  }
 }
 
-function renderQuadrant(rows) {
+function renderQuadrant(rows, found) {
   const svg = document.getElementById("quadSvg");
   if (!svg) return;
   const vx = XVARS[state.xvar] || XVARS.assets;
@@ -345,13 +369,27 @@ function renderQuadrant(rows) {
                    .filter((d) => d.x != null && d.y != null);
   const rho = scatter(svg, data, {
     logX: !!vx.log, logY: !!vy.log, sqrtY: !!vy.sqrt,
-    xLabel: vx.label, yLabel: vy.label, fmtX: vx.fmt, fmtY: vy.fmt,
+    xLabel: vx.label, yLabel: vy.label, fmtX: vx.fmt, fmtY: vy.fmt, found,
   });
-  document.getElementById("quadNote").textContent = data.length < 20
+  let note = data.length < 20
     ? "Not enough data for this pair."
     : data.length + " companies. Rank correlation "
       // +0 avoids "-0.00" when rho rounds to zero from below.
       + (rho == null ? "n/a" : (rho + 0).toFixed(2).replace("-0.00", "0.00")) + ".";
+  /* A looked-up company can be missing from THIS pair while sitting perfectly well on
+     the page - short interest is a US disclosure, so no ASX name appears against it.
+     Absent and unmarked is indistinguishable from present and unfound, so say which.
+     This is provenance a reader could not otherwise know, not a caption on the chart. */
+  if (found && found.size) {
+    const shown = data.filter((d) => found.has(d.row.ticker));
+    if (!shown.length) {
+      const missing = rows.filter(({ row }) => found.has(row.ticker));
+      note += missing.length === 1
+        ? ` ${missing[0].row.name} has no ${vy.label.toLowerCase()}, so it is not on this pair.`
+        : ` None of the ${missing.length} matches has ${vy.label.toLowerCase()}.`;
+    }
+  }
+  document.getElementById("quadNote").textContent = note;
   chartKey("quadKey", svg);
 }
 
@@ -489,7 +527,7 @@ function money(v) {
    are uniform by construction and would draw six identical flat curves. */
 const RIDGE_BINS = 52;
 
-function renderStrips(rows) {
+function renderStrips(rows, found) {
   const host = document.getElementById("strips");
   host.textContent = "";
   /* Container scale here too, for the same reason: the ridge labels were rendering
@@ -554,6 +592,16 @@ function renderStrips(rows) {
     svgEl("path", { d: `M${pts.join(" L")}`, class: "ridgeline" }, svg);
     svgEl("line", { x1: PAD_L, y1: base, x2: W - PAD_R, y2: base, class: "grid" }, svg);
 
+    /* Where the looked-up company sits on this test. Drawn after the curve so it is
+       not painted over, and clamped by px() so a company outside the 2nd-to-98th
+       percentile window still marks the end of the axis rather than vanishing. */
+    (found && found.size ? present : []).forEach((p_) => {
+      if (!found.has(p_.row.ticker)) return;
+      const x = px(p_.row.flags[key].value);
+      svgEl("line", { x1: x, y1: by(peak) - 9, x2: x, y2: base + 4,
+                      class: "ridgefound" }, svg);
+    });
+
     const name = svgEl("text", { x: PAD_L - 14, y: base - 2, class: "ridgelabel",
                                  "text-anchor": "end" }, svg);
     name.textContent = label;
@@ -586,9 +634,17 @@ function renderStrips(rows) {
   });
 
   const n = rows.length;
+  // Two different vertical lines appear on these rows once a lookup is running - the
+  // dashed 10% cut and a solid mark for the company - and nothing else says which is
+  // which. The dashed one is already named; this names the other.
+  const hits = found && found.size
+    ? rows.filter(({ row }) => found.has(row.ticker)) : [];
+  const mark = hits.length === 1 ? ` ${hits[0].row.name} marked in full.`
+             : hits.length > 1 ? ` ${hits.length} matches marked in full.` : "";
   document.getElementById("stripNote").textContent =
     `Worst 10% marked. Hover for names, click a test to filter`
-    + (state.tail ? ` - ${FLAGS.find((f) => f[0] === state.tail)[1]}, ${n} companies.` : `.`);
+    + (state.tail ? ` - ${FLAGS.find((f) => f[0] === state.tail)[1]}, ${n} companies.` : `.`)
+    + mark;
 }
 
 /* Names the companies under the pointer. Sorted worst-first and capped, because a

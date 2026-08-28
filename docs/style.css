@@ -480,6 +480,14 @@ h2 { font-size: 24px; }
 .ridgeline { fill: none; stroke: var(--accent); stroke-width: 1.8; }
 /* Boundary line at the worst-10% cut. Nothing else marks the tail. */
 .ridgecut { stroke: var(--na); stroke-width: 1.2; stroke-dasharray: 3 3; }
+
+/* The looked-up company, on both charts. Distinguished by TREATMENT rather than by a
+   third hue: the dot keeps its own fill, so "scores 90 or above" still reads, and
+   gains a ring. Placed last so it survives the per-theme .dot.hot overrides above. */
+#quadSvg .dot.found { opacity: 1; stroke: var(--ink); stroke-width: 2.2; }
+.ridgefound { stroke: var(--ink); stroke-width: 1.6; }
+.chartkey .k-found { width: 9px; height: 9px; border-radius: 50%;
+  background: var(--accent); box-shadow: 0 0 0 2px var(--ink); margin-left: 2px; }
 .ridgemark { stroke: var(--ink); stroke-width: 1; opacity: 0.55; pointer-events: none; }
 .ridgehit { fill: transparent; }
 .ridgelabel { fill: var(--ink); font-size: 14px; font-family: var(--serif); }
