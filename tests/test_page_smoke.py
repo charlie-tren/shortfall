@@ -257,3 +257,43 @@ def test_an_empty_lookup_leaves_no_trace_in_the_url(server):
         page.wait_for_timeout(250)
         assert "q=" not in page.url, page.url
         browser.close()
+
+
+def test_also_on_links_carry_the_ticker(server):
+    """The handoff: same company, sibling site, ticker in the URL."""
+    with sync_playwright() as pw:
+        browser, page = page_with(pw, [])
+        page.fill("#filters input[type=search]", "CBA.AX")
+        page.wait_for_timeout(250)
+        hrefs = page.eval_on_selector_all(
+            "#cards .card .alsoon a", "ns => ns.map(a => a.href)")
+        assert any("consensus-drift/?q=CBA.AX" in h for h in hrefs), hrefs
+        assert any(h.endswith("dcf.charlietrenorden.com/CBA.AX") for h in hrefs), hrefs
+        browser.close()
+
+
+def test_a_sibling_that_lacks_the_company_is_omitted_not_shown(server):
+    """Consensus Drift drops about a hundred names a week where estimate history is
+    too sparse, so 37 of these 652 have no reading to link to. Charlie's choice was to
+    omit the link rather than grey it - which only works if the code actually checks."""
+    with sync_playwright() as pw:
+        browser, page = page_with(pw, [])
+        page.fill("#filters input[type=search]", "4DX.AX")
+        page.wait_for_timeout(250)
+        labels = page.eval_on_selector_all(
+            "#cards .card .alsoon a", "ns => ns.map(a => a.textContent)")
+        assert labels == ["DCF Studio"], labels
+        browser.close()
+
+
+def test_no_peer_list_means_no_links_rather_than_broken_ones(server):
+    """A build that could not reach the siblings must show nothing, not guess. The
+    failure this guards is a link that lands on a page without the company."""
+    with sync_playwright() as pw:
+        browser, page = page_with(pw, [])
+        page.evaluate("() => { window.SHORTFALL_PEERS = {}; render(); }")
+        page.wait_for_timeout(250)
+        labels = page.eval_on_selector_all(
+            "#cards .card .alsoon a", "ns => ns.map(a => a.textContent)")
+        assert set(labels) == {"DCF Studio"}, labels
+        browser.close()

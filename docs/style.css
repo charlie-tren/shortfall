@@ -212,6 +212,13 @@ h2 {
 .card .score-n { font-size: 22px; }
 .card .score-of { font-size: 11px; color: var(--na); }
 .card .base { font-family: var(--mono); font-size: 11px; color: var(--na); width: 100%; text-align: right; }
+.alsoon { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--rule);
+  font-family: var(--mono); font-size: 12px; }
+.alsoon .lead { color: var(--soft); padding-right: .55em; }
+.alsoon .sep { color: var(--na); padding: 0 .5em; }
+.alsoon a { color: var(--accent); text-decoration: none;
+  border-bottom: 1px solid var(--accent-soft); }
+.alsoon a:hover { border-bottom-color: var(--accent); }
 
 .badge {
   display: inline-block; margin: 9px 7px 0 0; padding: 3px 9px; border-radius: 99px;

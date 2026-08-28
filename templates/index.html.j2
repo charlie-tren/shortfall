@@ -129,6 +129,11 @@
   </footer>
 </div>
 <script src="data.js"></script>
+<!-- What the sibling sites cover. A script tag, not a fetch: same reason as
+     data.js - no request in a reader's browser to fail, and the page still
+     works off disk. Missing is handled, so an old build simply shows no
+     links rather than breaking. -->
+<script src="peers.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

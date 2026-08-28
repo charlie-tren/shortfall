@@ -240,3 +240,20 @@ def write_js(payload, path="docs/data.js"):
     """A JS global, so the page works from file:// as well as over http."""
     with open(path, "w", encoding="utf-8") as fh:
         fh.write("window.SHORTFALL = " + json.dumps(payload) + ";\n")
+
+
+def write_tickers(payload, path="docs/tickers.json"):
+    """The public list of what this site covers, for the sibling sites to read.
+
+    Consensus Drift links to a company here only when it is actually ranked, so it
+    needs to know the universe - and 652 tickers is about 6KB, against the 4MB of
+    data.js. Published as its own file so nobody has to parse the payload to answer
+    one question, and kept to the RANKED names: a company in `excluded` has fewer
+    than three applicable tests and no score to link to.
+    """
+    names = sorted(r["ticker"] for r in payload["names"])
+    with open(path, "w", encoding="utf-8", newline="\n") as fh:
+        json.dump({"site": "Shortfall",
+                   "url": "https://charlietrenorden.com/shortfall/",
+                   "as_of": payload.get("as_of"),
+                   "tickers": names}, fh, indent=1)

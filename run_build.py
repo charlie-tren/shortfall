@@ -10,7 +10,7 @@ from datetime import date
 
 from asx import load as asx_load, records_from_statements
 from build import write as write_html
-from build_data import assemble_name, finalise, write, write_js
+from build_data import assemble_name, finalise, write, write_js, write_tickers
 from edgar import load_ticker_lookup, normalise_ticker, dedupe_by_cik, submissions
 from events import extract_events, LABELS
 from fetch_us import sweep, build_records
@@ -109,6 +109,7 @@ def main(as_of=None):
 
     write(payload)
     write_js(payload)
+    write_tickers(payload)
     write_html(payload)
     log(f"included {len(payload['names'])}, excluded {len(payload['excluded'])}, "
         f"ASX losing accruals to derived-CFO disagreement: "

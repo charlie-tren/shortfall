@@ -399,8 +399,52 @@ function renderCards(rows) {
         }
       }
     });
+    alsoOn(card, row);
   });
   renderPager(rows.length, pages);
+}
+
+/* The same company on the sibling sites: what it is worth, and where estimates are
+   heading. A target that does not cover the company is OMITTED, not greyed - Charlie's
+   call, 28/08/2026, chosen from rendered options.
+
+   DCF Studio is always offered because it routes any ticker. Consensus Drift is
+   offered only when peers.js says it plots the name: it drops about a hundred names a
+   week where estimate history is too sparse, which today leaves 37 of these 652 with
+   no reading to link to. The whole row disappears rather than printing a lead with
+   nothing after it. */
+const PEER_LINKS = [
+  {
+    label: "Consensus Drift",
+    slug: "consensus-drift",
+    href: (t) => "https://charlietrenorden.com/consensus-drift/?q=" + encodeURIComponent(t),
+  },
+  {
+    label: "DCF Studio",
+    slug: null,
+    href: (t) => "https://dcf.charlietrenorden.com/" + encodeURIComponent(t),
+  },
+];
+
+function covers(slug, ticker) {
+  if (!slug) return true;
+  const peers = window.SHORTFALL_PEERS || {};
+  const site = peers[slug];
+  // No peers.js, or a build that could not reach the sibling: show nothing rather
+  // than guess. A link that lands on an empty page is worse than no link.
+  return !!(site && site.tickers && site.tickers.indexOf(ticker) >= 0);
+}
+
+function alsoOn(card, row) {
+  const on = PEER_LINKS.filter((p) => covers(p.slug, row.ticker));
+  if (!on.length) return;
+  const foot = el("div", { class: "alsoon" }, card);
+  el("span", { class: "lead", text: "Also on" }, foot);
+  on.forEach((p, i) => {
+    if (i) el("span", { class: "sep", text: "·" }, foot);
+    el("a", { href: p.href(row.ticker), text: p.label,
+              rel: "noopener" }, foot);
+  });
 }
 
 function renderPager(total, pages) {
