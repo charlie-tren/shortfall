@@ -8,3 +8,6 @@ shot-*.png
 
 # a working screenshot, not a site asset
 live-final.png
+
+# contact sheets from tools/link_options.py - regenerate, do not commit
+link_options.png
