@@ -205,3 +205,55 @@ def test_filtering_returns_to_page_one(server):
         page.wait_for_timeout(300)
         assert page.locator("#pageInfo").text_content().startswith("1-")
         browser.close()
+
+
+def names_on_page(page):
+    return page.eval_on_selector_all("#cards .card h3", "ns => ns.map(n => n.textContent)")
+
+
+def test_lookup_matches_from_the_start_not_the_middle(server):
+    """A substring lookup is quietly useless on a list of 652 companies: "AMD" also
+    returns Camden Property Trust and "ON" returns twenty names, because both sit
+    inside longer words. Matching only from the start of the ticker or of a word in
+    the name is what makes three letters name a company rather than describe one."""
+    with sync_playwright() as pw:
+        browser, page = page_with(pw, [])
+        box = page.locator("#filters input[type=search]")
+        box.fill("AMD")
+        page.wait_for_timeout(250)
+        assert names_on_page(page) == ["Advanced Micro Devices"]
+        box.fill("ON")
+        page.wait_for_timeout(250)
+        got = names_on_page(page)
+        assert "ON Semiconductor" in got
+        assert not any("Constellation" in n or "Regeneron" in n for n in got), got
+        browser.close()
+
+
+def test_a_query_in_the_url_lands_on_that_company(server):
+    """The whole point of the lookup: Consensus Drift and DCF Studio hand a ticker
+    over by URL, and a handoff that lands on the unfiltered list is not a handoff."""
+    with sync_playwright() as pw:
+        browser = pw.chromium.launch()
+        page = browser.new_page()
+        page.goto(URL + "?q=CBA.AX")
+        page.wait_for_selector("#cards .card")
+        page.wait_for_timeout(250)
+        assert names_on_page(page) == ["Commonwealth Bank"]
+        assert page.locator("#filters input[type=search]").input_value() == "CBA.AX"
+        browser.close()
+
+
+def test_an_empty_lookup_leaves_no_trace_in_the_url(server):
+    """Never write the default state to the URL - a shared link must not carry an
+    empty filter."""
+    with sync_playwright() as pw:
+        browser, page = page_with(pw, [])
+        box = page.locator("#filters input[type=search]")
+        box.fill("CBA")
+        page.wait_for_timeout(250)
+        assert "q=CBA" in page.url
+        box.fill("")
+        page.wait_for_timeout(250)
+        assert "q=" not in page.url, page.url
+        browser.close()

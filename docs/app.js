@@ -30,7 +30,7 @@ const DEFAULT_WEIGHTS = {
 };
 
 const state = {
-  weights: {}, market: "all", sector: "all", size: "all",
+  weights: {}, q: "", market: "all", sector: "all", size: "all",
   minScore: 0, minHot: "all", price: "all", eventsOnly: false, tail: null, page: 0,
   xvar: "assets",
   yvar: "short_interest",
@@ -94,8 +94,22 @@ function hotCount(r) {
   }).length;
 }
 
+/* Everything matches from the START of the ticker or the start of a WORD in the name,
+   never from the middle. Substring matching was tried first and is quietly useless on
+   a lookup: "AMD" also returned Camden Property Trust, and "ON" returned twenty names
+   because it sits inside Constellation, Regeneron and Capstone. A reader typing three
+   letters is naming a company, not describing one. */
+function matches(r, q) {
+  if (r.ticker.toLowerCase().startsWith(q)) return true;
+  const name = r.name.toLowerCase();
+  if (name.startsWith(q)) return true;
+  return name.split(/[^a-z0-9]+/).some((w) => w.startsWith(q));
+}
+
 function visible() {
+  const q = state.q.trim().toLowerCase();
   return window.SHORTFALL.names.filter((r) => {
+    if (q && !matches(r, q)) return false;
     if (state.market !== "all" && r.market !== state.market) return false;
     if (state.sector !== "all" && r.sector !== state.sector) return false;
     if (state.eventsOnly && !(r.events && r.events.length)) return false;
@@ -636,6 +650,27 @@ function buildSliders() {
   });
 }
 
+/* ?q= is the whole reason the other two sites can hand a company over. It is read once
+   on boot and rewritten as the reader types - but only when there is something to say.
+   An empty q REMOVES the parameter rather than writing q=, so the default state never
+   lands in the URL and a shared link never carries an empty filter. */
+function readQuery() {
+  try {
+    return new URLSearchParams(window.location.search).get("q") || "";
+  } catch (e) {
+    return "";
+  }
+}
+
+function writeQuery() {
+  try {
+    const u = new URL(window.location.href);
+    if (state.q.trim()) u.searchParams.set("q", state.q.trim());
+    else u.searchParams.delete("q");
+    history.replaceState(null, "", u);
+  } catch (e) { /* a file:// page has no origin to replace against */ }
+}
+
 function dropdown(host, label, values, onChange, allLabel) {
   const wrap = el("label", { text: label }, host);
   const sel = el("select", {}, wrap);
@@ -678,6 +713,21 @@ function buildFilters() {
   const all = window.SHORTFALL.names;
   const uniq = (fn) => Array.from(new Set(all.map(fn).filter(Boolean))).sort();
 
+  // First control on the page, because it answers a different question from the rest:
+  // the dropdowns narrow a set, this one finds one company in 652. Until 28/08/2026
+  // there was no way to look a name up at all, which also made this site impossible
+  // to link INTO from the other two.
+  const find = el("label", { class: "find", text: "Find" }, host);
+  const q = el("input", { type: "search", placeholder: "Company or ticker",
+                          "aria-label": "Find a company by name or ticker" }, find);
+  q.value = state.q;
+  q.addEventListener("input", () => {
+    state.q = q.value;
+    state.page = 0;
+    writeQuery();
+    render();
+  });
+
   dropdown(host, "Market", uniq((r) => r.market), (v) => (state.market = v), "All markets");
   dropdown(host, "Sector", uniq((r) => r.sector), (v) => (state.sector = v), "All sectors");
 
@@ -719,9 +769,10 @@ function buildFilters() {
 
   const clear = el("button", { type: "button", text: "Clear", class: "clearBtn" }, host);
   clear.addEventListener("click", () => {
-    Object.assign(state, { market: "all", sector: "all", size: "all", minScore: 0,
+    Object.assign(state, { q: "", market: "all", sector: "all", size: "all", minScore: 0,
                            minHot: "all", price: "all", eventsOnly: false, tail: null,
                            page: 0, perTest: {} });
+    writeQuery();
     buildFilters();
     buildTestHeader();
     render();
@@ -774,6 +825,8 @@ document.addEventListener("DOMContentLoaded", () => {
   xsel.value = state.xvar; ysel.value = state.yvar;
   xsel.addEventListener("change", () => { state.xvar = xsel.value; render(); });
   ysel.addEventListener("change", () => { state.yvar = ysel.value; render(); });
+  // Before buildFilters, which prefills the input from it.
+  state.q = readQuery();
   buildSliders();
   buildFilters();
   buildTestHeader();

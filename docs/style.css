@@ -193,8 +193,11 @@ h2 {
 
 #filters { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; font-size: 14px; }
 #filters label { display: flex; align-items: center; gap: 7px; color: var(--soft); }
-#filters select { font: inherit; font-size: 14px; background: var(--bg); color: var(--ink);
+#filters select, #filters input[type="search"] {
+  font: inherit; font-size: 14px; background: var(--bg); color: var(--ink);
   border: 1px solid var(--rule); border-radius: 6px; padding: 5px 9px; }
+#filters input[type="search"] { min-width: 0; }
+#filters input[type="search"]::placeholder { color: var(--na); }
 
 .card {
   background: var(--raised); border: 1px solid var(--rule); border-radius: 10px;
@@ -492,8 +495,14 @@ h2 { font-size: 24px; }
   font-size: 12px; color: var(--na); text-transform: uppercase;
   letter-spacing: 0.05em; font-family: var(--mono);
 }
-#filters select { width: 100%; font-size: 14px; font-family: var(--serif);
-  text-transform: none; letter-spacing: 0; color: var(--ink); }
+#filters select, #filters input[type="search"] { width: 100%; font-size: 14px;
+  font-family: var(--serif); text-transform: none; letter-spacing: 0; color: var(--ink); }
+/* The lookup is the only control that answers "is this company here at all", so it
+   takes the row above the ones that narrow a set the reader is already looking at.
+   The row is full width; the field is not - a 1780px box for a four-letter ticker
+   reads as a mistake. */
+#filters label.find { grid-column: 1 / -1; }
+#filters label.find input[type="search"] { max-width: 380px; }
 #filters label.check {
   grid-template-columns: auto 1fr; grid-template-rows: auto; align-self: end;
   padding-bottom: 8px;
