@@ -269,20 +269,77 @@ def test_also_on_links_carry_the_ticker(server):
             "#cards .card .alsoon a", "ns => ns.map(a => a.href)")
         assert any("consensus-drift/?q=CBA.AX" in h for h in hrefs), hrefs
         assert any(h.endswith("dcf.charlietrenorden.com/CBA.AX") for h in hrefs), hrefs
+        assert any("crosscheck/?q=CBA.AX" in h for h in hrefs), hrefs
+        browser.close()
+
+
+def test_crosscheck_is_offered_only_where_it_covers_the_company(server):
+    """Crosscheck is this site crossed against Consensus Drift, so it holds only the
+    companies BOTH carry - 609 of the 640 here. Offering it on the other 31 would send
+    a reader to a page that cannot show them the company, which is the exact failure
+    the manifest check exists to prevent. DCF Studio is the one link that needs no
+    check, because it routes any ticker.
+
+    Both halves are asserted. A test that only checks the link appears would pass on
+    code that offered it unconditionally, which is the bug."""
+    with sync_playwright() as pw:
+        browser, page = page_with(pw, [])
+        split = page.evaluate(
+            """() => {
+              const on = new Set(((window.SHORTFALL_PEERS || {}).crosscheck || {}).tickers || []);
+              const names = window.SHORTFALL.names || [];
+              return {covered: (names.find(n => on.has(n.ticker)) || {}).ticker || null,
+                      missing: (names.find(n => !on.has(n.ticker)) || {}).ticker || null};
+            }"""
+        )
+        assert split["covered"], "crosscheck peer list is empty - peers.py did not run"
+
+        page.fill("#filters input[type=search]", split["covered"])
+        page.wait_for_timeout(250)
+        labels = page.eval_on_selector_all(
+            "#cards .card .alsoon a", "ns => ns.map(a => a.textContent)")
+        assert "Crosscheck" in labels, (split["covered"], labels)
+
+        if split["missing"]:
+            page.fill("#filters input[type=search]", split["missing"])
+            page.wait_for_timeout(250)
+            labels = page.eval_on_selector_all(
+                "#cards .card .alsoon a", "ns => ns.map(a => a.textContent)")
+            assert "Crosscheck" not in labels, (split["missing"], labels)
         browser.close()
 
 
 def test_a_sibling_that_lacks_the_company_is_omitted_not_shown(server):
     """Consensus Drift drops about a hundred names a week where estimate history is
-    too sparse, so 37 of these 652 have no reading to link to. Charlie's choice was to
-    omit the link rather than grey it - which only works if the code actually checks."""
+    too sparse, so some of these have no reading to link to. Charlie's choice was to
+    omit the link rather than grey it - which only works if the code actually checks.
+
+    The subject is DERIVED, not named. This test asked for 4DX.AX until 09/09/2026,
+    by which time 4DX.AX had dropped out of Shortfall's own universe: the search found
+    no card at all, the assertion saw an empty list, and the failure read as "the peer
+    links broke" when nothing about them had changed. A test pinned to one ticker in a
+    universe that turns over every week fails on data drift and tells you the wrong
+    thing when it does. Picking the company at run time cannot rot, and it also fails
+    honestly - if no such company exists any more, that is a real finding about the
+    join and the skip says so."""
     with sync_playwright() as pw:
         browser, page = page_with(pw, [])
-        page.fill("#filters input[type=search]", "4DX.AX")
+        subject = page.evaluate(
+            """() => {
+              const peers = window.SHORTFALL_PEERS || {};
+              const covered = new Set([].concat(
+                ...Object.values(peers).map(p => (p && p.tickers) || [])));
+              const row = (window.SHORTFALL.names || []).find(n => !covered.has(n.ticker));
+              return row ? row.ticker : null;
+            }"""
+        )
+        if subject is None:
+            pytest.skip("every company is now on every sibling; nothing to omit")
+        page.fill("#filters input[type=search]", subject)
         page.wait_for_timeout(250)
         labels = page.eval_on_selector_all(
             "#cards .card .alsoon a", "ns => ns.map(a => a.textContent)")
-        assert labels == ["DCF Studio"], labels
+        assert labels == ["DCF Studio"], f"{subject}: {labels}"
         browser.close()
 
 

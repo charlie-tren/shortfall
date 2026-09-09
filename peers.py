@@ -25,6 +25,10 @@ PEERS = os.path.join(os.path.dirname(os.path.abspath(__file__)), "peers")
 
 SITES = {
     "consensus-drift": "https://charlietrenorden.com/consensus-drift/tickers.json",
+    # This site crossed against Consensus Drift, so it covers only the companies both
+    # carry - 609 of the 640 here. Gated on its manifest like Consensus Drift, not
+    # offered unconditionally like DCF Studio, which routes any ticker.
+    "crosscheck": "https://charlietrenorden.com/crosscheck/tickers.json",
 }
 
 # A sibling that loses most of its universe is far more likely to be a broken build

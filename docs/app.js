@@ -462,6 +462,15 @@ const PEER_LINKS = [
     slug: null,
     href: (t) => "https://dcf.charlietrenorden.com/" + encodeURIComponent(t),
   },
+  /* This site crossed against Consensus Drift: where the accounting score sits against
+     how far the price is from analyst estimates. It only covers a company both sites
+     carry, so it is gated on its own manifest like Consensus Drift above, not offered
+     unconditionally like DCF Studio - which routes any ticker and so needs no check. */
+  {
+    label: "Crosscheck",
+    slug: "crosscheck",
+    href: (t) => "https://charlietrenorden.com/crosscheck/?q=" + encodeURIComponent(t),
+  },
 ];
 
 function covers(slug, ticker) {
