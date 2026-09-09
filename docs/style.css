@@ -92,7 +92,18 @@ body {
 
 .page { max-width: 1040px; margin: 0 auto; padding: 20px 22px 80px; }
 
-.bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 34px; }
+.bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 34px;
+       flex-wrap: wrap; gap: .75rem 1rem; }
+/* Two nav links held together so they wrap as a unit. Without this the theme toggle
+   sits between them once the bar wraps, and Other projects stops being the last thing
+   in the header. */
+/* order:2 moved from .home to .nav. .home carries it so the back-link sits top RIGHT,
+   which only worked while .home was the flex item of .bar - inside .nav both links now
+   carry order:2, cancelling out, and the nav itself defaulted to 0 and went LEFT of the
+   theme toggle. The house rule is theme toggle first, back-link last. */
+.nav { display: flex; align-items: center; gap: 1.4rem; white-space: nowrap; order: 2; }
+/* Navigation, like its neighbour, rather than a call to action. */
+.nav .cross { color: var(--muted); }
 /* Padding with a matching negative margin: a thumb-sized target without moving the
    link off the baseline the toggle sits on. It measured 115x22. */
 .home { color: var(--soft); text-decoration: none; font-size: 14px;
