@@ -337,6 +337,11 @@
    "market": "United States (NYSE & Nasdaq)"
   },
   {
+   "ticker": "BE",
+   "name": "Bloom Energy",
+   "market": "United States (NYSE & Nasdaq)"
+  },
+  {
    "ticker": "BNY",
    "name": "BNY Mellon",
    "market": "United States (NYSE & Nasdaq)"
@@ -379,11 +384,6 @@
   {
    "ticker": "BF-B",
    "name": "Brown–Forman",
-   "market": "United States (NYSE & Nasdaq)"
-  },
-  {
-   "ticker": "BLDR",
-   "name": "Builders FirstSource",
    "market": "United States (NYSE & Nasdaq)"
   },
   {
@@ -897,6 +897,11 @@
    "market": "United States (NYSE & Nasdaq)"
   },
   {
+   "ticker": "P",
+   "name": "Everpure",
+   "market": "United States (NYSE & Nasdaq)"
+  },
+  {
    "ticker": "ES",
    "name": "Eversource Energy",
    "market": "United States (NYSE & Nasdaq)"
@@ -1234,6 +1239,11 @@
   {
    "ticker": "ITW",
    "name": "Illinois Tool Works",
+   "market": "United States (NYSE & Nasdaq)"
+  },
+  {
+   "ticker": "ILMN",
+   "name": "Illumina, Inc.",
    "market": "United States (NYSE & Nasdaq)"
   },
   {
@@ -1584,11 +1594,6 @@
   {
    "ticker": "MRNA",
    "name": "Moderna",
-   "market": "United States (NYSE & Nasdaq)"
-  },
-  {
-   "ticker": "TAP",
-   "name": "Molson Coors Beverage Company",
    "market": "United States (NYSE & Nasdaq)"
   },
   {
@@ -2219,11 +2224,6 @@
   {
    "ticker": "TKO",
    "name": "TKO Group Holdings",
-   "market": "United States (NYSE & Nasdaq)"
-  },
-  {
-   "ticker": "TTD",
-   "name": "Trade Desk (The)",
    "market": "United States (NYSE & Nasdaq)"
   },
   {

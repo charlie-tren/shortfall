@@ -1,7 +1,7 @@
 {
  "site": "Crosscheck",
  "url": "https://charlietrenorden.com/crosscheck/",
- "as_of": "2026-09-14",
+ "as_of": "2026-09-21",
  "tickers": [
   "A",
   "A2M.AX",
@@ -503,7 +503,6 @@
   "SHW",
   "SJM",
   "SLB",
-  "SMCI",
   "SNA",
   "SNPS",
   "SO",
