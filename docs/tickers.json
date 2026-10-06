@@ -1,7 +1,7 @@
 {
  "site": "Shortfall",
  "url": "https://charlietrenorden.com/shortfall/",
- "as_of": "2026-09-29",
+ "as_of": "2026-10-06",
  "tickers": [
   "A",
   "A2M.AX",
@@ -48,6 +48,7 @@
   "AMZN",
   "ANET",
   "ANN.AX",
+  "ANZ.AX",
   "AON",
   "AOS",
   "APA",
@@ -185,6 +186,7 @@
   "DIS",
   "DLR",
   "DLTR",
+  "DNL.AX",
   "DOC",
   "DOV",
   "DOW",
