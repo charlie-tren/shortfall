@@ -5,7 +5,7 @@ company, so it must only ever run for names the sweep missed - hence the residue
 guard.
 """
 
-from edgar import frame
+from edgar import frame, filer_ciks
 from panel import Record
 from tags import CHAINS, KIND, UNIT, INSTANT, resolve
 
@@ -49,7 +49,10 @@ def build_records(year, frames, meta):
         r = Record(ticker=m["ticker"], name=m["name"], market=m["market"], year=year)
         for concept, field in CONCEPT_TO_FIELD.items():
             period = instant if KIND[concept] == INSTANT else duration
-            value, tag = resolve(concept, cik, frames.get(period, {}))
+            for filer in filer_ciks(cik):
+                value, tag = resolve(concept, filer, frames.get(period, {}))
+                if value is not None:
+                    break
             if value is not None:
                 setattr(r, field, value)
                 r.tags[concept] = tag

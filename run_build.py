@@ -11,7 +11,7 @@ from datetime import date
 from asx import load as asx_load, records_from_statements
 from build import write as write_html
 from build_data import assemble_name, finalise, write, write_js, write_tickers
-from edgar import load_ticker_lookup, normalise_ticker, dedupe_by_cik, submissions
+from edgar import load_ticker_lookup, normalise_ticker, dedupe_by_cik, submissions, filer_ciks
 from events import extract_events, LABELS
 from fetch_us import sweep, build_records
 from returns import fetch as fetch_returns, save as save_returns
@@ -82,7 +82,11 @@ def attach_events(rows, lookup, as_of, log):
         if cik is None:
             continue
         try:
-            found = extract_events(submissions(cik)["filings"]["recent"], as_of)
+            # A predecessor's restatement or auditor change is still this company's.
+            found = {(e["kind"], e["date"], e["form"]): e
+                     for c in filer_ciks(cik)
+                     for e in extract_events(submissions(c)["filings"]["recent"], as_of)}
+            found = sorted(found.values(), key=lambda e: e["date"], reverse=True)
         except Exception as exc:
             log(f"  events failed for {row['ticker']}: {exc}")
             continue

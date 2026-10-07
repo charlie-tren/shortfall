@@ -39,6 +39,30 @@ TICKER_CIK_OVERRIDES = {
 }
 
 
+# A holding-company reorganisation moves the ticker to a NEW CIK that has filed no
+# annual report yet, so every past 10-K sits under the old one. The new CIK then
+# carries a balance sheet and no revenue, profit or cash flow, all six tests read
+# not-applicable, and the company silently drops into `excluded`.
+#
+# ExxonMobil, July 2026: XOM moved to ExxonMobil Holdings Corp (2115436) and Exxon
+# Mobil Corp (34088) filed a 25-NSE on 02/07/2026. Every 10-K to FY2025 is under
+# 34088. Verified 07/10/2026 against both submissions endpoints.
+#
+# successor CIK -> predecessor CIKs, newest first. Each concept is read from the
+# successor first and the predecessors after, so once the new parent files its own
+# 10-K it takes over without anyone touching this. Only a pure reorganisation goes
+# here: after a MERGER the predecessor is a different business, and splicing its
+# history on would score a company on someone else's accounts.
+CIK_PREDECESSORS = {
+    2115436: (34088,),   # ExxonMobil Holdings Corp <- Exxon Mobil Corp
+}
+
+
+def filer_ciks(cik):
+    """The CIK and any predecessors whose filings belong to the same company."""
+    return (cik, *CIK_PREDECESSORS.get(cik, ()))
+
+
 def load_ticker_lookup():
     """{normalised ticker: cik int} for every SEC filer. ~10,400 entries."""
     d = _get("https://www.sec.gov/files/company_tickers.json")
