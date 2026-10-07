@@ -17,10 +17,25 @@ from fetch_us import sweep, build_records
 from returns import fetch as fetch_returns, save as save_returns
 from short_interest import fetch as fetch_short_interest, save as save_short_interest
 
-YEARS = (2024, 2023, 2022, 2021)
+# Four years, no more: tax rate averages over every prior year it is handed, so a
+# fifth year would quietly change what that test measures.
+DEPTH = 4
 
 
-def us_history(names, lookup, log):
+def years_for(as_of):
+    """The four fiscal years to score, newest first, derived from the build date.
+
+    The newest is the latest fiscal year whose following 1 April has passed. US
+    10-Ks for a calendar year are due by the end of March (60-90 days), so from
+    1 April the EDGAR CY frame for the year just gone is complete enough to score.
+    Hard-coding the years left the live page on FY2024 until October 2026.
+    """
+    d = date.fromisoformat(as_of) if isinstance(as_of, str) else as_of
+    newest = d.year - 1 if (d.month, d.day) >= (4, 1) else d.year - 2
+    return tuple(range(newest, newest - DEPTH, -1))
+
+
+def us_history(names, lookup, log, years):
     kept, dropped = dedupe_by_cik(names, lookup)
     if dropped:
         log(f"dual-class dropped: {dropped}")
@@ -30,7 +45,7 @@ def us_history(names, lookup, log):
     if unmapped:
         raise ValueError(f"unmapped US tickers, add a verified override: {unmapped}")
     history = {}
-    for year in YEARS:
+    for year in years:
         for r in build_records(year, sweep(year), meta):
             history.setdefault(r.ticker, []).append(r)
         log(f"  US {year} done")
@@ -83,8 +98,10 @@ def main(as_of=None):
     names = json.load(open("universe.json"))["names"]
     lookup = load_ticker_lookup()
 
+    years = years_for(as_of)
+    log(f"US fiscal years: {years}")
     history = us_history([n for n in names if n["market"].startswith("United States")],
-                         lookup, log)
+                         lookup, log, years)
     au, au_failed = asx_history([n for n in names if n["market"] == "Australia (ASX)"], log)
     history.update(au)
 
