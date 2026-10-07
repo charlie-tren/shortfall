@@ -32,3 +32,12 @@ def test_the_new_cik_wins_once_it_files():
 def test_no_cik_is_its_own_predecessor():
     for new, olds in CIK_PREDECESSORS.items():
         assert new not in olds and len(set(olds)) == len(olds)
+
+
+def test_every_year_stays_on_one_tag():
+    # Exxon's real shape: the old CIK tags both receivables concepts, the new one
+    # only the broader. Taking the new CIK first spliced 35.3bn onto 44.6bn.
+    f = frames({}, {"AccountsReceivableNetCurrent": {XOM_OLD: 35.7},
+                    "ReceivablesNetCurrent": {XOM_NEW: 44.6, XOM_OLD: 44.6}})
+    (r,) = build_records(2025, f, META)
+    assert (r.receivables, r.tags["Receivables"]) == (35.7, "AccountsReceivableNetCurrent")

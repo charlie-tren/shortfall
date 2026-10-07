@@ -7,7 +7,7 @@ guard.
 
 from edgar import frame, filer_ciks
 from panel import Record
-from tags import CHAINS, KIND, UNIT, INSTANT, resolve
+from tags import CHAINS, KIND, UNIT, INSTANT
 
 CONCEPT_TO_FIELD = {
     "Revenue": "revenue", "NetIncome": "net_income", "CFO": "cfo",
@@ -41,6 +41,23 @@ def sweep(year, log=None):
     return out
 
 
+def resolve_filers(concept, ciks, frames):
+    """resolve() across a company's CIKs, TAG first and CIK second.
+
+    The other order splices two tags into one series. Exxon's old CIK tags both
+    AccountsReceivableNetCurrent (35.3bn) and the broader ReceivablesNetCurrent
+    (43.7bn); the new one carries only the broader tag. Successor-first took 2025
+    from one and 2024 from the other and showed receivables up 26% on a year they
+    rose 2%. Walking the chain first keeps every year on the same tag.
+    """
+    for tag in CHAINS[concept]:
+        got = frames.get(tag, {})
+        for cik in ciks:
+            if cik in got:
+                return got[cik], tag
+    return None, None
+
+
 def build_records(year, frames, meta):
     """Panel records for every CIK in `meta`."""
     duration, instant = periods_for(year)
@@ -49,10 +66,7 @@ def build_records(year, frames, meta):
         r = Record(ticker=m["ticker"], name=m["name"], market=m["market"], year=year)
         for concept, field in CONCEPT_TO_FIELD.items():
             period = instant if KIND[concept] == INSTANT else duration
-            for filer in filer_ciks(cik):
-                value, tag = resolve(concept, filer, frames.get(period, {}))
-                if value is not None:
-                    break
+            value, tag = resolve_filers(concept, filer_ciks(cik), frames.get(period, {}))
             if value is not None:
                 setattr(r, field, value)
                 r.tags[concept] = tag
