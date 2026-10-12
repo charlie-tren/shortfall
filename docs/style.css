@@ -278,7 +278,6 @@ footer a:hover { color: var(--accent); }
 
 @media (max-width: 620px) {
   h1 { font-size: 34px; }
-  .page { padding: 16px 15px 60px; }
   .slider { grid-template-columns: 1fr 80px 30px; }
 }
 
@@ -428,7 +427,7 @@ h2 { font-size: 24px; }
 
 /* Mobile: the six-column test grid was cramped even at three columns. */
 @media (max-width: 620px) {
-  .page { padding: 14px 13px 56px; }
+  .page { padding: 14px 16px 56px; }
   .panel { padding: 16px 15px; margin-bottom: 18px; }
   #quadSvg { height: 340px; }
   .flags { grid-template-columns: repeat(2, 1fr); gap: 14px 12px; }
