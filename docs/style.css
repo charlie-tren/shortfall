@@ -92,32 +92,20 @@ body {
 
 .page { max-width: 1040px; margin: 0 auto; padding: 20px 22px 80px; }
 
-.bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 34px;
-       flex-wrap: wrap; gap: .75rem 1rem; }
-/* Two nav links held together so they wrap as a unit. Without this the theme toggle
-   sits between them once the bar wraps, and Other projects stops being the last thing
-   in the header. */
-/* order:2 moved from .home to .nav. .home carries it so the back-link sits top RIGHT,
-   which only worked while .home was the flex item of .bar - inside .nav both links now
-   carry order:2, cancelling out, and the nav itself defaulted to 0 and went LEFT of the
-   theme toggle. The house rule is theme toggle first, back-link last. */
-.nav { display: flex; align-items: center; gap: 1.4rem; white-space: nowrap; order: 2; }
-/* Navigation, like its neighbour, rather than a call to action. */
-.nav .cross { color: var(--muted); }
+.bar { display: flex; justify-content: flex-end; align-items: center; margin-bottom: 34px;
+       gap: 1rem; }
 /* Padding with a matching negative margin: a thumb-sized target without moving the
    link off the baseline the toggle sits on. It measured 115x22. */
 .home { color: var(--soft); text-decoration: none; font-size: 14px;
   display: inline-flex; align-items: center; padding: 11px 4px; margin: -11px -4px; }
 .home:hover { color: var(--accent); }
-/* House standard: the back-link sits top right on every property. */
-.home { order: 2; }
-.back { margin-right: 7px; }
-.toggle {
-  background: none; border: 1px solid var(--rule); color: var(--soft);
-  border-radius: 99px; padding: 5px 13px; font: inherit; font-size: 13px;
-  cursor: pointer; display: flex; align-items: center; gap: 7px;
+.theme-toggle {
+  display: inline-flex; align-items: center; gap: .45rem; padding: .42rem .82rem;
+  border: 1px solid var(--rule); border-radius: 999px; background: transparent;
+  font: 500 12.5px/1 var(--serif); letter-spacing: .02em; color: var(--soft); cursor: pointer;
 }
-.toggle .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+.theme-toggle:hover { color: var(--ink); border-color: var(--accent); }
+.theme-toggle .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
 
 .hero { margin-bottom: 40px; }
 .wip {

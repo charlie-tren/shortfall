@@ -943,13 +943,17 @@ document.addEventListener("DOMContentLoaded", () => {
   render();
   const btn = document.getElementById("themeBtn");
   const lbl = document.getElementById("themeLbl");
-  lbl.textContent = document.documentElement.getAttribute("data-theme") === "dark"
-    ? "Dark" : "Light";
+  const label = () => {
+    const next = document.documentElement.getAttribute("data-theme") === "dark" ? "Light" : "Dark";
+    lbl.textContent = next;
+    btn.setAttribute("aria-label", `Switch to ${next.toLowerCase()} theme`);
+  };
+  label();
   btn.addEventListener("click", () => {
     const dark = document.documentElement.getAttribute("data-theme") === "dark";
     document.documentElement.setAttribute("data-theme", dark ? "light" : "dark");
     localStorage.setItem("theme", dark ? "light" : "dark");
-    lbl.textContent = dark ? "Light" : "Dark";
+    label();
     render();
   });
   /* Both charts size themselves from their container, so both must redraw when it
