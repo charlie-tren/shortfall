@@ -642,11 +642,6 @@
    "market": "United States (NYSE & Nasdaq)"
   },
   {
-   "ticker": "CTVA",
-   "name": "Corteva",
-   "market": "United States (NYSE & Nasdaq)"
-  },
-  {
    "ticker": "CSGP",
    "name": "CoStar Group",
    "market": "United States (NYSE & Nasdaq)"
@@ -1792,11 +1787,6 @@
    "market": "United States (NYSE & Nasdaq)"
   },
   {
-   "ticker": "PSKY",
-   "name": "Paramount Skydance Corporation",
-   "market": "United States (NYSE & Nasdaq)"
-  },
-  {
    "ticker": "PH",
    "name": "Parker Hannifin",
    "market": "United States (NYSE & Nasdaq)"
@@ -2062,6 +2052,11 @@
    "market": "United States (NYSE & Nasdaq)"
   },
   {
+   "ticker": "SKYD",
+   "name": "Skydance Corporation",
+   "market": "United States (NYSE & Nasdaq)"
+  },
+  {
    "ticker": "SWKS",
    "name": "Skyworks Solutions",
    "market": "United States (NYSE & Nasdaq)"
@@ -2257,6 +2252,11 @@
    "market": "United States (NYSE & Nasdaq)"
   },
   {
+   "ticker": "TWLO",
+   "name": "Twilio",
+   "market": "United States (NYSE & Nasdaq)"
+  },
+  {
    "ticker": "TYL",
    "name": "Tyler Technologies",
    "market": "United States (NYSE & Nasdaq)"
@@ -2392,6 +2392,11 @@
    "market": "United States (NYSE & Nasdaq)"
   },
   {
+   "ticker": "VYLR",
+   "name": "Vylor",
+   "market": "United States (NYSE & Nasdaq)"
+  },
+  {
    "ticker": "WRB",
    "name": "W. R. Berkley Corporation",
    "market": "United States (NYSE & Nasdaq)"
@@ -2414,11 +2419,6 @@
   {
    "ticker": "DIS",
    "name": "Walt Disney Company (The)",
-   "market": "United States (NYSE & Nasdaq)"
-  },
-  {
-   "ticker": "WBD",
-   "name": "Warner Bros. Discovery",
    "market": "United States (NYSE & Nasdaq)"
   },
   {
