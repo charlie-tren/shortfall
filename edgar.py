@@ -4,6 +4,7 @@ SEC guidance is 10 requests/second and a contactable User-Agent. We sleep 250ms,
 comfortably inside it.
 """
 
+import http.client
 import json
 import time
 import urllib.error
@@ -14,13 +15,28 @@ import urllib.request
 # in the request log of a public screener.
 UA = {"User-Agent": "shortfall (+https://charlietrenorden.com/shortfall/)"}
 PAUSE = 0.25
+RETRIES = 3
+
+# The 13/10/2026 weekly build died on a truncated chunked response (IncompleteRead)
+# halfway through the frames sweep. A dropped connection or an SEC 5xx is retried;
+# a 404 is an answer, not a fault, and goes straight back to the caller.
+_TRANSIENT = (http.client.IncompleteRead, http.client.RemoteDisconnected,
+              ConnectionError, TimeoutError, urllib.error.URLError)
 
 
 def _get(url):
-    time.sleep(PAUSE)
-    req = urllib.request.Request(url, headers=UA)
-    with urllib.request.urlopen(req, timeout=60) as r:
-        return json.loads(r.read())
+    for attempt in range(RETRIES):
+        time.sleep(PAUSE if attempt == 0 else 5 * attempt)
+        req = urllib.request.Request(url, headers=UA)
+        try:
+            with urllib.request.urlopen(req, timeout=60) as r:
+                return json.loads(r.read())
+        except urllib.error.HTTPError as e:
+            if e.code < 500 and e.code != 429 or attempt == RETRIES - 1:
+                raise
+        except _TRANSIENT:
+            if attempt == RETRIES - 1:
+                raise
 
 
 def normalise_ticker(ticker):
