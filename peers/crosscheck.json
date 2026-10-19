@@ -1,7 +1,7 @@
 {
  "site": "Crosscheck",
  "url": "https://charlietrenorden.com/crosscheck/",
- "as_of": "2026-10-18",
+ "as_of": "2026-10-19",
  "tickers": [
   "A",
   "A2M.AX",
@@ -37,6 +37,7 @@
   "ALX.AX",
   "AMAT",
   "AMC.AX",
+  "AMCR",
   "AMD",
   "AME",
   "AMGN",
@@ -382,7 +383,6 @@
   "MPC",
   "MPL.AX",
   "MPWR",
-  "MQG.AX",
   "MRK",
   "MRNA",
   "MRSH",
@@ -511,7 +511,6 @@
   "SHW",
   "SJM",
   "SLB",
-  "SMCI",
   "SNA",
   "SNPS",
   "SO",
