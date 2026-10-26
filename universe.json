@@ -1897,8 +1897,8 @@
    "market": "United States (NYSE & Nasdaq)"
   },
   {
-   "ticker": "PWR",
-   "name": "Quanta Services",
+   "ticker": "Q",
+   "name": "Qnity Electronics",
    "market": "United States (NYSE & Nasdaq)"
   },
   {
@@ -1907,13 +1907,13 @@
    "market": "United States (NYSE & Nasdaq)"
   },
   {
-   "ticker": "DGX",
-   "name": "Quest Diagnostics",
+   "ticker": "PWR",
+   "name": "Quanta Services",
    "market": "United States (NYSE & Nasdaq)"
   },
   {
-   "ticker": "Q",
-   "name": "Qnity Electronics",
+   "ticker": "DGX",
+   "name": "Quest Diagnostics",
    "market": "United States (NYSE & Nasdaq)"
   },
   {
@@ -1929,11 +1929,6 @@
   {
    "ticker": "RDDT",
    "name": "Reddit",
-   "market": "United States (NYSE & Nasdaq)"
-  },
-  {
-   "ticker": "RTX",
-   "name": "RTX Corporation",
    "market": "United States (NYSE & Nasdaq)"
   },
   {
@@ -1963,7 +1958,7 @@
   },
   {
    "ticker": "RMD",
-   "name": "ResMed|",
+   "name": "ResMed",
    "market": "United States (NYSE & Nasdaq)"
   },
   {
@@ -1999,6 +1994,11 @@
   {
    "ticker": "RCL",
    "name": "Royal Caribbean Group",
+   "market": "United States (NYSE & Nasdaq)"
+  },
+  {
+   "ticker": "RTX",
+   "name": "RTX Corporation",
    "market": "United States (NYSE & Nasdaq)"
   },
   {
@@ -2053,7 +2053,7 @@
   },
   {
    "ticker": "SKYD",
-   "name": "Skydance Corporation",
+   "name": "Skydance",
    "market": "United States (NYSE & Nasdaq)"
   },
   {

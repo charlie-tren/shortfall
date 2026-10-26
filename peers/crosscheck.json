@@ -1,7 +1,7 @@
 {
  "site": "Crosscheck",
  "url": "https://charlietrenorden.com/crosscheck/",
- "as_of": "2026-10-19",
+ "as_of": "2026-10-26",
  "tickers": [
   "A",
   "A2M.AX",
@@ -159,7 +159,6 @@
   "CSGP",
   "CSX",
   "CTAS",
-  "CTD.AX",
   "CTSH",
   "CVNA",
   "CVS",
@@ -183,7 +182,6 @@
   "DLR",
   "DLTR",
   "DNL.AX",
-  "DOC",
   "DOV",
   "DOW",
   "DOW.AX",
@@ -511,6 +509,7 @@
   "SHW",
   "SJM",
   "SLB",
+  "SMCI",
   "SNA",
   "SNPS",
   "SO",
