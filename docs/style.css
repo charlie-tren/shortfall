@@ -11,6 +11,18 @@
   font-display: swap;
 }
 
+/* Subset to the letters of the wordmark only. */
+@font-face {
+  font-family: "DM Serif Display";
+  src: url("dmserif-sf.woff2") format("woff2");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "DM Serif Display";
+  src: url("dmserif-italic-sf.woff2") format("woff2");
+  font-weight: 400; font-style: italic; font-display: swap;
+}
+
 /* Spectral, self-hosted. The homepage already uses it, so the estate stays
    consistent, and self-hosting keeps the third-party request count at zero the way
    the display face does. 400, 600 and italic: the table's first column is 600 and
@@ -40,6 +52,7 @@
   --rule: #d4d9df;
   --accent: #3a5f80;
   --accent-soft: #7fa3c0;
+  --coral: #c8462e;
   --warn: #8a4b2a;
   --bear: #a4472f;
   --bull: #3f6b48;
@@ -57,6 +70,7 @@
     --rule: #262f3a;
     --accent: #82a8ca;
     --accent-soft: #46617d;
+    --coral: #ff8a70;
     --warn: #d29b76;
     --bear: #c9705a;
     --bull: #7ba37f;
@@ -72,6 +86,7 @@
   --rule: #262f3a;
   --accent: #82a8ca;
   --accent-soft: #46617d;
+  --coral: #ff8a70;
   --warn: #d29b76;
   --bear: #c9705a;
   --bull: #7ba37f;
@@ -114,10 +129,12 @@ body {
   font-family: var(--mono); font-size: 12px; color: var(--soft);
 }
 h1 {
-  font-family: var(--display); font-weight: 700;
-  font-size: clamp(38px, 6vw, 62px); line-height: 0.95;
-  margin: 0 0 10px; letter-spacing: 0.01em; text-transform: uppercase;
+  font: 400 clamp(38px, 6vw, 62px)/1.05 "DM Serif Display", Georgia, serif;
+  margin: 0 0 10px;
 }
+h1.wm { display: flex; align-items: center; gap: .3em; }
+h1.wm svg { height: .9em; width: .9em; flex: none; }
+h1.wm i { color: var(--coral); }
 .lede { color: var(--soft); max-width: 60ch; margin: 0; font-size: 17px; }
 
 h2 {
