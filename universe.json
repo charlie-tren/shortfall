@@ -1347,11 +1347,6 @@
    "market": "United States (NYSE & Nasdaq)"
   },
   {
-   "ticker": "KVUE",
-   "name": "Kenvue",
-   "market": "United States (NYSE & Nasdaq)"
-  },
-  {
    "ticker": "KDP",
    "name": "Keurig Dr Pepper",
    "market": "United States (NYSE & Nasdaq)"
@@ -1734,6 +1729,11 @@
   {
    "ticker": "OXY",
    "name": "Occidental Petroleum",
+   "market": "United States (NYSE & Nasdaq)"
+  },
+  {
+   "ticker": "OKTA",
+   "name": "Okta, Inc.",
    "market": "United States (NYSE & Nasdaq)"
   },
   {
