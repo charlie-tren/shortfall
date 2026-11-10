@@ -175,7 +175,7 @@ def test_both_themes_render(server):
         now = page.locator("html").get_attribute("data-theme")
         assert now != start
         # The label names the theme a click gives, not the one showing.
-        assert page.locator("#themeLbl").text_content().lower() == start
+        assert page.locator("#themeLbl").get_attribute("data-t").lower() == start
         assert page.locator("#themeBtn").get_attribute("aria-label") == f"Switch to {start} theme"
         assert now in ("light", "dark")
         assert page.locator(".card").count() > 10

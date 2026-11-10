@@ -945,7 +945,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const lbl = document.getElementById("themeLbl");
   const label = () => {
     const next = document.documentElement.getAttribute("data-theme") === "dark" ? "Light" : "Dark";
-    lbl.textContent = next;
+    lbl.dataset.t = next;
     btn.setAttribute("aria-label", `Switch to ${next.toLowerCase()} theme`);
   };
   label();
