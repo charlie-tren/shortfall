@@ -1,7 +1,7 @@
 {
  "site": "Crosscheck",
  "url": "https://charlietrenorden.com/crosscheck/",
- "as_of": "2026-11-10",
+ "as_of": "2026-11-12",
  "tickers": [
   "A",
   "A2M.AX",
@@ -47,7 +47,6 @@
   "AMZN",
   "ANET",
   "ANN.AX",
-  "ANZ.AX",
   "AON",
   "AOS",
   "APA",
@@ -391,7 +390,6 @@
   "MTD",
   "MTS.AX",
   "MU",
-  "NAB.AX",
   "NCLH",
   "NDAQ",
   "NDSN",
