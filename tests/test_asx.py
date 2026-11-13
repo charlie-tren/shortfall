@@ -76,3 +76,12 @@ def test_nan_values_are_treated_as_absent():
                                     "cashflow": pd.DataFrame()})
     assert recs[0].inventory is None
     assert recs[0].assets == 1000.0
+
+
+def test_drops_the_empty_column_yahoo_pads_onto_the_oldest_year():
+    old = pd.Timestamp("2023-06-30")
+    s = statements()
+    for k in ("balance", "income", "cashflow"):
+        s[k][old] = float("nan")
+    recs = records_from_statements("AAA.AX", "Alpha", s)
+    assert [r.year for r in recs] == [2025, 2024]

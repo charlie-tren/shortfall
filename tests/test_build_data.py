@@ -88,3 +88,16 @@ def test_absent_short_interest_stays_none_never_zero():
         build_data.SHORT_INTEREST = saved
     assert known["short_interest"] == 0.12
     assert missing["short_interest"] is None
+
+
+def test_assemble_name_falls_back_a_year_when_the_latest_is_thin():
+    thin = dict(net_income=200.0, revenue=1000.0, tax_expense=50.0)
+    out = assemble_name([rec(2026, **thin), rec(2025, **FULL), rec(2024, **PRIOR)])
+    assert out["year"] == 2025
+    assert out["applicable"] >= 3
+
+
+def test_assemble_name_keeps_a_thin_year_with_nothing_better_behind_it():
+    thin = dict(net_income=200.0, revenue=1000.0, tax_expense=50.0)
+    out = assemble_name([rec(2026, **thin), rec(2025, **thin), rec(2024, **thin)])
+    assert out["year"] == 2026

@@ -119,6 +119,10 @@ def records_from_statements(ticker, name, statements):
             financing=_at(cf, col, ("Financing Cash Flow",)),
             assets=r.assets,
         )
+        # Yahoo pads the oldest year with an empty column. Kept, it became the base
+        # year for every change test and knocked ANZ off the page (10/11/2026).
+        if r.assets is None and r.revenue is None and r.net_income is None:
+            continue
         # The ASX leg has no XBRL tag names, so record the source for traceability.
         r.tags = {"_source": "yfinance"}
         out.append(r)

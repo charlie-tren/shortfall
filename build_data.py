@@ -65,17 +65,30 @@ def levels(latest):
     }
 
 
+def run_flags(latest, priors):
+    flags, applicable = {}, 0
+    for key, fn in ALL_FLAGS.items():
+        value, ok, reason = fn(latest, priors)
+        flags[key] = {"value": value, "applicable": ok, "reason": reason}
+        applicable += 1 if ok else 0
+    return flags, applicable
+
+
 def assemble_name(history):
     """One name's flag results, or None if there is too little history."""
     got = latest_with_history(history, need=2)
     if got is None:
         return None
     latest, priors = got
-    flags, applicable = {}, 0
-    for key, fn in ALL_FLAGS.items():
-        value, ok, reason = fn(latest, priors)
-        flags[key] = {"value": value, "applicable": ok, "reason": reason}
-        applicable += 1 if ok else 0
+    flags, applicable = run_flags(latest, priors)
+    # Yahoo's first cut of a just-filed year is often missing lines. ANZ and NAB
+    # fell from 3-4 tests to 2 on their FY2026 accounts (10/11/2026) and dropped
+    # off the page, so a year below the minimum yields to the year before it.
+    if applicable < MIN_APPLICABLE_FLAGS and len(priors) >= 2:
+        back_flags, back_applicable = run_flags(priors[0], priors[1:])
+        if back_applicable >= MIN_APPLICABLE_FLAGS:
+            latest, priors = priors[0], priors[1:]
+            flags, applicable = back_flags, back_applicable
     return {
         "ticker": latest.ticker,
         "name": latest.name,
