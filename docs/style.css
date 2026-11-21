@@ -543,3 +543,7 @@ h2 { font-size: 24px; }
 #filters .scorewrap { display: grid; grid-template-columns: 1fr auto; gap: 8px;
   align-items: center; }
 .clearBtn { align-self: end; justify-self: start; margin-bottom: 4px; }
+/* Phones: 16px stops iOS zooming into a field; the back link gets a finger-sized hit area. */
+@media (pointer: coarse) {
+  input:not([type=checkbox]):not([type=radio]):not([type=range]), select, textarea { font-size: 16px !important; }
+}
