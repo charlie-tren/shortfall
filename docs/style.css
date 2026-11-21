@@ -114,6 +114,7 @@ body {
 .home { color: var(--soft); text-decoration: none; font-size: 14px;
   display: inline-flex; align-items: center; padding: 11px 4px; margin: -11px -4px; }
 .home:hover { color: var(--accent); }
+.home .back { font-size: calc(1em + 1.5px); position: relative; top: -1.5px; }
 .theme-toggle {
   display: inline-flex; align-items: center; gap: .45rem; padding: .42rem .82rem;
   border: 1px solid var(--rule); border-radius: 999px; background: transparent;
