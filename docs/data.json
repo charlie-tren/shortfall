@@ -290,7 +290,7 @@
     "debt_to_assets": 0.1260951726507473
    },
    "short_interest": 0.0342,
-   "ret_1y": null,
+   "ret_1y": 0.183,
    "flags": {
     "accruals": {
      "value": -0.082793867120954,
@@ -484,7 +484,7 @@
     "debt_to_assets": 0.007971434499659126
    },
    "short_interest": 0.1268,
-   "ret_1y": -0.2638,
+   "ret_1y": null,
    "flags": {
     "accruals": {
      "value": -0.032370563465774334,
@@ -1190,7 +1190,7 @@
     "debt_to_assets": 0.1743589446318764
    },
    "short_interest": 0.0221,
-   "ret_1y": null,
+   "ret_1y": 0.4013,
    "flags": {
     "accruals": {
      "value": 0.06828532073384337,
@@ -1276,7 +1276,7 @@
     "debt_to_assets": 0.04750151998560571
    },
    "short_interest": 0.0748,
-   "ret_1y": null,
+   "ret_1y": -0.034,
    "flags": {
     "accruals": {
      "value": -0.0448187450526389,
@@ -1364,7 +1364,7 @@
     "debt_to_assets": null
    },
    "short_interest": 0.0494,
-   "ret_1y": null,
+   "ret_1y": 0.3249,
    "flags": {
     "accruals": {
      "value": -0.0942578210286641,
@@ -1632,7 +1632,7 @@
     "debt_to_assets": 0.7721619392093407
    },
    "short_interest": 0.0268,
-   "ret_1y": null,
+   "ret_1y": -0.0404,
    "flags": {
     "accruals": {
      "value": -0.08133345783920068,
@@ -1802,7 +1802,7 @@
     "debt_to_assets": 0.43570190641247836
    },
    "short_interest": null,
-   "ret_1y": 0.0982,
+   "ret_1y": 0.1008,
    "flags": {
     "accruals": {
      "value": 0.02003478417997425,
@@ -1870,7 +1870,7 @@
     "debt_to_assets": 0.3280978318261741
    },
    "short_interest": null,
-   "ret_1y": -0.3228,
+   "ret_1y": -0.3221,
    "flags": {
     "accruals": {
      "value": -0.002238454421569136,
@@ -1937,7 +1937,7 @@
     "debt_to_assets": 0.012120238575561144
    },
    "short_interest": null,
-   "ret_1y": null,
+   "ret_1y": -0.1947,
    "flags": {
     "accruals": {
      "value": 0.03468883947972511,
@@ -2072,7 +2072,7 @@
     "debt_to_assets": 0.2399537995091198
    },
    "short_interest": null,
-   "ret_1y": 0.1207,
+   "ret_1y": 0.126,
    "flags": {
     "accruals": {
      "value": -0.0164240566941199,
@@ -2221,7 +2221,7 @@
     "debt_to_assets": 0.04574408184940371
    },
    "short_interest": null,
-   "ret_1y": 0.56,
+   "ret_1y": 0.5711,
    "flags": {
     "accruals": {
      "value": 0.11033437275620657,
@@ -2288,7 +2288,7 @@
     "debt_to_assets": 0.05946022929573453
    },
    "short_interest": null,
-   "ret_1y": 0.2888,
+   "ret_1y": 0.2986,
    "flags": {
     "accruals": {
      "value": 0.176654350549468,
@@ -2437,7 +2437,7 @@
     "debt_to_assets": 0.2834695160276556
    },
    "short_interest": 0.0518,
-   "ret_1y": 0.9731,
+   "ret_1y": null,
    "flags": {
     "accruals": {
      "value": -0.0019261250777472363,
@@ -2518,7 +2518,7 @@
     "debt_to_assets": 0.012397596050391972
    },
    "short_interest": null,
-   "ret_1y": -0.2861,
+   "ret_1y": -0.2912,
    "flags": {
     "accruals": {
      "value": -0.010022501951595313,
@@ -2586,7 +2586,7 @@
     "debt_to_assets": 0.6533484106043472
    },
    "short_interest": 0.0368,
-   "ret_1y": null,
+   "ret_1y": 1.0647,
    "flags": {
     "accruals": {
      "value": 0.05109875562615833,
@@ -2667,7 +2667,7 @@
     "debt_to_assets": 0.42457552899963275
    },
    "short_interest": null,
-   "ret_1y": null,
+   "ret_1y": -0.0795,
    "flags": {
     "accruals": {
      "value": 0.020236397921170032,
@@ -2810,7 +2810,7 @@
     "debt_to_assets": 0.18381769299705544
    },
    "short_interest": null,
-   "ret_1y": -0.0808,
+   "ret_1y": -0.0855,
    "flags": {
     "accruals": {
      "value": 0.11272937165254977,
@@ -3527,7 +3527,7 @@
     "debt_to_assets": 0.2518549731227754
    },
    "short_interest": null,
-   "ret_1y": -0.0706,
+   "ret_1y": -0.0765,
    "flags": {
     "accruals": {
      "value": -0.028575102991962704,
@@ -3595,7 +3595,7 @@
     "debt_to_assets": 0.057627974499779085
    },
    "short_interest": null,
-   "ret_1y": 0.1296,
+   "ret_1y": 0.1328,
    "flags": {
     "accruals": {
      "value": 0.026890365167350737,
@@ -3662,7 +3662,7 @@
     "debt_to_assets": 0.006866391466056321
    },
    "short_interest": null,
-   "ret_1y": -0.2377,
+   "ret_1y": -0.2337,
    "flags": {
     "accruals": {
      "value": 0.005371642723297939,
@@ -3808,7 +3808,7 @@
     "debt_to_assets": 0.19535241760885252
    },
    "short_interest": null,
-   "ret_1y": 0.1353,
+   "ret_1y": 0.1317,
    "flags": {
     "accruals": {
      "value": -0.028353441986093863,
@@ -3956,7 +3956,7 @@
     "debt_to_assets": 0.007971434499659126
    },
    "short_interest": 0.1268,
-   "ret_1y": -0.2638,
+   "ret_1y": null,
    "flags": {
     "accruals": {
      "value": -0.032370563465774334,
@@ -4135,7 +4135,7 @@
     "debt_to_assets": 0.3280768666568872
    },
    "short_interest": null,
-   "ret_1y": -0.6717,
+   "ret_1y": -0.6758,
    "flags": {
     "accruals": {
      "value": 0.043792991680772136,
@@ -4283,7 +4283,7 @@
     "debt_to_assets": 0.0781667628148777
    },
    "short_interest": null,
-   "ret_1y": -0.1443,
+   "ret_1y": -0.135,
    "flags": {
     "accruals": {
      "value": -0.02652639597503233,
@@ -4439,7 +4439,7 @@
     "debt_to_assets": 0.4012986410489473
    },
    "short_interest": null,
-   "ret_1y": null,
+   "ret_1y": -0.0595,
    "flags": {
     "accruals": {
      "value": 0.009663722785733464,
@@ -4506,7 +4506,7 @@
     "debt_to_assets": 0.32532384656355834
    },
    "short_interest": null,
-   "ret_1y": -0.0519,
+   "ret_1y": -0.0581,
    "flags": {
     "accruals": {
      "value": -0.04965904008603145,
@@ -4574,7 +4574,7 @@
     "debt_to_assets": 0.15724942190536917
    },
    "short_interest": 0.0124,
-   "ret_1y": null,
+   "ret_1y": 0.0984,
    "flags": {
     "accruals": {
      "value": 0.0013185477026082769,
@@ -4655,7 +4655,7 @@
     "debt_to_assets": 0.0017934330588262168
    },
    "short_interest": null,
-   "ret_1y": null,
+   "ret_1y": 0.1399,
    "flags": {
     "accruals": {
      "value": 0.04779608246028334,
@@ -4802,7 +4802,7 @@
     "debt_to_assets": 0.2601509353741497
    },
    "short_interest": null,
-   "ret_1y": -0.2613,
+   "ret_1y": -0.2554,
    "flags": {
     "accruals": {
      "value": 0.0064553187997483516,
@@ -4870,7 +4870,7 @@
     "debt_to_assets": 0.17319305185173176
    },
    "short_interest": 0.0155,
-   "ret_1y": null,
+   "ret_1y": 0.2932,
    "flags": {
     "accruals": {
      "value": -0.03279318150245561,
@@ -5030,7 +5030,7 @@
     "debt_to_assets": 0.29216849261310623
    },
    "short_interest": null,
-   "ret_1y": -0.3861,
+   "ret_1y": -0.3832,
    "flags": {
     "accruals": {
      "value": -0.0010173511733446328,
@@ -5179,7 +5179,7 @@
     "debt_to_assets": 0.34157497113965485
    },
    "short_interest": 0.0108,
-   "ret_1y": null,
+   "ret_1y": 0.3889,
    "flags": {
     "accruals": {
      "value": 0.014033043012615563,
@@ -5637,7 +5637,7 @@
     "debt_to_assets": 0.03611649734288187
    },
    "short_interest": 0.0121,
-   "ret_1y": null,
+   "ret_1y": -0.0937,
    "flags": {
     "accruals": {
      "value": 0.10897476162359769,
@@ -5718,7 +5718,7 @@
     "debt_to_assets": null
    },
    "short_interest": 0.0189,
-   "ret_1y": null,
+   "ret_1y": 0.4744,
    "flags": {
     "accruals": {
      "value": 0.002960406311111473,
@@ -5798,7 +5798,7 @@
     "debt_to_assets": 0.2523931677407245
    },
    "short_interest": null,
-   "ret_1y": 0.0568,
+   "ret_1y": 0.0586,
    "flags": {
     "accruals": {
      "value": -0.024357659924814368,
@@ -5866,7 +5866,7 @@
     "debt_to_assets": 0.24217084906012812
    },
    "short_interest": 0.0225,
-   "ret_1y": null,
+   "ret_1y": -0.4569,
    "flags": {
     "accruals": {
      "value": 0.015229278574480332,
@@ -6184,7 +6184,7 @@
     "debt_to_assets": 0.21374947541849945
    },
    "short_interest": null,
-   "ret_1y": null,
+   "ret_1y": -0.0329,
    "flags": {
     "accruals": {
      "value": -0.04442138359909237,
@@ -6333,7 +6333,7 @@
     "debt_to_assets": 0.2042755344418052
    },
    "short_interest": null,
-   "ret_1y": 0.0188,
+   "ret_1y": 0.0136,
    "flags": {
     "accruals": {
      "value": -0.040701935928944076,
@@ -6400,7 +6400,7 @@
     "debt_to_assets": 0.4458326030895571
    },
    "short_interest": 0.0004,
-   "ret_1y": null,
+   "ret_1y": -0.0226,
    "flags": {
     "accruals": {
      "value": -0.03068770514493613,
@@ -6554,7 +6554,7 @@
     "debt_to_assets": 0.23360223942815428
    },
    "short_interest": null,
-   "ret_1y": -0.3652,
+   "ret_1y": -0.3616,
    "flags": {
     "accruals": {
      "value": -0.10969840653109347,
@@ -6622,7 +6622,7 @@
     "debt_to_assets": 0.24528858444495427
    },
    "short_interest": 0.012,
-   "ret_1y": null,
+   "ret_1y": 0.1021,
    "flags": {
     "accruals": {
      "value": -0.008301795724347243,
@@ -6779,7 +6779,7 @@
     "debt_to_assets": 0.05561070153537624
    },
    "short_interest": null,
-   "ret_1y": -0.4646,
+   "ret_1y": -0.4618,
    "flags": {
     "accruals": {
      "value": -0.012527646384579372,
@@ -6928,7 +6928,7 @@
     "debt_to_assets": 0.8062519343856391
    },
    "short_interest": null,
-   "ret_1y": -0.181,
+   "ret_1y": -0.1779,
    "flags": {
     "accruals": {
      "value": -0.08718337120255827,
@@ -6997,7 +6997,7 @@
     "debt_to_assets": 0.7000544096552407
    },
    "short_interest": null,
-   "ret_1y": 0.2624,
+   "ret_1y": 0.2696,
    "flags": {
     "accruals": {
      "value": -0.052049609005329484,
@@ -7146,7 +7146,7 @@
     "debt_to_assets": 0.28523674418485095
    },
    "short_interest": 0.0269,
-   "ret_1y": null,
+   "ret_1y": 0.2079,
    "flags": {
     "accruals": {
      "value": -0.03286650555054652,
@@ -7382,7 +7382,7 @@
     "debt_to_assets": 0.14896432497038642
    },
    "short_interest": null,
-   "ret_1y": null,
+   "ret_1y": 0.1761,
    "flags": {
     "accruals": {
      "value": 0.016671156358165563,
@@ -7529,7 +7529,7 @@
     "debt_to_assets": 0.6110305219219041
    },
    "short_interest": null,
-   "ret_1y": null,
+   "ret_1y": 0.0404,
    "flags": {
     "accruals": {
      "value": -0.040117670810140456,
@@ -7597,7 +7597,7 @@
     "debt_to_assets": 0.22682400390929544
    },
    "short_interest": null,
-   "ret_1y": 0.0062,
+   "ret_1y": 0.0045,
    "flags": {
     "accruals": {
      "value": 0.015648355083895192,
@@ -7745,7 +7745,7 @@
     "debt_to_assets": 0.6104873228627264
    },
    "short_interest": null,
-   "ret_1y": 0.2759,
+   "ret_1y": 0.2794,
    "flags": {
     "accruals": {
      "value": -0.0097821888930014,
@@ -7894,7 +7894,7 @@
     "debt_to_assets": 0.28626559162015025
    },
    "short_interest": null,
-   "ret_1y": 0.107,
+   "ret_1y": 0.1056,
    "flags": {
     "accruals": {
      "value": -0.11641124832614194,
@@ -8043,7 +8043,7 @@
     "debt_to_assets": 0.03386902870092722
    },
    "short_interest": null,
-   "ret_1y": 0.1963,
+   "ret_1y": 0.2047,
    "flags": {
     "accruals": {
      "value": null,
@@ -8190,7 +8190,7 @@
     "debt_to_assets": 0.0
    },
    "short_interest": 0.0449,
-   "ret_1y": null,
+   "ret_1y": -0.414,
    "flags": {
     "accruals": {
      "value": 0.007617685467321684,
@@ -8268,7 +8268,7 @@
     "debt_to_assets": 0.2695433757493898
    },
    "short_interest": null,
-   "ret_1y": -0.1924,
+   "ret_1y": -0.1886,
    "flags": {
     "accruals": {
      "value": -0.058004144947560135,
@@ -8334,7 +8334,7 @@
     "debt_to_assets": 0.4700223607212522
    },
    "short_interest": 0.0129,
-   "ret_1y": 0.0573,
+   "ret_1y": null,
    "flags": {
     "accruals": {
      "value": -0.021519377379307602,
@@ -8415,7 +8415,7 @@
     "debt_to_assets": 0.28331712896768657
    },
    "short_interest": null,
-   "ret_1y": 0.0312,
+   "ret_1y": 0.0375,
    "flags": {
     "accruals": {
      "value": 0.04252161702756633,
@@ -8483,7 +8483,7 @@
     "debt_to_assets": 0.17725358629118854
    },
    "short_interest": 0.0122,
-   "ret_1y": null,
+   "ret_1y": 0.1969,
    "flags": {
     "accruals": {
      "value": -0.028546732308617383,
@@ -8564,7 +8564,7 @@
     "debt_to_assets": 0.28752174775491146
    },
    "short_interest": null,
-   "ret_1y": -0.2086,
+   "ret_1y": -0.1942,
    "flags": {
     "accruals": {
      "value": -0.0600392515777292,
@@ -8631,7 +8631,7 @@
     "debt_to_assets": 0.1856723211686559
    },
    "short_interest": 0.0972,
-   "ret_1y": null,
+   "ret_1y": -0.4369,
    "flags": {
     "accruals": {
      "value": 0.006336968288754521,
@@ -8711,7 +8711,7 @@
     "debt_to_assets": 0.2290761656530553
    },
    "short_interest": 0.0212,
-   "ret_1y": null,
+   "ret_1y": 0.2192,
    "flags": {
     "accruals": {
      "value": null,
@@ -8790,7 +8790,7 @@
     "debt_to_assets": 0.7354277482269503
    },
    "short_interest": 0.0221,
-   "ret_1y": null,
+   "ret_1y": 0.0103,
    "flags": {
     "accruals": {
      "value": -0.06601813956358102,
@@ -8950,7 +8950,7 @@
     "debt_to_assets": 0.469726492025691
    },
    "short_interest": null,
-   "ret_1y": 0.3226,
+   "ret_1y": 0.3149,
    "flags": {
     "accruals": {
      "value": -0.09190701153818007,
@@ -9098,7 +9098,7 @@
     "debt_to_assets": null
    },
    "short_interest": null,
-   "ret_1y": 0.0237,
+   "ret_1y": 0.0267,
    "flags": {
     "accruals": {
      "value": 0.0012318670262153424,
@@ -9164,7 +9164,7 @@
     "debt_to_assets": 0.19443563369432235
    },
    "short_interest": 0.029,
-   "ret_1y": null,
+   "ret_1y": 0.4264,
    "flags": {
     "accruals": {
      "value": -0.028893085771749528,
@@ -9245,7 +9245,7 @@
     "debt_to_assets": 0.1712870586570438
    },
    "short_interest": 0.0299,
-   "ret_1y": null,
+   "ret_1y": 0.1213,
    "flags": {
     "accruals": {
      "value": -0.006463089238067003,
@@ -9404,7 +9404,7 @@
     "debt_to_assets": 0.3267190252363846
    },
    "short_interest": null,
-   "ret_1y": null,
+   "ret_1y": -0.2102,
    "flags": {
     "accruals": {
      "value": -0.05380973860214528,
@@ -9550,7 +9550,7 @@
     "debt_to_assets": 0.2987600687845054
    },
    "short_interest": 0.0365,
-   "ret_1y": null,
+   "ret_1y": 0.2721,
    "flags": {
     "accruals": {
      "value": -0.017577231465652165,
@@ -9712,7 +9712,7 @@
     "debt_to_assets": 0.2021766583969818
    },
    "short_interest": 0.01,
-   "ret_1y": null,
+   "ret_1y": 0.2696,
    "flags": {
     "accruals": {
      "value": 0.0014598096164958486,
@@ -9948,7 +9948,7 @@
     "debt_to_assets": 0.2634022262701315
    },
    "short_interest": null,
-   "ret_1y": null,
+   "ret_1y": 0.3159,
    "flags": {
     "accruals": {
      "value": -0.08867360398950432,
@@ -10097,7 +10097,7 @@
     "debt_to_assets": null
    },
    "short_interest": null,
-   "ret_1y": null,
+   "ret_1y": 0.0726,
    "flags": {
     "accruals": {
      "value": 0.005643717634815978,
@@ -10322,7 +10322,7 @@
     "debt_to_assets": 0.17096555235026054
    },
    "short_interest": null,
-   "ret_1y": null,
+   "ret_1y": 0.0439,
    "flags": {
     "accruals": {
      "value": -0.09769007024477055,
@@ -10389,7 +10389,7 @@
     "debt_to_assets": 0.6477048718670797
    },
    "short_interest": 0.0487,
-   "ret_1y": null,
+   "ret_1y": -0.092,
    "flags": {
     "accruals": {
      "value": -0.019299922618234787,
@@ -10470,7 +10470,7 @@
     "debt_to_assets": 0.25483199953774593
    },
    "short_interest": null,
-   "ret_1y": 0.0036,
+   "ret_1y": 0.0068,
    "flags": {
     "accruals": {
      "value": -0.02849686493814608,
@@ -10936,7 +10936,7 @@
     "debt_to_assets": 0.21848350018539117
    },
    "short_interest": null,
-   "ret_1y": null,
+   "ret_1y": 0.1266,
    "flags": {
     "accruals": {
      "value": -0.035490555701117116,
@@ -11004,7 +11004,7 @@
     "debt_to_assets": 0.24496947235882452
    },
    "short_interest": 0.0002,
-   "ret_1y": null,
+   "ret_1y": 0.2974,
    "flags": {
     "accruals": {
      "value": null,
@@ -11240,7 +11240,7 @@
     "debt_to_assets": 0.15068890210787797
    },
    "short_interest": null,
-   "ret_1y": 0.1236,
+   "ret_1y": 0.125,
    "flags": {
     "accruals": {
      "value": 0.012378775271669895,
@@ -11554,7 +11554,7 @@
     "debt_to_assets": 0.1775534008894073
    },
    "short_interest": 0.0446,
-   "ret_1y": null,
+   "ret_1y": 0.3242,
    "flags": {
     "accruals": {
      "value": -0.06001753321194956,
@@ -11959,7 +11959,7 @@
     "debt_to_assets": null
    },
    "short_interest": 0.1031,
-   "ret_1y": null,
+   "ret_1y": -0.2341,
    "flags": {
     "accruals": {
      "value": 0.03570803465099211,
@@ -12032,7 +12032,7 @@
     "debt_to_assets": 0.18753216675244466
    },
    "short_interest": null,
-   "ret_1y": -0.0442,
+   "ret_1y": -0.0432,
    "flags": {
     "accruals": {
      "value": -0.042772481319247616,
@@ -12181,7 +12181,7 @@
     "debt_to_assets": 0.006642508436850745
    },
    "short_interest": null,
-   "ret_1y": null,
+   "ret_1y": -0.5661,
    "flags": {
     "accruals": {
      "value": -0.0004321883715077325,
@@ -12248,7 +12248,7 @@
     "debt_to_assets": 0.4422987436016752
    },
    "short_interest": null,
-   "ret_1y": -0.047,
+   "ret_1y": null,
    "flags": {
     "accruals": {
      "value": -0.12354074577808002,
@@ -12316,7 +12316,7 @@
     "debt_to_assets": 0.40070090308666934
    },
    "short_interest": null,
-   "ret_1y": 0.0614,
+   "ret_1y": 0.0591,
    "flags": {
     "accruals": {
      "value": -0.028181928506897155,
@@ -12544,7 +12544,7 @@
     "debt_to_assets": 0.059911463745839576
    },
    "short_interest": null,
-   "ret_1y": 0.2309,
+   "ret_1y": 0.2384,
    "flags": {
     "accruals": {
      "value": 0.005503365514522435,
@@ -12611,7 +12611,7 @@
     "debt_to_assets": 0.3633486254845478
    },
    "short_interest": 0.0081,
-   "ret_1y": null,
+   "ret_1y": 0.2829,
    "flags": {
     "accruals": {
      "value": 0.040033265164155216,
@@ -12851,7 +12851,7 @@
     "debt_to_assets": 0.18183374417967058
    },
    "short_interest": null,
-   "ret_1y": 0.1422,
+   "ret_1y": null,
    "flags": {
     "accruals": {
      "value": -0.1398121682319291,
@@ -12917,7 +12917,7 @@
     "debt_to_assets": 0.34650240957910494
    },
    "short_interest": null,
-   "ret_1y": 0.1881,
+   "ret_1y": 0.1822,
    "flags": {
     "accruals": {
      "value": -0.05692164484696915,
@@ -13222,7 +13222,7 @@
     "debt_to_assets": 0.2397875530962656
    },
    "short_interest": null,
-   "ret_1y": null,
+   "ret_1y": -0.13,
    "flags": {
     "accruals": {
      "value": -0.005298482914239478,
@@ -13369,7 +13369,7 @@
     "debt_to_assets": 0.0036565438367322854
    },
    "short_interest": null,
-   "ret_1y": null,
+   "ret_1y": -0.2441,
    "flags": {
     "accruals": {
      "value": 0.2905854814758606,
@@ -13437,7 +13437,7 @@
     "debt_to_assets": 0.011006406981625076
    },
    "short_interest": null,
-   "ret_1y": -0.1205,
+   "ret_1y": -0.1135,
    "flags": {
     "accruals": {
      "value": -0.15367434955300227,
@@ -13666,7 +13666,7 @@
     "debt_to_assets": 0.5055815935236472
    },
    "short_interest": null,
-   "ret_1y": -0.0422,
+   "ret_1y": -0.0408,
    "flags": {
     "accruals": {
      "value": -0.07149857258511227,
@@ -13966,7 +13966,7 @@
     "debt_to_assets": 0.2717072822125348
    },
    "short_interest": null,
-   "ret_1y": -0.072,
+   "ret_1y": -0.0734,
    "flags": {
     "accruals": {
      "value": -0.040162435378655874,
@@ -14115,7 +14115,7 @@
     "debt_to_assets": 0.2270696726664751
    },
    "short_interest": null,
-   "ret_1y": -0.1756,
+   "ret_1y": -0.1735,
    "flags": {
     "accruals": {
      "value": 0.021523074796768397,
@@ -14344,7 +14344,7 @@
     "debt_to_assets": 0.18720883846408698
    },
    "short_interest": null,
-   "ret_1y": null,
+   "ret_1y": 0.0793,
    "flags": {
     "accruals": {
      "value": -0.011693960661987695,
@@ -14411,7 +14411,7 @@
     "debt_to_assets": 0.43831779440598617
    },
    "short_interest": 0.1259,
-   "ret_1y": null,
+   "ret_1y": 0.0927,
    "flags": {
     "accruals": {
      "value": -0.015050833245990986,
@@ -14570,7 +14570,7 @@
     "debt_to_assets": 0.3763720994858969
    },
    "short_interest": 0.0245,
-   "ret_1y": null,
+   "ret_1y": -0.0618,
    "flags": {
     "accruals": {
      "value": -0.021155628430883297,
@@ -14648,7 +14648,7 @@
     "debt_to_assets": 0.19004383218534754
    },
    "short_interest": 0.023,
-   "ret_1y": null,
+   "ret_1y": -0.0188,
    "flags": {
     "accruals": {
      "value": -0.09572229283437168,
@@ -14729,7 +14729,7 @@
     "debt_to_assets": 0.25671601795404303
    },
    "short_interest": null,
-   "ret_1y": -0.1251,
+   "ret_1y": -0.1284,
    "flags": {
     "accruals": {
      "value": -0.013197800366605566,
@@ -14795,7 +14795,7 @@
     "debt_to_assets": 0.1983729662077597
    },
    "short_interest": null,
-   "ret_1y": -0.053,
+   "ret_1y": -0.0593,
    "flags": {
     "accruals": {
      "value": 0.03995735115323435,
@@ -14943,7 +14943,7 @@
     "debt_to_assets": 0.2362159579550884
    },
    "short_interest": null,
-   "ret_1y": 0.0358,
+   "ret_1y": 0.0377,
    "flags": {
     "accruals": {
      "value": -0.04318660333937228,
@@ -15011,7 +15011,7 @@
     "debt_to_assets": 0.20042202725056846
    },
    "short_interest": 0.0102,
-   "ret_1y": null,
+   "ret_1y": 0.141,
    "flags": {
     "accruals": {
      "value": -0.022968197879858657,
@@ -15092,7 +15092,7 @@
     "debt_to_assets": 0.17431734317343173
    },
    "short_interest": null,
-   "ret_1y": 0.2815,
+   "ret_1y": 0.279,
    "flags": {
     "accruals": {
      "value": -0.03880895892736652,
@@ -15241,7 +15241,7 @@
     "debt_to_assets": 0.40010778178934525
    },
    "short_interest": null,
-   "ret_1y": 0.0018,
+   "ret_1y": 0.0059,
    "flags": {
     "accruals": {
      "value": -0.012397371311032475,
@@ -15308,7 +15308,7 @@
     "debt_to_assets": 0.32268436174579285
    },
    "short_interest": 0.0348,
-   "ret_1y": null,
+   "ret_1y": 0.2328,
    "flags": {
     "accruals": {
      "value": -0.04020676166526963,
@@ -15389,7 +15389,7 @@
     "debt_to_assets": 0.18358027197077328
    },
    "short_interest": null,
-   "ret_1y": 0.1058,
+   "ret_1y": null,
    "flags": {
     "accruals": {
      "value": -0.05947472367554832,
@@ -15850,7 +15850,7 @@
     "debt_to_assets": 0.27297803370447177
    },
    "short_interest": null,
-   "ret_1y": null,
+   "ret_1y": 0.3763,
    "flags": {
     "accruals": {
      "value": -0.04230205492084138,
@@ -15997,7 +15997,7 @@
     "debt_to_assets": 0.34447491291780924
    },
    "short_interest": 0.0368,
-   "ret_1y": null,
+   "ret_1y": -0.3314,
    "flags": {
     "accruals": {
      "value": -0.02278987284458363,
@@ -16231,7 +16231,7 @@
     "debt_to_assets": null
    },
    "short_interest": 0.0349,
-   "ret_1y": null,
+   "ret_1y": 0.2299,
    "flags": {
     "accruals": {
      "value": -0.16019631865477546,
@@ -16698,7 +16698,7 @@
     "debt_to_assets": 0.5206938349257815
    },
    "short_interest": null,
-   "ret_1y": 0.132,
+   "ret_1y": 0.1298,
    "flags": {
     "accruals": {
      "value": -0.07916077248529607,
@@ -17161,7 +17161,7 @@
     "debt_to_assets": null
    },
    "short_interest": 0.009,
-   "ret_1y": null,
+   "ret_1y": 0.0831,
    "flags": {
     "accruals": {
      "value": 0.04859728272696487,
@@ -17478,7 +17478,7 @@
     "debt_to_assets": 0.014312673444177922
    },
    "short_interest": null,
-   "ret_1y": null,
+   "ret_1y": 0.0581,
    "flags": {
     "accruals": {
      "value": -0.33539252486681764,
@@ -17544,7 +17544,7 @@
     "debt_to_assets": 0.08097249407643985
    },
    "short_interest": null,
-   "ret_1y": 0.4001,
+   "ret_1y": 0.4078,
    "flags": {
     "accruals": {
      "value": -0.0447278119959732,
@@ -17691,7 +17691,7 @@
     "debt_to_assets": 0.5165675377111227
    },
    "short_interest": null,
-   "ret_1y": -0.5021,
+   "ret_1y": -0.5007,
    "flags": {
     "accruals": {
      "value": -0.040872817003210084,
@@ -17828,7 +17828,7 @@
     "debt_to_assets": 0.26631096134044746
    },
    "short_interest": null,
-   "ret_1y": -0.2461,
+   "ret_1y": -0.2426,
    "flags": {
     "accruals": {
      "value": -0.015021656990139158,
@@ -18052,7 +18052,7 @@
     "debt_to_assets": 0.326457070617564
    },
    "short_interest": null,
-   "ret_1y": -0.0719,
+   "ret_1y": -0.071,
    "flags": {
     "accruals": {
      "value": 0.022047079637319705,
@@ -18358,7 +18358,7 @@
     "debt_to_assets": 0.2548483773590369
    },
    "short_interest": null,
-   "ret_1y": -0.3288,
+   "ret_1y": -0.3225,
    "flags": {
     "accruals": {
      "value": 0.0038456060390257797,
@@ -18582,7 +18582,7 @@
     "debt_to_assets": 0.0015353346467305497
    },
    "short_interest": null,
-   "ret_1y": -0.3653,
+   "ret_1y": null,
    "flags": {
     "accruals": {
      "value": -0.11933708284295232,
@@ -18650,7 +18650,7 @@
     "debt_to_assets": 0.12383274538285952
    },
    "short_interest": 0.034,
-   "ret_1y": null,
+   "ret_1y": 0.23,
    "flags": {
     "accruals": {
      "value": -0.053067724782033636,
@@ -19206,7 +19206,7 @@
     "debt_to_assets": 0.19690275915925917
    },
    "short_interest": null,
-   "ret_1y": -0.2686,
+   "ret_1y": -0.2699,
    "flags": {
     "accruals": {
      "value": -0.1535739992633647,
@@ -19428,7 +19428,7 @@
     "debt_to_assets": 0.7125751290392405
    },
    "short_interest": null,
-   "ret_1y": null,
+   "ret_1y": -0.4741,
    "flags": {
     "accruals": {
      "value": 0.05487772866228991,
@@ -19736,7 +19736,7 @@
     "debt_to_assets": 0.18446738385968595
    },
    "short_interest": null,
-   "ret_1y": -0.0157,
+   "ret_1y": -0.0154,
    "flags": {
     "accruals": {
      "value": 0.03023832492961731,
@@ -19883,7 +19883,7 @@
     "debt_to_assets": 0.39197109719034917
    },
    "short_interest": null,
-   "ret_1y": -0.1072,
+   "ret_1y": -0.1028,
    "flags": {
     "accruals": {
      "value": -0.062117668922581346,
@@ -20331,7 +20331,7 @@
     "debt_to_assets": 0.006882425235559197
    },
    "short_interest": null,
-   "ret_1y": 0.0291,
+   "ret_1y": 0.0281,
    "flags": {
     "accruals": {
      "value": -0.06652823582101706,
@@ -20480,7 +20480,7 @@
     "debt_to_assets": null
    },
    "short_interest": 0.0244,
-   "ret_1y": null,
+   "ret_1y": 0.2731,
    "flags": {
     "accruals": {
      "value": -0.19426145513102036,
@@ -20637,7 +20637,7 @@
     "debt_to_assets": 0.0024323454741724524
    },
    "short_interest": 0.0582,
-   "ret_1y": null,
+   "ret_1y": 0.0686,
    "flags": {
     "accruals": {
      "value": 0.01962493927937688,
@@ -20794,7 +20794,7 @@
     "debt_to_assets": 0.22984385442614982
    },
    "short_interest": null,
-   "ret_1y": 0.3354,
+   "ret_1y": 0.3334,
    "flags": {
     "accruals": {
      "value": -0.054428351123339866,
@@ -21023,7 +21023,7 @@
     "debt_to_assets": 0.1533461302339277
    },
    "short_interest": null,
-   "ret_1y": -0.1405,
+   "ret_1y": -0.1429,
    "flags": {
     "accruals": {
      "value": -0.04656026986487833,
@@ -21091,7 +21091,7 @@
     "debt_to_assets": 0.3920460172945793
    },
    "short_interest": 0.0624,
-   "ret_1y": null,
+   "ret_1y": 0.3044,
    "flags": {
     "accruals": {
      "value": -0.02828206087352149,
@@ -21323,7 +21323,7 @@
     "debt_to_assets": 0.02591437287903198
    },
    "short_interest": null,
-   "ret_1y": -0.1952,
+   "ret_1y": -0.1868,
    "flags": {
     "accruals": {
      "value": -0.07645483321158997,
@@ -21391,7 +21391,7 @@
     "debt_to_assets": 0.3578673732843069
    },
    "short_interest": 0.1586,
-   "ret_1y": null,
+   "ret_1y": 0.44,
    "flags": {
     "accruals": {
      "value": -0.042271042974382174,
@@ -21548,7 +21548,7 @@
     "debt_to_assets": 0.22459711176224362
    },
    "short_interest": 0.0266,
-   "ret_1y": null,
+   "ret_1y": 0.1369,
    "flags": {
     "accruals": {
      "value": -0.06746783054653194,
@@ -21628,7 +21628,7 @@
     "debt_to_assets": 0.000532072707845007
    },
    "short_interest": null,
-   "ret_1y": -0.7574,
+   "ret_1y": -0.7201,
    "flags": {
     "accruals": {
      "value": -0.09246193283521151,
@@ -22323,7 +22323,7 @@
     "debt_to_assets": 0.32342386275539553
    },
    "short_interest": null,
-   "ret_1y": -0.4706,
+   "ret_1y": -0.4739,
    "flags": {
     "accruals": {
      "value": 0.08877959105610062,
@@ -22472,7 +22472,7 @@
     "debt_to_assets": 0.028778173212398336
    },
    "short_interest": null,
-   "ret_1y": null,
+   "ret_1y": 0.1973,
    "flags": {
     "accruals": {
      "value": -0.06979567509512935,
@@ -23105,7 +23105,7 @@
     "debt_to_assets": 0.34800742689238473
    },
    "short_interest": null,
-   "ret_1y": -0.0242,
+   "ret_1y": -0.0135,
    "flags": {
     "accruals": {
      "value": -0.04855603807902753,
@@ -23333,7 +23333,7 @@
     "debt_to_assets": 0.20232610986014418
    },
    "short_interest": 0.0124,
-   "ret_1y": null,
+   "ret_1y": 0.253,
    "flags": {
     "accruals": {
      "value": -0.03180676410424903,
@@ -23411,7 +23411,7 @@
     "debt_to_assets": 0.1066462025022092
    },
    "short_interest": null,
-   "ret_1y": -0.0162,
+   "ret_1y": -0.0074,
    "flags": {
     "accruals": {
      "value": -0.005348949807483919,
@@ -23637,7 +23637,7 @@
     "debt_to_assets": 0.251626114189352
    },
    "short_interest": 0.11,
-   "ret_1y": null,
+   "ret_1y": 0.0449,
    "flags": {
     "accruals": {
      "value": -0.034813412325169484,
@@ -23718,7 +23718,7 @@
     "debt_to_assets": null
    },
    "short_interest": 0.1413,
-   "ret_1y": null,
+   "ret_1y": -0.0989,
    "flags": {
     "accruals": {
      "value": -0.10616477243584395,
@@ -23793,7 +23793,7 @@
     "debt_to_assets": 0.21417630975877872
    },
    "short_interest": 0.0466,
-   "ret_1y": 0.4147,
+   "ret_1y": null,
    "flags": {
     "accruals": {
      "value": -0.05177903980245268,
@@ -23874,7 +23874,7 @@
     "debt_to_assets": 0.17707780959451339
    },
    "short_interest": 0.0507,
-   "ret_1y": null,
+   "ret_1y": -0.29,
    "flags": {
     "accruals": {
      "value": -0.09811146117014649,
@@ -24108,7 +24108,7 @@
     "debt_to_assets": 0.4893316376995902
    },
    "short_interest": null,
-   "ret_1y": -0.1337,
+   "ret_1y": -0.1292,
    "flags": {
     "accruals": {
      "value": -0.10679832890239271,
@@ -24324,7 +24324,7 @@
     "debt_to_assets": 0.3221816427783903
    },
    "short_interest": null,
-   "ret_1y": -0.1601,
+   "ret_1y": -0.1683,
    "flags": {
     "accruals": {
      "value": -0.036514835221245,
@@ -24632,7 +24632,7 @@
     "debt_to_assets": 0.16783433566867134
    },
    "short_interest": null,
-   "ret_1y": -0.0512,
+   "ret_1y": -0.047,
    "flags": {
     "accruals": {
      "value": -0.0018547345411188024,
@@ -24701,7 +24701,7 @@
     "debt_to_assets": 0.006025497859668686
    },
    "short_interest": null,
-   "ret_1y": 0.0799,
+   "ret_1y": 0.084,
    "flags": {
     "accruals": {
      "value": -0.09155214731791615,
@@ -24768,7 +24768,7 @@
     "debt_to_assets": 0.3058382889246641
    },
    "short_interest": null,
-   "ret_1y": -0.1466,
+   "ret_1y": -0.1502,
    "flags": {
     "accruals": {
      "value": 0.0042408460781975426,
@@ -24917,7 +24917,7 @@
     "debt_to_assets": 0.3428283125564969
    },
    "short_interest": null,
-   "ret_1y": 0.0535,
+   "ret_1y": 0.0513,
    "flags": {
     "accruals": {
      "value": null,
@@ -25142,7 +25142,7 @@
     "debt_to_assets": 0.026030450715931845
    },
    "short_interest": 0.1008,
-   "ret_1y": null,
+   "ret_1y": 0.1409,
    "flags": {
     "accruals": {
      "value": -0.00015816978577484214,
@@ -25298,7 +25298,7 @@
     "debt_to_assets": 0.056997035732446945
    },
    "short_interest": 0.0269,
-   "ret_1y": null,
+   "ret_1y": 0.099,
    "flags": {
     "accruals": {
      "value": -0.0013516194633202718,
@@ -25536,7 +25536,7 @@
     "debt_to_assets": 0.24233243332446727
    },
    "short_interest": null,
-   "ret_1y": -0.2535,
+   "ret_1y": -0.2539,
    "flags": {
     "accruals": {
      "value": -0.01734759061129749,
@@ -25671,7 +25671,7 @@
     "debt_to_assets": 0.15479810209955475
    },
    "short_interest": 0.0925,
-   "ret_1y": null,
+   "ret_1y": -0.3546,
    "flags": {
     "accruals": {
      "value": -0.05080418199468543,
@@ -25752,7 +25752,7 @@
     "debt_to_assets": 0.3476755849553867
    },
    "short_interest": null,
-   "ret_1y": -0.1135,
+   "ret_1y": -0.1089,
    "flags": {
     "accruals": {
      "value": null,
@@ -25818,7 +25818,7 @@
     "debt_to_assets": 0.2469701932525377
    },
    "short_interest": null,
-   "ret_1y": null,
+   "ret_1y": 0.3496,
    "flags": {
     "accruals": {
      "value": -0.06631983112544233,
@@ -25886,7 +25886,7 @@
     "debt_to_assets": 0.1968151777575205
    },
    "short_interest": 0.0258,
-   "ret_1y": null,
+   "ret_1y": 0.6339,
    "flags": {
     "accruals": {
      "value": -0.043160882915242456,
@@ -25967,7 +25967,7 @@
     "debt_to_assets": 0.28716182130039347
    },
    "short_interest": null,
-   "ret_1y": null,
+   "ret_1y": 0.1465,
    "flags": {
     "accruals": {
      "value": -0.030287385992083977,
@@ -26115,7 +26115,7 @@
     "debt_to_assets": 0.1922038018705473
    },
    "short_interest": null,
-   "ret_1y": null,
+   "ret_1y": -0.0397,
    "flags": {
     "accruals": {
      "value": -0.07091655994810983,
@@ -26183,7 +26183,7 @@
     "debt_to_assets": 0.48150940579277396
    },
    "short_interest": 0.0099,
-   "ret_1y": null,
+   "ret_1y": 0.2944,
    "flags": {
     "accruals": {
      "value": -0.11001742710527979,
@@ -26264,7 +26264,7 @@
     "debt_to_assets": 0.1827235129441242
    },
    "short_interest": null,
-   "ret_1y": -0.3362,
+   "ret_1y": -0.3247,
    "flags": {
     "accruals": {
      "value": -0.13180533966062608,
@@ -26332,7 +26332,7 @@
     "debt_to_assets": 0.27938680846249575
    },
    "short_interest": 0.0303,
-   "ret_1y": 0.0228,
+   "ret_1y": null,
    "flags": {
     "accruals": {
      "value": -0.1559907558305481,
@@ -26490,7 +26490,7 @@
     "debt_to_assets": null
    },
    "short_interest": 0.0583,
-   "ret_1y": 0.0191,
+   "ret_1y": null,
    "flags": {
     "accruals": {
      "value": 0.004716568129721412,
@@ -26808,7 +26808,7 @@
     "debt_to_assets": 0.253485768844552
    },
    "short_interest": 0.0236,
-   "ret_1y": null,
+   "ret_1y": 0.1744,
    "flags": {
     "accruals": {
      "value": 0.011510887940834708,
@@ -26967,7 +26967,7 @@
     "debt_to_assets": 0.4597790826592112
    },
    "short_interest": null,
-   "ret_1y": -0.3034,
+   "ret_1y": -0.3011,
    "flags": {
     "accruals": {
      "value": -0.09792560748487406,
@@ -27034,7 +27034,7 @@
     "debt_to_assets": 0.16530656404074126
    },
    "short_interest": 0.0879,
-   "ret_1y": null,
+   "ret_1y": 0.3827,
    "flags": {
     "accruals": {
      "value": null,
@@ -27113,7 +27113,7 @@
     "debt_to_assets": 0.5814604181680165
    },
    "short_interest": 0.163,
-   "ret_1y": null,
+   "ret_1y": 0.337,
    "flags": {
     "accruals": {
      "value": -0.046470610079207844,
@@ -27275,7 +27275,7 @@
     "debt_to_assets": 0.18218799072758543
    },
    "short_interest": null,
-   "ret_1y": -0.034,
+   "ret_1y": -0.0326,
    "flags": {
     "accruals": {
      "value": 0.02640397059592786,
@@ -27343,7 +27343,7 @@
     "debt_to_assets": 0.40524394291403915
    },
    "short_interest": 0.0,
-   "ret_1y": null,
+   "ret_1y": -0.1057,
    "flags": {
     "accruals": {
      "value": -0.06332666649955862,
@@ -27823,7 +27823,7 @@
     "debt_to_assets": 0.0008351488743645606
    },
    "short_interest": 0.0278,
-   "ret_1y": null,
+   "ret_1y": 0.4138,
    "flags": {
     "accruals": {
      "value": -0.022746733181936638,
@@ -27978,7 +27978,7 @@
     "debt_to_assets": 0.3105718585402558
    },
    "short_interest": 0.0183,
-   "ret_1y": null,
+   "ret_1y": -0.1366,
    "flags": {
     "accruals": {
      "value": -0.03959698287727798,
@@ -28285,7 +28285,7 @@
     "debt_to_assets": null
    },
    "short_interest": 0.0254,
-   "ret_1y": null,
+   "ret_1y": 0.922,
    "flags": {
     "accruals": {
      "value": -0.11243460256429795,
@@ -28520,7 +28520,7 @@
     "debt_to_assets": 0.18510556731760178
    },
    "short_interest": null,
-   "ret_1y": -0.257,
+   "ret_1y": -0.2537,
    "flags": {
     "accruals": {
      "value": -0.05446637342869651,
@@ -28588,7 +28588,7 @@
     "debt_to_assets": 0.4067341511538132
    },
    "short_interest": 0.0385,
-   "ret_1y": 0.0237,
+   "ret_1y": null,
    "flags": {
     "accruals": {
      "value": null,
@@ -28744,7 +28744,7 @@
     "debt_to_assets": null
    },
    "short_interest": 0.0486,
-   "ret_1y": null,
+   "ret_1y": 0.3892,
    "flags": {
     "accruals": {
      "value": -0.024853813470194774,
@@ -28819,7 +28819,7 @@
     "debt_to_assets": 0.8038837309737165
    },
    "short_interest": 0.1262,
-   "ret_1y": null,
+   "ret_1y": -0.3168,
    "flags": {
     "accruals": {
      "value": -0.07861043131049203,
@@ -28978,7 +28978,7 @@
     "debt_to_assets": 0.15110027204970944
    },
    "short_interest": 0.0609,
-   "ret_1y": -0.2077,
+   "ret_1y": null,
    "flags": {
     "accruals": {
      "value": -0.03417943391326928,
@@ -29217,7 +29217,7 @@
     "debt_to_assets": 0.7269656641816455
    },
    "short_interest": null,
-   "ret_1y": -0.1102,
+   "ret_1y": -0.1005,
    "flags": {
     "accruals": {
      "value": -0.22325843318392366,
@@ -29444,7 +29444,7 @@
     "debt_to_assets": 0.11874197689345314
    },
    "short_interest": null,
-   "ret_1y": -0.0696,
+   "ret_1y": -0.0778,
    "flags": {
     "accruals": {
      "value": -0.04235176880916791,
@@ -29510,7 +29510,7 @@
     "debt_to_assets": 0.3735967310823681
    },
    "short_interest": 0.0912,
-   "ret_1y": null,
+   "ret_1y": -0.2015,
    "flags": {
     "accruals": {
      "value": -0.06827497418307046,
@@ -29985,7 +29985,7 @@
     "debt_to_assets": 0.22920747996438112
    },
    "short_interest": 0.0376,
-   "ret_1y": null,
+   "ret_1y": 0.0083,
    "flags": {
     "accruals": {
      "value": -0.0608821141877875,
@@ -30066,7 +30066,7 @@
     "debt_to_assets": 0.07650173695947687
    },
    "short_interest": 0.0292,
-   "ret_1y": null,
+   "ret_1y": -0.0392,
    "flags": {
     "accruals": {
      "value": -0.0012624145191644771,
@@ -30303,7 +30303,7 @@
     "debt_to_assets": 1.448334756618275
    },
    "short_interest": 0.0536,
-   "ret_1y": null,
+   "ret_1y": 0.1096,
    "flags": {
     "accruals": {
      "value": -0.06043956043956044,
@@ -30381,7 +30381,7 @@
     "debt_to_assets": 0.3370016802998689
    },
    "short_interest": 0.0082,
-   "ret_1y": null,
+   "ret_1y": 0.1891,
    "flags": {
     "accruals": {
      "value": -0.05242669066296289,
@@ -30535,7 +30535,7 @@
     "debt_to_assets": 0.05846283524530858
    },
    "short_interest": null,
-   "ret_1y": null,
+   "ret_1y": 0.2063,
    "flags": {
     "accruals": {
      "value": -0.11118589096153883,
@@ -30603,7 +30603,7 @@
     "debt_to_assets": 0.24091093485528836
    },
    "short_interest": 0.026,
-   "ret_1y": null,
+   "ret_1y": 0.221,
    "flags": {
     "accruals": {
      "value": -0.02947479711967082,
@@ -30684,7 +30684,7 @@
     "debt_to_assets": 0.3829252052970334
    },
    "short_interest": null,
-   "ret_1y": 0.0794,
+   "ret_1y": 0.08,
    "flags": {
     "accruals": {
      "value": -0.1033538400476285,
@@ -30832,7 +30832,7 @@
     "debt_to_assets": 0.4402437335549093
    },
    "short_interest": null,
-   "ret_1y": null,
+   "ret_1y": 0.0018,
    "flags": {
     "accruals": {
      "value": -0.04916908467422844,
@@ -30900,7 +30900,7 @@
     "debt_to_assets": 0.12456812143739164
    },
    "short_interest": 0.0386,
-   "ret_1y": null,
+   "ret_1y": -0.0798,
    "flags": {
     "accruals": {
      "value": -0.014890055255572757,
@@ -31297,7 +31297,7 @@
     "debt_to_assets": 0.17450843414118875
    },
    "short_interest": 0.0445,
-   "ret_1y": null,
+   "ret_1y": -0.1484,
    "flags": {
     "accruals": {
      "value": -0.0756330965944714,
@@ -31451,7 +31451,7 @@
     "debt_to_assets": 0.34104338831607556
    },
    "short_interest": 0.0285,
-   "ret_1y": null,
+   "ret_1y": 0.0502,
    "flags": {
     "accruals": {
      "value": -0.05064564380653327,
@@ -31531,7 +31531,7 @@
     "debt_to_assets": null
    },
    "short_interest": 0.0099,
-   "ret_1y": null,
+   "ret_1y": 0.1271,
    "flags": {
     "accruals": {
      "value": 0.017675501892420932,
@@ -31764,7 +31764,7 @@
     "debt_to_assets": 0.2117813161816613
    },
    "short_interest": 0.0478,
-   "ret_1y": null,
+   "ret_1y": -0.06,
    "flags": {
     "accruals": {
      "value": -0.047488951386098835,
@@ -31844,7 +31844,7 @@
     "debt_to_assets": 0.3658813726232861
    },
    "short_interest": 0.121,
-   "ret_1y": null,
+   "ret_1y": 0.0246,
    "flags": {
     "accruals": {
      "value": 0.034217200830066866,
@@ -31924,7 +31924,7 @@
     "debt_to_assets": 0.2282084043157297
    },
    "short_interest": 0.072,
-   "ret_1y": null,
+   "ret_1y": 0.5223,
    "flags": {
     "accruals": {
      "value": null,
@@ -32083,7 +32083,7 @@
     "debt_to_assets": 0.4215836116105831
    },
    "short_interest": 0.0261,
-   "ret_1y": null,
+   "ret_1y": 0.079,
    "flags": {
     "accruals": {
      "value": -0.03629777334662679,
@@ -32249,7 +32249,7 @@
     "debt_to_assets": 0.2951125990229091
    },
    "short_interest": 0.0152,
-   "ret_1y": null,
+   "ret_1y": -0.0258,
    "flags": {
     "accruals": {
      "value": -0.011415978398983482,
@@ -32407,7 +32407,7 @@
     "debt_to_assets": 0.054291186574651144
    },
    "short_interest": null,
-   "ret_1y": null,
+   "ret_1y": -0.5976,
    "flags": {
     "accruals": {
      "value": -0.04147237264340153,
@@ -32473,7 +32473,7 @@
     "debt_to_assets": 0.25350163854836755
    },
    "short_interest": 0.0257,
-   "ret_1y": null,
+   "ret_1y": -0.0632,
    "flags": {
     "accruals": {
      "value": -0.036059425933939133,
@@ -32791,7 +32791,7 @@
     "debt_to_assets": 0.32290542970154623
    },
    "short_interest": null,
-   "ret_1y": null,
+   "ret_1y": 0.1855,
    "flags": {
     "accruals": {
      "value": -0.06217774172991136,
@@ -32940,7 +32940,7 @@
     "debt_to_assets": 0.16471020426114277
    },
    "short_interest": null,
-   "ret_1y": -0.2682,
+   "ret_1y": -0.2704,
    "flags": {
     "accruals": {
      "value": -0.01755081970159755,
@@ -33088,7 +33088,7 @@
     "debt_to_assets": 0.06448492777020068
    },
    "short_interest": 0.0245,
-   "ret_1y": null,
+   "ret_1y": 0.3779,
    "flags": {
     "accruals": {
      "value": -0.031188492471929997,
@@ -33166,7 +33166,7 @@
     "debt_to_assets": 0.10287189866350281
    },
    "short_interest": 0.0207,
-   "ret_1y": null,
+   "ret_1y": 2.164,
    "flags": {
     "accruals": {
      "value": -0.11415722343615022,
@@ -33247,7 +33247,7 @@
     "debt_to_assets": 0.03458398534638572
    },
    "short_interest": null,
-   "ret_1y": -0.3943,
+   "ret_1y": -0.3811,
    "flags": {
     "accruals": {
      "value": -0.03234886676110324,
@@ -33389,7 +33389,7 @@
     "debt_to_assets": 0.22342590227948628
    },
    "short_interest": null,
-   "ret_1y": null,
+   "ret_1y": 0.3645,
    "flags": {
     "accruals": {
      "value": -0.10378969228028864,
@@ -33856,7 +33856,7 @@
     "debt_to_assets": 0.2705520652319209
    },
    "short_interest": null,
-   "ret_1y": 0.0382,
+   "ret_1y": 0.0451,
    "flags": {
     "accruals": {
      "value": -0.06333311658755446,
@@ -34237,7 +34237,7 @@
     "debt_to_assets": 0.5281443279167147
    },
    "short_interest": null,
-   "ret_1y": null,
+   "ret_1y": 0.7589,
    "flags": {
     "accruals": {
      "value": -0.05087724565418715,
@@ -34384,7 +34384,7 @@
     "debt_to_assets": null
    },
    "short_interest": 0.0001,
-   "ret_1y": null,
+   "ret_1y": 0.0328,
    "flags": {
     "accruals": {
      "value": -0.04269211140643873,
@@ -34857,7 +34857,7 @@
     "debt_to_assets": 0.18260548857256284
    },
    "short_interest": null,
-   "ret_1y": 0.2429,
+   "ret_1y": 0.2441,
    "flags": {
     "accruals": {
      "value": -0.10977006138221938,
@@ -35005,7 +35005,7 @@
     "debt_to_assets": 0.4571873568483738
    },
    "short_interest": null,
-   "ret_1y": null,
+   "ret_1y": 0.0606,
    "flags": {
     "accruals": {
      "value": -0.027842274427894997,
@@ -35073,7 +35073,7 @@
     "debt_to_assets": 0.14678357539013984
    },
    "short_interest": 0.0244,
-   "ret_1y": null,
+   "ret_1y": 0.405,
    "flags": {
     "accruals": {
      "value": -0.04259392809961133,
@@ -35153,7 +35153,7 @@
     "debt_to_assets": 0.15427121391315562
    },
    "short_interest": null,
-   "ret_1y": 0.159,
+   "ret_1y": 0.1563,
    "flags": {
     "accruals": {
      "value": null,
@@ -35611,7 +35611,7 @@
     "debt_to_assets": 0.22994915443084757
    },
    "short_interest": null,
-   "ret_1y": null,
+   "ret_1y": 0.3815,
    "flags": {
     "accruals": {
      "value": -0.03856070509729373,
@@ -35758,7 +35758,7 @@
     "debt_to_assets": 0.04749414519906323
    },
    "short_interest": 0.0304,
-   "ret_1y": null,
+   "ret_1y": 0.4617,
    "flags": {
     "accruals": {
      "value": -0.0659893345464655,
@@ -35918,7 +35918,7 @@
     "debt_to_assets": 0.2420238695579089
    },
    "short_interest": 0.0362,
-   "ret_1y": null,
+   "ret_1y": 1.0587,
    "flags": {
     "accruals": {
      "value": -0.048729735030999755,
@@ -35998,7 +35998,7 @@
     "debt_to_assets": 0.0007209475232206605
    },
    "short_interest": null,
-   "ret_1y": null,
+   "ret_1y": 0.1538,
    "flags": {
     "accruals": {
      "value": -0.08809599766238421,
@@ -36378,7 +36378,7 @@
     "debt_to_assets": 0.1743589446318764
    },
    "short_interest": 0.0221,
-   "ret_1y": null,
+   "ret_1y": 0.4013,
    "flags": {
     "accruals": {
      "value": 0.06828532073384337,
@@ -36545,7 +36545,7 @@
     "debt_to_assets": 0.05558118841248393
    },
    "short_interest": null,
-   "ret_1y": 0.1049,
+   "ret_1y": 0.1056,
    "flags": {
     "accruals": {
      "value": -0.17818250844206446,
@@ -36612,7 +36612,7 @@
     "debt_to_assets": 0.4594801897736595
    },
    "short_interest": null,
-   "ret_1y": null,
+   "ret_1y": -0.1245,
    "flags": {
     "accruals": {
      "value": -0.06463928024689783,
@@ -36761,7 +36761,7 @@
     "debt_to_assets": 0.08024174413086564
    },
    "short_interest": null,
-   "ret_1y": -0.1197,
+   "ret_1y": -0.1141,
    "flags": {
     "accruals": {
      "value": -0.07246065705930897,
@@ -36829,7 +36829,7 @@
     "debt_to_assets": 0.09784492568407416
    },
    "short_interest": null,
-   "ret_1y": 0.2006,
+   "ret_1y": 0.204,
    "flags": {
     "accruals": {
      "value": -0.057266237772098355,
@@ -36974,7 +36974,7 @@
     "debt_to_assets": 0.009930331395713057
    },
    "short_interest": null,
-   "ret_1y": 0.6775,
+   "ret_1y": 0.6915,
    "flags": {
     "accruals": {
      "value": -0.2338295575170317,
@@ -37121,7 +37121,7 @@
     "debt_to_assets": 0.40279308135810377
    },
    "short_interest": null,
-   "ret_1y": null,
+   "ret_1y": -0.202,
    "flags": {
     "accruals": {
      "value": -0.04193503835674916,
@@ -37574,7 +37574,7 @@
     "debt_to_assets": 0.11344478158981362
    },
    "short_interest": null,
-   "ret_1y": null,
+   "ret_1y": -0.1919,
    "flags": {
     "accruals": {
      "value": -0.0259924935540371,
@@ -37802,7 +37802,7 @@
     "debt_to_assets": 0.2616014060474642
    },
    "short_interest": null,
-   "ret_1y": 0.1481,
+   "ret_1y": 0.1548,
    "flags": {
     "accruals": {
      "value": -0.19414020947791621,
@@ -38104,7 +38104,7 @@
     "debt_to_assets": 0.29359090526482573
    },
    "short_interest": null,
-   "ret_1y": 0.5651,
+   "ret_1y": 0.5639,
    "flags": {
     "accruals": {
      "value": -0.04466153597321821,
@@ -38327,7 +38327,7 @@
     "debt_to_assets": 0.239848730939856
    },
    "short_interest": 0.0185,
-   "ret_1y": null,
+   "ret_1y": 0.0296,
    "flags": {
     "accruals": {
      "value": -0.009669479606188467,
@@ -38564,7 +38564,7 @@
     "debt_to_assets": 0.14246050907084223
    },
    "short_interest": 0.029,
-   "ret_1y": 0.9171,
+   "ret_1y": null,
    "flags": {
     "accruals": {
      "value": -0.05888378156453429,
@@ -38725,7 +38725,7 @@
     "debt_to_assets": 0.02684862324394994
    },
    "short_interest": null,
-   "ret_1y": -0.7778,
+   "ret_1y": -0.7735,
    "flags": {
     "accruals": {
      "value": -0.009296910406476113,
@@ -38792,7 +38792,7 @@
     "debt_to_assets": 0.07531694027447279
    },
    "short_interest": 0.0005,
-   "ret_1y": 0.1725,
+   "ret_1y": null,
    "flags": {
     "accruals": {
      "value": -0.007852846841067771,
@@ -38870,7 +38870,7 @@
     "debt_to_assets": 0.317032120798336
    },
    "short_interest": null,
-   "ret_1y": null,
+   "ret_1y": 0.1009,
    "flags": {
     "accruals": {
      "value": -0.17361900198507768,
@@ -39093,7 +39093,7 @@
     "debt_to_assets": 0.2069185707543241
    },
    "short_interest": 0.0406,
-   "ret_1y": null,
+   "ret_1y": 0.1398,
    "flags": {
     "accruals": {
      "value": -0.04584816375513098,
@@ -39174,7 +39174,7 @@
     "debt_to_assets": 0.01139099807242251
    },
    "short_interest": null,
-   "ret_1y": 0.1443,
+   "ret_1y": 0.146,
    "flags": {
     "accruals": {
      "value": -0.12889795686929184,
@@ -39321,7 +39321,7 @@
     "debt_to_assets": 0.42165506924454316
    },
    "short_interest": null,
-   "ret_1y": 0.0974,
+   "ret_1y": 0.0942,
    "flags": {
     "accruals": {
      "value": -0.11927666213925713,
@@ -39389,7 +39389,7 @@
     "debt_to_assets": 0.09211728818474339
    },
    "short_interest": null,
-   "ret_1y": -0.0579,
+   "ret_1y": -0.0571,
    "flags": {
     "accruals": {
      "value": -0.032967372119376157,
@@ -39696,7 +39696,7 @@
     "debt_to_assets": 0.0950921997349542
    },
    "short_interest": null,
-   "ret_1y": -0.354,
+   "ret_1y": -0.3443,
    "flags": {
     "accruals": {
      "value": -0.038420470446771895,
@@ -40002,7 +40002,7 @@
     "debt_to_assets": 0.12277631692653358
    },
    "short_interest": 0.0135,
-   "ret_1y": null,
+   "ret_1y": 0.427,
    "flags": {
     "accruals": {
      "value": -0.07449522334107926,
@@ -40081,7 +40081,7 @@
     "debt_to_assets": 0.32384235867562267
    },
    "short_interest": null,
-   "ret_1y": 0.1336,
+   "ret_1y": 0.1465,
    "flags": {
     "accruals": {
      "value": -0.16676249144421698,
@@ -40309,7 +40309,7 @@
     "debt_to_assets": 0.29282281816772593
    },
    "short_interest": 0.053,
-   "ret_1y": null,
+   "ret_1y": 0.2208,
    "flags": {
     "accruals": {
      "value": -0.06057402492239867,
@@ -40469,7 +40469,7 @@
     "debt_to_assets": 0.4836929399677088
    },
    "short_interest": null,
-   "ret_1y": 0.5375,
+   "ret_1y": 0.5458,
    "flags": {
     "accruals": {
      "value": -0.11223377618051669,
@@ -40694,7 +40694,7 @@
     "debt_to_assets": 0.35372024109500677
    },
    "short_interest": null,
-   "ret_1y": -0.0571,
+   "ret_1y": -0.0467,
    "flags": {
     "accruals": {
      "value": null,
@@ -40838,7 +40838,7 @@
     "debt_to_assets": 0.3089629284174101
    },
    "short_interest": null,
-   "ret_1y": -0.6852,
+   "ret_1y": -0.6795,
    "flags": {
     "accruals": {
      "value": -0.08186796031903365,
@@ -40988,7 +40988,7 @@
     "debt_to_assets": 0.11692370279965975
    },
    "short_interest": null,
-   "ret_1y": -0.2777,
+   "ret_1y": -0.2751,
    "flags": {
     "accruals": {
      "value": -0.11381261986061088,
@@ -41055,7 +41055,7 @@
     "debt_to_assets": 0.1878146869755223
    },
    "short_interest": null,
-   "ret_1y": -0.2996,
+   "ret_1y": -0.2921,
    "flags": {
     "accruals": {
      "value": -0.12774181080297614,
@@ -41363,7 +41363,7 @@
     "debt_to_assets": 0.484783141386915
    },
    "short_interest": null,
-   "ret_1y": -0.0035,
+   "ret_1y": 0.0028,
    "flags": {
     "accruals": {
      "value": -0.11076439224550971,
@@ -41587,7 +41587,7 @@
     "debt_to_assets": 0.11750425740063046
    },
    "short_interest": null,
-   "ret_1y": 0.22,
+   "ret_1y": 0.224,
    "flags": {
     "accruals": {
      "value": null,
@@ -41881,7 +41881,7 @@
     "debt_to_assets": 0.23282583500158044
    },
    "short_interest": 0.1598,
-   "ret_1y": null,
+   "ret_1y": -0.1898,
    "flags": {
     "accruals": {
      "value": -0.1716147719044171,
@@ -41958,7 +41958,7 @@
     "debt_to_assets": null
    },
    "short_interest": 0.0441,
-   "ret_1y": null,
+   "ret_1y": 1.6062,
    "flags": {
     "accruals": {
      "value": -0.06779129889799969,
@@ -42037,7 +42037,7 @@
     "debt_to_assets": 0.37277172252215546
    },
    "short_interest": 0.0279,
-   "ret_1y": null,
+   "ret_1y": 0.1267,
    "flags": {
     "accruals": {
      "value": -0.12209981215413515,
@@ -42198,7 +42198,7 @@
     "debt_to_assets": 0.10775112964893986
    },
    "short_interest": null,
-   "ret_1y": 0.55,
+   "ret_1y": 0.5549,
    "flags": {
     "accruals": {
      "value": -0.057402291492515516,
@@ -42343,7 +42343,7 @@
     "debt_to_assets": 0.4650492386867104
    },
    "short_interest": 0.0325,
-   "ret_1y": null,
+   "ret_1y": 0.1512,
    "flags": {
     "accruals": {
      "value": -0.06864924958310173,
@@ -42582,7 +42582,7 @@
     "debt_to_assets": 0.14648623071589204
    },
    "short_interest": null,
-   "ret_1y": -0.5425,
+   "ret_1y": -0.5411,
    "flags": {
     "accruals": {
      "value": -0.0964928521889503,
@@ -42648,7 +42648,7 @@
     "debt_to_assets": null
    },
    "short_interest": 0.0167,
-   "ret_1y": null,
+   "ret_1y": 0.1471,
    "flags": {
     "accruals": {
      "value": -0.0012201105661932311,
@@ -42727,7 +42727,7 @@
     "debt_to_assets": 0.2601870094130156
    },
    "short_interest": null,
-   "ret_1y": null,
+   "ret_1y": -0.0496,
    "flags": {
     "accruals": {
      "value": -0.08299278940974139,
@@ -42795,7 +42795,7 @@
     "debt_to_assets": 0.02776520083275022
    },
    "short_interest": null,
-   "ret_1y": null,
+   "ret_1y": -0.4585,
    "flags": {
     "accruals": {
      "value": -0.1685607274586191,
@@ -42862,7 +42862,7 @@
     "debt_to_assets": 0.2828817273261718
    },
    "short_interest": 0.0529,
-   "ret_1y": null,
+   "ret_1y": -0.1329,
    "flags": {
     "accruals": {
      "value": -0.035106965646267724,
@@ -42943,7 +42943,7 @@
     "debt_to_assets": 0.051198486122792264
    },
    "short_interest": null,
-   "ret_1y": 0.2677,
+   "ret_1y": 0.2712,
    "flags": {
     "accruals": {
      "value": -0.07205240174672489,
@@ -43011,7 +43011,7 @@
     "debt_to_assets": 0.36989417742762576
    },
    "short_interest": 0.0368,
-   "ret_1y": null,
+   "ret_1y": 0.236,
    "flags": {
     "accruals": {
      "value": -0.08010757361174312,
@@ -43172,7 +43172,7 @@
     "debt_to_assets": 0.0976320024522952
    },
    "short_interest": 0.081,
-   "ret_1y": null,
+   "ret_1y": 0.5411,
    "flags": {
     "accruals": {
      "value": -0.057094685212859715,
@@ -43248,7 +43248,7 @@
     "debt_to_assets": 0.08171654692842599
    },
    "short_interest": null,
-   "ret_1y": -0.4348,
+   "ret_1y": -0.4328,
    "flags": {
     "accruals": {
      "value": -0.08132058438806905,
@@ -43470,7 +43470,7 @@
     "debt_to_assets": 0.3839695543547731
    },
    "short_interest": null,
-   "ret_1y": -0.1872,
+   "ret_1y": -0.1798,
    "flags": {
     "accruals": {
      "value": -0.1142385082905529,
@@ -43619,7 +43619,7 @@
     "debt_to_assets": 0.19981172040480114
    },
    "short_interest": 0.037,
-   "ret_1y": null,
+   "ret_1y": -0.1091,
    "flags": {
     "accruals": {
      "value": null,
@@ -43696,7 +43696,7 @@
     "debt_to_assets": 0.021213604367738607
    },
    "short_interest": 0.1366,
-   "ret_1y": null,
+   "ret_1y": -0.4361,
    "flags": {
     "accruals": {
      "value": -0.041569035455972056,
@@ -43856,7 +43856,7 @@
     "debt_to_assets": 0.3418098143996224
    },
    "short_interest": 0.0559,
-   "ret_1y": null,
+   "ret_1y": -0.1359,
    "flags": {
     "accruals": {
      "value": -0.08088521647843681,
@@ -44096,7 +44096,7 @@
     "debt_to_assets": 0.4823892364384266
    },
    "short_interest": null,
-   "ret_1y": 0.1506,
+   "ret_1y": 0.1596,
    "flags": {
     "accruals": {
      "value": -0.09729312341812878,
@@ -44163,7 +44163,7 @@
     "debt_to_assets": 0.04368046024004906
    },
    "short_interest": 0.0186,
-   "ret_1y": null,
+   "ret_1y": 0.2402,
    "flags": {
     "accruals": {
      "value": -0.039001962433417435,
@@ -44478,7 +44478,7 @@
     "debt_to_assets": 0.45628219805380654
    },
    "short_interest": 0.0711,
-   "ret_1y": null,
+   "ret_1y": 0.0448,
    "flags": {
     "accruals": {
      "value": -0.049653536888131324,
@@ -44637,7 +44637,7 @@
     "debt_to_assets": 0.006980218518849485
    },
    "short_interest": null,
-   "ret_1y": null,
+   "ret_1y": 0.2273,
    "flags": {
     "accruals": {
      "value": -0.14194389345423633,
@@ -44704,7 +44704,7 @@
     "debt_to_assets": 0.10839956434018758
    },
    "short_interest": null,
-   "ret_1y": 0.3217,
+   "ret_1y": 0.3147,
    "flags": {
     "accruals": {
      "value": -0.11271893098632699,
@@ -45012,7 +45012,7 @@
     "debt_to_assets": 0.09684448049864622
    },
    "short_interest": null,
-   "ret_1y": 0.0147,
+   "ret_1y": 0.0104,
    "flags": {
     "accruals": {
      "value": -0.005077310749527043,
@@ -45317,7 +45317,7 @@
     "debt_to_assets": 0.13430607821423354
    },
    "short_interest": null,
-   "ret_1y": -0.0015,
+   "ret_1y": 0.0068,
    "flags": {
     "accruals": {
      "value": -0.11996108459143985,
@@ -45539,7 +45539,7 @@
     "debt_to_assets": 0.18792409315718608
    },
    "short_interest": 0.0212,
-   "ret_1y": null,
+   "ret_1y": -0.128,
    "flags": {
     "accruals": {
      "value": -0.02657857301583691,
@@ -45697,7 +45697,7 @@
     "debt_to_assets": 0.28620551779288284
    },
    "short_interest": 0.0539,
-   "ret_1y": null,
+   "ret_1y": 0.215,
    "flags": {
     "accruals": {
      "value": -0.06494456193054925,
@@ -45776,7 +45776,7 @@
     "debt_to_assets": 0.23360606755582544
    },
    "short_interest": 0.0174,
-   "ret_1y": null,
+   "ret_1y": 0.0814,
    "flags": {
     "accruals": {
      "value": -0.025140698747571393,
@@ -45857,7 +45857,7 @@
     "debt_to_assets": 0.1855201848153804
    },
    "short_interest": 0.0847,
-   "ret_1y": null,
+   "ret_1y": 0.2555,
    "flags": {
     "accruals": {
      "value": null,
@@ -45935,7 +45935,7 @@
     "debt_to_assets": 0.10306421812511124
    },
    "short_interest": 0.0492,
-   "ret_1y": null,
+   "ret_1y": 0.1528,
    "flags": {
     "accruals": {
      "value": -0.08247676783315165,
@@ -46176,7 +46176,7 @@
     "debt_to_assets": 0.18225269821754522
    },
    "short_interest": null,
-   "ret_1y": -0.1167,
+   "ret_1y": -0.1082,
    "flags": {
     "accruals": {
      "value": -0.13502625888654138,
@@ -46242,7 +46242,7 @@
     "debt_to_assets": 0.2636105051512844
    },
    "short_interest": 0.0257,
-   "ret_1y": null,
+   "ret_1y": -0.1469,
    "flags": {
     "accruals": {
      "value": -0.036059831857936354,
@@ -46320,7 +46320,7 @@
     "debt_to_assets": 0.04750151998560571
    },
    "short_interest": 0.0748,
-   "ret_1y": null,
+   "ret_1y": -0.034,
    "flags": {
     "accruals": {
      "value": -0.0448187450526389,
@@ -46556,7 +46556,7 @@
     "debt_to_assets": 0.09221436243458274
    },
    "short_interest": null,
-   "ret_1y": null,
+   "ret_1y": 0.0486,
    "flags": {
     "accruals": {
      "value": -0.05248601568481808,
@@ -46624,7 +46624,7 @@
     "debt_to_assets": 0.2557473834868951
    },
    "short_interest": 0.0267,
-   "ret_1y": null,
+   "ret_1y": 0.0881,
    "flags": {
     "accruals": {
      "value": -0.03465757212646327,
@@ -46940,7 +46940,7 @@
     "debt_to_assets": 0.06317105076414109
    },
    "short_interest": null,
-   "ret_1y": null,
+   "ret_1y": 0.7565,
    "flags": {
     "accruals": {
      "value": -0.08178045953816822,
@@ -47088,7 +47088,7 @@
     "debt_to_assets": 0.3154793118086249
    },
    "short_interest": null,
-   "ret_1y": -0.4756,
+   "ret_1y": -0.474,
    "flags": {
     "accruals": {
      "value": -0.1753665822900276,
@@ -47154,7 +47154,7 @@
     "debt_to_assets": 0.3681542038736488
    },
    "short_interest": 0.1412,
-   "ret_1y": null,
+   "ret_1y": -0.2364,
    "flags": {
     "accruals": {
      "value": -0.0675526596727535,
@@ -47558,7 +47558,7 @@
     "debt_to_assets": 0.07941376959781868
    },
    "short_interest": 0.0822,
-   "ret_1y": null,
+   "ret_1y": 0.351,
    "flags": {
     "accruals": {
      "value": -0.060641043053103354,
@@ -47956,7 +47956,7 @@
     "debt_to_assets": 0.4743305939105491
    },
    "short_interest": 0.0603,
-   "ret_1y": null,
+   "ret_1y": 0.0738,
    "flags": {
     "accruals": {
      "value": -0.04415863482701575,
@@ -48115,7 +48115,7 @@
     "debt_to_assets": 0.3434509340165999
    },
    "short_interest": null,
-   "ret_1y": null,
+   "ret_1y": 0.0151,
    "flags": {
     "accruals": {
      "value": null,
@@ -48181,7 +48181,7 @@
     "debt_to_assets": 0.2723281367392938
    },
    "short_interest": null,
-   "ret_1y": -0.2363,
+   "ret_1y": -0.2349,
    "flags": {
     "accruals": {
      "value": -0.19551348917901024,
@@ -48327,7 +48327,7 @@
     "debt_to_assets": 0.2982456140350877
    },
    "short_interest": null,
-   "ret_1y": 0.0123,
+   "ret_1y": 0.0232,
    "flags": {
     "accruals": {
      "value": -0.05478469971472526,
@@ -48395,7 +48395,7 @@
     "debt_to_assets": 0.4018375057243169
    },
    "short_interest": 0.0111,
-   "ret_1y": null,
+   "ret_1y": 0.356,
    "flags": {
     "accruals": {
      "value": 0.05550118082438585,
@@ -48476,7 +48476,7 @@
     "debt_to_assets": 0.1578379324426813
    },
    "short_interest": 0.0382,
-   "ret_1y": null,
+   "ret_1y": -0.5724,
    "flags": {
     "accruals": {
      "value": -0.07088715056697592,
@@ -48874,7 +48874,7 @@
     "debt_to_assets": null
    },
    "short_interest": 0.0294,
-   "ret_1y": null,
+   "ret_1y": 0.3605,
    "flags": {
     "accruals": {
      "value": -0.042204590544394203,
@@ -48954,7 +48954,7 @@
     "debt_to_assets": 0.29940205358561833
    },
    "short_interest": 0.072,
-   "ret_1y": null,
+   "ret_1y": 0.9846,
    "flags": {
     "accruals": {
      "value": -0.12029432819002102,
@@ -49180,7 +49180,7 @@
     "debt_to_assets": 0.03887186915796376
    },
    "short_interest": null,
-   "ret_1y": 0.053,
+   "ret_1y": 0.047,
    "flags": {
     "accruals": {
      "value": -0.415530373691104,
@@ -49247,7 +49247,7 @@
     "debt_to_assets": 0.18209055453676679
    },
    "short_interest": null,
-   "ret_1y": null,
+   "ret_1y": -0.17,
    "flags": {
     "accruals": {
      "value": -0.0544980914061694,
@@ -49396,7 +49396,7 @@
     "debt_to_assets": 0.07819332382521868
    },
    "short_interest": 0.0149,
-   "ret_1y": null,
+   "ret_1y": -0.1122,
    "flags": {
     "accruals": {
      "value": -0.06225126418290314,
@@ -49477,7 +49477,7 @@
     "debt_to_assets": null
    },
    "short_interest": 0.0448,
-   "ret_1y": 0.4321,
+   "ret_1y": null,
    "flags": {
     "accruals": {
      "value": -0.026958275253750514,
@@ -49554,7 +49554,7 @@
     "debt_to_assets": 0.03637907486000296
    },
    "short_interest": null,
-   "ret_1y": -0.0846,
+   "ret_1y": -0.0784,
    "flags": {
     "accruals": {
      "value": -0.21378355759751905,
@@ -49621,7 +49621,7 @@
     "debt_to_assets": null
    },
    "short_interest": 0.0494,
-   "ret_1y": null,
+   "ret_1y": 0.3249,
    "flags": {
     "accruals": {
      "value": -0.0942578210286641,
@@ -49708,7 +49708,7 @@
     "debt_to_assets": 0.100907896460091
    },
    "short_interest": null,
-   "ret_1y": -0.2723,
+   "ret_1y": -0.2716,
    "flags": {
     "accruals": {
      "value": -0.08266861734216577,
@@ -50167,7 +50167,7 @@
     "debt_to_assets": null
    },
    "short_interest": 0.0205,
-   "ret_1y": null,
+   "ret_1y": 0.3407,
    "flags": {
     "accruals": {
      "value": -0.06808816100816208,
@@ -50326,7 +50326,7 @@
     "debt_to_assets": 0.2904530258442936
    },
    "short_interest": 0.0494,
-   "ret_1y": null,
+   "ret_1y": 0.0684,
    "flags": {
     "accruals": {
      "value": -0.12274663884799501,
@@ -50723,7 +50723,7 @@
     "debt_to_assets": 0.06724021357513212
    },
    "short_interest": 0.0218,
-   "ret_1y": null,
+   "ret_1y": 0.6493,
    "flags": {
     "accruals": {
      "value": -0.17924909221436425,
@@ -50802,7 +50802,7 @@
     "debt_to_assets": 0.1260951726507473
    },
    "short_interest": 0.0342,
-   "ret_1y": null,
+   "ret_1y": 0.183,
    "flags": {
     "accruals": {
      "value": -0.082793867120954,
@@ -50970,7 +50970,7 @@
     "debt_to_assets": 0.10468394121248134
    },
    "short_interest": null,
-   "ret_1y": -0.0026,
+   "ret_1y": -0.0147,
    "flags": {
     "accruals": {
      "value": -0.14218492217506895,
@@ -51114,7 +51114,7 @@
     "debt_to_assets": 0.7721619392093407
    },
    "short_interest": 0.0268,
-   "ret_1y": null,
+   "ret_1y": -0.0404,
    "flags": {
     "accruals": {
      "value": -0.08133345783920068,
@@ -51439,7 +51439,7 @@
     "debt_to_assets": 0.3243416896008875
    },
    "short_interest": null,
-   "ret_1y": -0.0296,
+   "ret_1y": -0.0248,
    "flags": {
     "accruals": {
      "value": -0.11392741319578832,
@@ -51840,7 +51840,7 @@
     "debt_to_assets": 0.03056333777091892
    },
    "short_interest": null,
-   "ret_1y": 0.4351,
+   "ret_1y": 0.4286,
    "flags": {
     "accruals": {
      "value": -0.7526272699239221,
@@ -51982,7 +51982,7 @@
     "debt_to_assets": 0.21053702196908056
    },
    "short_interest": 0.0483,
-   "ret_1y": null,
+   "ret_1y": -0.2973,
    "flags": {
     "accruals": {
      "value": -0.09714362254294612,
@@ -52062,7 +52062,7 @@
     "debt_to_assets": 0.18389522630167543
    },
    "short_interest": 0.0135,
-   "ret_1y": null,
+   "ret_1y": 0.5531,
    "flags": {
     "accruals": {
      "value": -0.09650251921591703,
@@ -52220,7 +52220,7 @@
     "debt_to_assets": 0.34249292923877056
    },
    "short_interest": 0.0393,
-   "ret_1y": null,
+   "ret_1y": 0.2364,
    "flags": {
     "accruals": {
      "value": -0.06610377157028209,
@@ -52380,7 +52380,7 @@
     "debt_to_assets": 0.033717443940210846
    },
    "short_interest": null,
-   "ret_1y": null,
+   "ret_1y": -0.0798,
    "flags": {
     "accruals": {
      "value": -0.20092513210031518,
@@ -52685,7 +52685,7 @@
     "debt_to_assets": 0.5759978130125751
    },
    "short_interest": 0.0232,
-   "ret_1y": null,
+   "ret_1y": -0.25,
    "flags": {
     "accruals": {
      "value": -0.1405953801867584,
@@ -52765,7 +52765,7 @@
     "debt_to_assets": 0.22608049826051832
    },
    "short_interest": 0.0243,
-   "ret_1y": null,
+   "ret_1y": 0.6589,
    "flags": {
     "accruals": {
      "value": -0.14777124478617015,
@@ -52842,7 +52842,7 @@
     "debt_to_assets": 0.6851613965744401
    },
    "short_interest": 0.036,
-   "ret_1y": null,
+   "ret_1y": -0.0355,
    "flags": {
     "accruals": {
      "value": -0.09734432310596924,
@@ -52921,7 +52921,7 @@
     "debt_to_assets": 0.3037480156736662
    },
    "short_interest": null,
-   "ret_1y": -0.096,
+   "ret_1y": -0.0909,
    "flags": {
     "accruals": {
      "value": null,
@@ -53133,7 +53133,7 @@
     "debt_to_assets": null
    },
    "short_interest": 0.1058,
-   "ret_1y": null,
+   "ret_1y": -0.0891,
    "flags": {
     "accruals": {
      "value": -0.03706548511167526,
@@ -53409,7 +53409,7 @@
     "debt_to_assets": null
    },
    "short_interest": 0.036,
-   "ret_1y": null,
+   "ret_1y": 0.2301,
    "flags": {
     "accruals": {
      "value": null,
@@ -53774,7 +53774,7 @@
     "debt_to_assets": 0.3051312814360205
    },
    "short_interest": 0.0328,
-   "ret_1y": null,
+   "ret_1y": -0.5719,
    "flags": {
     "accruals": {
      "value": null,
@@ -53992,7 +53992,7 @@
     "debt_to_assets": 0.00475223905630746
    },
    "short_interest": null,
-   "ret_1y": -0.5937,
+   "ret_1y": -0.5905,
    "flags": {
     "accruals": {
      "value": 0.02661217197696739,
@@ -54055,7 +54055,7 @@
     "debt_to_assets": null
    },
    "short_interest": null,
-   "ret_1y": 0.2489,
+   "ret_1y": 0.2545,
    "flags": {
     "accruals": {
      "value": null,
@@ -54183,7 +54183,7 @@
     "debt_to_assets": null
    },
    "short_interest": null,
-   "ret_1y": null,
+   "ret_1y": -0.0992,
    "flags": {
     "accruals": {
      "value": null,
@@ -54247,7 +54247,7 @@
     "debt_to_assets": 0.23733396739822712
    },
    "short_interest": null,
-   "ret_1y": -0.137,
+   "ret_1y": -0.1366,
    "flags": {
     "accruals": {
      "value": -0.1269505222053491,
@@ -54311,7 +54311,7 @@
     "debt_to_assets": 0.007785949981956535
    },
    "short_interest": null,
-   "ret_1y": 0.4202,
+   "ret_1y": null,
    "flags": {
     "accruals": {
      "value": -0.08117424497267689,
@@ -54374,7 +54374,7 @@
     "debt_to_assets": 0.08993134237494504
    },
    "short_interest": null,
-   "ret_1y": 0.1602,
+   "ret_1y": null,
    "flags": {
     "accruals": {
      "value": null,
@@ -54438,7 +54438,7 @@
     "debt_to_assets": 0.48030764300592854
    },
    "short_interest": null,
-   "ret_1y": null,
+   "ret_1y": -0.0443,
    "flags": {
     "accruals": {
      "value": -0.14381225760588853,
@@ -54502,7 +54502,7 @@
     "debt_to_assets": null
    },
    "short_interest": null,
-   "ret_1y": -0.4021,
+   "ret_1y": -0.4002,
    "flags": {
     "accruals": {
      "value": null,
